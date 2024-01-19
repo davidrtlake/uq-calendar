@@ -5,6 +5,7 @@ const scraperObject = {
     console.log(`Navigating to ${this.url}...`);
     // Navigate to the selected page
     await page.goto(this.url);
+    let scrapedData = [];
     // Wait for the required DOM to be rendered
     await page.waitForSelector("div#show-events");
     // Get the link to all the required books
@@ -16,7 +17,10 @@ const scraperObject = {
         .map((el) => el.href);
       return links;
     });
-    console.log(urls);
+
+    function sleep(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
 
     // Loop through each of those links, open a new page instance and get the relevant data from them
     let pagePromise = (link) =>
@@ -24,46 +28,80 @@ const scraperObject = {
         let dataObj = {};
         let newPage = await browser.newPage();
         await newPage.goto(link);
-        dataObj["bookTitle"] = await newPage.$eval(
-          ".product_main > h1",
+        dataObj["title"] = await newPage.$eval(
+          "#page-head > h1",
           (text) => text.textContent
         );
-        dataObj["bookPrice"] = await newPage.$eval(
-          ".price_color",
-          (text) => text.textContent
-        );
-        dataObj["noAvailable"] = await newPage.$eval(
-          ".instock.availability",
+        let descriptionTitles = await newPage.$$eval(
+          ".event-details > dl",
           (text) => {
-            // Strip new line and tab spaces
-            text = text.textContent.replace(/(\r\n\t|\n|\r|\t)/gm, "");
-            // Get the number of stock available
-            let regexp = /^.*\((.*)\).*$/i;
-            let stockAvailable = regexp.exec(text)[1].split(" ")[0];
-            return stockAvailable;
+            const texts = [];
+            for (const item of text) {
+              for (const j of item.querySelectorAll("dt").values()) {
+                texts.push(
+                  j.textContent.replace(
+                    /(\r\n\t|\n|\r|\t|^\s|\s$|\B\s|\s\B)/gm,
+                    ""
+                  )
+                );
+              }
+            }
+            return texts;
           }
         );
-        dataObj["imageUrl"] = await newPage.$eval(
-          "#product_gallery img",
-          (img) => img.src
+        let descriptions = await newPage.$$eval(
+          ".event-details > dl",
+          (text) => {
+            const texts = [];
+            for (const item of text) {
+              for (const j of item.querySelectorAll("dd").values()) {
+                if (j.firstChild.nodeName === "A") {
+                  texts.push(j.querySelector("a").href);
+                } else if (j.className === "tags") {
+                  let tags = [];
+                  for (const listItem of j.querySelectorAll("li")) {
+                    tags.push({
+                      tagsUrl: listItem.querySelector("a").href,
+                      tagsText: listItem.textContent.replace(
+                        /(\r\n\t|\n|\r|\t|^\s|\s$|\B\s|\s\B)/gm,
+                        ""
+                      ),
+                    });
+                  }
+                  texts.push(tags);
+                } else {
+                  texts.push(
+                    j.textContent.replace(
+                      /(\r\n\t|\n|\r|\t|^\s|\s$|\B\s|\s\B)/gm,
+                      ""
+                    )
+                  );
+                }
+              }
+            }
+            return texts;
+          }
         );
-        dataObj["bookDescription"] = await newPage.$eval(
-          "#product_description",
-          (div) => div.nextSibling.nextSibling.textContent
-        );
-        dataObj["upc"] = await newPage.$eval(
-          ".table.table-striped > tbody > tr > td",
-          (table) => table.textContent
-        );
+        if (descriptionTitles.length === descriptions.length) {
+          for (let i = 0; i < descriptionTitles.length; i++) {
+            dataObj[descriptionTitles[i]] = descriptions[i];
+          }
+        } else {
+          console.log("Titles and desciptions are not the same length!");
+        }
         resolve(dataObj);
         await newPage.close();
       });
 
     for (link in urls) {
+      console.log(`Navigating to ${urls[link]}...`);
       let currentPageData = await pagePromise(urls[link]);
-      // scrapedData.push(currentPageData);
-      console.log(currentPageData);
+      sleep(2000);
+      // break;
+      scrapedData.push(currentPageData);
     }
+    await page.close();
+    return scrapedData;
   },
 };
 
