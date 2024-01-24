@@ -32,6 +32,7 @@ const scraperObject = {
           "#page-head > h1",
           (text) => text.textContent
         );
+        // Get the description titles
         let descriptionTitles = await newPage.$$eval(
           ".event-details > dl",
           (text) => {
@@ -49,6 +50,7 @@ const scraperObject = {
             return texts;
           }
         );
+        // Get the corresponding descriptions
         let descriptions = await newPage.$$eval(
           ".event-details > dl",
           (text) => {
@@ -56,8 +58,10 @@ const scraperObject = {
             for (const item of text) {
               for (const j of item.querySelectorAll("dd").values()) {
                 if (j.firstChild.nodeName === "A") {
+                  // For email link
                   texts.push(j.querySelector("a").href);
                 } else if (j.className === "tags") {
+                  // For the event categories
                   let tags = [];
                   for (const listItem of j.querySelectorAll("li")) {
                     tags.push({
@@ -69,7 +73,20 @@ const scraperObject = {
                     });
                   }
                   texts.push(tags);
+                } else if (
+                  // For the contact email
+                  j.querySelector("a") !== null &&
+                  j.firstChild.nodeName === "#text"
+                ) {
+                  texts.push({
+                    org_unit: j.textContent.replace(
+                      /(\r\n\t|\n|\r|\t|^\s|\s$|\B\s|\s\B)/gm,
+                      ""
+                    ),
+                    org_unit_url: j.querySelector("a").href,
+                  });
                 } else {
+                  // For everything else
                   texts.push(
                     j.textContent.replace(
                       /(\r\n\t|\n|\r|\t|^\s|\s$|\B\s|\s\B)/gm,
@@ -82,6 +99,7 @@ const scraperObject = {
             return texts;
           }
         );
+        // console.log(descriptions);
         if (descriptionTitles.length === descriptions.length) {
           for (let i = 0; i < descriptionTitles.length; i++) {
             dataObj[descriptionTitles[i]] = descriptions[i];

@@ -16,7 +16,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "New Year's Day public holiday"
   },
   {
@@ -37,7 +40,10 @@
     "Name:": "UQ Graduate School",
     "Phone:": "+61 7 3346 0503",
     "Email:": "mailto:graduateschool@uq.edu.au",
-    "Org.Unit:": "Graduate School",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
     "Full Description:": "Research Quarter 1 commences"
   },
   {
@@ -57,7 +63,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Summer Semester 2023/2024 classes recommence after mid-semester break"
   },
   {
@@ -76,7 +85,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61733652600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1 first date to request a program change through mySI-net"
   },
   {
@@ -96,7 +108,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 1-classes commence/due date to enrol"
   },
   {
@@ -116,7 +131,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Summer Semester 2023/2024-last date to drop courses or cancel enrolment without academic penalty"
   },
   {
@@ -136,7 +154,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 1-final date for addition of courses or alteration of enrolment"
   },
   {
@@ -156,7 +177,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Progression Improvement Plan due for students who were issued a progression intervention notice in an earlier semester and have interrupted their studies,who wish to return in Semester 1 2024"
   },
   {
@@ -176,7 +200,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 1-census date/last date to drop courses or cancel enrolment without financial liability and academic penalty"
   },
   {
@@ -196,7 +223,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 1-due date for payment of tuition fees"
   },
   {
@@ -220,7 +250,10 @@
     "Name:": "Examinations and Timetable Services",
     "Phone:": "+61 7 3365 2488",
     "Email:": "mailto:timetabling@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1-My Timetable opens for preferencing at 12:00pm"
   },
   {
@@ -240,7 +273,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Australia Day public holiday"
   },
   {
@@ -260,7 +296,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 1-classes end"
   },
   {
@@ -280,7 +319,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Summer Semester 2023/2024 classes end"
   },
   {
@@ -300,7 +342,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 2-classes commence/due date to enrol"
   },
   {
@@ -324,7 +369,10 @@
     "Name:": "Examinations and Timetable Services",
     "Phone:": "+61 7 3365 2488",
     "Email:": "mailto:timetabling@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1-My Timetable preferencing closes at 9:00am.Classes set to‘OFF’during preference allocation period."
   },
   {
@@ -344,7 +392,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 2-final date for addition of courses or alteration of enrolment"
   },
   {
@@ -364,7 +415,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1-due date to enrol*for domestic students*Some variations are approved annually on a program-by-program basis."
   },
   {
@@ -384,7 +438,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Summer Semester 2023/2024 revision period 29 January-2 February 2024"
   },
   {
@@ -403,7 +460,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Cross-institutional and Non-award study-due date for enrolment for Semester 1Administrative charges apply for late enrolment."
   },
   {
@@ -424,7 +484,10 @@
     "Name:": "UQ Graduate School",
     "Phone:": "+61 7 3346 0503",
     "Email:": "mailto:graduateschool@uq.edu.au",
-    "Org.Unit:": "Graduate School",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
     "Full Description:": "Research Quarter 1-census date/final date to cancel without financial penalty"
   },
   {
@@ -444,7 +507,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Summer Semester 2023/2024-last date to withdraw from a course in mySI-net incurring financial liability and academic penalty"
   },
   {
@@ -465,7 +531,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:examinations@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Summer Semester 2023/2024 examination period 3-10 February 2024"
   },
   {
@@ -489,7 +558,10 @@
     "Name:": "Examinations and Timetable Services",
     "Phone:": "+61 7 3365 2488",
     "Email:": "mailto:timetabling@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1-My Timetable personal timetable released at 12:00pm,and open for allocation adjustment."
   },
   {
@@ -509,7 +581,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 2-due date for payment of tuition fees"
   },
   {
@@ -533,7 +608,10 @@
     "Name:": "Examinations and Timetable Services",
     "Phone:": "+61 7 3365 2488",
     "Email:": "mailto:timetabling@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1-My Timetable unavailable from 8:00am to 12:00pm"
   },
   {
@@ -553,7 +631,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1-last date to request a program change through mySI-net"
   },
   {
@@ -573,7 +654,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 2-census date/last date to drop courses or cancel enrolment without financial liability and academic penalty"
   },
   {
@@ -593,7 +677,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Summer Semester 2023/2024 examinations end and Summer Semester 2023/2024 ends"
   },
   {
@@ -613,7 +700,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Orientation Week 12-16 February 2024"
   },
   {
@@ -633,7 +723,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1-due date to enrol*for international students"
   },
   {
@@ -652,7 +745,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1 classes commence**Some variations to the Academic Calendar are approved annually on a program-by-program basis."
   },
   {
@@ -672,7 +768,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:examinations@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Summer Semester 2023/2024 finalisation of grades"
   },
   {
@@ -692,7 +791,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1-final date for addition of courses or alteration of enrolment"
   },
   {
@@ -713,7 +815,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:fees@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1-due date for payment of tuition fees"
   },
   {
@@ -737,7 +842,10 @@
     "Name:": "Examinations and Timetable Services",
     "Phone:": "+61 7 3365 2488",
     "Email:": "mailto:timetabling@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1-My Timetable allocation adjustment finishes at 9:00am."
   },
   {
@@ -758,7 +866,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:examinations@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Summer Semester 2023/2024 deferred and supplementary examinations"
   },
   {
@@ -778,7 +889,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 2-classes end"
   },
   {
@@ -795,7 +909,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:examinations@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1 mid-semester Saturday examinations"
   },
   {
@@ -815,7 +932,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 3-classes commence/due date to enrol"
   },
   {
@@ -835,7 +955,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 3-final date for addition of courses or alteration of enrolment"
   },
   {
@@ -854,7 +977,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1 classes end before mid-semester break"
   },
   {
@@ -874,7 +1000,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Good Friday public holiday"
   },
   {
@@ -894,7 +1023,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Easter Saturday public holiday"
   },
   {
@@ -914,7 +1046,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Easter Sunday public holiday"
   },
   {
@@ -935,7 +1070,10 @@
     "Name:": "UQ Graduate School",
     "Phone:": "+61 7 3346 0503",
     "Email:": "mailto:graduateschool@uq.edu.au",
-    "Org.Unit:": "Graduate School",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
     "Full Description:": "Research Quarter 1 ends"
   },
   {
@@ -956,7 +1094,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:fees@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1 Census Date-last date to withdraw from Semester 1 course(s)or cancel enrolment through mySI-net without financial liability"
   },
   {
@@ -975,7 +1116,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1 mid-semester break commences**Some variations to the Academic Calendar are approved annually on a program-by-program basis."
   },
   {
@@ -995,7 +1139,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Universities Australia Common Vacation Week"
   },
   {
@@ -1015,7 +1162,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Easter Monday public holiday"
   },
   {
@@ -1036,7 +1186,10 @@
     "Name:": "UQ Graduate School",
     "Phone:": "+61 7 3346 0503",
     "Email:": "mailto:graduateschool@uq.edu.au",
-    "Org.Unit:": "Graduate School",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
     "Full Description:": "Research Quarter 2 commences"
   },
   {
@@ -1056,7 +1209,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 3-due date for payment of tuition fees"
   },
   {
@@ -1076,7 +1232,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 3-census date/last date to drop courses or cancel enrolment without financial liability and academic penalty"
   },
   {
@@ -1095,7 +1254,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1 classes recommence after mid-semester break**Some variations to the Academic Calendar are approved annually on a program-by-program basis."
   },
   {
@@ -1112,7 +1274,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:examinations@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1 mid-semester Saturday examinations"
   },
   {
@@ -1129,7 +1294,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:examinations@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1 mid-semester Saturday examinations"
   },
   {
@@ -1149,7 +1317,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "ANZAC Day public holiday"
   },
   {
@@ -1169,7 +1340,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1-last date to drop courses or cancel enrolment without academic penalty"
   },
   {
@@ -1190,7 +1364,10 @@
     "Name:": "UQ Graduate School",
     "Phone:": "+61 7 3346 0503",
     "Email:": "mailto:graduateschool@uq.edu.au",
-    "Org.Unit:": "Graduate School",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
     "Full Description:": "Research Quarter 2-census date/final date to cancel without financial penalty"
   },
   {
@@ -1207,7 +1384,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:examinations@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1 mid-semester Saturday deferred examinations"
   },
   {
@@ -1227,7 +1407,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Labour Day public holiday"
   },
   {
@@ -1247,7 +1430,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1 classes end**Some variations to the Academic Calendar are approved annually on a program-by-program basis."
   },
   {
@@ -1267,7 +1453,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 3-classes end"
   },
   {
@@ -1287,7 +1476,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 4-final date for addition of courses or alteration of enrolment"
   },
   {
@@ -1306,7 +1498,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1 revision period 27 May-31 May 2024"
   },
   {
@@ -1326,7 +1521,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Summer Semester 2024/2025 enrolments open"
   },
   {
@@ -1346,7 +1544,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 4-classes commence/due date to enrol"
   },
   {
@@ -1366,7 +1567,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1-last date to withdraw from a course in mySI-net incurring financial liability and academic penalty"
   },
   {
@@ -1387,7 +1591,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:examinations@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1 examination period 1-15 June 2024"
   },
   {
@@ -1407,7 +1614,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 4-census date/last date to drop courses or cancel enrolment without financial liability and academic penalty"
   },
   {
@@ -1427,7 +1637,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 4-due date for payment of tuition fees"
   },
   {
@@ -1446,7 +1659,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1 examination period ends/Semester 1 ends"
   },
   {
@@ -1466,7 +1682,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 4-classes end"
   },
   {
@@ -1486,7 +1705,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 5-classes commence/due date to enrol"
   },
   {
@@ -1506,7 +1728,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 5-final date for addition of courses or alteration of enrolment"
   },
   {
@@ -1526,7 +1751,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:examinations@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1 finalisation of grades"
   },
   {
@@ -1546,7 +1774,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2-first date to request a program change through mySI-net(provisional)"
   },
   {
@@ -1565,7 +1796,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Cross-institutional and Non-award study-due date for enrolment for Semester 2Administrative charges apply for late enrolment."
   },
   {
@@ -1586,7 +1820,10 @@
     "Name:": "UQ Graduate School",
     "Phone:": "+61 7 3346 0503",
     "Email:": "mailto:graduateschool@uq.edu.au",
-    "Org.Unit:": "Graduate School",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
     "Full Description:": "Research Quarter 2 ends"
   },
   {
@@ -1606,7 +1843,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Progression Improvement Plan due for students who were issued a progression intervention notice in an earlier semester and have interrupted their studies,who wish to return in Semester 2 2024"
   },
   {
@@ -1627,7 +1867,10 @@
     "Name:": "UQ Graduate School",
     "Phone:": "+61 7 3346 0503",
     "Email:": "mailto:graduateschool@uq.edu.au",
-    "Org.Unit:": "Graduate School",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
     "Full Description:": "Research Quarter 3 commences"
   },
   {
@@ -1647,7 +1890,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Universities Australia Common Vacation Week"
   },
   {
@@ -1667,7 +1913,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 5-due date for payment of tuition fees"
   },
   {
@@ -1687,7 +1936,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 5-census date/last date to drop courses or cancel enrolment without financial liability and academic penalty"
   },
   {
@@ -1708,7 +1960,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 9194",
     "Email:": "mailto:graduations@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Graduations period 8-12 July 2024"
   },
   {
@@ -1728,7 +1983,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2-last date to request a program change through mySI-net"
   },
   {
@@ -1748,7 +2006,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2-due date to enrol*for domestic students*Some variations are approved annually on a program-by-program basis."
   },
   {
@@ -1768,7 +2029,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Mid-year Orientation Week 15-19 July 2024"
   },
   {
@@ -1789,7 +2053,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:examinations@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1 deferred and supplementary examination period 16-19 July 2024"
   },
   {
@@ -1809,7 +2076,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2-due date to enrol*for international students*Some variations are approved annually on a program-by-program basis."
   },
   {
@@ -1828,7 +2098,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2 classes commence**Some variations to the Academic Calendar are approved annually on a program-by-program basis."
   },
   {
@@ -1849,7 +2122,10 @@
     "Name:": "UQ Graduate School",
     "Phone:": "+61 7 3346 0503",
     "Email:": "mailto:graduateschool@uq.edu.au",
-    "Org.Unit:": "Graduate School",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
     "Full Description:": "Research Quarter 3-census date/final date to cancel without financial penalty"
   },
   {
@@ -1869,7 +2145,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2-last date for addition of courses or alteration of enrolment"
   },
   {
@@ -1890,7 +2169,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:fees@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2-due date for payment of tuition fees"
   },
   {
@@ -1909,7 +2191,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Royal Queensland Show public holiday(Gatton area only-Gatton campus closed)(provisional)"
   },
   {
@@ -1929,7 +2214,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Royal Queensland Show public holiday(Brisbane Area only-St Lucia and Herston Campus closed)"
   },
   {
@@ -1949,7 +2237,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 5-classes end"
   },
   {
@@ -1969,7 +2260,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 6-classes commence/due date to enrol"
   },
   {
@@ -1989,7 +2283,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 6-final date for addition of courses or alteration of enrolment"
   },
   {
@@ -2009,7 +2306,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 6-due date for payment of tuition fees"
   },
   {
@@ -2029,7 +2329,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 6-census date/last date to drop courses or cancel enrolment without financial liability and academic penalty"
   },
   {
@@ -2046,7 +2349,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:examinations@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2 mid-semester Saturday examinations"
   },
   {
@@ -2067,7 +2373,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:fees@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2 Census Date-last date to withdraw from Semester 2 course(s)or cancel enrolment through mySI-net without financial liability"
   },
   {
@@ -2084,7 +2393,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:examinations@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2 mid-semester Saturday examinations"
   },
   {
@@ -2101,7 +2413,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:examinations@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2 mid-semester Saturday examinations"
   },
   {
@@ -2120,7 +2435,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2 classes end before mid-semester break"
   },
   {
@@ -2140,7 +2458,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Universities Australia Common Vacation Week"
   },
   {
@@ -2159,7 +2480,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2 mid-semester break commences**Some variations to the Academic Calendar are approved annually on a program-by-program basis."
   },
   {
@@ -2179,7 +2503,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2-last date to drop courses or cancel enrolment without academic penalty"
   },
   {
@@ -2200,7 +2527,10 @@
     "Name:": "UQ Graduate School",
     "Phone:": "+61 7 3346 0503",
     "Email:": "mailto:graduateschool@uq.edu.au",
-    "Org.Unit:": "Graduate School",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
     "Full Description:": "Research Quarter 3 ends"
   },
   {
@@ -2219,7 +2549,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2 classes recommence after mid-semester break**Some variations to the Academic Calendar are approved annually on a program-by-program basis."
   },
   {
@@ -2240,7 +2573,10 @@
     "Name:": "UQ Graduate School",
     "Phone:": "+61 7 3346 0503",
     "Email:": "mailto:graduateschool@uq.edu.au",
-    "Org.Unit:": "Graduate School",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
     "Full Description:": "Research Quarter 4 commences"
   },
   {
@@ -2257,7 +2593,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:examinations@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2 mid-semester Saturday deferred examinations"
   },
   {
@@ -2277,7 +2616,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "King’s Birthday public holiday"
   },
   {
@@ -2297,7 +2639,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 6-classes end"
   },
   {
@@ -2317,7 +2662,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 7-classes commence/due date to enrol"
   },
   {
@@ -2337,7 +2685,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 7-final date for addition of courses or alteration of enrolment"
   },
   {
@@ -2357,7 +2708,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2 classes end**Some variations to the Academic Calendar are approved annually on a program-by-program basis."
   },
   {
@@ -2377,7 +2731,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 7-due date for payment of tuition fees"
   },
   {
@@ -2397,7 +2754,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 7-census date/last date to drop courses or cancel enrolment without financial liability and academic penalty"
   },
   {
@@ -2416,7 +2776,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2 revision period 28 October-1 November 2024"
   },
   {
@@ -2435,7 +2798,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Cross-institutional and Non-award study-due date for enrolment for Summer SemesterAdministrative charges apply for late enrolment."
   },
   {
@@ -2455,7 +2821,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2-last date to withdraw from a course in mySI-net incurring financial liability and academic penalty"
   },
   {
@@ -2476,7 +2845,10 @@
     "Name:": "UQ Graduate School",
     "Phone:": "+61 7 3346 0503",
     "Email:": "mailto:graduateschool@uq.edu.au",
-    "Org.Unit:": "Graduate School",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
     "Full Description:": "Research Quarter 4-census date/final date to cancel without financial penalty"
   },
   {
@@ -2497,7 +2869,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:examinations@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2 examination period 2-16 November 2024"
   },
   {
@@ -2517,7 +2892,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Summer Semester 2024/2025-due date for enrolmentDue date for domestic and international students.Administrative charges apply for late enrolment."
   },
   {
@@ -2537,7 +2915,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2 examination period ends/Semester 2 ends"
   },
   {
@@ -2557,7 +2938,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 7-classes end"
   },
   {
@@ -2577,7 +2961,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 8-final date for addition of courses or alteration of enrolment"
   },
   {
@@ -2596,7 +2983,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 1 and 2 2025 enrolments open for continuing students"
   },
   {
@@ -2616,7 +3006,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 8-classes commence/due date to enrol"
   },
   {
@@ -2636,7 +3029,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 8-due date for payment of tuition fees"
   },
   {
@@ -2656,7 +3052,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 8-census date/last date to drop courses or cancel enrolment without financial liability and academic penalty"
   },
   {
@@ -2676,7 +3075,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Summer Semester 2024/2025 classes commence(provisional)"
   },
   {
@@ -2697,7 +3099,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:examinations@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2 finalisation of grades"
   },
   {
@@ -2718,7 +3123,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 9194",
     "Email:": "mailto:graduations@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Graduations period 2-20 December 2024"
   },
   {
@@ -2738,7 +3146,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Summer Semester 2024/2025-final date for addition or substitution of courses"
   },
   {
@@ -2759,7 +3170,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2328",
     "Email:": "mailto:fees@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Summer Semester 2024/2025-due date for payment of tuition fees"
   },
   {
@@ -2780,7 +3194,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:examinations@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Semester 2 deferred and supplementary examination period 10-13 December 2024"
   },
   {
@@ -2800,7 +3217,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Teaching Period 8-classes end"
   },
   {
@@ -2821,7 +3241,10 @@
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
     "Email:": "mailto:fees@uq.edu.au",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Summer Semester 2024/2025 Census Date-last date to withdraw from Summer Semester course(s)or cancel enrolment through mySI-net without financial liability"
   },
   {
@@ -2841,7 +3264,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Summer Semester 2024/2025 classes end before mid-semester break(provisional)"
   },
   {
@@ -2861,7 +3287,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Summer Semester 2024/2025 mid-semester break commences"
   },
   {
@@ -2881,7 +3310,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Christmas Day public holiday"
   },
   {
@@ -2901,7 +3333,10 @@
     ],
     "Name:": "Student Centre",
     "Phone:": "+61 7 3365 2600",
-    "Org.Unit:": "Academic Services Division",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
     "Full Description:": "Christmas Day/Boxing Day public holiday"
   },
   {
@@ -2922,7 +3357,10 @@
     "Name:": "UQ Graduate School",
     "Phone:": "+61 7 3346 0503",
     "Email:": "mailto:graduateschool@uq.edu.au",
-    "Org.Unit:": "Graduate School",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
     "Full Description:": "Research Quarter 4 ends"
   }
 ]

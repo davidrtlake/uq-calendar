@@ -1,3 +1,4 @@
+require("dotenv").config();
 const browserObject = require("./browser");
 const scraperController = require("./pageController");
 
