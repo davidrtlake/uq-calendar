@@ -8,7 +8,7 @@ const scraperObject = {
     let scrapedData = [];
     // Wait for the required DOM to be rendered
     await page.waitForSelector("div#show-events");
-    // Get the link to all the required books
+    // Get the link to all the calender events
     let urls = await page.$$eval("ul.events-lists > li", (links) => {
       // Filter out elements that do not contain an 'a' tag
       links = links
@@ -18,16 +18,13 @@ const scraperObject = {
       return links;
     });
 
-    function sleep(ms) {
-      return new Promise((resolve) => setTimeout(resolve, ms));
-    }
-
     // Loop through each of those links, open a new page instance and get the relevant data from them
-    let pagePromise = (link) =>
+    let pagePromise = (link, count) =>
       new Promise(async (resolve, reject) => {
         let dataObj = {};
         let newPage = await browser.newPage();
         await newPage.goto(link);
+        dataObj["id"] = parseInt(count) + 1;
         dataObj["title"] = await newPage.$eval(
           "#page-head > h1",
           (text) => text.textContent
@@ -113,14 +110,18 @@ const scraperObject = {
 
     for (link in urls) {
       console.log(`Navigating to ${urls[link]}...`);
-      let currentPageData = await pagePromise(urls[link]);
+      let currentPageData = await pagePromise(urls[link], link);
       sleep(2000);
-      // break;
       scrapedData.push(currentPageData);
+      // break;
     }
     await page.close();
     return scrapedData;
   },
 };
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 module.exports = scraperObject;

@@ -1,0 +1,3512 @@
+[
+  {
+    "id": 1,
+    "title": "New Year's Day public holiday",
+    "Date:": "Monday,01 January 2024",
+    "Time:": "All Day",
+    "URL:": "https://www.qld.gov.au/recreation/travel/holidays/public",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "New Year's Day public holiday"
+  },
+  {
+    "id": 2,
+    "title": "Research Quarter 1 commences",
+    "Date:": "Monday,01 January 2024",
+    "Time:": "All Day",
+    "URL:": "https://graduate-school.uq.edu.au/research-quarters",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "UQ Graduate School",
+    "Phone:": "+61 7 3346 0503",
+    "Email:": "mailto:graduateschool@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
+    "Full Description:": "Research Quarter 1 commences"
+  },
+  {
+    "id": 3,
+    "title": "Summer Semester 2023/2024 classes recommence after mid-semester break",
+    "Date:": "Tuesday,02 January 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Summer Semester 2023/2024 classes recommence after mid-semester break"
+  },
+  {
+    "id": 4,
+    "title": "Semester 1 2024 - first date to request a program change through mySI-net",
+    "Date:": "Tuesday,02 January 2024",
+    "Time:": "All Day",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61733652600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1 first date to request a program change through mySI-net"
+  },
+  {
+    "id": 5,
+    "title": "Teaching Period 1 - classes commence/due date to enrol",
+    "Date:": "Tuesday,02 January 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 1-classes commence/due date to enrol"
+  },
+  {
+    "id": 6,
+    "title": "Summer Semester 2023/2024 - last date to drop courses or cancel enrolment without academic penalty",
+    "Date:": "Tuesday,02 January 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Summer Semester 2023/2024-last date to drop courses or cancel enrolment without academic penalty"
+  },
+  {
+    "id": 7,
+    "title": "Teaching Period 1 - final date for addition of courses or alteration of enrolment",
+    "Date:": "Tuesday,02 January 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 1-final date for addition of courses or alteration of enrolment"
+  },
+  {
+    "id": 8,
+    "title": "Progression Improvement Plan due for students who were issued a progression intervention notice in an earlier semester and have interrupted their studies, who wish to return in Semester 1 2024",
+    "Date:": "Friday,05 January 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/node/266/0#0",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Progression Improvement Plan due for students who were issued a progression intervention notice in an earlier semester and have interrupted their studies,who wish to return in Semester 1 2024"
+  },
+  {
+    "id": 9,
+    "title": "Teaching Period 1 - census date/last date to drop courses or cancel enrolment without financial liability and academic penalty",
+    "Date:": "Tuesday,09 January 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 1-census date/last date to drop courses or cancel enrolment without financial liability and academic penalty"
+  },
+  {
+    "id": 10,
+    "title": "Teaching Period 1 - due date for payment of tuition fees",
+    "Date:": "Tuesday,09 January 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 1-due date for payment of tuition fees"
+  },
+  {
+    "id": 11,
+    "title": "Semester 1 - My Timetable opens for preferencing at 12:00pm",
+    "Date:": "Monday,15 January 2024",
+    "Time:": "12:00 pm",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=7",
+        "tagsText": "Other events"
+      }
+    ],
+    "Name:": "Examinations and Timetable Services",
+    "Phone:": "+61 7 3365 2488",
+    "Email:": "mailto:timetabling@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1-My Timetable opens for preferencing at 12:00pm"
+  },
+  {
+    "id": 12,
+    "title": "Australia Day public holiday",
+    "Date:": "Friday,26 January 2024",
+    "Time:": "All Day",
+    "URL:": "https://www.qld.gov.au/recreation/travel/holidays/public",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Australia Day public holiday"
+  },
+  {
+    "id": 13,
+    "title": "Teaching Period 1 - classes end",
+    "Date:": "Saturday,27 January 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 1-classes end"
+  },
+  {
+    "id": 14,
+    "title": "Summer Semester 2023/2024 classes end",
+    "Date:": "Saturday,27 January 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Summer Semester 2023/2024 classes end"
+  },
+  {
+    "id": 15,
+    "title": "Teaching Period 2 - classes commence/due date to enrol",
+    "Date:": "Monday,29 January 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 2-classes commence/due date to enrol"
+  },
+  {
+    "id": 16,
+    "title": "Semester 1 - My Timetable preferencing closes at 9:00am.",
+    "Date:": "Monday,29 January 2024",
+    "Time:": "9:00 am",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=7",
+        "tagsText": "Other events"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Examinations and Timetable Services",
+    "Phone:": "+61 7 3365 2488",
+    "Email:": "mailto:timetabling@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1-My Timetable preferencing closes at 9:00am.Classes set to‘OFF’during preference allocation period."
+  },
+  {
+    "id": 17,
+    "title": "Teaching Period 2 - final date for addition of courses or alteration of enrolment",
+    "Date:": "Monday,29 January 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 2-final date for addition of courses or alteration of enrolment"
+  },
+  {
+    "id": 18,
+    "title": "Semester 1 - due date to enrol* for domestic students",
+    "Date:": "Monday,29 January 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-sign",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1-due date to enrol*for domestic students*Some variations are approved annually on a program-by-program basis."
+  },
+  {
+    "id": 19,
+    "title": "Summer Semester 2023/2024 revision period 29 January - 2 February 2024",
+    "Date:": "Monday,29 January 2024-Friday,02 February 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Summer Semester 2023/2024 revision period 29 January-2 February 2024"
+  },
+  {
+    "id": 20,
+    "title": "Cross-institutional and Non-award study - due date for enrolment for Semester 1",
+    "Date:": "Wednesday,31 January 2024",
+    "Time:": "All Day",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Cross-institutional and Non-award study-due date for enrolment for Semester 1Administrative charges apply for late enrolment."
+  },
+  {
+    "id": 21,
+    "title": "Research Quarter 1 - census date/final date to cancel without financial penalty",
+    "Date:": "Thursday,01 February 2024",
+    "Time:": "All Day",
+    "URL:": "https://graduate-school.uq.edu.au/research-quarters",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "UQ Graduate School",
+    "Phone:": "+61 7 3346 0503",
+    "Email:": "mailto:graduateschool@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
+    "Full Description:": "Research Quarter 1-census date/final date to cancel without financial penalty"
+  },
+  {
+    "id": 22,
+    "title": "Summer Semester 2023/2024 - last date to withdraw from a course in mySI-net incurring financial liability and academic penalty",
+    "Date:": "Friday,02 February 2024",
+    "Time:": "9:00 am",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Summer Semester 2023/2024-last date to withdraw from a course in mySI-net incurring financial liability and academic penalty"
+  },
+  {
+    "id": 23,
+    "title": "Summer Semester 2023/2024 examination period 3 - 10 February 2024",
+    "Date:": "Saturday,03 February 2024-Saturday,10 February 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:examinations@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Summer Semester 2023/2024 examination period 3-10 February 2024"
+  },
+  {
+    "id": 24,
+    "title": "Semester 1 - My Timetable personal timetable released at 12:00pm, and open for allocation adjustment.",
+    "Date:": "Monday,05 February 2024",
+    "Time:": "12:00 pm",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=7",
+        "tagsText": "Other events"
+      }
+    ],
+    "Name:": "Examinations and Timetable Services",
+    "Phone:": "+61 7 3365 2488",
+    "Email:": "mailto:timetabling@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1-My Timetable personal timetable released at 12:00pm,and open for allocation adjustment."
+  },
+  {
+    "id": 25,
+    "title": "Teaching Period 2 - due date for payment of tuition fees",
+    "Date:": "Monday,05 February 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 2-due date for payment of tuition fees"
+  },
+  {
+    "id": 26,
+    "title": "Semester 1 - My Timetable unavailable from 8:00am to 12:00pm",
+    "Date:": "Monday,05 February 2024",
+    "Time:": "8:00 am",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=7",
+        "tagsText": "Other events"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Examinations and Timetable Services",
+    "Phone:": "+61 7 3365 2488",
+    "Email:": "mailto:timetabling@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1-My Timetable unavailable from 8:00am to 12:00pm"
+  },
+  {
+    "id": 27,
+    "title": "Semester 1 - last date to request a program change through mySI-net",
+    "Date:": "Friday,09 February 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/node/316/0",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1-last date to request a program change through mySI-net"
+  },
+  {
+    "id": 28,
+    "title": "Teaching Period 2 - census date/last date to drop courses or cancel enrolment without financial liability and academic penalty",
+    "Date:": "Friday,09 February 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 2-census date/last date to drop courses or cancel enrolment without financial liability and academic penalty"
+  },
+  {
+    "id": 29,
+    "title": "Summer Semester 2023/2024 examinations end and Summer Semester 2023/2024 ends",
+    "Date:": "Saturday,10 February 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Summer Semester 2023/2024 examinations end and Summer Semester 2023/2024 ends"
+  },
+  {
+    "id": 30,
+    "title": "Orientation Week 12 - 16 February 2024",
+    "Date:": "Monday,12 February 2024-Friday,16 February 2024",
+    "Time:": "All Day",
+    "URL:": "https://orientation.uq.edu.au/",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Orientation Week 12-16 February 2024"
+  },
+  {
+    "id": 31,
+    "title": "Semester 1 - due date to enrol* for international students",
+    "Date:": "Friday,16 February 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-sign",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1-due date to enrol*for international students"
+  },
+  {
+    "id": 32,
+    "title": "Semester 1 classes commence*",
+    "Date:": "Monday,19 February 2024",
+    "Time:": "All Day",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1 classes commence**Some variations to the Academic Calendar are approved annually on a program-by-program basis."
+  },
+  {
+    "id": 33,
+    "title": "Summer Semester 2023/2024 finalisation of grades",
+    "Date:": "Thursday,22 February 2024",
+    "Time:": "All Day",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:examinations@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Summer Semester 2023/2024 finalisation of grades"
+  },
+  {
+    "id": 34,
+    "title": "Semester 1 - final date for addition of courses or alteration of enrolment",
+    "Date:": "Friday,01 March 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/node/212/1#1",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1-final date for addition of courses or alteration of enrolment"
+  },
+  {
+    "id": 35,
+    "title": "Semester 1 - due date for payment of tuition fees",
+    "Date:": "Friday,01 March 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/fees-payments-and-refunds",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:fees@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1-due date for payment of tuition fees"
+  },
+  {
+    "id": 36,
+    "title": "Semester 1 - My Timetable allocation adjustment finishes at 9:00am",
+    "Date:": "Monday,04 March 2024",
+    "Time:": "9:00 am",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=7",
+        "tagsText": "Other events"
+      }
+    ],
+    "Name:": "Examinations and Timetable Services",
+    "Phone:": "+61 7 3365 2488",
+    "Email:": "mailto:timetabling@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1-My Timetable allocation adjustment finishes at 9:00am."
+  },
+  {
+    "id": 37,
+    "title": "Summer Semester 2023/2024 deferred and supplementary examinations",
+    "Date:": "Saturday,09 March 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:examinations@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Summer Semester 2023/2024 deferred and supplementary examinations"
+  },
+  {
+    "id": 38,
+    "title": "Teaching Period 2 - classes end",
+    "Date:": "Saturday,23 March 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 2-classes end"
+  },
+  {
+    "id": 39,
+    "title": "Semester 1 mid-semester Saturday examinations",
+    "Date:": "Saturday,23 March 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:examinations@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1 mid-semester Saturday examinations"
+  },
+  {
+    "id": 40,
+    "title": "Teaching Period 3 - classes commence/due date to enrol",
+    "Date:": "Monday,25 March 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 3-classes commence/due date to enrol"
+  },
+  {
+    "id": 41,
+    "title": "Teaching Period 3 - final date for addition of courses or alteration of enrolment",
+    "Date:": "Monday,25 March 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 3-final date for addition of courses or alteration of enrolment"
+  },
+  {
+    "id": 42,
+    "title": "Semester 1 classes end before mid-semester break",
+    "Date:": "Thursday,28 March 2024",
+    "Time:": "All Day",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1 classes end before mid-semester break"
+  },
+  {
+    "id": 43,
+    "title": "Good Friday public holiday",
+    "Date:": "Friday,29 March 2024",
+    "Time:": "All Day",
+    "URL:": "https://www.qld.gov.au/recreation/travel/holidays/public",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Good Friday public holiday"
+  },
+  {
+    "id": 44,
+    "title": "Easter Saturday public holiday",
+    "Date:": "Saturday,30 March 2024",
+    "Time:": "All Day",
+    "URL:": "https://www.qld.gov.au/recreation/travel/holidays/public",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Easter Saturday public holiday"
+  },
+  {
+    "id": 45,
+    "title": "Easter Sunday public holiday",
+    "Date:": "Sunday,31 March 2024",
+    "Time:": "All Day",
+    "URL:": "https://www.qld.gov.au/recreation/travel/holidays/public",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Easter Sunday public holiday"
+  },
+  {
+    "id": 46,
+    "title": "Research Quarter 1 ends",
+    "Date:": "Sunday,31 March 2024",
+    "Time:": "All Day",
+    "URL:": "https://graduate-school.uq.edu.au/research-quarters",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "UQ Graduate School",
+    "Phone:": "+61 7 3346 0503",
+    "Email:": "mailto:graduateschool@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
+    "Full Description:": "Research Quarter 1 ends"
+  },
+  {
+    "id": 47,
+    "title": "Semester 1 Census Date - last date to withdraw from Semester 1 course(s) or cancel enrolment through mySI-net without financial liability",
+    "Date:": "Sunday,31 March 2024",
+    "Time:": "All Day",
+    "URL:": "https://dictionary.uq.edu.au/terminology/census-date",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:fees@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1 Census Date-last date to withdraw from Semester 1 course(s)or cancel enrolment through mySI-net without financial liability"
+  },
+  {
+    "id": 48,
+    "title": "Semester 1 mid-semester break commences*",
+    "Date:": "Monday,01 April 2024",
+    "Time:": "All Day",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1 mid-semester break commences**Some variations to the Academic Calendar are approved annually on a program-by-program basis."
+  },
+  {
+    "id": 49,
+    "title": "Universities Australia Common Vacation Week",
+    "Date:": "Monday,01 April 2024-Friday,05 April 2024",
+    "Time:": "All Day",
+    "URL:": "https://www.universitiesaustralia.edu.au/australias-universities/teaching-calendar#.XBMVHzNoSiN",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Universities Australia Common Vacation Week"
+  },
+  {
+    "id": 50,
+    "title": "Easter Monday public holiday",
+    "Date:": "Monday,01 April 2024",
+    "Time:": "All Day",
+    "URL:": "https://www.qld.gov.au/recreation/travel/holidays/public",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Easter Monday public holiday"
+  },
+  {
+    "id": 51,
+    "title": "Research Quarter 2 commences",
+    "Date:": "Monday,01 April 2024",
+    "Time:": "All Day",
+    "URL:": "https://graduate-school.uq.edu.au/research-quarters",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "UQ Graduate School",
+    "Phone:": "+61 7 3346 0503",
+    "Email:": "mailto:graduateschool@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
+    "Full Description:": "Research Quarter 2 commences"
+  },
+  {
+    "id": 52,
+    "title": "Teaching Period 3 - due date for payment of tuition fees",
+    "Date:": "Tuesday,02 April 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 3-due date for payment of tuition fees"
+  },
+  {
+    "id": 53,
+    "title": "Teaching Period 3 - census date/last date to drop courses or cancel enrolment without financial liability and academic penalty",
+    "Date:": "Friday,05 April 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 3-census date/last date to drop courses or cancel enrolment without financial liability and academic penalty"
+  },
+  {
+    "id": 54,
+    "title": "Semester 1 classes recommence after mid-semester break*",
+    "Date:": "Monday,08 April 2024",
+    "Time:": "All Day",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1 classes recommence after mid-semester break**Some variations to the Academic Calendar are approved annually on a program-by-program basis."
+  },
+  {
+    "id": 55,
+    "title": "Semester 1 mid-semester Saturday examinations",
+    "Date:": "Saturday,13 April 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:examinations@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1 mid-semester Saturday examinations"
+  },
+  {
+    "id": 56,
+    "title": "Semester 1 mid-semester Saturday examinations",
+    "Date:": "Saturday,20 April 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:examinations@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1 mid-semester Saturday examinations"
+  },
+  {
+    "id": 57,
+    "title": "ANZAC Day public holiday",
+    "Date:": "Thursday,25 April 2024",
+    "Time:": "All Day",
+    "URL:": "https://www.qld.gov.au/recreation/travel/holidays/public",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "ANZAC Day public holiday"
+  },
+  {
+    "id": 58,
+    "title": "Semester 1 - last date to drop courses or cancel enrolment without academic penalty",
+    "Date:": "Tuesday,30 April 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1-last date to drop courses or cancel enrolment without academic penalty"
+  },
+  {
+    "id": 59,
+    "title": "Research Quarter 2 - census date/final date to cancel without financial penalty",
+    "Date:": "Wednesday,01 May 2024",
+    "Time:": "All Day",
+    "URL:": "https://graduate-school.uq.edu.au/research-quarters",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "UQ Graduate School",
+    "Phone:": "+61 7 3346 0503",
+    "Email:": "mailto:graduateschool@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
+    "Full Description:": "Research Quarter 2-census date/final date to cancel without financial penalty"
+  },
+  {
+    "id": 60,
+    "title": "Semester 1 mid-semester Saturday deferred examinations",
+    "Date:": "Saturday,04 May 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:examinations@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1 mid-semester Saturday deferred examinations"
+  },
+  {
+    "id": 61,
+    "title": "Labour Day public holiday",
+    "Date:": "Monday,06 May 2024",
+    "Time:": "All Day",
+    "URL:": "https://www.qld.gov.au/recreation/travel/holidays/public",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Labour Day public holiday"
+  },
+  {
+    "id": 62,
+    "title": "Semester 1 classes end*",
+    "Date:": "Saturday,25 May 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1 classes end**Some variations to the Academic Calendar are approved annually on a program-by-program basis."
+  },
+  {
+    "id": 63,
+    "title": "Teaching Period 3 - classes end",
+    "Date:": "Saturday,25 May 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 3-classes end"
+  },
+  {
+    "id": 64,
+    "title": "Teaching Period 4 - final date for addition of courses or alteration of enrolment",
+    "Date:": "Monday,27 May 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 4-final date for addition of courses or alteration of enrolment"
+  },
+  {
+    "id": 65,
+    "title": "Semester 1 revision period 27 May - 31 May 2024",
+    "Date:": "Monday,27 May 2024-Friday,31 May 2024",
+    "Time:": "All Day",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1 revision period 27 May-31 May 2024"
+  },
+  {
+    "id": 66,
+    "title": "Summer Semester 2024/2025 enrolments open",
+    "Date:": "Monday,27 May 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Summer Semester 2024/2025 enrolments open"
+  },
+  {
+    "id": 67,
+    "title": "Teaching Period 4 - classes commence/due date to enrol",
+    "Date:": "Monday,27 May 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 4-classes commence/due date to enrol"
+  },
+  {
+    "id": 68,
+    "title": "Semester 1 - last date to withdraw from a course in mySI-net incurring financial liability and academic penalty",
+    "Date:": "Friday,31 May 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1-last date to withdraw from a course in mySI-net incurring financial liability and academic penalty"
+  },
+  {
+    "id": 69,
+    "title": "Semester 1 examination period 1 - 15 June 2024",
+    "Date:": "Saturday,01 June 2024-Saturday,15 June 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:examinations@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1 examination period 1-15 June 2024"
+  },
+  {
+    "id": 70,
+    "title": "Teaching Period 4 - census date/last date to drop courses or cancel enrolment without financial liability and academic penalty",
+    "Date:": "Monday,03 June 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 4-census date/last date to drop courses or cancel enrolment without financial liability and academic penalty"
+  },
+  {
+    "id": 71,
+    "title": "Teaching Period 4 - due date for payment of tuition fees",
+    "Date:": "Monday,03 June 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 4-due date for payment of tuition fees"
+  },
+  {
+    "id": 72,
+    "title": "Semester 1 examination period ends/Semester 1 ends",
+    "Date:": "Saturday,15 June 2024",
+    "Time:": "All Day",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1 examination period ends/Semester 1 ends"
+  },
+  {
+    "id": 73,
+    "title": "Teaching Period 4 - classes end",
+    "Date:": "Saturday,22 June 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 4-classes end"
+  },
+  {
+    "id": 74,
+    "title": "Teaching Period 5 - classes commence/due date to enrol",
+    "Date:": "Monday,24 June 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 5-classes commence/due date to enrol"
+  },
+  {
+    "id": 75,
+    "title": "Teaching Period 5 - final date for addition of courses or alteration of enrolment",
+    "Date:": "Monday,24 June 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 5-final date for addition of courses or alteration of enrolment"
+  },
+  {
+    "id": 76,
+    "title": "Semester 1 finalisation of grades",
+    "Date:": "Wednesday,26 June 2024",
+    "Time:": "All Day",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:examinations@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1 finalisation of grades"
+  },
+  {
+    "id": 77,
+    "title": "Semester 2 - first date to request a program change through mySI-net",
+    "Date:": "Wednesday,26 June 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/node/316/0",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2-first date to request a program change through mySI-net(provisional)"
+  },
+  {
+    "id": 78,
+    "title": "Cross-institutional and Non-award study - due date for enrolment for Semester 2",
+    "Date:": "Sunday,30 June 2024",
+    "Time:": "All Day",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Cross-institutional and Non-award study-due date for enrolment for Semester 2Administrative charges apply for late enrolment."
+  },
+  {
+    "id": 79,
+    "title": "Research Quarter 2 ends",
+    "Date:": "Sunday,30 June 2024",
+    "Time:": "All Day",
+    "URL:": "https://graduate-school.uq.edu.au/research-quarters",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "UQ Graduate School",
+    "Phone:": "+61 7 3346 0503",
+    "Email:": "mailto:graduateschool@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
+    "Full Description:": "Research Quarter 2 ends"
+  },
+  {
+    "id": 80,
+    "title": "Progression Improvement Plan due for students who were issued a progression intervention notice in an earlier semester and have interrupted their studies, who wish to return in Semester 2 2024",
+    "Date:": "Sunday,30 June 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/node/266/0#0",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Progression Improvement Plan due for students who were issued a progression intervention notice in an earlier semester and have interrupted their studies,who wish to return in Semester 2 2024"
+  },
+  {
+    "id": 81,
+    "title": "Research Quarter 3 commences",
+    "Date:": "Monday,01 July 2024",
+    "Time:": "All Day",
+    "URL:": "https://graduate-school.uq.edu.au/research-quarters",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "UQ Graduate School",
+    "Phone:": "+61 7 3346 0503",
+    "Email:": "mailto:graduateschool@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
+    "Full Description:": "Research Quarter 3 commences"
+  },
+  {
+    "id": 82,
+    "title": "Universities Australia Common Vacation Week",
+    "Date:": "Monday,01 July 2024-Friday,05 July 2024",
+    "Time:": "All Day",
+    "URL:": "https://www.universitiesaustralia.edu.au/australias-universities/teaching-calendar#.Wt6dG5q-miM",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Universities Australia Common Vacation Week"
+  },
+  {
+    "id": 83,
+    "title": "Teaching Period 5 - due date for payment of tuition fees",
+    "Date:": "Monday,01 July 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 5-due date for payment of tuition fees"
+  },
+  {
+    "id": 84,
+    "title": "Teaching Period 5 - census date/last date to drop courses or cancel enrolment without financial liability and academic penalty",
+    "Date:": "Friday,05 July 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 5-census date/last date to drop courses or cancel enrolment without financial liability and academic penalty"
+  },
+  {
+    "id": 85,
+    "title": "Graduations period 8 - 12 July 2024",
+    "Date:": "Monday,08 July 2024-Friday,12 July 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/graduation",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 9194",
+    "Email:": "mailto:graduations@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Graduations period 8-12 July 2024"
+  },
+  {
+    "id": 86,
+    "title": "Semester 2 - last date to request a program change through mySI-net",
+    "Date:": "Friday,12 July 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/node/316/0",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2-last date to request a program change through mySI-net"
+  },
+  {
+    "id": 87,
+    "title": "Semester 2 - due date to enrol* for domestic students",
+    "Date:": "Friday,12 July 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-sign",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2-due date to enrol*for domestic students*Some variations are approved annually on a program-by-program basis."
+  },
+  {
+    "id": 88,
+    "title": "Mid-year Orientation Week 15 - 19 July 2024",
+    "Date:": "Monday,15 July 2024-Friday,19 July 2024",
+    "Time:": "All Day",
+    "URL:": "https://orientation.uq.edu.au/",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Mid-year Orientation Week 15-19 July 2024"
+  },
+  {
+    "id": 89,
+    "title": "Semester 1 deferred and supplementary examination period 16 - 19 July 2024",
+    "Date:": "Tuesday,16 July 2024-Friday,19 July 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:examinations@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1 deferred and supplementary examination period 16-19 July 2024"
+  },
+  {
+    "id": 90,
+    "title": "Semester 2 - due date to enrol* for international students",
+    "Date:": "Friday,19 July 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-sign",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2-due date to enrol*for international students*Some variations are approved annually on a program-by-program basis."
+  },
+  {
+    "id": 91,
+    "title": "Semester 2 classes commence*",
+    "Date:": "Monday,22 July 2024",
+    "Time:": "All Day",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2 classes commence**Some variations to the Academic Calendar are approved annually on a program-by-program basis."
+  },
+  {
+    "id": 92,
+    "title": "Research Quarter 3 - census date/final date to cancel without financial penalty",
+    "Date:": "Thursday,01 August 2024",
+    "Time:": "All Day",
+    "URL:": "https://graduate-school.uq.edu.au/research-quarters",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "UQ Graduate School",
+    "Phone:": "+61 7 3346 0503",
+    "Email:": "mailto:graduateschool@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
+    "Full Description:": "Research Quarter 3-census date/final date to cancel without financial penalty"
+  },
+  {
+    "id": 93,
+    "title": "Semester 2 - last date for addition of courses or alteration of enrolment",
+    "Date:": "Friday,02 August 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/node/212/1#1",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2-last date for addition of courses or alteration of enrolment"
+  },
+  {
+    "id": 94,
+    "title": "Semester 2 - due date for payment of tuition fees",
+    "Date:": "Friday,02 August 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/fees-payments-and-refunds",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:fees@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2-due date for payment of tuition fees"
+  },
+  {
+    "id": 95,
+    "title": "Royal Queensland Show public holiday (Gatton area only - Gatton campus closed) (provisional)",
+    "Date:": "Monday,12 August 2024",
+    "Time:": "All Day",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Royal Queensland Show public holiday(Gatton area only-Gatton campus closed)(provisional)"
+  },
+  {
+    "id": 96,
+    "title": "Royal Queensland Show public holiday (Brisbane Area only - St Lucia and Herston Campus closed)",
+    "Date:": "Wednesday,14 August 2024",
+    "Time:": "All Day",
+    "URL:": "https://www.qld.gov.au/recreation/travel/holidays/public",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Royal Queensland Show public holiday(Brisbane Area only-St Lucia and Herston Campus closed)"
+  },
+  {
+    "id": 97,
+    "title": "Teaching Period 5 - classes end",
+    "Date:": "Saturday,17 August 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 5-classes end"
+  },
+  {
+    "id": 98,
+    "title": "Teaching Period 6 - classes commence/due date to enrol",
+    "Date:": "Monday,19 August 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 6-classes commence/due date to enrol"
+  },
+  {
+    "id": 99,
+    "title": "Teaching Period 6 - final date for addition of courses or alteration of enrolment",
+    "Date:": "Monday,19 August 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 6-final date for addition of courses or alteration of enrolment"
+  },
+  {
+    "id": 100,
+    "title": "Teaching Period 6 - due date for payment of tuition fees",
+    "Date:": "Monday,26 August 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 6-due date for payment of tuition fees"
+  },
+  {
+    "id": 101,
+    "title": "Teaching Period 6 - census date/last date to drop courses or cancel enrolment without financial liability and academic penalty",
+    "Date:": "Friday,30 August 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 6-census date/last date to drop courses or cancel enrolment without financial liability and academic penalty"
+  },
+  {
+    "id": 102,
+    "title": "Semester 2 mid-semester Saturday examinations",
+    "Date:": "Saturday,31 August 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:examinations@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2 mid-semester Saturday examinations"
+  },
+  {
+    "id": 103,
+    "title": "Semester 2 Census Date - last date to withdraw from Semester 2 course(s) or cancel enrolment through mySI-net without financial liability",
+    "Date:": "Saturday,31 August 2024",
+    "Time:": "All Day",
+    "URL:": "https://dictionary.uq.edu.au/terminology/census-date",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:fees@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2 Census Date-last date to withdraw from Semester 2 course(s)or cancel enrolment through mySI-net without financial liability"
+  },
+  {
+    "id": 104,
+    "title": "Semester 2 mid-semester Saturday examinations",
+    "Date:": "Saturday,07 September 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:examinations@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2 mid-semester Saturday examinations"
+  },
+  {
+    "id": 105,
+    "title": "Semester 2 mid-semester Saturday examinations",
+    "Date:": "Saturday,14 September 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:examinations@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2 mid-semester Saturday examinations"
+  },
+  {
+    "id": 106,
+    "title": "Semester 2 classes end before mid-semester break",
+    "Date:": "Saturday,21 September 2024",
+    "Time:": "All Day",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2 classes end before mid-semester break"
+  },
+  {
+    "id": 107,
+    "title": "Universities Australia Common Vacation Week",
+    "Date:": "Monday,23 September 2024-Friday,27 September 2024",
+    "Time:": "All Day",
+    "URL:": "https://www.universitiesaustralia.edu.au/australias-universities/teaching-calendar#.Wt7HZ5q-miN",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Universities Australia Common Vacation Week"
+  },
+  {
+    "id": 108,
+    "title": "Semester 2 mid-semester break commences*",
+    "Date:": "Monday,23 September 2024",
+    "Time:": "All Day",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2 mid-semester break commences**Some variations to the Academic Calendar are approved annually on a program-by-program basis."
+  },
+  {
+    "id": 109,
+    "title": "Semester 2 - last date to drop courses or cancel enrolment without academic penalty",
+    "Date:": "Monday,30 September 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2-last date to drop courses or cancel enrolment without academic penalty"
+  },
+  {
+    "id": 110,
+    "title": "Research Quarter 3 ends",
+    "Date:": "Monday,30 September 2024",
+    "Time:": "All Day",
+    "URL:": "https://graduate-school.uq.edu.au/research-quarters",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "UQ Graduate School",
+    "Phone:": "+61 7 3346 0503",
+    "Email:": "mailto:graduateschool@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
+    "Full Description:": "Research Quarter 3 ends"
+  },
+  {
+    "id": 111,
+    "title": "Semester 2 classes recommence after mid-semester break*",
+    "Date:": "Monday,30 September 2024",
+    "Time:": "All Day",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2 classes recommence after mid-semester break**Some variations to the Academic Calendar are approved annually on a program-by-program basis."
+  },
+  {
+    "id": 112,
+    "title": "Research Quarter 4 commences",
+    "Date:": "Tuesday,01 October 2024",
+    "Time:": "All Day",
+    "URL:": "https://graduate-school.uq.edu.au/research-quarters",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "UQ Graduate School",
+    "Phone:": "+61 7 3346 0503",
+    "Email:": "mailto:graduateschool@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
+    "Full Description:": "Research Quarter 4 commences"
+  },
+  {
+    "id": 113,
+    "title": "Semester 2 mid-semester Saturday deferred examinations",
+    "Date:": "Saturday,05 October 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:examinations@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2 mid-semester Saturday deferred examinations"
+  },
+  {
+    "id": 114,
+    "title": "King’s Birthday public holiday",
+    "Date:": "Monday,07 October 2024",
+    "Time:": "All Day",
+    "URL:": "https://www.qld.gov.au/recreation/travel/holidays/public",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "King’s Birthday public holiday"
+  },
+  {
+    "id": 115,
+    "title": "Teaching Period 6 - classes end",
+    "Date:": "Saturday,19 October 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 6-classes end"
+  },
+  {
+    "id": 116,
+    "title": "Teaching Period 7 - classes commence/due date to enrol",
+    "Date:": "Monday,21 October 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 7-classes commence/due date to enrol"
+  },
+  {
+    "id": 117,
+    "title": "Teaching Period 7 - final date for addition of courses or alteration of enrolment",
+    "Date:": "Monday,21 October 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 7-final date for addition of courses or alteration of enrolment"
+  },
+  {
+    "id": 118,
+    "title": "Semester 2 classes end*",
+    "Date:": "Saturday,26 October 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2 classes end**Some variations to the Academic Calendar are approved annually on a program-by-program basis."
+  },
+  {
+    "id": 119,
+    "title": "Teaching Period 7 - due date for payment of tuition fees",
+    "Date:": "Monday,28 October 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 7-due date for payment of tuition fees"
+  },
+  {
+    "id": 120,
+    "title": "Teaching Period 7 - census date/last date to drop courses or cancel enrolment without financial liability and academic penalty",
+    "Date:": "Monday,28 October 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 7-census date/last date to drop courses or cancel enrolment without financial liability and academic penalty"
+  },
+  {
+    "id": 121,
+    "title": "Semester 2 revision period 28 October - 1 November 2024",
+    "Date:": "Monday,28 October 2024-Friday,01 November 2024",
+    "Time:": "All Day",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2 revision period 28 October-1 November 2024"
+  },
+  {
+    "id": 122,
+    "title": "Cross-institutional and Non-award study - due date for enrolment for Summer Semester",
+    "Date:": "Thursday,31 October 2024",
+    "Time:": "All Day",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Cross-institutional and Non-award study-due date for enrolment for Summer SemesterAdministrative charges apply for late enrolment."
+  },
+  {
+    "id": 123,
+    "title": "Semester 2 - last date to withdraw from a course in mySI-net incurring financial liability and academic penalty",
+    "Date:": "Friday,01 November 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2-last date to withdraw from a course in mySI-net incurring financial liability and academic penalty"
+  },
+  {
+    "id": 124,
+    "title": "Research Quarter 4 - census date/final date to cancel without financial penalty",
+    "Date:": "Friday,01 November 2024",
+    "Time:": "All Day",
+    "URL:": "https://graduate-school.uq.edu.au/research-quarters",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "UQ Graduate School",
+    "Phone:": "+61 7 3346 0503",
+    "Email:": "mailto:graduateschool@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
+    "Full Description:": "Research Quarter 4-census date/final date to cancel without financial penalty"
+  },
+  {
+    "id": 125,
+    "title": "Semester 2 examination period 2 - 16 November 2024",
+    "Date:": "Saturday,02 November 2024-Saturday,16 November 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:examinations@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2 examination period 2-16 November 2024"
+  },
+  {
+    "id": 126,
+    "title": "Summer Semester 2024/2025 - due date for enrolment",
+    "Date:": "Friday,08 November 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Summer Semester 2024/2025-due date for enrolmentDue date for domestic and international students.Administrative charges apply for late enrolment."
+  },
+  {
+    "id": 127,
+    "title": "Semester 2 examination period ends/Semester 2 ends",
+    "Date:": "Saturday,16 November 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2 examination period ends/Semester 2 ends"
+  },
+  {
+    "id": 128,
+    "title": "Teaching Period 7 - classes end",
+    "Date:": "Saturday,16 November 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 7-classes end"
+  },
+  {
+    "id": 129,
+    "title": "Teaching Period 8 - final date for addition of courses or alteration of enrolment",
+    "Date:": "Monday,18 November 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 8-final date for addition of courses or alteration of enrolment"
+  },
+  {
+    "id": 130,
+    "title": "Semester 1 and 2 2025 enrolments open for continuing students",
+    "Date:": "Monday,18 November 2024",
+    "Time:": "All Day",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 1 and 2 2025 enrolments open for continuing students"
+  },
+  {
+    "id": 131,
+    "title": "Teaching Period 8 - classes commence/due date to enrol",
+    "Date:": "Monday,18 November 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 8-classes commence/due date to enrol"
+  },
+  {
+    "id": 132,
+    "title": "Teaching Period 8 - due date for payment of tuition fees",
+    "Date:": "Monday,25 November 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 8-due date for payment of tuition fees"
+  },
+  {
+    "id": 133,
+    "title": "Teaching Period 8 - census date/last date to drop courses or cancel enrolment without financial liability and academic penalty",
+    "Date:": "Monday,25 November 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 8-census date/last date to drop courses or cancel enrolment without financial liability and academic penalty"
+  },
+  {
+    "id": 134,
+    "title": "Summer Semester 2024/2025 classes commence",
+    "Date:": "Monday,25 November 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Summer Semester 2024/2025 classes commence(provisional)"
+  },
+  {
+    "id": 135,
+    "title": "Semester 2 finalisation of grades",
+    "Date:": "Wednesday,27 November 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:examinations@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2 finalisation of grades"
+  },
+  {
+    "id": 136,
+    "title": "Graduations period 2 - 20 December 2024",
+    "Date:": "Monday,02 December 2024-Friday,20 December 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/graduation",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 9194",
+    "Email:": "mailto:graduations@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Graduations period 2-20 December 2024"
+  },
+  {
+    "id": 137,
+    "title": "Summer Semester 2024/2025 - final date for addition or substitution of courses (provisional)",
+    "Date:": "Friday,06 December 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/node/212/1#1",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Summer Semester 2024/2025-final date for addition or substitution of courses"
+  },
+  {
+    "id": 138,
+    "title": "Summer Semester 2024/2025 - due date for payment of tuition fees (provisional)",
+    "Date:": "Friday,06 December 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/fees-payments-and-refunds",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2328",
+    "Email:": "mailto:fees@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Summer Semester 2024/2025-due date for payment of tuition fees"
+  },
+  {
+    "id": 139,
+    "title": "Semester 2 deferred and supplementary examination period 10 - 13 December 2024",
+    "Date:": "Tuesday,10 December 2024-Friday,13 December 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:examinations@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Semester 2 deferred and supplementary examination period 10-13 December 2024"
+  },
+  {
+    "id": 140,
+    "title": "Teaching Period 8 - classes end",
+    "Date:": "Saturday,14 December 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/about-your-timetable/teaching-period-calendar",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Teaching Period 8-classes end"
+  },
+  {
+    "id": 141,
+    "title": "Summer Semester 2024/2025 Census Date - last date to withdraw from Summer Semester course(s) or cancel enrolment through mySI-net without financial liability",
+    "Date:": "Wednesday,18 December 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Email:": "mailto:fees@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Summer Semester 2024/2025 Census Date-last date to withdraw from Summer Semester course(s)or cancel enrolment through mySI-net without financial liability"
+  },
+  {
+    "id": 142,
+    "title": "Summer Semester 2024/2025 classes end before mid-semester break (provisional)",
+    "Date:": "Saturday,21 December 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Summer Semester 2024/2025 classes end before mid-semester break(provisional)"
+  },
+  {
+    "id": 143,
+    "title": "Summer Semester 2024/2025 mid-semester break commences",
+    "Date:": "Sunday,22 December 2024",
+    "Time:": "All Day",
+    "URL:": "https://my.uq.edu.au/information-and-services/manage-my-program/summer-semester",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Summer Semester 2024/2025 mid-semester break commences"
+  },
+  {
+    "id": 144,
+    "title": "Christmas Day public holiday",
+    "Date:": "Wednesday,25 December 2024",
+    "Time:": "All Day",
+    "URL:": "https://www.qld.gov.au/recreation/travel/holidays/public",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Christmas Day public holiday"
+  },
+  {
+    "id": 145,
+    "title": "Boxing Day public holiday",
+    "Date:": "Thursday,26 December 2024",
+    "Time:": "All Day",
+    "URL:": "https://www.qld.gov.au/recreation/travel/holidays/public",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "Student Centre",
+    "Phone:": "+61 7 3365 2600",
+    "Org.Unit:": {
+      "org_unit": "Academic Services Division",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=1150"
+    },
+    "Full Description:": "Christmas Day/Boxing Day public holiday"
+  },
+  {
+    "id": 146,
+    "title": "Research Quarter 4 ends",
+    "Date:": "Tuesday,31 December 2024",
+    "Time:": "All Day",
+    "URL:": "https://graduate-school.uq.edu.au/research-quarters",
+    "Event category(s):": [
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=16",
+        "tagsText": "Academic Calendar"
+      },
+      {
+        "tagsUrl": "https://www.uq.edu.au/events/calendar_view.php?category_id=3",
+        "tagsText": "Student matters"
+      }
+    ],
+    "Name:": "UQ Graduate School",
+    "Phone:": "+61 7 3346 0503",
+    "Email:": "mailto:graduateschool@uq.edu.au",
+    "Org.Unit:": {
+      "org_unit": "Graduate School",
+      "org_unit_url": "http://www.uq.edu.au/departments/unit.html?unit=186"
+    },
+    "Full Description:": "Research Quarter 4 ends"
+  }
+]
