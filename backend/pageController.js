@@ -1,4 +1,5 @@
 const pageScraper = require("./pageScraper");
+const path = require("path");
 const fs = require("fs");
 
 async function scrapeAll(browserInstance) {
@@ -8,10 +9,13 @@ async function scrapeAll(browserInstance) {
     let scrapedData = await pageScraper.scraper(browser);
     await browser.close();
 
-    const fileName = "data_3";
+    const fileName = "data";
+    const directory = path.join(__dirname, "data", "2025", fileName);
+    console.log(directory);
+    console.log(directory + ".json");
 
     fs.writeFile(
-      fileName + ".json",
+      directory + ".json",
       JSON.stringify(scrapedData),
       "utf8",
       function (err) {
@@ -19,7 +23,7 @@ async function scrapeAll(browserInstance) {
           return console.log(err);
         }
         console.log(
-          `The data has been scraped and saved successfully! View it at './${fileName}.json'`
+          `The data has been scraped and saved successfully! View it at '${directory}.json'`
         );
       }
     );
