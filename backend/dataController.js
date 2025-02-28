@@ -1,3 +1,4 @@
+require("dotenv").config();
 const mysql = require("mysql2");
 
 const writeToFile = false;
@@ -72,10 +73,15 @@ function sendEventsToDB() {
 }
 
 function getEntriesFromDB() {
-  pool.query("SELECT * FROM events", (err, result) => {
-    if (err) throw err;
-    console.log("Requesting data.");
-    console.log(result);
+  return new Promise((resolve, reject) => {
+    pool.query("SELECT * FROM events", (err, result) => {
+      if (err) {
+        console.error("Database error:", err);
+        return reject(err);
+      }
+      console.log("Requesting data.");
+      resolve(result); // Return result as a resolved promise
+    });
   });
 }
 
