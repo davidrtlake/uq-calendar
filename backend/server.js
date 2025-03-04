@@ -13,6 +13,7 @@ app.get("/api/events", async (req, res) => {
     const events = await dataController.getEntriesFromDB(); // Await the database query
     res.json(events); // Send the data as JSON
   } catch (error) {
+    console.error("❌ Error fetching events:", error.message);
     res.status(500).json({ error: "Internal server error" });
   }
 });

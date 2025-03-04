@@ -1,5 +1,5 @@
 require("dotenv").config();
-const mysql = require("mysql2");
+const mysql = require("mysql2/promise");
 
 const writeToFile = false;
 
@@ -21,24 +21,21 @@ const pool = mysql.createPool({
   queueLimit: 0,
 });
 
-function sendEventsToDB() {
-  pool.connect((err) => {
-    if (err) return console.error(err.message);
+async function sendEventsToDB() {
+  try {
     console.log("Insert events into events table.");
-    console.log("Connected to the MySQL server.");
+    // Execute the DELETE query on the events table
+    await pool.query("DELETE FROM events");
+    console.log("Events table cleared.");
     let eventCols = [
       `end_date`,
       `event_id`,
       `period`,
       `start_date`,
+      `sub_period`,
       `title`,
       `url`,
     ];
-    // Execute the DELETE query on the events table
-    pool.query("DELETE FROM events", (err, result) => {
-      if (err) throw err;
-      console.log("Events table cleared.");
-    });
 
     let id = 1;
     for (let year of scrapedData) {
@@ -47,7 +44,7 @@ function sendEventsToDB() {
           for (let day of month["days"]) {
             let sql = `INSERT INTO events (${eventCols.join(
               ", "
-            )}) VALUES (?, ?, ?, ?, ?, ?)`;
+            )}) VALUES (?, ?, ?, ?, ?, ?, ?)`;
             let [startDate, endDate] = convertDate(
               day["date"],
               month["name"],
@@ -58,31 +55,36 @@ function sendEventsToDB() {
               id++,
               period["name"],
               startDate,
+              month["name"],
               day["description"],
               day["link"],
             ];
             console.log(`Inserted row ${id - 1}`);
-            pool.query(sql, entryData, (err, result) => {
-              if (err) throw err;
-            });
+
+            // Use async/await for database queries
+            await pool.query(sql, entryData);
           }
         }
       }
     }
-  });
+  } catch (err) {
+    console.error("Database error:", err.message);
+  }
 }
 
-function getEntriesFromDB() {
-  return new Promise((resolve, reject) => {
-    pool.query("SELECT * FROM events", (err, result) => {
-      if (err) {
-        console.error("Database error:", err);
-        return reject(err);
-      }
-      console.log("Requesting data.");
-      resolve(result); // Return result as a resolved promise
-    });
-  });
+async function getEntriesFromDB() {
+  try {
+    const [rows] = await pool.query("SELECT * FROM events"); // ✅ Use await, no callbacks.
+    console.log("✅ Fetched events.", rows[0]);
+    for (const [key, value] of Object.entries(rows[0])) {
+      console.log("");
+      console.log(key, value, typeof value);
+    }
+    return rows; // Return the fetched data.
+  } catch (err) {
+    console.error("❌ Database error:", err.message);
+    throw err; // Ensure error is caught in Express route.
+  }
 }
 
 function sendTagsToDB() {
@@ -174,6 +176,7 @@ function convertDate(date, month, year) {
   let endMonth = "";
 
   for (let l of date) {
+    // Find the start and end months. They will only be 3 chars long.
     if (startMonth.length < 3) {
       startMonth += l.match(/[A-Za-z]/g) ? l : "";
     } else {
