@@ -1,34 +1,37 @@
-import "./Day.css";
+import "./Components.css";
 
-interface Props {
+interface Event {
+  event_id: number;
   title: string;
-  url: string;
+  period: string;
+  sub_period: string;
   start_date: Date;
+  end_date: Date;
+  url: string;
 }
 
-const Day = ({ title, url, start_date }: Props) => {
-  const monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
+interface Props {
+  date: string;
+  events: Event[];
+}
 
+const Day = ({ date, events }: Props) => {
   return (
     <>
-      <h4>
-        {monthNames[start_date.getMonth()]} {start_date.getDate()}
-      </h4>
-      <h4 className="truncate">{title}</h4>
-      <p>{url}</p>
+      <div className="day">
+        <h4 className="date-num">{date}</h4>
+        {events.map((e, i) => (
+          <p key={i} className="truncate event">
+            {e.url ? (
+              <a href={e.url} target="_blank" rel="noopener noreferrer">
+                {e.title}
+              </a>
+            ) : (
+              e.title
+            )}
+          </p>
+        ))}
+      </div>
     </>
   );
 };

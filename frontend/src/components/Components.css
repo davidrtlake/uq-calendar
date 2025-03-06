@@ -1,0 +1,45 @@
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+          line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr;
+  column-gap: 0.5%;
+  row-gap: 1%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.month {
+  border: 1px solid rgba(255, 255, 255, 0.87);
+}
+
+.day {
+  border: 1px solid rgba(255, 255, 255, 0.87);
+  height: 150px;
+  min-width: 90px;
+}
+
+.date-num {
+  margin-block-start: 0.25em;
+  margin-inline-start: 0.25em;
+  margin-block-end: 0.5em;
+}
+
+.event {
+  margin-block-start: 0em;
+  margin-block-end: 0.5em;
+  border: 1px solid rgba(255, 255, 255, 0.87);
+  font-weight: 200;
+  font-size: 14px;
+}

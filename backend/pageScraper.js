@@ -51,7 +51,10 @@ const scraperObject = {
 
         for (let p of contentWrapper.querySelectorAll("h3")) {
           // Iterating over periods.
-          let period = { name: p.textContent.trim(), months: [] };
+          let period = {
+            name: p.textContent.trim().replace(/\u{2013}/gu, "-"),
+            months: [],
+          };
           // console.log("P");
           // console.log(p.nodeName, p.textContent);
           for (let m of [
