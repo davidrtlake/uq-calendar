@@ -18,4 +18,5 @@ fieldset {
   border-color: rgb(255, 255, 255, 0.5);
   border-style: dashed;
   margin-right: 10px;
+  min-width: 7em;
 }

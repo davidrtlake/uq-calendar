@@ -16,6 +16,17 @@ const scraperObject = {
     const getYearData = async (year) => {
       return await page.evaluate((targetYear) => {
         let periods = [];
+        const charMap = {
+          "\u200B": "",
+          "\u2013": "-",
+          "\u00A0": " ",
+        };
+        const cleanText = (inputText) => {
+          // console.log(inputText, typeof inputText);
+          return inputText
+            .trim()
+            .replace(/[\u200B\u2013\u00A0]/g, (match) => charMap[match]);
+        };
         // Find all h2 elements
         const h2Elements = [...document.querySelectorAll("h2, h3")];
 
@@ -52,7 +63,7 @@ const scraperObject = {
         for (let p of contentWrapper.querySelectorAll("h3")) {
           // Iterating over periods.
           let period = {
-            name: p.textContent.trim().replace(/\u{2013}/gu, "-"),
+            name: cleanText(p.textContent),
             months: [],
           };
           // console.log("P");
@@ -63,7 +74,7 @@ const scraperObject = {
             // Iterating over months.
             if (m.nodeName === "H4") {
               // Check if month name or list of days.
-              let month = { name: m.textContent.trim(), days: [] };
+              let month = { name: cleanText(m.textContent), days: [] };
               period["months"].push(month);
             } else if (m.nodeName === "UL") {
               for (let li of m.children) {
@@ -90,9 +101,9 @@ const scraperObject = {
                   desc = desc.slice(1);
                 }
                 let day = {
-                  date: date.normalize("NFC"),
-                  description: desc,
-                  link: link.normalize("NFC"),
+                  date: cleanText(date),
+                  description: cleanText(desc),
+                  link: cleanText(link),
                 };
                 period["months"][period["months"].length - 1]["days"].push(day);
               }

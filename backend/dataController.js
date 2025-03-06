@@ -165,9 +165,10 @@ function connectTagsAndEvents() {
 
 function convertDate(date, month, year) {
   const dateLen = date.length;
-  // console.log("");
-  // console.log(date, date.length);
+  console.log("");
+  console.log(date, date.length);
 
+  // Get all digits from the sub period and see if it's a year, then replace with current year.
   let monthNums = month.replace(/[A-Za-z\s]+/g, "");
   if (monthNums.startsWith("20")) {
     year = monthNums;
@@ -189,7 +190,7 @@ function convertDate(date, month, year) {
   }
 
   date = date.replace(/[A-Za-z\s]+/g, "").replace(/\u{2013}/gu, "-");
-  // console.log(date, date.length);
+  console.log(date, date.length);
 
   let startDate = date.split("-")[0];
   let endDate = date.split("-")[1] || startDate;
@@ -203,18 +204,18 @@ function convertDate(date, month, year) {
   startMonth = convertMonthToNumber(startMonth);
   endMonth = convertMonthToNumber(endMonth);
 
-  // console.log(
-  //   startDate,
-  //   endDate,
-  //   startMonth,
-  //   endMonth,
-  //   "month",
-  //   month,
-  //   "year",
-  //   year,
-  //   "monthNums",
-  //   monthNums
-  // );
+  console.log(
+    startDate,
+    endDate,
+    startMonth,
+    endMonth,
+    "month",
+    month,
+    "year",
+    year,
+    "monthNums",
+    monthNums
+  );
 
   if (dateLen > 6 && startDate === endDate) {
     throw new Error("Start and end date should be different.");
@@ -227,7 +228,7 @@ function convertDate(date, month, year) {
 
   startDate = `${year}-${startMonth}-${startDate}`;
   endDate = `${year}-${endMonth}-${endDate}`;
-  // console.log(startDate, endDate);
+  console.log(startDate, endDate);
 
   return [startDate, endDate];
 }
@@ -236,43 +237,30 @@ function convertMonthToNumber(month) {
   switch (month) {
     case "Jan":
       return "01";
-      break;
     case "Feb":
       return "02";
-      break;
     case "Mar":
       return "03";
-      break;
     case "Apr":
       return "04";
-      break;
     case "May":
       return "05";
-      break;
     case "Jun":
       return "06";
-      break;
     case "Jul":
       return "07";
-      break;
     case "Aug":
       return "08";
-      break;
     case "Sep":
       return "09";
-      break;
     case "Oct":
       return "10";
-      break;
     case "Nov":
       return "11";
-      break;
     case "Dec":
       return "12";
-      break;
     default:
       throw new Error("Invalid month");
-      return month;
       break;
   }
 }
