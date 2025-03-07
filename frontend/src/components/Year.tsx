@@ -1,5 +1,5 @@
-import "./Components.css";
 import Month from "./Month";
+import "./Year.css";
 
 // Define a type for your events
 interface Event {
@@ -57,8 +57,8 @@ const Year = ({ year, currDay, events }: Props) => {
   return (
     <>
       <div>
-        <h1>{year} Events</h1>
-        <div className="flex-container">
+        <h1>{year}</h1>
+        <div className="flex-container-column">
           {monthLens.map((length, i) => (
             <div key={i} className="month">
               <Month

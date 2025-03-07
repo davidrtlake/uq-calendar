@@ -165,8 +165,8 @@ function connectTagsAndEvents() {
 
 function convertDate(date, month, year) {
   const dateLen = date.length;
-  console.log("");
-  console.log(date, date.length);
+  // console.log("");
+  // console.log(date, date.length);
 
   // Get all digits from the sub period and see if it's a year, then replace with current year.
   let monthNums = month.replace(/[A-Za-z\s]+/g, "");
@@ -190,7 +190,7 @@ function convertDate(date, month, year) {
   }
 
   date = date.replace(/[A-Za-z\s]+/g, "").replace(/\u{2013}/gu, "-");
-  console.log(date, date.length);
+  // console.log(date, date.length);
 
   let startDate = date.split("-")[0];
   let endDate = date.split("-")[1] || startDate;
@@ -204,18 +204,18 @@ function convertDate(date, month, year) {
   startMonth = convertMonthToNumber(startMonth);
   endMonth = convertMonthToNumber(endMonth);
 
-  console.log(
-    startDate,
-    endDate,
-    startMonth,
-    endMonth,
-    "month",
-    month,
-    "year",
-    year,
-    "monthNums",
-    monthNums
-  );
+  // console.log(
+  //   startDate,
+  //   endDate,
+  //   startMonth,
+  //   endMonth,
+  //   "month",
+  //   month,
+  //   "year",
+  //   year,
+  //   "monthNums",
+  //   monthNums
+  // );
 
   if (dateLen > 6 && startDate === endDate) {
     throw new Error("Start and end date should be different.");
@@ -228,7 +228,7 @@ function convertDate(date, month, year) {
 
   startDate = `${year}-${startMonth}-${startDate}`;
   endDate = `${year}-${endMonth}-${endDate}`;
-  console.log(startDate, endDate);
+  // console.log(startDate, endDate);
 
   return [startDate, endDate];
 }

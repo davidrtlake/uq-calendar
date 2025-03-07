@@ -1,5 +1,5 @@
 import Day from "./Day";
-import "./Components.css";
+import "./Month.css";
 
 // Define a type for your events
 interface Event {
@@ -53,12 +53,17 @@ const Month = ({ startDay, monthLength, monthName, events }: Props) => {
       <h2>{monthName}</h2>
       <div className="container">
         {daysOfTheWeek.map((day, i) => (
-          <div key={i}>{day}</div>
+          <div
+            key={i}
+            style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.56)" }}
+          >
+            {day}
+          </div>
         ))}
         {fillerDays}
         {days.map((dayList, i) => {
           return (
-            <div key={i}>
+            <div key={i} className="day">
               <Day date={`${i + 1}`} events={dayList} />
             </div>
           );

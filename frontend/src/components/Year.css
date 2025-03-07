@@ -1,0 +1,11 @@
+.flex-container-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.month {
+  /* border: 1px solid rgba(255, 255, 255, 0.87); */
+  overflow: visible;
+  height: auto;
+  padding-block-end: 1em;
+}

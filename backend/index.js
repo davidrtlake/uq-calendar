@@ -9,5 +9,5 @@ const dataController = require("./dataController");
 // scraperController(browserInstance);
 
 // dataController.connectTagsAndEvents();
-dataController.sendEventsToDB();
+// dataController.sendEventsToDB();
 // dataController.getEntriesFromDB();

@@ -1,7 +1,9 @@
 #root {
-  margin: 0 auto;
-  padding: 2rem;
+  margin: auto;
+  padding: 2rem 1rem 0 1rem;
   text-align: left;
+  --timetable-stripes-light: rgba(255, 255, 255, 0.2);
+  --timetable-stripes-dark: rgba(255, 255, 255, 0.1);
 }
 
 .body-flex-container {
@@ -15,6 +17,7 @@
 
 fieldset {
   position: sticky;
+  top: 10%; /* Adjust as needed */
   border-color: rgb(255, 255, 255, 0.5);
   border-style: dashed;
   margin-right: 10px;
