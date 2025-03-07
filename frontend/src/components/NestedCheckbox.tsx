@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./NestedCheckbox.css";
 
 interface CheckedYear {
@@ -10,26 +10,15 @@ interface Props {
   allYears: number[];
   allPeriods: string[];
   checkHandler: (p: string, y: number) => void;
+  checkedState: Map<number, CheckedYear>;
 }
 
-const NestedCheckbox = ({ allYears, allPeriods, checkHandler }: Props) => {
-  const [checkedState, setCheckedState] = useState<Map<number, CheckedYear>>( // Need to bundle it all into a Map of sets in App.tsx
-    () => {
-      const checkboxLayout = new Map<number, CheckedYear>();
-      let newChildPeriods: Map<string, boolean>;
-      for (let y of allYears) {
-        newChildPeriods = new Map<string, boolean>(); // Tidy up, forEach?
-        for (let p of allPeriods) {
-          newChildPeriods.set(p, true);
-        }
-        checkboxLayout.set(y, {
-          checked: true,
-          childPeriods: new Map<string, boolean>(newChildPeriods),
-        });
-      }
-      return checkboxLayout;
-    }
-  );
+const NestedCheckbox = ({
+  allYears,
+  allPeriods,
+  checkHandler,
+  checkedState,
+}: Props) => {
   const [shownContent, setShownContent] = useState<Map<number, boolean>>(() => {
     const defaultShownContent = new Map<number, boolean>();
     allYears.forEach((y) => defaultShownContent.set(y, false));
@@ -54,25 +43,6 @@ const NestedCheckbox = ({ allYears, allPeriods, checkHandler }: Props) => {
   //   console.log(checkboxLayout);
   // }, []);
 
-  function localCheckHandler(p: string, y: number) {
-    // Need to bundle it all into a Map of sets in App.tsx
-    const newCS = new Map<number, CheckedYear>(checkedState);
-    if (p.length === 0) {
-      // If year checked/unchecked, then also toggle children.
-      newCS.set(y, {
-        checked: !newCS.get(y)?.checked,
-        childPeriods: newCS.get(y)?.childPeriods,
-      });
-    } else {
-      // If a child is checked/unchecked, check if all children are ticked or all unticked now.
-      newCS.set(y, {
-        checked: !newCS.get(y)?.checked,
-        childPeriods: newCS.get(y)?.childPeriods,
-      });
-    }
-    setCheckedState(newCS);
-  }
-
   function buttonClickHandler(y: number) {
     const newShownContent = new Map<number, boolean>(shownContent);
     newShownContent.set(y, !newShownContent.get(y));
@@ -91,7 +61,7 @@ const NestedCheckbox = ({ allYears, allPeriods, checkHandler }: Props) => {
                 id={`${y}`}
                 name={`${y}`}
                 checked={checkedState.get(y)?.checked ?? true}
-                onChange={() => localCheckHandler("", y)}
+                onChange={() => checkHandler("", y)}
               />
               <label htmlFor={`${y}`}>{`${y}`}</label>
             </div>
@@ -113,12 +83,12 @@ const NestedCheckbox = ({ allYears, allPeriods, checkHandler }: Props) => {
               <li key={j}>
                 <input
                   type="checkbox"
-                  id={`${y}p`}
-                  name={`${y}p`}
-                  defaultChecked={true}
-                  onChange={() => checkHandler(p, 0)}
+                  id={`${y}${p}`}
+                  name={`${y}${p}`}
+                  checked={checkedState.get(y)?.childPeriods?.get(p) ?? true}
+                  onChange={() => checkHandler(p, y)}
                 />
-                <label htmlFor={`${y}p`}>{p}</label>
+                <label htmlFor={`${y}${p}`}>{p}</label>
               </li>
             ))}
           </div>

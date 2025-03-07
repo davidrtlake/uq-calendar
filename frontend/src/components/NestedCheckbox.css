@@ -1,7 +1,7 @@
 ul {
   list-style: none;
   margin-block-start: 0em;
-  margin-block-end: 0em;
+  margin-block-end: 0.2em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   padding-inline-start: 0px;
@@ -17,6 +17,7 @@ li {
   width: 100%;
   cursor: pointer;
   border: 1px solid rgb(255, 255, 255, 0.5);
+  border-radius: 0.3em;
   text-align: left;
   outline: none;
   font-size: 15px;

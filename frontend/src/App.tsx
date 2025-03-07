@@ -14,10 +14,19 @@ interface Event {
   url: string;
 }
 
+interface CheckedYear {
+  checked: boolean;
+  childPeriods: Map<string, boolean> | undefined;
+}
+
 function App() {
   const [events, setEvents] = useState<Event[]>([]); // State is set of periods to use.
   const [activePeriods, setActivePeriods] = useState<Set<string>>(new Set());
   const [activeYears, setActiveYears] = useState<Set<number>>(new Set());
+  const [activeYearPeriods, setActiveYearPeriods] = useState<
+    Map<number, Set<string>>
+  >(new Map());
+  const allYears: number[] = [2025, 2026, 2024, 2023];
   const allPeriods: string[] = [
     "Semester 1",
     "Semester 2",
@@ -28,7 +37,23 @@ function App() {
     "Summer Semester (2024-25)",
     "Summer Semester (2023-24)",
   ]; // Maybe replace this with something automatic (state) / just use activePeriods.
-  const allYears: number[] = [2025, 2026, 2024, 2023];
+  const [checkedState, setCheckedState] = useState<Map<number, CheckedYear>>(
+    () => {
+      const checkboxLayout = new Map<number, CheckedYear>();
+      let newChildPeriods: Map<string, boolean>;
+      for (let y of allYears) {
+        newChildPeriods = new Map<string, boolean>();
+        for (let p of allPeriods) {
+          newChildPeriods.set(p, true);
+        }
+        checkboxLayout.set(y, {
+          checked: true,
+          childPeriods: new Map(newChildPeriods),
+        });
+      }
+      return checkboxLayout;
+    }
+  );
   const year: number = 2025;
   let currDay: number = 3;
 
@@ -53,12 +78,49 @@ function App() {
     }
   }
 
-  // useEffect(() => {
-  //   console.log("Caught update.", activePeriods);
-  //   setEvents((prevEvents) =>
-  //     prevEvents.filter((e) => activePeriods.has(e.period))
-  //   );
-  // }, [activePeriods]);
+  function checkBoxHandler(p: string, y: number) {
+    // Need to bundle it all into a Map of sets in App.tsx
+    const newCS = new Map<number, CheckedYear>(checkedState);
+    if (p.length === 0) {
+      // If year checked/unchecked, then also toggle children.
+      // Clone the children.
+      const childPeriodsCopy = new Map<string, boolean>(
+        newCS.get(y)?.childPeriods
+      );
+      // Set all the children to parent.
+      childPeriodsCopy.forEach((value, key) => {
+        console.log(key, !newCS.get(y)?.checked);
+        childPeriodsCopy.set(key, !newCS.get(y)?.checked);
+      });
+      newCS.set(y, {
+        checked: !newCS.get(y)?.checked,
+        childPeriods: childPeriodsCopy,
+      });
+    } else {
+      // If a child is checked/unchecked.
+      // Toggle the child state.
+      newCS.get(y)?.childPeriods?.set(p, !newCS.get(y)?.childPeriods?.get(p));
+
+      // Check if all children are ticked or all unticked now.
+      const target: number = newCS.get(y)?.childPeriods?.size ?? 0;
+      let sum: number = 0;
+      newCS.get(y)?.childPeriods?.forEach((value) => {
+        value && sum++;
+      });
+      if (sum === 0 || !newCS.get(y)?.childPeriods?.get(p)) {
+        newCS.set(y, {
+          checked: false,
+          childPeriods: newCS.get(y)?.childPeriods,
+        });
+      } else if (sum === target) {
+        newCS.set(y, {
+          checked: true,
+          childPeriods: newCS.get(y)?.childPeriods,
+        });
+      }
+    }
+    setCheckedState(newCS);
+  }
 
   useEffect(() => {
     // Gets data
@@ -112,7 +174,8 @@ function App() {
           <NestedCheckbox
             allYears={allYears}
             allPeriods={allPeriods}
-            checkHandler={checkHandler}
+            checkHandler={checkBoxHandler}
+            checkedState={checkedState}
           />
         </div>
         <div style={{ maxWidth: "1500px" }}>
