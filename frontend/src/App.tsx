@@ -21,66 +21,50 @@ interface CheckedYear {
 
 function App() {
   const [events, setEvents] = useState<Event[]>([]); // State is set of periods to use.
-  const [activePeriods, setActivePeriods] = useState<Set<string>>(new Set());
-  const [activeYears, setActiveYears] = useState<Set<number>>(new Set());
-  const [activeYearPeriods, setActiveYearPeriods] = useState<
-    Map<number, Set<string>>
-  >(new Map());
-  const allYears: number[] = [2025, 2026, 2024, 2023];
+  const allYears: string[] = ["2023", "2024", "2025", "2026"];
+  const allSummerSemesters: string[] = [
+    "Summer Semester (2023-24)",
+    "Summer Semester (2024-25)",
+    "Summer Semester (2025-26)",
+    "Summer Semester (2026-27)",
+  ];
   const allPeriods: string[] = [
     "Semester 1",
     "Semester 2",
-    "Summer Semester (2025-26)",
     "Research quarters",
     "Teaching periods",
-    "Summer Semester (2026-27)",
-    "Summer Semester (2024-25)",
-    "Summer Semester (2023-24)",
   ]; // Maybe replace this with something automatic (state) / just use activePeriods.
-  const [checkedState, setCheckedState] = useState<Map<number, CheckedYear>>(
+  const [checkedState, setCheckedState] = useState<Map<string, CheckedYear>>(
     () => {
-      const checkboxLayout = new Map<number, CheckedYear>();
+      const checkboxLayout = new Map<string, CheckedYear>();
       let newChildPeriods: Map<string, boolean>;
-      for (let y of allYears) {
+      for (let i = 0; i < allYears.length; i++) {
         newChildPeriods = new Map<string, boolean>();
         for (let p of allPeriods) {
           newChildPeriods.set(p, true);
         }
-        checkboxLayout.set(y, {
+        checkboxLayout.set(allYears[i], {
           checked: true,
           childPeriods: new Map(newChildPeriods),
+        });
+        checkboxLayout.set(allSummerSemesters[i], {
+          checked: true,
+          childPeriods: new Map(),
         });
       }
       return checkboxLayout;
     }
   );
-  const year: number = 2025;
-  let currDay: number = 3;
+  const today = new Date();
+  const year: number = today.getFullYear();
+  const newYearsDay = new Date(`${year}-01-01`);
+  let currDay: number = newYearsDay.getDay();
+  console.log(year, currDay);
 
-  function checkHandler(p: string, y: number) {
-    console.log(p, y);
-    if (!y) {
-      const newAP: Set<string> = new Set(activePeriods);
-      if (activePeriods.has(p)) {
-        newAP.delete(p);
-      } else {
-        newAP.add(p);
-      }
-      setActivePeriods(newAP);
-    } else {
-      const newAY: Set<number> = new Set(activeYears);
-      if (activeYears.has(y)) {
-        newAY.delete(y);
-      } else {
-        newAY.add(y);
-      }
-      setActiveYears(newAY);
-    }
-  }
-
-  function checkBoxHandler(p: string, y: number) {
+  // Handles any checkbox clicks => updates checkedState and therefore shown events.
+  function checkBoxHandler(p: string, y: string) {
     // Need to bundle it all into a Map of sets in App.tsx
-    const newCS = new Map<number, CheckedYear>(checkedState);
+    const newCS = new Map<string, CheckedYear>(checkedState);
     if (p.length === 0) {
       // If year checked/unchecked, then also toggle children.
       // Clone the children.
@@ -88,8 +72,7 @@ function App() {
         newCS.get(y)?.childPeriods
       );
       // Set all the children to parent.
-      childPeriodsCopy.forEach((value, key) => {
-        console.log(key, !newCS.get(y)?.checked);
+      childPeriodsCopy.forEach((_, key) => {
         childPeriodsCopy.set(key, !newCS.get(y)?.checked);
       });
       newCS.set(y, {
@@ -122,16 +105,13 @@ function App() {
     setCheckedState(newCS);
   }
 
+  // Gets event data from API.
   useEffect(() => {
-    // Gets data
     fetch("/api/events") // Backend URL
       .then((response) => response.json())
       .then((data: Event[]) => {
-        const newActivePeriods: Set<string> = new Set<string>();
-        const newActiveYears: Set<number> = new Set<number>();
         const formattedData = data
           .map((row) => {
-            newActivePeriods.add(row.period);
             return {
               ...row,
               start_date: new Date(row.start_date), // Convert Date to ISO string
@@ -144,7 +124,6 @@ function App() {
               row.end_date.getFullYear() === year
           )
           .map((row) => {
-            newActiveYears.add(row.start_date.getFullYear());
             return {
               ...row,
               start_date:
@@ -157,10 +136,6 @@ function App() {
                   : new Date(`December 31, ${year} 00:00:00`),
             };
           });
-        console.log("Setting Active Periods");
-        setActivePeriods(newActivePeriods);
-        console.log("Setting Active Years");
-        setActiveYears(newActiveYears);
         console.log("Setting Events");
         setEvents(formattedData);
       })
@@ -174,6 +149,7 @@ function App() {
           <NestedCheckbox
             allYears={allYears}
             allPeriods={allPeriods}
+            allSummerSemesters={allSummerSemesters}
             checkHandler={checkBoxHandler}
             checkedState={checkedState}
           />
@@ -182,11 +158,17 @@ function App() {
           <Year
             year={year}
             currDay={currDay}
-            events={events.filter(
-              (e) =>
-                activePeriods.has(e.period) &&
-                activeYears.has(e.start_date.getFullYear())
-            )}
+            events={events.filter((e) => {
+              if (e.period.startsWith("Summer")) {
+                return checkedState.get(e.period)?.checked ?? false;
+              } else {
+                return (
+                  checkedState
+                    .get(`${e.start_date.getFullYear()}`)
+                    ?.childPeriods?.get(e.period) ?? false
+                );
+              }
+            })}
           />
         </div>
       </div>

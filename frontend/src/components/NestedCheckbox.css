@@ -11,12 +11,22 @@ li {
   margin-inline-start: 1em;
 }
 
+@media (min-width: 1674px) {
+  .year-collapsible .year {
+    padding: 0.6em 4em 0.6em 0em;
+  }
+  .year-collapsible .summer {
+    padding: 0.6em 2em 0.6em 0em;
+  }
+}
+
 .year-collapsible {
   background-color: rgb(255, 255, 255, 0.1);
   padding: 0;
   width: 100%;
+  min-height: 41px;
   cursor: pointer;
-  border: 1px solid rgb(255, 255, 255, 0.5);
+  border: 1px solid rgb(255, 255, 255, 0.3);
   border-radius: 0.3em;
   text-align: left;
   outline: none;

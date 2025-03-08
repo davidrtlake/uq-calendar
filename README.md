@@ -9,27 +9,28 @@ Use `npm run dev` to start frontend.
 
 - [ ] Fix overlapping months and days:
 - [ ] Add nests for fieldset Period selector for different year:
-  - Checkboxes for whole year.
-  - Remember selection.
+  - [x] Checkboxes for whole year.
+  - [ ] Remember selection.
 - [x] Make fieldset sticky on scroll.
 - [ ] Add search for events:
-  - only returns days with matches.
-  - no reload.
-  - has year and month heading.
-  - uses fieldset as filter.
-  - informs if there are results that are hidden.
+  - [ ] only returns days with matches.
+  - [ ] no reload.
+  - [ ] has year and month heading.
+  - [ ] uses fieldset as filter.
+  - [ ] informs if there are results that are hidden.
 - [ ] Add all years to page.
-  - Automatic scroll to current year.
+  - [ ] Automatic scroll to current year.
 - [x] On hover expand event description.
 - [ ] Show holidays.
 - [ ] Record type of day in JSON:
-  - Vacation/Revision periods (White)
-  - Public Holidays (Mustard)
-  - Teaching periods (Pale blue)
-  - Examination periods (Yellow)
-  - Starting Dates (Green)
-  - Closing Dates (Salmon)
-  - Graduation Period (Orange bar)
-  - Special Events (White border)
-  - Finalisation of Grades (Red border)
+  - [ ] Vacation/Revision periods (White)
+  - [ ] Public Holidays (Mustard)
+  - [ ] Teaching periods (Pale blue)
+  - [ ] Examination periods (Yellow)
+  - [ ] Starting Dates (Green)
+  - [ ] Closing Dates (Salmon)
+  - [ ] Graduation Period (Orange bar)
+  - [ ] Special Events (White border)
+  - [ ] Finalisation of Grades (Red border)
 - [ ] Add teaching week.
+- [ ] Add quick navigation section on right side.
