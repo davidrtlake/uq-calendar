@@ -11,6 +11,15 @@
   -webkit-box-orient: vertical;
 }
 
+.extended-event-descriptions a {
+  font-weight: 500;
+  color: #3f50e4;
+  text-decoration: inherit;
+}
+.extended-event-descriptions a:hover {
+  color: #9498eb;
+}
+
 .extended-event {
   padding: 0 2% 0 2%;
   line-height: 1.5rem;

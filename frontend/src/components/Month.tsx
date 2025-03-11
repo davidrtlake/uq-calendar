@@ -151,13 +151,11 @@ const Month = ({
                     return <div key={col}></div>;
                   } else {
                     return (
-                      <div key={col}>
-                        <div className="day">
-                          <Day
-                            date={`${dayCount + 1}`}
-                            events={days[dayCount++]}
-                          />
-                        </div>
+                      <div key={col} className="day">
+                        <Day
+                          date={`${dayCount + 1}`}
+                          events={days[dayCount++]}
+                        />
                       </div>
                     );
                   }

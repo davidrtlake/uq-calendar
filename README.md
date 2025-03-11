@@ -7,7 +7,8 @@ Use `npm run dev` to start frontend.
 
 # TODO
 
-- [x] Fix overlapping months and days:
+## Features
+
 - [x] Add nests for fieldset Period selector for different year:
   - [x] Checkboxes for whole year.
   - [ ] Remember selection.
@@ -35,3 +36,9 @@ Use `npm run dev` to start frontend.
   - [ ] Finalisation of Grades (Red border)
 - [ ] Add teaching week.
 - [ ] Add quick navigation section on right side.
+
+## Fixes
+
+- [x] Fix overlapping months and days.
+- [ ] Fix page position changing when selecting periods. (Fix month length? centre scroll?)
+- [ ] Fix duplicate events that appear in more than one period.
