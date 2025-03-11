@@ -59,7 +59,6 @@ function App() {
   const year: number = today.getFullYear();
   const newYearsDay = new Date(`${year}-01-01`);
   let currDay: number = newYearsDay.getDay();
-  console.log(year, currDay);
 
   // Handles any checkbox clicks => updates checkedState and therefore shown events.
   function checkBoxHandler(p: string, y: string) {

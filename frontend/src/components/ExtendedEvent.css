@@ -1,0 +1,31 @@
+/* Event descriptions */
+.extended-event-descriptions {
+  margin-block-start: 0em;
+  margin-left: 0.1em;
+  margin-block-end: 0.1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+          line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.extended-event {
+  padding: 0 2% 0 2%;
+  line-height: 1.5rem;
+  position: relative;
+  border-radius: 0.3em;
+  background-color: rgb(146, 107, 56);
+  font-size: 13px;
+}
+
+.extended-event:hover {
+  background-color: rgb(114, 81, 37);
+  z-index: 3000;
+}
+
+.extended-event:hover .extended-event-descriptions {
+  -webkit-line-clamp: none; /* number of lines to show */
+          line-clamp: none;
+}

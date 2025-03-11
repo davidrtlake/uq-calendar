@@ -65,8 +65,12 @@ const Year = ({ year, currDay, events }: Props) => {
                 startDay={monthStartDays[i]}
                 monthLength={length}
                 monthName={monthNames[i]}
+                monthNum={i}
                 events={events.filter((row) => {
-                  return row.start_date.getMonth() === i;
+                  return (
+                    row.start_date.getMonth() === i ||
+                    row.end_date.getMonth() === i
+                  );
                 })}
               />
             </div>

@@ -7,19 +7,20 @@ Use `npm run dev` to start frontend.
 
 # TODO
 
-- [ ] Fix overlapping months and days:
-- [ ] Add nests for fieldset Period selector for different year:
+- [x] Fix overlapping months and days:
+- [x] Add nests for fieldset Period selector for different year:
   - [x] Checkboxes for whole year.
   - [ ] Remember selection.
 - [x] Make fieldset sticky on scroll.
 - [ ] Add search for events:
-  - [ ] only returns days with matches.
+  - [ ] Scrolls to results (like ctrl+f)
   - [ ] no reload.
   - [ ] has year and month heading.
   - [ ] uses fieldset as filter.
   - [ ] informs if there are results that are hidden.
 - [ ] Add all years to page.
-  - [ ] Automatic scroll to current year.
+  - [ ] Automatic scroll to current day.
+  - [ ] Button to jump to today.
 - [x] On hover expand event description.
 - [ ] Show holidays.
 - [ ] Record type of day in JSON:
