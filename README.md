@@ -35,10 +35,11 @@ Use `npm run dev` to start frontend.
   - [ ] Special Events (White border)
   - [ ] Finalisation of Grades (Red border)
 - [ ] Add teaching week.
-- [ ] Add quick navigation section on right side.
+- [x] Add quick navigation section on right side.
 
 ## Fixes
 
 - [x] Fix overlapping months and days.
 - [ ] Fix page position changing when selecting periods. (Fix month length? centre scroll?)
-- [ ] Fix duplicate events that appear in more than one period.
+- [ ] Fix duplicate events that appear in more than one period
+- [ ] Make drop downs on side bars smooth/fix quick nav styling.

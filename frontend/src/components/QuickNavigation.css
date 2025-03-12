@@ -1,0 +1,39 @@
+ul {
+  list-style: none;
+  margin-block-start: 0em;
+  margin-block-end: 0.2em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+
+li {
+  margin-inline-start: 1em;
+}
+
+.quick-navigation-panel {
+  position: sticky;
+  top: 10%; /* Adjust as needed */
+  margin-left: 10px;
+  min-width: 7em;
+}
+
+.year-collapsible {
+  background-color: rgb(255, 255, 255, 0.1);
+  width: 100%;
+  min-height: 41px;
+  cursor: pointer;
+  border: 1px solid rgb(255, 255, 255, 0.3);
+  border-radius: 0.3em;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.active, .year-collapsible:hover {
+  background-color: #ccc;
+}

@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./App.css";
 import Year from "./components/Year";
 import NestedCheckbox from "./components/NestedCheckbox";
+import QuickNavigation from "./components/QuickNavigation";
 
 // Define a type for your events
 interface Event {
@@ -34,6 +35,30 @@ function App() {
     "Research quarters",
     "Teaching periods",
   ]; // Maybe replace this with something automatic (state) / just use activePeriods.
+  const monthNames: string[] = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  // This idea is taken from https://react.dev/learn/manipulating-the-dom-with-refs#example-scrolling-to-an-element
+  const monthRefs: Map<
+    string,
+    React.MutableRefObject<Map<string, HTMLDivElement> | null>
+  > = new Map();
+  allYears.map((y) => {
+    monthRefs.set(y, useRef<Map<string, HTMLDivElement> | null>(null));
+  });
+
   const [checkedState, setCheckedState] = useState<Map<string, CheckedYear>>(
     () => {
       const checkboxLayout = new Map<string, CheckedYear>();
@@ -56,9 +81,6 @@ function App() {
     }
   );
   const today = new Date();
-  const year: number = today.getFullYear();
-  const newYearsDay = new Date(`${year}-01-01`);
-  let currDay: number = newYearsDay.getDay();
 
   // Handles any checkbox clicks => updates checkedState and therefore shown events.
   function checkBoxHandler(p: string, y: string) {
@@ -104,42 +126,44 @@ function App() {
     setCheckedState(newCS);
   }
 
+  // Handling clicking in navigation bar.
+  function navigationHandler(m: string, y: string) {
+    const map = getMap(y);
+    const node = map.get(m)!;
+    node.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "center",
+    });
+  }
+
+  // Gets the map of refs for the year y.
+  function getMap(y: string): Map<string, HTMLDivElement> {
+    if (!monthRefs.get(y)!.current) {
+      monthRefs.get(y)!.current = new Map();
+    }
+    return monthRefs.get(y)!.current!;
+  }
+
   // Gets event data from API.
   useEffect(() => {
     fetch("/api/events") // Backend URL
       .then((response) => response.json())
       .then((data: Event[]) => {
-        const formattedData = data
-          .map((row) => {
-            return {
-              ...row,
-              start_date: new Date(row.start_date), // Convert Date to ISO string
-              end_date: new Date(row.end_date),
-            };
-          })
-          .filter(
-            (row) =>
-              row.start_date.getFullYear() === year ||
-              row.end_date.getFullYear() === year
-          )
-          .map((row) => {
-            return {
-              ...row,
-              start_date:
-                row.start_date.getFullYear() === year
-                  ? row.start_date
-                  : new Date(`Janurary 01, ${year} 00:00:00`),
-              end_date:
-                row.end_date.getFullYear() === year
-                  ? row.end_date
-                  : new Date(`December 31, ${year} 00:00:00`),
-            };
-          });
+        const formattedData = data.map((row) => {
+          return {
+            ...row,
+            start_date: new Date(row.start_date),
+            end_date: new Date(row.end_date),
+          };
+        });
         console.log("Setting Events");
         setEvents(formattedData);
       })
       .catch((error) => console.error("Error fetching data:", error));
   }, []); // This will all go in App.tsx and be passed to year.tsx component.
+
+  navigationHandler(monthNames[today.getMonth()], `${today.getFullYear()}`);
 
   return (
     <>
@@ -154,20 +178,57 @@ function App() {
           />
         </div>
         <div style={{ maxWidth: "1500px" }}>
-          <Year
-            year={year}
-            currDay={currDay}
-            events={events.filter((e) => {
-              if (e.period.startsWith("Summer")) {
-                return checkedState.get(e.period)?.checked ?? false;
-              } else {
-                return (
-                  checkedState
-                    .get(`${e.start_date.getFullYear()}`)
-                    ?.childPeriods?.get(e.period) ?? false
-                );
-              }
-            })}
+          {allYears.map((y) => {
+            const year: number = parseInt(y);
+            const newYearsDay = new Date(`${year}-01-01`);
+            let currDay: number = newYearsDay.getDay();
+            return (
+              <Year
+                year={year}
+                currDay={currDay}
+                monthNames={monthNames}
+                getMap={getMap}
+                events={events
+                  .filter(
+                    // Only get fields for selected year.
+                    (row) =>
+                      row.start_date.getFullYear() === year ||
+                      row.end_date.getFullYear() === year
+                  )
+                  .map((row) => {
+                    // Crop any overflowing start or end dates.
+                    return {
+                      ...row,
+                      start_date:
+                        row.start_date.getFullYear() === year
+                          ? row.start_date
+                          : new Date(`Janurary 01, ${year} 00:00:00`),
+                      end_date:
+                        row.end_date.getFullYear() === year
+                          ? row.end_date
+                          : new Date(`December 31, ${year} 00:00:00`),
+                    };
+                  })
+                  .filter((e) => {
+                    // filter here
+                    if (e.period.startsWith("Summer")) {
+                      return checkedState.get(e.period)?.checked ?? false;
+                    } else {
+                      return checkedState
+                        .get(`${e.start_date.getFullYear()}`)!
+                        .childPeriods!.get(e.period);
+                    }
+                  })}
+              />
+            );
+          })}
+        </div>
+        <div className="period-selector">
+          <QuickNavigation
+            allYears={allYears}
+            monthNames={monthNames}
+            navigationHandler={navigationHandler}
+            checkedState={checkedState}
           />
         </div>
       </div>

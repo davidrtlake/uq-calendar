@@ -15,10 +15,13 @@ interface Event {
 interface Props {
   year: number;
   currDay: number;
+  monthNames: string[];
+  getMap: (y: string) => Map<string, HTMLDivElement>;
+  // monthRefs: Map<string, HTMLDivElement>;
   events: Event[];
 }
 
-const Year = ({ year, currDay, events }: Props) => {
+const Year = ({ year, currDay, monthNames, getMap, events }: Props) => {
   const monthLens: number[] = [
     31,
     28 + (year % 4 === 0 ? 1 : 0),
@@ -33,20 +36,6 @@ const Year = ({ year, currDay, events }: Props) => {
     30,
     31,
   ];
-  const monthNames: string[] = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
   const monthStartDays: number[] = Array();
 
   monthLens.forEach((length) => {
@@ -60,7 +49,18 @@ const Year = ({ year, currDay, events }: Props) => {
         <h1>{year}</h1>
         <div className="flex-container-column">
           {monthLens.map((length, i) => (
-            <div key={i} className="month">
+            <div
+              key={i}
+              className="month"
+              ref={(node) => {
+                const map = getMap(`${year}`);
+                if (node) {
+                  map.set(monthNames[i], node!);
+                } else {
+                  map.delete(monthNames[i]);
+                }
+              }}
+            >
               <Month
                 startDay={monthStartDays[i]}
                 monthLength={length}

@@ -24,7 +24,7 @@
   padding: 0 2% 0 2%;
   line-height: 1.5rem;
   position: relative;
-  border-radius: 0.3em;
+  border-radius: 0 0 0.4em 0.4em;
   background-color: rgb(146, 107, 56);
   font-size: 13px;
 }
