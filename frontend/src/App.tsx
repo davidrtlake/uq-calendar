@@ -21,6 +21,7 @@ interface CheckedYear {
 }
 
 function App() {
+  console.log("---RELOADING-APP---");
   const [events, setEvents] = useState<Event[]>([]); // State is set of periods to use.
   const allYears: string[] = ["2023", "2024", "2025", "2026"];
   const allSummerSemesters: string[] = [
@@ -49,16 +50,15 @@ function App() {
     "November",
     "December",
   ];
-
-  // This idea is taken from https://react.dev/learn/manipulating-the-dom-with-refs#example-scrolling-to-an-element
-  const monthRefs: Map<
-    string,
-    React.MutableRefObject<Map<string, HTMLDivElement> | null>
-  > = new Map();
-  allYears.map((y) => {
-    monthRefs.set(y, useRef<Map<string, HTMLDivElement> | null>(null));
-  });
-
+  const daysOfTheWeek: string[] = [
+    "Sun",
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+  ];
   const [checkedState, setCheckedState] = useState<Map<string, CheckedYear>>(
     () => {
       const checkboxLayout = new Map<string, CheckedYear>();
@@ -80,7 +80,15 @@ function App() {
       return checkboxLayout;
     }
   );
-  const today = new Date();
+  // This idea is taken from https://react.dev/learn/manipulating-the-dom-with-refs#example-scrolling-to-an-element
+  const monthRefs: Map<
+    string,
+    React.MutableRefObject<Map<string, HTMLDivElement> | null>
+  > = new Map();
+  allYears.map((y) => {
+    monthRefs.set(y, useRef<Map<string, HTMLDivElement> | null>(null));
+  });
+  const today: Date = new Date();
 
   // Handles any checkbox clicks => updates checkedState and therefore shown events.
   function checkBoxHandler(p: string, y: string) {
@@ -128,6 +136,7 @@ function App() {
 
   // Handling clicking in navigation bar.
   function navigationHandler(m: string, y: string) {
+    console.log("Scrolling to", m, y);
     const map = getMap(y);
     const node = map.get(m)!;
     node.scrollIntoView({
@@ -161,9 +170,25 @@ function App() {
         setEvents(formattedData);
       })
       .catch((error) => console.error("Error fetching data:", error));
-  }, []); // This will all go in App.tsx and be passed to year.tsx component.
+  }, []);
 
-  navigationHandler(monthNames[today.getMonth()], `${today.getFullYear()}`);
+  // useEffect(() => {
+  //   navigationHandler(monthNames[today.getMonth()], `${today.getFullYear()}`); //Wait until components have loaded.
+  //   console.log(
+  //     "Scrolling to today",
+  //     monthNames[today.getMonth()],
+  //     `${today.getFullYear()}`
+  //   );
+  // }, []);
+
+  useEffect(() => {
+    setTimeout(
+      navigationHandler,
+      500,
+      monthNames[today.getMonth()],
+      `${today.getFullYear()}`
+    ); // Hacky but it works.
+  }, []);
 
   return (
     <>
@@ -177,13 +202,39 @@ function App() {
             checkedState={checkedState}
           />
         </div>
-        <div style={{ maxWidth: "1500px" }}>
-          {allYears.map((y) => {
+        <div style={{ maxWidth: "1300px" }}>
+          {/* <div ref={headingRef} className="fixed-heading">
+            <MonthYearHeading monthRefs={monthRefs} />
+          </div> */}
+          <div
+            className="container"
+            style={{
+              top: "5.05rem",
+              position: "sticky",
+              zIndex: "3005",
+              backgroundColor: "#2f033d",
+              paddingTop: "0.3rem",
+            }}
+          >
+            {daysOfTheWeek.map((day, i) => (
+              <div
+                key={i}
+                style={{
+                  borderBottom: "1px solid rgba(255, 255, 255, 0.56)",
+                  paddingInlineStart: "0.1rem",
+                }}
+              >
+                {day}
+              </div>
+            ))}
+          </div>
+          {allYears.map((y, i) => {
             const year: number = parseInt(y);
             const newYearsDay = new Date(`${year}-01-01`);
             let currDay: number = newYearsDay.getDay();
             return (
               <Year
+                key={i}
                 year={year}
                 currDay={currDay}
                 monthNames={monthNames}

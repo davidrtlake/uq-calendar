@@ -23,6 +23,7 @@ interface ExtendedEventAndLength {
 interface Props {
   startDay: number;
   monthLength: number;
+  prevMonthLength: number;
   monthName: string;
   monthNum: number;
   events: Event[];
@@ -31,19 +32,11 @@ interface Props {
 const Month = ({
   startDay,
   monthLength,
+  prevMonthLength,
   monthNum,
   monthName,
   events,
 }: Props) => {
-  const daysOfTheWeek: string[] = [
-    "Sun",
-    "Mon",
-    "Tue",
-    "Wed",
-    "Thu",
-    "Fri",
-    "Sat",
-  ];
   const days: Event[][] = Array(monthLength)
     .fill(null)
     .map(() => Array());
@@ -119,6 +112,13 @@ const Month = ({
 
   let dayCount: number = 0;
   let eECount: number = 0;
+  let startFillCount: number = prevMonthLength - startDay + 1;
+  let endFillCount: number = 1;
+
+  // let marginStart: string = "0";
+  // let paddingStart: string = "0";
+  // let eEHeight: string = "0";
+  // let gapBackground: string = "none";
 
   for (let i = 0; i < startDay; i++) {
     fillerDays.push(<div key={i}></div>);
@@ -126,17 +126,24 @@ const Month = ({
 
   return (
     <>
-      <h2>{monthName}</h2>
+      <h2
+        style={{
+          position: "sticky",
+          top: "0em",
+          zIndex: "3002",
+          backgroundColor: "#2f033d",
+          marginBlockStart: "0em",
+          marginBlockEnd: "0.63em",
+          paddingBlockStart: "1.725em",
+          paddingBlockEnd: "0.105em",
+          paddingInlineStart: "5.8em",
+          borderBottomWidth: "50%",
+          borderBottom: "1px solid rgba(255, 255, 255, 0.56)",
+        }}
+      >
+        {monthName}
+      </h2>
       <div className="container">
-        {daysOfTheWeek.map((day, i) => (
-          <div
-            key={i}
-            style={{ borderBottom: "1px solid rgba(255, 255, 255, 0.56)" }}
-          >
-            {day}
-          </div>
-        ))}
-        {/* {fillerDays} */}
         {Array(Math.ceil((monthLength + fillerDays.length) / 7) * 2)
           .fill(null)
           .map((_, row) => {
@@ -144,11 +151,21 @@ const Month = ({
               .fill(null)
               .map((_, col) => {
                 if (row % 2 === 0) {
+                  // If its a day row.
                   if (
                     (row === 0 && col < startDay) ||
                     dayCount >= monthLength
                   ) {
-                    return <div key={col}></div>;
+                    // If first row or after last day, fill with filler days.
+                    return (
+                      <div
+                        key={col}
+                        className="filler-day"
+                        style={{ color: "rgb(146, 146, 146)" }}
+                      >
+                        <h4>{row === 0 ? startFillCount++ : endFillCount++}</h4>
+                      </div>
+                    );
                   } else {
                     return (
                       <div key={col} className="day">
@@ -160,11 +177,43 @@ const Month = ({
                     );
                   }
                 } else {
+                  // If its an event row.
                   if ((row === 1 && col < startDay) || eECount >= monthLength) {
                     return (
+                      // If first row or after last day, fill with filler days.
                       <div key={col} style={{ marginBlockEnd: "3%" }}></div>
                     );
                   } else {
+                    // if (
+                    //   invisExtendedEvents[eECount] !== 0 &&
+                    //   extendedEvents[eECount].length === 0
+                    // ) {
+                    //   // Prev extended events still going but not putting any new ones.
+                    //   marginStart = "0";
+                    //   paddingStart = `${
+                    //     invisExtendedEvents[eECount] * 1.5 * 1.04
+                    //   }rem`;
+                    //   eEHeight = "0";
+                    //   gapBackground =
+                    //     "repeating-linear-gradient(-45deg, transparent 0 3px, var(--timetable-stripes-dark) 3px 6px)";
+                    // } else if (
+                    //   invisExtendedEvents[eECount] === 0 &&
+                    //   extendedEvents[eECount].length === 0
+                    // ) {
+                    //   // Empty space.
+                    //   marginStart = "0";
+                    //   paddingStart = "0";
+                    //   eEHeight = "80%";
+                    //   gapBackground = "green";
+                    // } else {
+                    //   // No prev events or putting new event in.
+                    //   marginStart = `${
+                    //     invisExtendedEvents[eECount] * 1.5 * 1.04
+                    //   }rem`;
+                    //   paddingStart = "0";
+                    //   eEHeight = "auto";
+                    //   gapBackground = "none";
+                    // }
                     return (
                       <div
                         key={col}

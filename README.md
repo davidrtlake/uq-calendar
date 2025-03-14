@@ -43,3 +43,9 @@ Use `npm run dev` to start frontend.
 - [ ] Fix page position changing when selecting periods. (Fix month length? centre scroll?)
 - [ ] Fix duplicate events that appear in more than one period
 - [ ] Make drop downs on side bars smooth/fix quick nav styling.
+
+## Ideas
+
+- Background gradient colour shift as user scrolls.
+- Check collision of heading and month heading. Fade out month heading.
+- Reduce min height of days with extended events below them.

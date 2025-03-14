@@ -6,9 +6,18 @@
   --timetable-stripes-dark: rgba(255, 255, 255, 0.1);
 }
 
+.container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  column-gap: 0.5%;
+  /* row-gap: 1%; */
+  align-items: start;
+}
+
 .body-flex-container {
   display: flex;
   flex-direction: row;
+  /* width: 100%; */
 }
 
 .period-selector {
@@ -22,4 +31,14 @@ fieldset {
   border-style: dashed;
   margin-right: 10px;
   min-width: 7em;
+}
+
+.fixed-heading {
+  /* border: 1px solid red; */
+  position: fixed;
+  width: inherit;
+  background-color: #2f033d;
+  z-index: 3001;
+  top: 0px;
+  max-width: 1300px;
 }

@@ -46,11 +46,27 @@ const Year = ({ year, currDay, monthNames, getMap, events }: Props) => {
   return (
     <>
       <div>
-        <h1>{year}</h1>
+        <h1
+          style={{
+            position: "sticky",
+            top: "0",
+            // backgroundColor: "#2f033d",
+            zIndex: "3003",
+            marginBlockStart: "0em",
+            marginBlockEnd: "0.67em",
+            paddingBlockStart: "0.4em",
+            paddingBlockEnd: "0.07em",
+            borderBottom: "1px solid rgba(255, 255, 255, 0.56)",
+            color: "rgb(197, 197, 197)",
+          }}
+        >
+          {year}
+        </h1>
         <div className="flex-container-column">
           {monthLens.map((length, i) => (
             <div
               key={i}
+              id={`${year}-${monthNames[i]}`}
               className="month"
               ref={(node) => {
                 const map = getMap(`${year}`);
@@ -64,6 +80,7 @@ const Year = ({ year, currDay, monthNames, getMap, events }: Props) => {
               <Month
                 startDay={monthStartDays[i]}
                 monthLength={length}
+                prevMonthLength={monthLens[(i - 1 + 12) % 12]}
                 monthName={monthNames[i]}
                 monthNum={i}
                 events={events.filter((row) => {
