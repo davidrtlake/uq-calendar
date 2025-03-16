@@ -19,8 +19,8 @@ Use `npm run dev` to start frontend.
   - [ ] has year and month heading.
   - [ ] uses fieldset as filter.
   - [ ] informs if there are results that are hidden.
-- [ ] Add all years to page.
-  - [ ] Automatic scroll to current day.
+- [x] Add all years to page.
+  - [x] Automatic scroll to current day.
   - [ ] Button to jump to today.
 - [x] On hover expand event description.
 - [ ] Show holidays.
@@ -49,3 +49,5 @@ Use `npm run dev` to start frontend.
 - Background gradient colour shift as user scrolls.
 - Check collision of heading and month heading. Fade out month heading.
 - Reduce min height of days with extended events below them.
+- Border line vertically middle of month shooting out either side.
+- Add information current as warning.

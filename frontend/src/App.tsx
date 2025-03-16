@@ -278,6 +278,7 @@ function App() {
           <QuickNavigation
             allYears={allYears}
             monthNames={monthNames}
+            monthRefs={monthRefs}
             navigationHandler={navigationHandler}
             checkedState={checkedState}
           />

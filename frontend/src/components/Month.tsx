@@ -45,6 +45,7 @@ const Month = ({
     .map(() => Array());
   const invisExtendedEvents: number[] = Array(monthLength).fill(0);
   const fillerDays = Array();
+  const today: Date = new Date();
   let startDate: Date;
   let endDate: Date;
   let distanceToNextSunday: number;
@@ -133,7 +134,7 @@ const Month = ({
           zIndex: "3002",
           backgroundColor: "#2f033d",
           marginBlockStart: "0em",
-          marginBlockEnd: "0.63em",
+          marginBlockEnd: "1.2em", // 0.63
           paddingBlockStart: "1.725em",
           paddingBlockEnd: "0.105em",
           paddingInlineStart: "5.8em",
