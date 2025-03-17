@@ -11,6 +11,7 @@ interface Event {
   sub_period: string;
   start_date: Date;
   end_date: Date;
+  event_type: string;
   url: string;
 }
 
@@ -25,6 +26,7 @@ interface Props {
   monthLength: number;
   prevMonthLength: number;
   monthName: string;
+  todayMonth: boolean;
   monthNum: number;
   events: Event[];
 }
@@ -35,6 +37,7 @@ const Month = ({
   prevMonthLength,
   monthNum,
   monthName,
+  todayMonth,
   events,
 }: Props) => {
   const days: Event[][] = Array(monthLength)
@@ -169,7 +172,22 @@ const Month = ({
                     );
                   } else {
                     return (
-                      <div key={col} className="day">
+                      <div
+                        key={col}
+                        className="day"
+                        style={{
+                          border:
+                            todayMonth && dayCount + 1 === today.getDate()
+                              ? "1px solid red"
+                              : "none",
+                          minHeight: `${
+                            160 -
+                            (invisExtendedEvents[eECount] +
+                              extendedEvents[eECount].length) *
+                              10
+                          }px`,
+                        }}
+                      >
                         <Day
                           date={`${dayCount + 1}`}
                           events={days[dayCount++]}

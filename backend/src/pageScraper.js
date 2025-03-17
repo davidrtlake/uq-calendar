@@ -15,17 +15,57 @@ const scraperObject = {
 
     const getYearData = async (year) => {
       return await page.evaluate((targetYear) => {
+        const myTimetableURL = "https://my.uq.edu.au/node/212/3#3"; // Subject to change.
         let periods = [];
         const charMap = {
           "\u200B": "",
           "\u2013": "-",
           "\u00A0": " ",
         };
+        // Clean the text of ambiguous characters.
         const cleanText = (inputText) => {
-          // console.log(inputText, typeof inputText);
           return inputText
             .trim()
             .replace(/[\u200B\u2013\u00A0]/g, (match) => charMap[match]);
+        };
+        // Get the event type based on the description string.
+        // A lot of different cases have to be considered as wording changes a lot.
+        const getDayType = (description) => {
+          description = description.toLowerCase();
+          if (
+            description.includes("public holiday") ||
+            description.includes("show holiday")
+          ) {
+            return "Public holiday";
+          } else if (description.includes("examination")) {
+            return "Examination period";
+          } else if (
+            description.includes("start") ||
+            description.includes("first date") || // Cute.
+            (description.includes("enrolments") &&
+              description.includes("open")) ||
+            description.includes("opens") ||
+            description.includes("commence") ||
+            description.includes("classes resume")
+          ) {
+            return "Starting date";
+          } else if (
+            (description.includes("end") &&
+              !description.includes("end of sem")) ||
+            description.includes("last date") ||
+            description.includes("last day") ||
+            description.includes("due") ||
+            description.includes("last chance") ||
+            description.includes("closes")
+          ) {
+            return "Closing date";
+          } else if (description.includes("graduation")) {
+            return "Graduation period";
+          } else if (description.includes("finalisation of grades")) {
+            return "Finalisation of grades";
+          } else {
+            return null;
+          }
         };
         // Find all h2 elements
         const h2Elements = [...document.querySelectorAll("h2, h3")];
@@ -40,25 +80,11 @@ const scraperObject = {
         while (contentWrapper.nodeName !== "DIV")
           contentWrapper = contentWrapper.nextElementSibling;
 
-        // console.log("1", contentWrapper.nodeName);
-        // console.log("2", contentWrapper.className);
-        // console.log(
-        //   [...contentWrapper.classList].forEach((cls) =>
-        //     console.log("Class:", cls)
-        //   )
-        // );
-
         if (
           !contentWrapper ||
           !contentWrapper.classList.contains("uq-accordion")
         )
           return [];
-
-        // console.log(
-        //   [...contentWrapper.querySelectorAll("h3")].forEach((nd) =>
-        //     console.log("Period:", nd.nodeName, nd.textContent)
-        //   )
-        // );
 
         for (let p of contentWrapper.querySelectorAll("h3")) {
           // Iterating over periods.
@@ -66,8 +92,6 @@ const scraperObject = {
             name: cleanText(p.textContent),
             months: [],
           };
-          // console.log("P");
-          // console.log(p.nodeName, p.textContent);
           for (let m of [
             ...p.parentNode.nextElementSibling.childNodes[0].children,
           ]) {
@@ -98,11 +122,20 @@ const scraperObject = {
                 }
                 desc = desc.normalize("NFC");
                 while (desc.length && !desc.charAt(0).match(/[a-z]/i)) {
+                  // Keep chopping off first character until it's a letter.
                   desc = desc.slice(1);
+                }
+                desc = cleanText(desc);
+                if (
+                  link === "" &&
+                  desc.toLowerCase().includes("my timetable")
+                ) {
+                  link = myTimetableURL;
                 }
                 let day = {
                   date: cleanText(date),
-                  description: cleanText(desc),
+                  description: desc,
+                  dayType: getDayType(desc),
                   link: cleanText(link),
                 };
                 period["months"][period["months"].length - 1]["days"].push(day);

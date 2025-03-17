@@ -100,6 +100,9 @@ const QuickNavigation = ({
                   outline:
                     y === currYear && m === currMonth
                       ? "1px solid rgb(255, 255, 255, 0.6)"
+                      : today.getFullYear() === parseInt(y) &&
+                        j === today.getMonth()
+                      ? "1px solid rgb(255, 0, 0, 0.6)"
                       : "none",
                 }}
                 onClick={() => navigationHandler(m, y)}

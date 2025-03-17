@@ -9,6 +9,7 @@ interface Event {
   sub_period: string;
   start_date: Date;
   end_date: Date;
+  event_type: string;
   url: string;
 }
 
@@ -37,6 +38,7 @@ const Year = ({ year, currDay, monthNames, getMap, events }: Props) => {
     31,
   ];
   const monthStartDays: number[] = Array();
+  const today: Date = new Date();
 
   monthLens.forEach((length) => {
     monthStartDays.push(currDay % 7);
@@ -82,6 +84,9 @@ const Year = ({ year, currDay, monthNames, getMap, events }: Props) => {
                 monthLength={length}
                 prevMonthLength={monthLens[(i - 1 + 12) % 12]}
                 monthName={monthNames[i]}
+                todayMonth={
+                  today.getMonth() === i && year === today.getFullYear()
+                }
                 monthNum={i}
                 events={events.filter((row) => {
                   return (

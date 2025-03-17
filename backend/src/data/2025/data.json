@@ -11,7 +11,8 @@
               {
                 "date": "2 Dec",
                 "description": "My Timetable course timetables available",
-                "link": ""
+                "dayType": null,
+                "link": "https://my.uq.edu.au/node/212/3#3"
               }
             ]
           },
@@ -21,41 +22,49 @@
               {
                 "date": "1 Jan",
                 "description": "New Year's Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "5 Jan",
                 "description": "Progression improvement plan due today if you received a progression intervention notice in a previous semester and want to resume your studies",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "13 Jan",
                 "description": "My Timetable opens for preferencing at 12pm",
-                "link": ""
+                "dayType": "Starting date",
+                "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "16 Jan",
                 "description": "QTAC major offer round",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "27 Jan",
                 "description": "Australia Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "28 Jan",
                 "description": "My Timetable preferencing closes at 9am",
-                "link": ""
+                "dayType": "Closing date",
+                "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "31Jan",
                 "description": "Due date to enrol - domestic students",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "31 Jan",
                 "description": "Due date to apply for cross-institutional and non-award study in Semester 1",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -66,31 +75,37 @@
               {
                 "date": "3 Feb",
                 "description": "My Timetable unavailable from 8am to 12pm",
-                "link": ""
+                "dayType": null,
+                "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "3 Feb",
                 "description": "My Timetable personal timetable released at 12pm, and open for allocation adjustment",
-                "link": ""
+                "dayType": null,
+                "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "14 Feb",
                 "description": "Last chance to request a program change through mySI-net",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               },
               {
                 "date": "17-21 Feb",
                 "description": "Orientation Week",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/orientation"
               },
               {
                 "date": "21 Feb",
                 "description": "Due date to enrol - international students",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "24 Feb",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -101,31 +116,37 @@
               {
                 "date": "7 Mar",
                 "description": "Last date for addition of courses or alteration of enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "10 Mar",
                 "description": "My Timetable allocation adjustment finishes at 9am",
-                "link": ""
+                "dayType": null,
+                "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "10-13 Mar",
                 "description": "Employability Week",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "14 Mar",
                 "description": "Due date for payment of Semester 1 fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "29 Mar",
                 "description": "In-semester examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/exam-timetables-and-venues"
               },
               {
                 "date": "31 Mar",
                 "description": "Census date -Last chance to withdraw from courses or cancel your enrolment through mySI-net without financial liability",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program?p=2#2"
               }
             ]
@@ -136,46 +157,55 @@
               {
                 "date": "5 Apr",
                 "description": "In-semester examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/exam-timetables-and-venues"
               },
               {
                 "date": "12 Apr",
                 "description": "In-semester examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/exam-timetables-and-venues"
               },
               {
                 "date": "17 Apr",
                 "description": "Last day of classes before mid-semester break",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "18-21 Apr",
                 "description": "Easter public holidays",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "21 Apr",
                 "description": "Mid-semester break starts for most programs",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "21-25 Apr",
                 "description": "Universities Australia Common Vacation Week",
+                "dayType": null,
                 "link": "https://universitiesaustralia.edu.au/our-universities/teaching-calendars/"
               },
               {
                 "date": "25 Apr",
                 "description": "Anzac Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "28 Apr",
                 "description": "Classes resume for most programs",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "30 Apr",
                 "description": "Last chance to withdraw from courses or cancel your enrolment without academic penalty(financial liability remains)",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program?p=2#2"
               }
             ]
@@ -186,16 +216,19 @@
               {
                 "date": "5 May",
                 "description": "Labour Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "10 May",
                 "description": "In-semester deferred examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/deferring-exam#:~:text=You%20can%20request%20a%20deferred,you%20provide%20when%20you%20apply."
               },
               {
                 "date": "31 May",
                 "description": "Semester 1 classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -206,26 +239,31 @@
               {
                 "date": "2-6 Jun",
                 "description": "Revision period",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "6 Jun",
                 "description": "Last day to withdraw from courses in mySI-net (academic penalty and financial liability apply)",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program?p=2#2"
               },
               {
                 "date": "7-21 Jun",
                 "description": "Examination period",
+                "dayType": "Examination period",
                 "link": ""
               },
               {
                 "date": "21 Jun",
                 "description": "Semester 1 ends",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "23 Jun",
                 "description": "Inter-semester break commences",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -236,21 +274,25 @@
               {
                 "date": "2 Jul",
                 "description": "Finalisation of grades",
+                "dayType": "Finalisation of grades",
                 "link": ""
               },
               {
                 "date": "7-11 Jul",
                 "description": "Universities Australia Common Vacation Week",
+                "dayType": null,
                 "link": "https://universitiesaustralia.edu.au/our-universities/teaching-calendars/"
               },
               {
                 "date": "14-18 Jul",
                 "description": "Graduations",
+                "dayType": "Graduation period",
                 "link": "https://my.uq.edu.au/graduation"
               },
               {
                 "date": "22-25 Jul",
                 "description": "Deferred and supplementary examination period",
+                "dayType": "Examination period",
                 "link": ""
               }
             ]
@@ -266,26 +308,31 @@
               {
                 "date": "9 Jun",
                 "description": "My Timetable course timetables available",
-                "link": ""
+                "dayType": null,
+                "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "5 Jun",
                 "description": "QTAC major offer round",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "23 Jun",
                 "description": "My Timetable opens for preferencing at 12pm",
+                "dayType": "Starting date",
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "30 Jun",
                 "description": "Due date to apply for cross-institutional and non-award study in Semester 2",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "30 Jun",
                 "description": "Progression improvement plan due today if you received a progression intervention notice in a previous semester and want to resume your studies",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -296,61 +343,73 @@
               {
                 "date": "2 Jul",
                 "description": "First date to request a program change through mySI-net",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "6-13 Jul",
                 "description": "NAIDOC Week",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "7 Jul",
                 "description": "My Timetable preferencing closes at 9am",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "7-11 Jul",
                 "description": "Universities Australia Common Vacation Week",
+                "dayType": null,
                 "link": "https://universitiesaustralia.edu.au/our-universities/teaching-calendars/"
               },
               {
                 "date": "14 Jul",
                 "description": "My Timetable unavailable from 8am to 12pm",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "14 Jul",
                 "description": "My Timetable personal timetable released at 12pm, and open for allocation adjustment",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "18 Jul",
                 "description": "Last date to request a program change through mySI-net",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "18 Jul",
                 "description": "Due date to enrol - domestic students",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "19-20 Jul",
                 "description": "Brisbane Tertiary Studies and Careers Expo (TSXPO)",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "21-25 Jul",
                 "description": "Mid-year Orientation Week",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "25 Jul",
                 "description": "Due date to enrol - international students",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "28 Jul",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -361,21 +420,25 @@
               {
                 "date": "8 Aug",
                 "description": "Due date for payment of Semester 2 fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "8 Aug",
                 "description": "Last date for addition of courses or alteration of enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "11 Aug",
                 "description": "My Timetable allocation adjustment finishes at 9am",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "31 Aug",
                 "description": "Census date  -Last chance to withdraw from courses or cancel enrolment through mySI-net without financial penalty",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program?p=2#2"
               }
             ]
@@ -386,41 +449,49 @@
               {
                 "date": "6 Sep",
                 "description": "In-semester examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/deferring-exam#:~:text=You%20can%20request%20a%20deferred,you%20provide%20when%20you%20apply.https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/exam-timetables-and-venues"
               },
               {
                 "date": "13 Sep",
                 "description": "In-semester examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/deferring-exam#:~:text=You%20can%20request%20a%20deferred,you%20provide%20when%20you%20apply.https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/exam-timetables-and-venues"
               },
               {
                 "date": "15-19 Sep",
                 "description": "Research and Innovation Week",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "20 Sep",
                 "description": "In-semester examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/deferring-exam#:~:text=You%20can%20request%20a%20deferred,you%20provide%20when%20you%20apply.https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/exam-timetables-and-venues"
               },
               {
                 "date": "27 Sep",
                 "description": "Classes end for mid-semester break",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "29 Sep",
                 "description": "Mid-semester break starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "29 Sep-3 Oct",
                 "description": "Universities Australia Common Vacation Week",
+                "dayType": null,
                 "link": "https://universitiesaustralia.edu.au/our-universities/teaching-calendars/"
               },
               {
                 "date": "30 Sep",
                 "description": "Last chance to withdraw from courses or cancel enrolment without academic penalty (financial liabilities remains)",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program?p=2#2"
               }
             ]
@@ -431,16 +502,19 @@
               {
                 "date": "6 Oct",
                 "description": "King's Birthday public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "7 Oct",
                 "description": "Classes resume for most programs",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "11 Oct",
                 "description": "In-semester deferred examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/exam-timetables-and-venues"
               }
             ]
@@ -451,31 +525,37 @@
               {
                 "date": "1 Nov",
                 "description": "Semester 2 classes end",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "3-7 Nov",
                 "description": "Revision period",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "3-7 Nov",
                 "description": "Teaching and Learning Week",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "7 Nov",
                 "description": "Last chance to withdraw from courses in mySI-net (academic penalty and financial liability apply)",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program?p=2#2"
               },
               {
                 "date": "8-22 Nov",
                 "description": "Examination period",
+                "dayType": "Examination period",
                 "link": ""
               },
               {
                 "date": "24 Nov",
                 "description": "Inter-semester break commences",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -486,26 +566,31 @@
               {
                 "date": "3 Dec",
                 "description": "Finalisation of grades",
+                "dayType": "Finalisation of grades",
                 "link": ""
               },
               {
                 "date": "10-24 Dec",
                 "description": "Graduations",
+                "dayType": "Graduation period",
                 "link": "https://my.uq.edu.au/graduation"
               },
               {
                 "date": "16-19 Dec",
                 "description": "Deferred and supplementary examination period",
+                "dayType": "Examination period",
                 "link": ""
               },
               {
                 "date": "25 Dec",
                 "description": "Christmas Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "26 Dec",
                 "description": "Boxing Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               }
             ]
@@ -521,6 +606,7 @@
               {
                 "date": "2 Jun",
                 "description": "Enrolments open for Summer Semester",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -531,7 +617,8 @@
               {
                 "date": "15 Sep",
                 "description": "My Timetable course timetables available",
-                "link": ""
+                "dayType": null,
+                "link": "https://my.uq.edu.au/node/212/3#3"
               }
             ]
           },
@@ -541,11 +628,13 @@
               {
                 "date": "27 Oct",
                 "description": "My Timetable opens for preferencing at 12pm",
-                "link": ""
+                "dayType": "Starting date",
+                "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "31 Oct",
                 "description": "Applications for cross-institutional and non-award study in Summer Semester due",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -556,21 +645,25 @@
               {
                 "date": "10 Nov",
                 "description": "My Timetable preferencing closes at 9am",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "14 Nov",
                 "description": "Due date to enrol",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "17 Nov",
                 "description": "My Timetable is closed from 8am to midday",
-                "link": ""
+                "dayType": null,
+                "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "17 Nov",
                 "description": "My Timetable personal timetable released at 12pm, and open for allocation adjustment",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/node/212/3#3"
               }
             ]
@@ -581,46 +674,55 @@
               {
                 "date": "1 Dec",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "12 Dec",
                 "description": "Due date for payment of Summer Semester fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "12 Dec",
                 "description": "Last date for addition of courses or alteration of enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "18 Dec",
                 "description": "Census date -Last chance to withdraw from course(s) or cancel enrolment through mySI-net without financial liability",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program?p=2#2"
               },
               {
                 "date": "22 Dec",
                 "description": "My Timetable allocation adjustment finishes at 9am",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "24 Dec",
                 "description": "Classes end for mid-semester break",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "25 Dec",
                 "description": "Mid-semester break starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "25 Dec",
                 "description": "Christmas Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "26 Dec",
                 "description": "Boxing Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               }
             ]
@@ -631,11 +733,13 @@
               {
                 "date": "5 Jan",
                 "description": "Classes restart",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "31 Jan",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -646,21 +750,25 @@
               {
                 "date": "2-6 Feb",
                 "description": "Revision period",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "6 Feb",
                 "description": "Last chance to withdraw from courses in mySI-net (academic penalty and financial liability apply)",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program?p=2#2"
               },
               {
                 "date": "7-14 Feb",
                 "description": "Examination period",
+                "dayType": "Examination period",
                 "link": ""
               },
               {
                 "date": "26 Feb",
                 "description": "Finalisation of grades",
+                "dayType": "Finalisation of grades",
                 "link": ""
               }
             ]
@@ -671,6 +779,7 @@
               {
                 "date": "14 Mar",
                 "description": "Deferred and supplementary examinations",
+                "dayType": "Examination period",
                 "link": ""
               }
             ]
@@ -686,21 +795,25 @@
               {
                 "date": "1 Jan",
                 "description": "Starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "15 Jan",
                 "description": "Due date for payment of RQ1 fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "1 Feb",
                 "description": "Census date - Last chance to cancel your enrolment without financial liability",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "31 Mar",
                 "description": "Ends",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -711,21 +824,25 @@
               {
                 "date": "1 Apr",
                 "description": "Starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "15 Apr",
                 "description": "Due date for payment of RQ2 fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "1 May",
                 "description": "Census date - Last chance to cancel your enrolment without financial liability",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "30 Jun",
                 "description": "Ends",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -736,21 +853,25 @@
               {
                 "date": "1 Jul",
                 "description": "Starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "15 Jul",
                 "description": "Due date for payment of RQ3 fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "1 Aug",
                 "description": "Census date - Last chance to cancel your enrolment without financial liability",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "30 Sep",
                 "description": "Ends",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -761,21 +882,25 @@
               {
                 "date": "1 Oct",
                 "description": "Starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "15 Oct",
                 "description": "Due date for payment of RQ4 fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "1 Nov",
                 "description": "Census date - Last chance to cancel your enrolment without financial liability",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "31 Dec",
                 "description": "Ends",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -791,26 +916,31 @@
               {
                 "date": "6 Jan",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "6 Jan",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "13 Jan",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "13 Jan",
                 "description": "Due date for payment of fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "1 Feb",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -821,26 +951,31 @@
               {
                 "date": "3 Feb",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "3 Feb",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "10 Feb",
                 "description": "Due date for payment of fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "14 Feb",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "29 Mar",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -851,26 +986,31 @@
               {
                 "date": "31 Mar",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "31 Mar",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "7 Apr",
                 "description": "Due date for payment of fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "14 Apr",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "31 May",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -881,26 +1021,31 @@
               {
                 "date": "2 Jun",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "2 Jun",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "9 Jun",
                 "description": "Due date for payment of fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "9 Jun",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "28 Jun",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -911,26 +1056,31 @@
               {
                 "date": "30 Jun",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "30 Jun",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "7 Jul",
                 "description": "Due date for payment of fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "11 Jul",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "23 Aug",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -941,26 +1091,31 @@
               {
                 "date": "25 Aug",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "25 Aug",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "1 Sep",
                 "description": "Due date for payment of fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "8 Sep",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "25 Oct",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -971,26 +1126,31 @@
               {
                 "date": "27 Oct",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "27 Oct",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "3 Nov",
                 "description": "Due date for payment of fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "3 Nov",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "22 Nov",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -1001,26 +1161,31 @@
               {
                 "date": "24 Nov",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "24 Nov",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "1 Dec",
                 "description": "Due date for payment of fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "1 Dec",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "20 Dec",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -1041,16 +1206,19 @@
               {
                 "date": "1 Jan",
                 "description": "New Year's Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "23 Jan",
                 "description": "Due date to enrol for domestic students",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "26 Jan",
                 "description": "Australia Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               }
             ]
@@ -1061,21 +1229,25 @@
               {
                 "date": "6 Feb",
                 "description": "Last chance to request a program change through mySI-net",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               },
               {
                 "date": "16-20 Feb",
                 "description": "Orientation Week",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/orientation"
               },
               {
                 "date": "20 Feb",
                 "description": "Due date to enrol - international students",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "23 Feb",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -1086,21 +1258,25 @@
               {
                 "date": "6 Mar",
                 "description": "Due date for payment of Semester 1 fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "6 Mar",
                 "description": "Last date for addition of courses or alteration of enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "9-13 Mar",
                 "description": "Employability Week",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "31 Mar",
                 "description": "Census date -Last chance to withdraw from courses or cancel your enrolment through mySI-net without financial liability",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program?p=2#2"
               }
             ]
@@ -1111,36 +1287,43 @@
               {
                 "date": "2 Apr",
                 "description": "Last day of classes before mid-semester break",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "3-6 Apr",
                 "description": "Easter public holidays",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "7 Apr",
                 "description": "Mid-semester break starts for most programs",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "6-10 Apr",
                 "description": "Universities Australia Common Vacation Week",
+                "dayType": null,
                 "link": "https://universitiesaustralia.edu.au/our-universities/teaching-calendars/"
               },
               {
                 "date": "25 Apr",
                 "description": "Anzac Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "13 Apr",
                 "description": "Classes resume for most programs",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "30 Apr",
                 "description": "Last chance to withdraw from courses or cancel your enrolment without academic penalty(financial liability remains)",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program?p=2#2"
               }
             ]
@@ -1151,11 +1334,13 @@
               {
                 "date": "4 May",
                 "description": "Labour Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "29 May",
                 "description": "Semester 1 classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -1166,26 +1351,31 @@
               {
                 "date": "1-5 Jun",
                 "description": "Revision period",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "6-20 Jun",
                 "description": "Examination period",
+                "dayType": "Examination period",
                 "link": ""
               },
               {
                 "date": "20 Jun",
                 "description": "Semester 1 ends",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "22 Jun",
                 "description": "Inter-semester break commences",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "24 Jun",
                 "description": "Finalisation of grades",
+                "dayType": "Finalisation of grades",
                 "link": ""
               }
             ]
@@ -1196,11 +1386,13 @@
               {
                 "date": "6-10 Jul",
                 "description": "Universities Australia Common Vacation Week",
+                "dayType": null,
                 "link": "https://universitiesaustralia.edu.au/our-universities/teaching-calendars/"
               },
               {
                 "date": "13-17 Jul",
                 "description": "Graduations",
+                "dayType": "Graduation period",
                 "link": "https://my.uq.edu.au/graduation"
               }
             ]
@@ -1216,31 +1408,37 @@
               {
                 "date": "5-12 Jul",
                 "description": "NAIDOC Week",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "6-10 Jul",
                 "description": "Universities Australia Common Vacation Week",
+                "dayType": null,
                 "link": "https://universitiesaustralia.edu.au/our-universities/teaching-calendars/"
               },
               {
                 "date": "10 Jul",
                 "description": "Due date to enrol - domestic students",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "20-24 Jul",
                 "description": "Mid-year Orientation Week",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "24 Jul",
                 "description": "Due date to enrol - international students",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "27 Jul",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -1251,16 +1449,19 @@
               {
                 "date": "7 Aug",
                 "description": "Due date for payment of Semester 2 fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "7 Aug",
                 "description": "Last date for addition of courses or alteration of enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "31 Aug",
                 "description": "Census date  -Last chance to withdraw from courses or cancel enrolment through mySI-net without financial penalty",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program?p=2#2"
               }
             ]
@@ -1271,21 +1472,25 @@
               {
                 "date": "25 Sep",
                 "description": "Classes end for mid-semester break",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "28 Sep",
                 "description": "Mid-semester break starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "28 Sep-2 Oct",
                 "description": "Universities Australia Common Vacation Week",
+                "dayType": null,
                 "link": "https://universitiesaustralia.edu.au/our-universities/teaching-calendars/"
               },
               {
                 "date": "30 Sep",
                 "description": "Last chance to withdraw from courses or cancel enrolment without academic penalty (financial liabilities remains)",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program?p=2#2"
               }
             ]
@@ -1296,16 +1501,19 @@
               {
                 "date": "5 Oct",
                 "description": "King's Birthday public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "6 Oct",
                 "description": "Classes resume for most programs",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "30 Oct",
                 "description": "Semester 2 classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -1316,16 +1524,19 @@
               {
                 "date": "2-6 Nov",
                 "description": "Revision period",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "7-21 Nov",
                 "description": "Examination period",
+                "dayType": "Examination period",
                 "link": ""
               },
               {
                 "date": "23 Nov",
                 "description": "Inter-semester break commences",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -1336,21 +1547,25 @@
               {
                 "date": "2 Dec",
                 "description": "Finalisation of grades",
+                "dayType": "Finalisation of grades",
                 "link": ""
               },
               {
                 "date": "7-23 Dec",
                 "description": "Graduations",
+                "dayType": "Graduation period",
                 "link": "https://my.uq.edu.au/graduation"
               },
               {
                 "date": "25 Dec",
                 "description": "Christmas Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "26 Dec",
                 "description": "Boxing Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               }
             ]
@@ -1366,6 +1581,7 @@
               {
                 "date": "1 Jun",
                 "description": "Enrolments open for Summer Semester",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -1376,11 +1592,13 @@
               {
                 "date": "6 Nov",
                 "description": "Due date to enrol",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "30 Nov",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -1391,36 +1609,43 @@
               {
                 "date": "11 Dec",
                 "description": "Due date for payment of Summer Semester fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "11 Dec",
                 "description": "Last date for addition of courses or alteration of enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "18 Dec",
                 "description": "Census date -Last chance to withdraw from course(s) or cancel enrolment through mySI-net without financial liability",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program?p=2#2"
               },
               {
                 "date": "24 Dec",
                 "description": "Classes end for mid-semester break",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "25 Dec",
                 "description": "Mid-semester break starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "25 Dec",
                 "description": "Christmas Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "26 Dec",
                 "description": "Boxing Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               }
             ]
@@ -1431,11 +1656,13 @@
               {
                 "date": "4 Jan",
                 "description": "Classes restart",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "29 Jan",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -1446,16 +1673,19 @@
               {
                 "date": "2-5 Feb",
                 "description": "Revision period",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "6-13 Feb",
                 "description": "Examination period",
+                "dayType": "Examination period",
                 "link": ""
               },
               {
                 "date": "25 Feb",
                 "description": "Finalisation of grades",
+                "dayType": "Finalisation of grades",
                 "link": ""
               }
             ]
@@ -1471,21 +1701,25 @@
               {
                 "date": "1 Jan",
                 "description": "Starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "15 Jan",
                 "description": "Due date for payment of RQ1 fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "1 Feb",
                 "description": "Census date - Last chance to cancel your enrolment without financial liability",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "31 Mar",
                 "description": "Ends",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -1496,21 +1730,25 @@
               {
                 "date": "1 Apr",
                 "description": "Starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "15 Apr",
                 "description": "Due date for payment of RQ2 fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "1 May",
                 "description": "Census date - Last chance to cancel your enrolment without financial liability",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "30 Jun",
                 "description": "Ends",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -1521,21 +1759,25 @@
               {
                 "date": "1 Jul",
                 "description": "Starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "15 Jul",
                 "description": "Due date for payment of RQ3 fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "1 Aug",
                 "description": "Census date - Last chance to cancel your enrolment without financial liability",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "30 Sep",
                 "description": "Ends",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -1546,21 +1788,25 @@
               {
                 "date": "1 Oct",
                 "description": "Starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "15 Oct",
                 "description": "Due date for payment of RQ4 fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "1 Nov",
                 "description": "Census date - Last chance to cancel your enrolment without financial liability",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "31 Dec",
                 "description": "Ends",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -1576,26 +1822,31 @@
               {
                 "date": "5 Jan",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "5 Jan",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "12 Jan",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "12 Jan",
                 "description": "Due date for payment of fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "31 Jan",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -1606,26 +1857,31 @@
               {
                 "date": "2 Feb",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "2 Feb",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "9 Feb",
                 "description": "Due date for payment of fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "13 Feb",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "28 Mar",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -1636,26 +1892,31 @@
               {
                 "date": "30 Mar",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "30 Mar",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "6 Apr",
                 "description": "Due date for payment of fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "13 Apr",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "30 May",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -1666,26 +1927,31 @@
               {
                 "date": "1 Jun",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "1 Jun",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "8 Jun",
                 "description": "Due date for payment of fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "8 Jun",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "27 Jun",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -1696,26 +1962,31 @@
               {
                 "date": "29 Jun",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "29 Jun",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "6 Jul",
                 "description": "Due date for payment of fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "9 Jul",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "22 Aug",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -1726,26 +1997,31 @@
               {
                 "date": "24 Aug",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "24 Aug",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "31 Aug",
                 "description": "Due date for payment of fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "7 Sep",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "24 Oct",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -1756,26 +2032,31 @@
               {
                 "date": "26 Oct",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "26 Oct",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "2 Nov",
                 "description": "Due date for payment of fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "2 Nov",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "21 Nov",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -1786,26 +2067,31 @@
               {
                 "date": "23 Nov",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "23 Nov",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "30 Nov",
                 "description": "Due date for payment of fees",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "30 Nov",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "19 Dec",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -1826,31 +2112,37 @@
               {
                 "date": "1 Jan",
                 "description": "New Year's Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "2 Jan",
                 "description": "Request a program change through mySI-net from today",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               },
               {
                 "date": "15 Jan",
                 "description": "Select your preferred class times through My Timetable from midday today",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "26 Jan",
                 "description": "Australia Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "29 Jan",
                 "description": "Last chance to select your preferred class times - My Timetable preferencing closes at 9am",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "29Jan",
                 "description": "Enrolment in most programs closes today for domestic students",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-allocation?p=2#2"
               }
             ]
@@ -1861,31 +2153,37 @@
               {
                 "date": "5 Feb",
                 "description": "My Timetable is closed from 8am to midday",
-                "link": ""
+                "dayType": null,
+                "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "5 Feb",
                 "description": "Adjust your timetable in My Timetable from midday today",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "9 Feb",
                 "description": "Last chance to request a program change through mySI-net",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               },
               {
                 "date": "12-16 Feb",
                 "description": "Orientation Week",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/orientation"
               },
               {
                 "date": "16 Feb",
                 "description": "Enrolment in most programs closes today for international students",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-allocation"
               },
               {
                 "date": "19 Feb",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -1896,36 +2194,43 @@
               {
                 "date": "1 Mar",
                 "description": "Last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               },
               {
                 "date": "1 Mar",
                 "description": "Tuition fees due today",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/fees-payments-and-refunds/how-pay"
               },
               {
                 "date": "4 Mar",
                 "description": "Last chance to adjust your timetable - My Timetable adjustments close at 9am",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "23 Mar",
                 "description": "In-semester examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/exam-timetables-and-venues"
               },
               {
                 "date": "28 Mar",
                 "description": "Classes end for mid-semester break",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "29-31 Mar",
                 "description": "Easter public holidays",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "31 Mar",
                 "description": "Census date -Last chance to withdraw from courses or cancel your enrolment through mySI-net without financial liability",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               }
             ]
@@ -1936,41 +2241,49 @@
               {
                 "date": "1 Apr",
                 "description": "Mid-semester break starts for most programs",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "1 Apr",
                 "description": "Easter Monday public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "1-5 Apr",
                 "description": "Universities of Australia Common Vacation Week",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "8 Apr",
                 "description": "Classes resume for most programs",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "13 Apr",
                 "description": "In-semester examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/exam-timetables-and-venues"
               },
               {
                 "date": "20 Apr",
                 "description": "In-semester examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/exam-timetables-and-venues"
               },
               {
                 "date": "25 Apr",
                 "description": "Anzac Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "30 Apr",
                 "description": "Last chance to withdraw from courses or cancel your enrolment without any academic penalty",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               }
             ]
@@ -1981,26 +2294,31 @@
               {
                 "date": "4 May",
                 "description": "In-semester deferred examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/deferring-exam#:~:text=You%20can%20request%20a%20deferred,you%20provide%20when%20you%20apply."
               },
               {
                 "date": "6 May",
                 "description": "Labour Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "25 May",
                 "description": "Semester 1 classes end",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "27-31 May",
                 "description": "Revision period",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "31 May",
                 "description": "Last day to withdraw from courses in mySI-net (academic penalties and financial liabilities apply)",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               }
             ]
@@ -2011,21 +2329,25 @@
               {
                 "date": "1-15 Jun",
                 "description": "Examination period",
+                "dayType": "Examination period",
                 "link": ""
               },
               {
                 "date": "15 Jun",
                 "description": "Semester 1 ends",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "26 Jun",
                 "description": "Finalisation of grades",
+                "dayType": "Finalisation of grades",
                 "link": ""
               },
               {
                 "date": "30 Jun",
                 "description": "Progression improvement plan due today if you received a progression intervention notice in a previous semester and want to resume your studies.",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -2036,21 +2358,25 @@
               {
                 "date": "1-5 Jul",
                 "description": "Universities of Australia Common Vacation Week",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "8-12 Jul",
                 "description": "Graduations",
+                "dayType": "Graduation period",
                 "link": "https://my.uq.edu.au/graduation"
               },
               {
                 "date": "15-19 Jul",
                 "description": "Mid-year Orientation Week",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "16-19 Jul",
                 "description": "Deferred and supplementary examination period",
+                "dayType": "Examination period",
                 "link": ""
               }
             ]
@@ -2066,21 +2392,25 @@
               {
                 "date": "3 Jun",
                 "description": "My Timetable course timetables available",
-                "link": ""
+                "dayType": null,
+                "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "17 Jun",
                 "description": "Select your preferred class times in My Timetable from midday today",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "26 Jun",
                 "description": "Request a program change in mySI-net from today",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               },
               {
                 "date": "30 Jun",
                 "description": "Progression improvement plan due today if you received a progression intervention notice in a previous semester and want to resume your studies.",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -2091,41 +2421,49 @@
               {
                 "date": "1 Jul",
                 "description": "Last chance to select your preferred class times - My Timetable closes at 9am",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "8 Jul",
                 "description": "My Timetable is closed from 8am to midday",
-                "link": ""
+                "dayType": null,
+                "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "8 Jul",
                 "description": "Adjust your timetable in My Timetable from midday today",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "12 Jul",
                 "description": "Last chance to request a program change through mySI-net",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               },
               {
                 "date": "12 Jul",
                 "description": "Enrolment in most programs closes for domestic students",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-allocation?p=2#2"
               },
               {
                 "date": "15-19 Jul",
                 "description": "Mid-year Orientation Week",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "19 Jul",
                 "description": "Enrolment in most programs closes for international students",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-allocation?p=2#2"
               },
               {
                 "date": "22 Jul",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -2136,36 +2474,43 @@
               {
                 "date": "2 Aug",
                 "description": "Last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               },
               {
                 "date": "2 Aug",
                 "description": "Tuition fees due today",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/fees-payments-and-refunds/how-pay"
               },
               {
                 "date": "5 Aug",
                 "description": "Last chance to adjust your timetable - My Timetable closes at 9am",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "12 Aug",
                 "description": "Royal Queensland Show for Gatton only - Gatton campus closed",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "14 Aug",
                 "description": "Royal Queensland Show for Brisbane only - St Lucia and Herston campuses closed",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "31 Aug",
                 "description": "Census date -Last chance to withdraw from courses or cancel enrolment through mySI-net without financial penalty",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               },
               {
                 "date": "31 Aug",
                 "description": "In-semester examinations",
+                "dayType": "Examination period",
                 "link": ""
               }
             ]
@@ -2176,36 +2521,43 @@
               {
                 "date": "7 Sep",
                 "description": "In-semester examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/exam-timetables-and-venues"
               },
               {
                 "date": "14 Sep",
                 "description": "In-semester examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/exam-timetables-and-venues"
               },
               {
                 "date": "21 Sep",
                 "description": "Classes end for mid-semester break",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "23 Sep",
                 "description": "Mid-semester break starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "23-27 Sep",
                 "description": "Universities of Australia Common Vacation Week",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "30 Sep",
                 "description": "Classes resume after mid-semester break",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "30 Sep",
                 "description": "Last date to withdraw from courses or cancel enrolment through mySI-net without academic penalty (financial liabilities apply)",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program"
               }
             ]
@@ -2216,21 +2568,25 @@
               {
                 "date": "5 Oct",
                 "description": "Deferred in-semester examinations",
+                "dayType": "Examination period",
                 "link": ""
               },
               {
                 "date": "7 Oct",
                 "description": "King's Birthday public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "26 Oct",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "28 Oct",
                 "description": "Revision period starts",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -2241,31 +2597,37 @@
               {
                 "date": "1 Nov",
                 "description": "Last date to withdraw from courses through mySI-net, incurring financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program"
               },
               {
                 "date": "2-16 Nov",
                 "description": "Examination period",
+                "dayType": "Examination period",
                 "link": ""
               },
               {
                 "date": "16 Nov",
                 "description": "Semester 2 ends",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "18 Nov",
                 "description": "Enrolments for Semesters 1 and 2, 2025 open for continuing students",
+                "dayType": "Starting date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-allocation"
               },
               {
                 "date": "27 Nov",
                 "description": "Finalisation of grades",
+                "dayType": "Finalisation of grades",
                 "link": ""
               },
               {
                 "date": "27 Nov",
                 "description": "Request a program change through mySI-net from today for Sem 1, 2025",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               }
             ]
@@ -2276,21 +2638,25 @@
               {
                 "date": "2-20 Dec",
                 "description": "Graduations",
+                "dayType": "Graduation period",
                 "link": "https://my.uq.edu.au/graduation"
               },
               {
                 "date": "10-13 Dec",
                 "description": "Deferred and supplementary examination period",
+                "dayType": "Examination period",
                 "link": ""
               },
               {
                 "date": "25 Dec",
                 "description": "Christmas Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "26 Dec",
                 "description": "Boxing Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               }
             ]
@@ -2306,6 +2672,7 @@
               {
                 "date": "27 May",
                 "description": "Enrolments open",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -2316,7 +2683,8 @@
               {
                 "date": "9 Sep",
                 "description": "My Timetable course timetables available",
-                "link": ""
+                "dayType": null,
+                "link": "https://my.uq.edu.au/node/212/3#3"
               }
             ]
           },
@@ -2326,11 +2694,13 @@
               {
                 "date": "7 Oct",
                 "description": "King's Birthday public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "21 Oct",
                 "description": "My Timetable opens for preferencing at midday today",
+                "dayType": "Starting date",
                 "link": "https://my.uq.edu.au/node/212/3#3"
               }
             ]
@@ -2341,26 +2711,31 @@
               {
                 "date": "4 Nov",
                 "description": "My Timetable preferencing closes at 9am",
-                "link": ""
+                "dayType": "Closing date",
+                "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "8 Nov",
                 "description": "Due date to enrol",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-allocation?p=1#1"
               },
               {
                 "date": "11 Nov",
                 "description": "My Timetable is unavailable from 8am to midday today",
-                "link": ""
+                "dayType": null,
+                "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "11 Nov",
                 "description": "My Timetable personal timetable released at 12pm, and open for allocation adjustment",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "25 Nov",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -2371,41 +2746,49 @@
               {
                 "date": "6 Dec",
                 "description": "Tuition fees due",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "6 Dec",
                 "description": "Last chance to add or substitute courses",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-allocation?p=1#1"
               },
               {
                 "date": "16 Dec",
                 "description": "Last chance to adjust your timetable - My Timetable allocation adjustment finishes at 9am",
-                "link": ""
+                "dayType": "Closing date",
+                "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "18 Dec",
                 "description": "Census date - Last chance to withdraw from course(s) or cancel enrolment without any financial liability",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "21 Dec",
                 "description": "Classes end for mid-semester break",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "22 Dec",
                 "description": "Mid-semester break starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "25 Dec",
                 "description": "Christmas Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "26 Dec",
                 "description": "Boxing Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               }
             ]
@@ -2416,36 +2799,43 @@
               {
                 "date": "1 Jan",
                 "description": "New Year's Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "2 Jan",
                 "description": "Classes resume after mid-semester break",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "2 Jan",
                 "description": "Last chance to withdraw from courses or cancel enrolment without any academic penalty",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/withdrawing-course-or-program?p=2#2"
               },
               {
                 "date": "25 Jan",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "27 Jan",
                 "description": "Revision period starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "27 Jan",
                 "description": "Australia Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "31 Jan",
                 "description": "Last date to withdraw from course(s) through mySI-net, incurring financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -2456,16 +2846,19 @@
               {
                 "date": "1-8 Feb",
                 "description": "Examination period",
+                "dayType": "Examination period",
                 "link": ""
               },
               {
                 "date": "8 Feb",
                 "description": "Summer Semester 2024/2025 ends",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "20 Feb",
                 "description": "Finalisation of grades",
+                "dayType": "Finalisation of grades",
                 "link": ""
               }
             ]
@@ -2476,6 +2869,7 @@
               {
                 "date": "8 Mar",
                 "description": "Deferred and supplementary examinations",
+                "dayType": "Examination period",
                 "link": ""
               }
             ]
@@ -2491,16 +2885,19 @@
               {
                 "date": "1 Jan",
                 "description": "Starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "1 Feb",
                 "description": "Census date - Last chance to cancel your enrolment without financial penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "31 Mar",
                 "description": "Ends",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -2511,16 +2908,19 @@
               {
                 "date": "1 Apr",
                 "description": "Starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "1 May",
                 "description": "Census date - Last chance to cancel your enrolment without financial penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "30 Jun",
                 "description": "Ends",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -2531,16 +2931,19 @@
               {
                 "date": "1 Jul",
                 "description": "Starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "1 Aug",
                 "description": "Census date - Last chance to cancel your enrolment without financial penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "30 Sep",
                 "description": "Ends",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -2551,16 +2954,19 @@
               {
                 "date": "1 Oct",
                 "description": "Starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "1 Nov",
                 "description": "Census date - Last chance to cancel your enrolment without financial penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "31 Dec",
                 "description": "Ends",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -2576,26 +2982,31 @@
               {
                 "date": "2 Jan",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "2 Jan",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "9 Jan",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "9 Jan",
                 "description": "Tuition fees due",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "27 Jan",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -2606,26 +3017,31 @@
               {
                 "date": "29 Jan",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "29 Jan",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "5 Feb",
                 "description": "Tuition fees due",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "9 Feb",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "23 Mar",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -2636,26 +3052,31 @@
               {
                 "date": "25 Mar",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "25 Mar",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "2 Apr",
                 "description": "Tuition fees due",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "5 Apr",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "25 May",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -2666,26 +3087,31 @@
               {
                 "date": "27 May",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "27 May",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "3 Jun",
                 "description": "Tuition fees due",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "3 Jun",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "22 Jun",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -2696,26 +3122,31 @@
               {
                 "date": "24 Jun",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "24 Jun",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "1 Jul",
                 "description": "Tuition fees due",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "5 Jul",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "17 Aug",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -2726,26 +3157,31 @@
               {
                 "date": "19 Aug",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "19 Aug",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "26 Aug",
                 "description": "Tuition fees due",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "30 Aug",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "19 Oct",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -2756,26 +3192,31 @@
               {
                 "date": "21 Oct",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "21 Oct",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "28 Oct",
                 "description": "Tuition fees due",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "28 Oct",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "16 Nov",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -2786,26 +3227,31 @@
               {
                 "date": "18 Nov",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "18 Nov",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "25 Nov",
                 "description": "Tuition fees due",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "25 Nov",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "14 Dec",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -2826,26 +3272,31 @@
               {
                 "date": "2 Jan",
                 "description": "New Year's Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "16 Jan",
                 "description": "Select your preferred class times through My Timetable from midday today",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "26 Jan",
                 "description": "Australia Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "27 Jan",
                 "description": "Last chance to select your preferred class times - My Timetable preferencing closes at 4pm",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "27Jan",
                 "description": "Enrolment in most programs closes today for domestic students",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-allocation?p=2#2"
               }
             ]
@@ -2856,31 +3307,37 @@
               {
                 "date": "6 Feb",
                 "description": "My Timetable is closed from 8am to midday",
-                "link": ""
+                "dayType": null,
+                "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "6 Feb",
                 "description": "Select your preferred class times in My Timetable from midday today",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "10 Feb",
                 "description": "Last chance to request a program change through mySI-net",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               },
               {
                 "date": "13-17 Feb",
                 "description": "Orientation Week",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/orientation"
               },
               {
                 "date": "17 Feb",
                 "description": "Enrolment in most programs closes today for international students",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-allocation"
               },
               {
                 "date": "20 Feb",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -2891,26 +3348,31 @@
               {
                 "date": "3 Mar",
                 "description": "Last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               },
               {
                 "date": "3 Mar",
                 "description": "Tuition fees due today",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/fees-payments-and-refunds/how-pay"
               },
               {
                 "date": "6 Mar",
                 "description": "Last chance to adjust your timetable - My Timetable adjustments close at 9am",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "25 Mar",
                 "description": "In-semester examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/exam-timetables-and-venues"
               },
               {
                 "date": "31 Mar",
                 "description": "Census date -Last chance to withdraw from courses or cancel your enrolment through mySI-net without financial liability",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               }
             ]
@@ -2921,46 +3383,55 @@
               {
                 "date": "1 Apr",
                 "description": "In-semester examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/exam-timetables-and-venues"
               },
               {
                 "date": "6 Apr",
                 "description": "Classes end for mid-semester break",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "7-10 Apr",
                 "description": "Easter holidays",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "10 Apr",
                 "description": "Mid-semester break starts for most programs",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "10-14 Apr",
                 "description": "Universities of Australia Common Vacation Week",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "17 Apr",
                 "description": "Classes resume for most programs",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "22 Apr",
                 "description": "In-semester examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/exam-timetables-and-venues"
               },
               {
                 "date": "25 Apr",
                 "description": "Anzac Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "30 Apr",
                 "description": "Last chance to withdraw from courses or cancel your enrolment without any academic penalty",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               }
             ]
@@ -2971,21 +3442,25 @@
               {
                 "date": "1 May",
                 "description": "Labor Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "6 May",
                 "description": "In-semester deferred examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/deferring-exam#:~:text=You%20can%20request%20a%20deferred,you%20provide%20when%20you%20apply."
               },
               {
                 "date": "27 May",
                 "description": "Semester 1 classes end",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "29 May-2 Jun",
                 "description": "Revision period",
+                "dayType": null,
                 "link": ""
               }
             ]
@@ -2996,26 +3471,31 @@
               {
                 "date": "2 Jun",
                 "description": "Last day to withdraw from courses in mySI-net (academic penalties and financial liabilities apply)",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               },
               {
                 "date": "3-17 Jun",
                 "description": "Examination period",
+                "dayType": "Examination period",
                 "link": ""
               },
               {
                 "date": "17 Jun",
                 "description": "Semester 1 ends",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "28 Jun",
                 "description": "Finalisation of grades",
+                "dayType": "Finalisation of grades",
                 "link": ""
               },
               {
                 "date": "30 Jun",
                 "description": "Progression improvement plan due today if you received a progression intervention notice in a previous semester and want to resume your studies.",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -3026,11 +3506,13 @@
               {
                 "date": "3-7 Jul",
                 "description": "Universities of Australia Common Vacation Week",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "16-19 Jul",
                 "description": "Deferred and supplementary examination period",
+                "dayType": "Examination period",
                 "link": ""
               }
             ]
@@ -3046,21 +3528,25 @@
               {
                 "date": "5 Jun",
                 "description": "My Timetable course timetables available",
-                "link": ""
+                "dayType": null,
+                "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "19 Jun",
                 "description": "Select your preferred class times in My Timetable from midday today",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "28 Jun",
                 "description": "Request a program change in mySI-net from today",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               },
               {
                 "date": "30 Jun",
                 "description": "Progression improvement plan due today if you received a progression intervention notice in a previous semester and want to resume your studies.",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -3071,36 +3557,43 @@
               {
                 "date": "3 Jul",
                 "description": "Last chance to select your preferred class times - My Timetable closes at 9am",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "10 Jul",
                 "description": "Adjust your timetable in My Timetable from midday today",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "14 Jul",
                 "description": "Last chance to request a program change through mySI-net",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               },
               {
                 "date": "14 Jul",
                 "description": "Enrolment in most programs closes for domestic students",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-allocation?p=2#2"
               },
               {
                 "date": "17-21 Jul",
                 "description": "Mid-year Orientation Week",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "21 Jul",
                 "description": "Enrolment in most programs closes for international students",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-allocation?p=2#2"
               },
               {
                 "date": "24 Jul",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -3111,31 +3604,37 @@
               {
                 "date": "4 Aug",
                 "description": "Last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               },
               {
                 "date": "4 Aug",
                 "description": "Tuition fees due today",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/fees-payments-and-refunds/how-pay"
               },
               {
                 "date": "7 Aug",
                 "description": "Last chance to adjust your timetable - My Timetable closes at 9am",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "14 Aug",
                 "description": "Royal Queensland Show for Gatton only - Gatton campus closed",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "16 Aug",
                 "description": "Royal Queensland Show for Brisbane only - St Lucia and Herston campuses closed",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "31 Aug",
                 "description": "Census date  -Last chance to withdraw from courses or cancel enrolment through mySI-net without financial penalty",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               }
             ]
@@ -3146,36 +3645,43 @@
               {
                 "date": "2 Sep",
                 "description": "In-semester examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/exam-timetables-and-venues"
               },
               {
                 "date": "9 Sep",
                 "description": "In-semester examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/exam-timetables-and-venues"
               },
               {
                 "date": "16 Sep",
                 "description": "In-semester examinations",
+                "dayType": "Examination period",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/exams-and-assessment/exam-timetables-and-venues"
               },
               {
                 "date": "23 Sep",
                 "description": "Classes end for mid-semester break",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "25 Sep",
                 "description": "Mid-semester break starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "25-29 Sep",
                 "description": "Universities of Australia Common Vacation Week",
+                "dayType": null,
                 "link": ""
               },
               {
                 "date": "30 Sep",
                 "description": "Last chance to withdraw from courses or cancel enrolment (academic penalties and financial liabilities apply)",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               }
             ]
@@ -3186,26 +3692,31 @@
               {
                 "date": "2 Oct",
                 "description": "King's Birthday public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "3 Oct",
                 "description": "Classes resume after mid-semester break",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "7 Oct",
                 "description": "Deferred examinations",
+                "dayType": "Examination period",
                 "link": ""
               },
               {
                 "date": "28 Oct",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "30 Oct",
                 "description": "Revision period starts",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -3216,26 +3727,31 @@
               {
                 "date": "3 Nov",
                 "description": "Last day to withdraw from courses in mySI-net (academic penalties and financial liabilities apply)",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               },
               {
                 "date": "4-18 Nov",
                 "description": "Examination period",
+                "dayType": "Examination period",
                 "link": ""
               },
               {
                 "date": "18 Nov",
                 "description": "Semester 2 ends",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "20 Nov",
                 "description": "Enrolments for Semesters 1 and 2, 2024 open for continuing students",
+                "dayType": "Starting date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-allocation"
               },
               {
                 "date": "29 Nov",
                 "description": "Finalisation of grades",
+                "dayType": "Finalisation of grades",
                 "link": ""
               }
             ]
@@ -3246,21 +3762,25 @@
               {
                 "date": "4-22 Dec",
                 "description": "Graduations",
+                "dayType": "Graduation period",
                 "link": "https://my.uq.edu.au/graduation"
               },
               {
                 "date": "12-15 Dec",
                 "description": "Deferred and supplementary examination period",
+                "dayType": "Examination period",
                 "link": ""
               },
               {
                 "date": "25 Dec",
                 "description": "Christmas Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "26 Dec",
                 "description": "Boxing Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               }
             ]
@@ -3276,6 +3796,7 @@
               {
                 "date": "29 May",
                 "description": "Enrolments open",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -3286,7 +3807,8 @@
               {
                 "date": "11 Sep",
                 "description": "My Timetable course timetables available",
-                "link": ""
+                "dayType": null,
+                "link": "https://my.uq.edu.au/node/212/3#3"
               }
             ]
           },
@@ -3296,11 +3818,13 @@
               {
                 "date": "2 Oct",
                 "description": "King's Birthday public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "23 Oct",
                 "description": "Adjust your timetable preferences in My Timetable from midday today",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/node/212/3#3"
               }
             ]
@@ -3311,26 +3835,31 @@
               {
                 "date": "6 Nov",
                 "description": "My Timetable preferencing closes at 9am",
-                "link": ""
+                "dayType": "Closing date",
+                "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "10 Nov",
                 "description": "Enrolment closes today",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/classes-timetables-and-coursework/enrolment-and-class-allocation?p=2#2"
               },
               {
                 "date": "13 Nov",
                 "description": "My Timetable is closed from 8am to midday",
-                "link": ""
+                "dayType": null,
+                "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "13 Nov",
                 "description": "Adjust your timetable through My Timetable from midday today",
+                "dayType": null,
                 "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "27 Nov",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -3341,41 +3870,49 @@
               {
                 "date": "8 Dec",
                 "description": "Tuition fees due",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "8 Dec",
                 "description": "Last chance to add or substitute courses",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "18 Dec",
                 "description": "Last chance to adjust your timetable - My Timetable allocation closes at 9am",
-                "link": ""
+                "dayType": "Closing date",
+                "link": "https://my.uq.edu.au/node/212/3#3"
               },
               {
                 "date": "18 Dec",
                 "description": "Census date - Last chance to withdraw from course(s) or cancel enrolment without any financial liability",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "23 Dec",
                 "description": "Classes end for mid-semester break",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "24 Dec",
                 "description": "Mid-semester break starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "25 Dec",
                 "description": "Christmas Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "26 Dec",
                 "description": "Boxing Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               }
             ]
@@ -3386,31 +3923,37 @@
               {
                 "date": "1 Jan",
                 "description": "New Year's Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "2 Jan",
                 "description": "Classes resume after mid-semester break",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "2 Jan",
                 "description": "Last chance to withdraw from courses or cancel enrolment without any academic penalty",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               },
               {
                 "date": "26 Jan",
                 "description": "Australia Day public holiday",
+                "dayType": "Public holiday",
                 "link": ""
               },
               {
                 "date": "27 Jan",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "29 Jan",
                 "description": "Start of the revision period",
+                "dayType": "Starting date",
                 "link": ""
               }
             ]
@@ -3421,26 +3964,31 @@
               {
                 "date": "2 Feb",
                 "description": "End of the revision period",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "2 Feb",
                 "description": "Last chance (by 9am) to withdraw from a course(academic penalties and financial liabilities apply)",
+                "dayType": "Closing date",
                 "link": "https://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programshttps://my.uq.edu.au/information-and-services/manage-my-program/changing-what-you-study/changing-programs"
               },
               {
                 "date": "3-10 Feb",
                 "description": "Examination period",
+                "dayType": "Examination period",
                 "link": ""
               },
               {
                 "date": "10 Feb",
                 "description": "Summer Semester 2023/2024 ends",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "22 Feb",
                 "description": "Finalisation of grades",
+                "dayType": "Finalisation of grades",
                 "link": ""
               }
             ]
@@ -3451,6 +3999,7 @@
               {
                 "date": "9 Mar",
                 "description": "Deferred and supplementary examinations",
+                "dayType": "Examination period",
                 "link": ""
               }
             ]
@@ -3466,16 +4015,19 @@
               {
                 "date": "1 Jan",
                 "description": "Starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "1 Feb",
                 "description": "Census date - Last chance to cancel your enrolment without financial penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "31 Mar",
                 "description": "Ends",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -3486,16 +4038,19 @@
               {
                 "date": "1 Apr",
                 "description": "Starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "1 May",
                 "description": "Census date - Last chance to cancel your enrolment without financial penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "30 Jun",
                 "description": "Ends",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -3506,16 +4061,19 @@
               {
                 "date": "1 Jul",
                 "description": "Starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "1 Aug",
                 "description": "Census date - Last chance to cancel your enrolment without financial penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "30 Sep",
                 "description": "Ends",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -3526,16 +4084,19 @@
               {
                 "date": "1 Oct",
                 "description": "Starts",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "1 Nov",
                 "description": "Census date - Last chance to cancel your enrolment without financial penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "31 Dec",
                 "description": "Ends",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -3551,26 +4112,31 @@
               {
                 "date": "3 Jan",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "3 Jan",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "9 Jan",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "9 Jan",
                 "description": "Tuition fees due",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "28 Jan",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -3581,26 +4147,31 @@
               {
                 "date": "30 Jan",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "30 Jan",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "6 Feb",
                 "description": "Tuition fees due",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "10 Feb",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "25 Mar",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -3611,26 +4182,31 @@
               {
                 "date": "27 Mar",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "27 Mar",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "3 Apr",
                 "description": "Tuition fees due",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "7 Apr",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "27 May",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -3641,26 +4217,31 @@
               {
                 "date": "29 May",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "29 May",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "5 Jun",
                 "description": "Tuition fees due",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "5 Jun",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "24 Jun",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -3671,26 +4252,31 @@
               {
                 "date": "26 Jun",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "26 Jun",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "3 Jul",
                 "description": "Tuition fees due",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "7 Jul",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "19 Aug",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -3701,26 +4287,31 @@
               {
                 "date": "21 Aug",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "21 Aug",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "28 Aug",
                 "description": "Tuition fees due",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "1 Sep",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "21 Oct",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -3731,26 +4322,31 @@
               {
                 "date": "23 Oct",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "23 Oct",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "30 Oct",
                 "description": "Tuition fees due",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "30 Oct",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "18 Nov",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]
@@ -3761,26 +4357,31 @@
               {
                 "date": "20 Nov",
                 "description": "Enrolments close - last chance to add courses or alter your enrolment",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "20 Nov",
                 "description": "Classes start",
+                "dayType": "Starting date",
                 "link": ""
               },
               {
                 "date": "27 Nov",
                 "description": "Tuition fees due",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "27 Nov",
                 "description": "Census date - Last chance to drop courses or cancel enrolment without financial liability and academic penalty",
+                "dayType": "Closing date",
                 "link": ""
               },
               {
                 "date": "16 Dec",
                 "description": "Classes end",
+                "dayType": "Closing date",
                 "link": ""
               }
             ]

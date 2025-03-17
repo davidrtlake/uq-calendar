@@ -25,17 +25,21 @@ Use `npm run dev` to start frontend.
 - [x] On hover expand event description.
 - [ ] Show holidays.
 - [ ] Record type of day in JSON:
-  - [ ] Vacation/Revision periods (White)
-  - [ ] Public Holidays (Mustard)
-  - [ ] Teaching periods (Pale blue)
-  - [ ] Examination periods (Yellow)
-  - [ ] Starting Dates (Green)
-  - [ ] Closing Dates (Salmon)
-  - [ ] Graduation Period (Orange bar)
-  - [ ] Special Events (White border)
-  - [ ] Finalisation of Grades (Red border)
+  - [ ] Colour days with type, partial colour for shared event days.
+  - [ ] Day types
+    - [ ] Vacation/Revision periods (White)
+    - [ ] Public Holidays (Mustard)
+    - [ ] Teaching periods (Pale blue)
+    - [ ] Examination periods (Yellow)
+    - [ ] Starting Dates (Green)
+    - [ ] Closing Dates (Salmon)
+    - [ ] Graduation Period (Orange bar)
+    - [ ] Special Events (White border)
+    - [ ] Finalisation of Grades (Red border)
 - [ ] Add teaching week.
 - [x] Add quick navigation section on right side.
+  - [ ] Make a quick nav by teaching week.
+- [ ] Give events times if a time is in the description. (e.g. midday, 8am to 12pm, 9am)
 
 ## Fixes
 
@@ -43,6 +47,9 @@ Use `npm run dev` to start frontend.
 - [ ] Fix page position changing when selecting periods. (Fix month length? centre scroll?)
 - [ ] Fix duplicate events that appear in more than one period
 - [ ] Make drop downs on side bars smooth/fix quick nav styling.
+- [ ] Anthing with my timetable, link https://my.uq.edu.au/node/212/3#3
+- [ ] Add "open tab" icon to links.
+- [ ] Make Event interface global?
 
 ## Ideas
 
@@ -50,4 +57,5 @@ Use `npm run dev` to start frontend.
 - Check collision of heading and month heading. Fade out month heading.
 - Reduce min height of days with extended events below them.
 - Border line vertically middle of month shooting out either side.
-- Add information current as warning.
+- Add "information current as" warning.
+- Scroll to currMonth every time select periods is shown.

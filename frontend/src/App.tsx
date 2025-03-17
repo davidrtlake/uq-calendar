@@ -12,6 +12,7 @@ interface Event {
   sub_period: string;
   start_date: Date;
   end_date: Date;
+  event_type: string;
   url: string;
 }
 
