@@ -48,37 +48,45 @@ const Day = ({ date, today, events }: Props) => {
       >
         {date} {today ? " Today" : ""}
       </h4>
-      {events.map((e, i) => (
-        <div
-          key={i}
-          className="event"
-          style={{
-            marginBlockEnd: showPeriod[i + 1] ? "0.5em" : "0.2em",
-            backgroundColor: getEventColour(e.event_type)[0],
-            color: getEventColour(e.event_type)[1],
-          }}
-        >
-          <p
-            className={`event-descriptions ${
-              events.length > 2 ? "truncate-2" : "truncate-3"
-            }`}
+      {events.map((e, i) => {
+        for (let j = 0; j < i; j++) {
+          if (events[j].title === events[i].title) {
+            // Duplicate event then only show one.
+            return;
+          }
+        }
+        return (
+          <div
+            key={i}
+            className="event"
+            style={{
+              marginBlockEnd: showPeriod[i + 1] ? "0.5em" : "0.2em",
+              backgroundColor: getEventColour(e.event_type)[0],
+              color: getEventColour(e.event_type)[1],
+            }}
           >
-            {showPeriod[i] && <b className="period-title">{e.period}: </b>}
-            {e.url ? (
-              <a
-                href={e.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: getEventColour(e.event_type)[1] }}
-              >
-                {e.title}
-              </a>
-            ) : (
-              e.title
-            )}
-          </p>
-        </div>
-      ))}
+            <p
+              className={`event-descriptions ${
+                events.length > 2 ? "truncate-2" : "truncate-3"
+              }`}
+            >
+              {showPeriod[i] && <b className="period-title">{e.period}: </b>}
+              {e.url ? (
+                <a
+                  href={e.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: getEventColour(e.event_type)[1] }}
+                >
+                  {e.title}
+                </a>
+              ) : (
+                e.title
+              )}
+            </p>
+          </div>
+        );
+      })}
     </>
   );
 };

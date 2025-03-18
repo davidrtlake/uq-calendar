@@ -15,10 +15,9 @@ Use `npm run dev` to start frontend.
 - [x] Make fieldset sticky on scroll.
 - [ ] Add search for events:
   - [ ] Scrolls to results (like ctrl+f)
-  - [ ] no reload.
-  - [ ] has year and month heading.
-  - [ ] uses fieldset as filter.
-  - [ ] informs if there are results that are hidden.
+  - [ ] Uses fieldset as filter.
+  - [ ] Informs if there are results that are hidden.
+  - [ ] Search all years checkbox.
 - [x] Add all years to page.
   - [x] Automatic scroll to current day.
   - [ ] Button to jump to today.
@@ -36,6 +35,7 @@ Use `npm run dev` to start frontend.
     - [x] Finalisation of Grades (Red border)
 - [x] Add teaching week.
   - [ ] Different colour for summer semester.
+  - [ ] Different shades for all non teaching weeks.
 - [x] Add quick navigation section on right side.
   - [ ] Make a quick nav by teaching week.
 - [ ] Give events times if a time is in the description. (e.g. midday, 8am to 12pm, 9am)
@@ -45,7 +45,7 @@ Use `npm run dev` to start frontend.
 
 - [x] Fix overlapping months and days.
 - [ ] Fix page position changing when selecting periods. (Fix month length? centre scroll?)
-- [ ] Fix duplicate events that appear in more than one period
+- [x] Fix duplicate events that appear in more than one period
 - [ ] Make drop downs on side bars smooth/fix quick nav styling.
 - [x] Anthing with my timetable, link https://my.uq.edu.au/node/212/3#3
 - [ ] Add "open tab" icon to links.

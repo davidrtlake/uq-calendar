@@ -49,15 +49,21 @@ const Month = ({
   let introText: string;
   let eELength: number;
   let labelIndex: number = 0;
+  let toggle: boolean = true;
 
-  events.forEach((e) => {
+  // Sort events into single or multi-day.
+  events.forEach((e, i) => {
+    introText = "";
     // If starts or ends in another month, adjust the start or end date.
     if (e.start_date.getMonth() !== monthNum) {
+      // If starts in previous month.
+      introText = "Cont.";
       startDate = new Date(e.end_date.getFullYear(), monthNum, 1);
     } else {
       startDate = e.start_date;
     }
     if (e.end_date.getMonth() !== monthNum) {
+      // If ends in next month.
       endDate = new Date(e.start_date.getFullYear(), monthNum, monthLength);
     } else {
       endDate = e.end_date;
@@ -73,7 +79,6 @@ const Month = ({
       remainingTime = eventLength + 1;
       currDay = startDate.getDay();
       currDate = startDate.getDate();
-      introText = "";
       // Keep track of days in between that will be affected.
       while (remainingTime > 0) {
         distanceToNextSunday = 7 - currDay;
@@ -85,15 +90,23 @@ const Month = ({
           event: e,
           introText: introText,
           length: eELength,
-        }); // Need to know if overflow has happened.
-        for (let i = currDate; i < currDate + eELength - 1; i++) {
-          invisExtendedEvents[i]++;
+        });
+        toggle = true;
+        for (let j = 0; j < i; j++) {
+          if (events[j].title === events[i].title) {
+            // Duplicate event then only count one to invisExtendedEvents.
+            toggle = false;
+          }
+        }
+        if (toggle) {
+          for (let i = currDate; i < currDate + eELength - 1; i++) {
+            invisExtendedEvents[i]++;
+          }
         }
         currDate += distanceToNextSunday;
         currDay = 0;
         remainingTime -= distanceToNextSunday;
         introText = "Cont.";
-        // Fill the days afterwards with space.
       }
     }
   });
@@ -258,6 +271,15 @@ const Month = ({
                         }}
                       >
                         {extendedEvents[eECount++].map((e, j) => {
+                          for (let k = 0; k < j; k++) {
+                            if (
+                              extendedEvents[eECount - 1][k].event.title ===
+                              extendedEvents[eECount - 1][j].event.title
+                            ) {
+                              // Duplicate event then only show one.
+                              return;
+                            }
+                          }
                           return (
                             <ExtendedEvent
                               key={j}

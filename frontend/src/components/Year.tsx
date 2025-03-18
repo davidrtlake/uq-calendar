@@ -41,8 +41,6 @@ const Year = ({
     currDay += length;
   });
 
-  console.log("yearLabels", typeof yearLabels, yearLabels);
-
   return (
     <>
       <div>
