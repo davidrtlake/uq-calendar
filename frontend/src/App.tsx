@@ -5,7 +5,7 @@ import NestedCheckbox from "./components/NestedCheckbox";
 import QuickNavigation from "./components/QuickNavigation";
 
 // Define a type for your events
-interface Event {
+export interface Event {
   event_id: number;
   title: string;
   period: string;
@@ -194,11 +194,12 @@ function App() {
   return (
     <>
       <div className="body-flex-container">
-        <div className="period-selector">
+        <div className="sidebar" style={{ paddingRight: "1%" }}>
           <NestedCheckbox
             allYears={allYears}
             allPeriods={allPeriods}
             allSummerSemesters={allSummerSemesters}
+            monthRefs={monthRefs}
             checkHandler={checkBoxHandler}
             checkedState={checkedState}
           />
@@ -275,7 +276,7 @@ function App() {
             );
           })}
         </div>
-        <div className="period-selector">
+        <div className="sidebar" style={{ paddingLeft: "2%" }}>
           <QuickNavigation
             allYears={allYears}
             monthNames={monthNames}

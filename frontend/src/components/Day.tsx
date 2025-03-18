@@ -1,22 +1,13 @@
 import "./Day.css";
-
-interface Event {
-  event_id: number;
-  title: string;
-  period: string;
-  sub_period: string;
-  start_date: Date;
-  end_date: Date;
-  event_type: string;
-  url: string;
-}
+import { Event } from "../App";
 
 interface Props {
   date: string;
+  today: boolean;
   events: Event[];
 }
 
-const Day = ({ date, events }: Props) => {
+const Day = ({ date, today, events }: Props) => {
   const showPeriod: boolean[] = Array();
   let prevPeriod: string = "";
 
@@ -25,16 +16,47 @@ const Day = ({ date, events }: Props) => {
     prevPeriod = e.period;
   });
 
+  const getEventColour = (eventType: string): string[] => {
+    switch (eventType) {
+      case "Public holiday":
+        return ["rgb(110, 100, 84)", "rgb(255, 255, 255)"];
+      case "Examination period":
+        return ["rgb(216, 212, 165)", "rgb(71, 70, 55)"];
+      case "Starting date":
+        return ["rgb(74, 109, 68)", "rgb(255, 255, 255)"];
+      case "Closing date":
+        return ["rgb(151, 34, 54)", "rgb(255, 255, 255)"];
+      case "Graduation period":
+        return ["rgb(244, 122, 62)", "rgb(255, 255, 255)"];
+      case "Finalisation of grades":
+        return ["rgb(253, 170, 170)", "rgb(49, 20, 20)"];
+      default:
+        return ["rgb(56, 92, 146)", "rgb(255, 255, 255)"];
+    }
+  };
+
   showPeriod.push(false);
 
   return (
     <>
-      <h4>{date}</h4>
+      <h4
+        style={{
+          backgroundColor: today ? "#a8c7fa" : "none",
+          color: today ? "#062e6f" : "white",
+          borderRadius: today ? "0.2em" : "0",
+        }}
+      >
+        {date}
+      </h4>
       {events.map((e, i) => (
         <div
           key={i}
           className="event"
-          style={{ marginBlockEnd: showPeriod[i + 1] ? "0.5em" : "0.2em" }}
+          style={{
+            marginBlockEnd: showPeriod[i + 1] ? "0.5em" : "0.2em",
+            backgroundColor: getEventColour(e.event_type)[0],
+            color: getEventColour(e.event_type)[1],
+          }}
         >
           <p
             className={`event-descriptions ${
@@ -43,7 +65,12 @@ const Day = ({ date, events }: Props) => {
           >
             {showPeriod[i] && <b className="period-title">{e.period}: </b>}
             {e.url ? (
-              <a href={e.url} target="_blank" rel="noopener noreferrer">
+              <a
+                href={e.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: getEventColour(e.event_type)[1] }}
+              >
                 {e.title}
               </a>
             ) : (

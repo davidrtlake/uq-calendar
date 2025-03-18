@@ -11,26 +11,26 @@
   -webkit-box-orient: vertical;
 }
 
-.extended-event-descriptions a {
+/* .extended-event-descriptions a {
   font-weight: 500;
   color: #3f50e4;
   text-decoration: inherit;
 }
 .extended-event-descriptions a:hover {
   color: #9498eb;
-}
+} */
 
 .extended-event {
   padding: 0 2% 0 2%;
   line-height: 1.5rem;
   position: relative;
   border-radius: 0 0 0.4em 0.4em;
-  background-color: rgb(146, 107, 56);
+  /* background-color: rgb(146, 107, 56); */
   font-size: 13px;
 }
 
 .extended-event:hover {
-  background-color: rgb(114, 81, 37);
+  /* background-color: rgb(114, 81, 37); */
   z-index: 3000;
 }
 

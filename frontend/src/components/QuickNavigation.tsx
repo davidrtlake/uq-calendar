@@ -79,6 +79,14 @@ const QuickNavigation = ({
           <div
             className="nav-year-collapsible"
             onClick={() => buttonClickHandler(y)}
+            style={{
+              display:
+                y === currYear ||
+                y === `${parseInt(currYear) + 1}` ||
+                y === `${parseInt(currYear) - 1}`
+                  ? "flex"
+                  : "none",
+            }}
           >
             <span style={{ margin: "auto" }}>
               {y === currYear ? <b>{`${y}`}</b> : `${y}`}
@@ -87,7 +95,7 @@ const QuickNavigation = ({
 
           <div
             style={{
-              display: shownContent.get(y) ? "block" : "none",
+              display: shownContent.get(y) ? "block" : "none", //y === currYear ? "block" : "none",
             }}
           >
             {monthNames.map((m, j) => (
@@ -102,7 +110,7 @@ const QuickNavigation = ({
                       ? "1px solid rgb(255, 255, 255, 0.6)"
                       : today.getFullYear() === parseInt(y) &&
                         j === today.getMonth()
-                      ? "1px solid rgb(255, 0, 0, 0.6)"
+                      ? "1px solid #a8c7fa80"
                       : "none",
                 }}
                 onClick={() => navigationHandler(m, y)}

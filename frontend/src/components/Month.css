@@ -1,11 +1,10 @@
 .day {
-  /* border: 1px solid rgba(255, 255, 255, 0.87); */
   overflow: visible;
   display: flex;
   flex-direction: column;
   height: 100%;
-  min-height: 160px;
-  min-width: 90px;
+  /* min-height: 150px; */
+  /* min-width: 90px; */
   background: repeating-linear-gradient(-45deg, transparent 0 3px, var(--timetable-stripes-dark) 3px 6px);
 }
 
@@ -30,7 +29,11 @@
 }
 
 .day h4, h4 {
-  margin-block-start: 0.1em;
+  /* margin-block-start: 0.1em;
   margin-inline-start: 0.3em;
-  margin-block-end: 0.4em;
+  margin-block-end: 0.4em; */
+  margin: 0px;
+  padding-block-start: 0.1em;
+  padding-inline-start: 0.3em;
+  padding-block-end: 0.4em;
 }

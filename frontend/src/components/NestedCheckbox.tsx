@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./NestedCheckbox.css";
 
 interface CheckedYear {
@@ -10,6 +10,10 @@ interface Props {
   allYears: string[];
   allPeriods: string[];
   allSummerSemesters: string[];
+  monthRefs: Map<
+    string,
+    React.MutableRefObject<Map<string, HTMLDivElement> | null>
+  >;
   checkHandler: (p: string, y: string) => void;
   checkedState: Map<string, CheckedYear>;
 }
@@ -18,6 +22,7 @@ const NestedCheckbox = ({
   allYears,
   allPeriods,
   allSummerSemesters,
+  monthRefs,
   checkHandler,
   checkedState,
 }: Props) => {
@@ -26,6 +31,37 @@ const NestedCheckbox = ({
     allYears.forEach((y) => defaultShownContent.set(y, y === "2025"));
     return defaultShownContent;
   });
+  const today: Date = new Date();
+  const [currYear, setCurrYear] = useState<string>(
+    `${today.getFullYear()}`.slice(2)
+  );
+
+  const callback = (
+    entries: IntersectionObserverEntry[],
+    _: IntersectionObserver
+  ) => {
+    entries.forEach((entry: IntersectionObserverEntry) => {
+      let entryId: string[] = entry.target.id.split("-");
+      if (entry.isIntersecting) {
+        // Item entering screen.
+        setCurrYear(entryId[0].slice(2));
+      }
+    });
+  };
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "-49% 0px -49% 0px",
+      threshold: 0,
+    };
+    const observer = new IntersectionObserver(callback, options);
+    monthRefs.forEach((year) => {
+      year.current?.forEach((ref) => {
+        observer.observe(ref);
+      });
+    });
+  }, []);
 
   function buttonClickHandler(y: string) {
     const newShownContent = new Map<string, boolean>(shownContent);
@@ -35,10 +71,10 @@ const NestedCheckbox = ({
 
   return (
     <fieldset>
-      <legend>Select Periods:</legend>
+      <legend>Select Categories:</legend>
       {allYears.map((y, i) => (
         <div key={i}>
-          <ul>
+          <ul style={{ display: y.includes(currYear) ? "block" : "none" }}>
             <div className="year-collapsible">
               <div>
                 <input
@@ -48,7 +84,9 @@ const NestedCheckbox = ({
                   checked={checkedState.get(y)?.checked ?? true}
                   onChange={() => checkHandler("", y)}
                 />
-                <label className="year" htmlFor={`${y}`}>{`${y}`}</label>
+                <label className="year" htmlFor={y}>
+                  {y}
+                </label>
               </div>
               <button
                 type="button"
@@ -78,7 +116,13 @@ const NestedCheckbox = ({
               ))}
             </div>
           </ul>
-          <ul>
+          <ul
+            style={{
+              display: allSummerSemesters[i].includes(currYear)
+                ? "block"
+                : "none",
+            }}
+          >
             <div className="year-collapsible">
               <input
                 type="checkbox"

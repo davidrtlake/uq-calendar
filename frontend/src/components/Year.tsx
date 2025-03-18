@@ -1,17 +1,6 @@
 import Month from "./Month";
+import { Event } from "../App";
 import "./Year.css";
-
-// Define a type for your events
-interface Event {
-  event_id: number;
-  title: string;
-  period: string;
-  sub_period: string;
-  start_date: Date;
-  end_date: Date;
-  event_type: string;
-  url: string;
-}
 
 interface Props {
   year: number;

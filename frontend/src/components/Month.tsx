@@ -1,19 +1,8 @@
 import Day from "./Day";
 import ExtendedEvent from "./ExtendedEvent";
+import { Event } from "../App";
 import "./Month.css";
 import "./ExtendedEvent.css";
-
-// Define a type for your events
-interface Event {
-  event_id: number;
-  title: string;
-  period: string;
-  sub_period: string;
-  start_date: Date;
-  end_date: Date;
-  event_type: string;
-  url: string;
-}
 
 interface ExtendedEventAndLength {
   event: Event;
@@ -176,12 +165,8 @@ const Month = ({
                         key={col}
                         className="day"
                         style={{
-                          border:
-                            todayMonth && dayCount + 1 === today.getDate()
-                              ? "1px solid red"
-                              : "none",
                           minHeight: `${
-                            160 -
+                            150 -
                             (invisExtendedEvents[eECount] +
                               extendedEvents[eECount].length) *
                               10
@@ -190,13 +175,14 @@ const Month = ({
                       >
                         <Day
                           date={`${dayCount + 1}`}
+                          today={todayMonth && dayCount + 1 === today.getDate()}
                           events={days[dayCount++]}
                         />
                       </div>
                     );
                   }
                 } else {
-                  // If its an event row.
+                  // If its an extended event row.
                   if ((row === 1 && col < startDay) || eECount >= monthLength) {
                     return (
                       // If first row or after last day, fill with filler days.
@@ -239,7 +225,7 @@ const Month = ({
                         style={{
                           marginBlockEnd: "5%",
                           marginBlockStart: `${
-                            invisExtendedEvents[eECount] * 1.5 * 1.04
+                            invisExtendedEvents[eECount] * 1.5 * 1.0425 // Just enough to put a gap between events.
                           }rem`,
                         }}
                       >

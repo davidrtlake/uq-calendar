@@ -24,18 +24,16 @@ Use `npm run dev` to start frontend.
   - [ ] Button to jump to today.
 - [x] On hover expand event description.
 - [ ] Show holidays.
-- [ ] Record type of day in JSON:
-  - [ ] Colour days with type, partial colour for shared event days.
-  - [ ] Day types
-    - [ ] Vacation/Revision periods (White)
-    - [ ] Public Holidays (Mustard)
-    - [ ] Teaching periods (Pale blue)
-    - [ ] Examination periods (Yellow)
-    - [ ] Starting Dates (Green)
-    - [ ] Closing Dates (Salmon)
-    - [ ] Graduation Period (Orange bar)
-    - [ ] Special Events (White border)
-    - [ ] Finalisation of Grades (Red border)
+- [x] Record type of day in JSON:
+  - [x] Colour events with type.
+  - [x] Day types
+    - [x] Vacation/Revision periods (White)
+    - [x] Public Holidays (Mustard)
+    - [x] Examination periods (Yellow)
+    - [x] Starting Dates (Green)
+    - [x] Closing Dates (Salmon)
+    - [x] Graduation Period (Orange bar)
+    - [x] Finalisation of Grades (Red border)
 - [ ] Add teaching week.
 - [x] Add quick navigation section on right side.
   - [ ] Make a quick nav by teaching week.
@@ -47,9 +45,10 @@ Use `npm run dev` to start frontend.
 - [ ] Fix page position changing when selecting periods. (Fix month length? centre scroll?)
 - [ ] Fix duplicate events that appear in more than one period
 - [ ] Make drop downs on side bars smooth/fix quick nav styling.
-- [ ] Anthing with my timetable, link https://my.uq.edu.au/node/212/3#3
+- [x] Anthing with my timetable, link https://my.uq.edu.au/node/212/3#3
 - [ ] Add "open tab" icon to links.
-- [ ] Make Event interface global?
+- [x] Make Event interface global?
+- [x] Hide prev years nav
 
 ## Ideas
 
@@ -58,4 +57,4 @@ Use `npm run dev` to start frontend.
 - Reduce min height of days with extended events below them.
 - Border line vertically middle of month shooting out either side.
 - Add "information current as" warning.
-- Scroll to currMonth every time select periods is shown.
+- Scroll to currMonth/currWeek every time select periods is shown.
