@@ -23,7 +23,7 @@ Use `npm run dev` to start frontend.
   - [x] Automatic scroll to current day.
   - [ ] Button to jump to today.
 - [x] On hover expand event description.
-- [ ] Show holidays.
+- [x] Show holidays.
 - [x] Record type of day in JSON:
   - [x] Colour events with type.
   - [x] Day types
@@ -34,7 +34,7 @@ Use `npm run dev` to start frontend.
     - [x] Closing Dates (Salmon)
     - [x] Graduation Period (Orange bar)
     - [x] Finalisation of Grades (Red border)
-- [ ] Add teaching week.
+- [x] Add teaching week.
   - [ ] Different colour for summer semester.
 - [x] Add quick navigation section on right side.
   - [ ] Make a quick nav by teaching week.
@@ -51,7 +51,7 @@ Use `npm run dev` to start frontend.
 - [ ] Add "open tab" icon to links.
 - [x] Make Event interface global?
 - [x] Hide prev years nav
-- [ ] 29 May - 2 Jun Revision period to showing in May.
+- [x] 29 May - 2 Jun Revision period to showing in May.
 
 ## Ideas
 
@@ -61,3 +61,4 @@ Use `npm run dev` to start frontend.
 - Border line vertically middle of month shooting out either side.
 - Add "information current as" warning.
 - Scroll to currMonth/currWeek every time select periods is shown.
+- Make public holidays background lighter (like weekend)

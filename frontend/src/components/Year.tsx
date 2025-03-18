@@ -8,9 +8,17 @@ interface Props {
   monthNames: string[];
   getMap: (y: string) => Map<string, HTMLDivElement>;
   events: Event[];
+  yearLabels: object;
 }
 
-const Year = ({ year, currDay, monthNames, getMap, events }: Props) => {
+const Year = ({
+  year,
+  currDay,
+  monthNames,
+  getMap,
+  events,
+  yearLabels,
+}: Props) => {
   const monthLens: number[] = [
     31,
     28 + (year % 4 === 0 ? 1 : 0),
@@ -32,6 +40,8 @@ const Year = ({ year, currDay, monthNames, getMap, events }: Props) => {
     monthStartDays.push(currDay % 7);
     currDay += length;
   });
+
+  console.log("yearLabels", typeof yearLabels, yearLabels);
 
   return (
     <>
@@ -82,6 +92,7 @@ const Year = ({ year, currDay, monthNames, getMap, events }: Props) => {
                     row.end_date.getMonth() === i
                   );
                 })}
+                monthLabels={yearLabels[monthNames[i] as keyof object]}
               />
             </div>
           ))}

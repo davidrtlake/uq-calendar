@@ -37,7 +37,7 @@ const ExtendedEvent = ({ event, introText, eventLength }: Props) => {
           width: `${
             100 * eventLength +
             rowGapPercentOfDayWdith * (eventLength - 1) -
-            paddingPercent * 2
+            paddingPercent * 2 // Maybe use view width unit.
           }%`,
           backgroundColor: getEventColour(event.event_type)[0],
           color: getEventColour(event.event_type)[1],

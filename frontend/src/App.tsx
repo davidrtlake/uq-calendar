@@ -3,6 +3,7 @@ import "./App.css";
 import Year from "./components/Year";
 import NestedCheckbox from "./components/NestedCheckbox";
 import QuickNavigation from "./components/QuickNavigation";
+import data from "./assets/week_labels.json";
 
 // Define a type for your events
 export interface Event {
@@ -81,6 +82,7 @@ function App() {
       return checkboxLayout;
     }
   );
+  const labels: object = data;
   // This idea is taken from https://react.dev/learn/manipulating-the-dom-with-refs#example-scrolling-to-an-element
   const monthRefs: Map<
     string,
@@ -278,6 +280,7 @@ function App() {
                         .childPeriods!.get(e.period);
                     }
                   })}
+                yearLabels={labels[y as keyof Object]}
               />
             );
           })}

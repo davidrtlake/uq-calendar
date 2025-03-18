@@ -18,6 +18,7 @@ interface Props {
   todayMonth: boolean;
   monthNum: number;
   events: Event[];
+  monthLabels: string[];
 }
 
 const Month = ({
@@ -28,6 +29,7 @@ const Month = ({
   monthName,
   todayMonth,
   events,
+  monthLabels,
 }: Props) => {
   const days: Event[][] = Array(monthLength)
     .fill(null)
@@ -46,6 +48,7 @@ const Month = ({
   let currDate: number;
   let introText: string;
   let eELength: number;
+  let labelIndex: number = 0;
 
   events.forEach((e) => {
     // If starts or ends in another month, adjust the start or end date.
@@ -138,23 +141,30 @@ const Month = ({
                 if (row % 2 === 0) {
                   // If its a day row.
                   if (col === 0) {
-                    // Start of each row show the teaching week.
+                    // Start of each row show the teaching week label.
                     return (
                       <div
                         key={col}
                         style={{
-                          paddingTop: "17px",
-                          maxWidth: "25px",
-                          // lineHeight: "160px",
+                          width: "25px",
+                          lineHeight: "100%",
+                          margin: "auto",
                         }}
                       >
                         <span
                           style={{
-                            fontSize: "80px",
-                            color: "rgba(255, 255, 255, 0.4)",
+                            fontSize:
+                              row === 0 && fillerDays.length > 0
+                                ? "50px"
+                                : "70px",
+                            color: "rgba(255, 255, 255, 0.31)",
                             fontFamily: "fantasy",
+                            display: "inline-block",
+                            verticalAlign: "middle",
                           }}
-                        ></span>
+                        >
+                          {monthLabels[labelIndex++]}
+                        </span>
                       </div>
                     );
                   } else if (
