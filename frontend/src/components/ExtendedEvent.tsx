@@ -26,7 +26,7 @@ const ExtendedEvent = ({ event, introText, eventLength }: Props) => {
         return ["rgb(56, 92, 146)", "rgb(255, 255, 255)"];
     }
   };
-  const paddingPercent: number = 2; //
+  const paddingPercent: number = 2; // Padding within the event.
   const rowGapPercentOfDayWdith: number = 3.85; // Trial and error, close enough.
 
   return (

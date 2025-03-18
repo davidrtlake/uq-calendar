@@ -50,20 +50,12 @@ const Month = ({
   events.forEach((e) => {
     // If starts or ends in another month, adjust the start or end date.
     if (e.start_date.getMonth() !== monthNum) {
-      startDate = new Date(
-        `${e.end_date.getFullYear()}-${
-          monthNum < 10 ? `0${monthNum}` : monthNum
-        }-01`
-      );
+      startDate = new Date(e.end_date.getFullYear(), monthNum, 1);
     } else {
       startDate = e.start_date;
     }
     if (e.end_date.getMonth() !== monthNum) {
-      endDate = new Date(
-        `${e.start_date.getFullYear()}-${
-          monthNum < 10 ? `0${monthNum}` : monthNum
-        }-${monthLength}`
-      );
+      endDate = new Date(e.start_date.getFullYear(), monthNum, monthLength);
     } else {
       endDate = e.end_date;
     }
@@ -137,7 +129,7 @@ const Month = ({
         {monthName}
       </h2>
       <div className="container">
-        {Array(Math.ceil((monthLength + fillerDays.length) / 8) * 2)
+        {Array(Math.ceil((monthLength + fillerDays.length) / 7) * 2)
           .fill(null)
           .map((_, row) => {
             return Array(8)
@@ -151,7 +143,7 @@ const Month = ({
                       <div
                         key={col}
                         style={{
-                          // paddingTop: "15px",
+                          paddingTop: "17px",
                           maxWidth: "25px",
                           // lineHeight: "160px",
                         }}
@@ -162,9 +154,7 @@ const Month = ({
                             color: "rgba(255, 255, 255, 0.4)",
                             fontFamily: "fantasy",
                           }}
-                        >
-                          {row}
-                        </span>
+                        ></span>
                       </div>
                     );
                   } else if (
@@ -253,7 +243,7 @@ const Month = ({
                         style={{
                           marginBlockEnd: "5%",
                           marginBlockStart: `${
-                            Math.round(invisExtendedEvents[eECount] * 25) // Just enough to put a gap between events.
+                            Math.round(invisExtendedEvents[eECount] * 25) // Just enough to put a gap between events. 25 comes from height of extended event.
                           }px`,
                         }}
                       >

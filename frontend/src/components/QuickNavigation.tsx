@@ -71,7 +71,6 @@ const QuickNavigation = ({
   function buttonClickHandler(y: string) {
     // Make the whole box a button.
     if (!shownContent.get(y)) {
-      console.log("Setting", y, "to true.");
       const newShownContent = new Map<string, boolean>(shownContent);
       allYears.forEach((ye) => newShownContent.set(ye, false));
       newShownContent.set(y, true);
@@ -86,14 +85,16 @@ const QuickNavigation = ({
           <div
             className="nav-year-collapsible"
             onClick={() => buttonClickHandler(y)}
-            style={{
-              display:
-                y === currYear ||
-                y === `${parseInt(currYear) + 1}` ||
-                y === `${parseInt(currYear) - 1}`
-                  ? "flex"
-                  : "none",
-            }}
+            style={
+              {
+                // display:
+                //   y === currYear ||
+                //   y === `${parseInt(currYear) + 1}` ||
+                //   y === `${parseInt(currYear) - 1}`
+                //     ? "flex"
+                //     : "none",
+              }
+            }
           >
             <span style={{ margin: "auto" }}>
               {y === currYear ? <b>{`${y}`}</b> : `${y}`}
@@ -112,13 +113,19 @@ const QuickNavigation = ({
                 id={`${y}${m}`}
                 style={{
                   width: "90%",
-                  outline:
+                  color:
+                    today.getFullYear() === parseInt(y) &&
+                    j === today.getMonth()
+                      ? "rgb(168, 199, 250)"
+                      : "",
+                  borderLeft:
                     y === currYear && m === currMonth
-                      ? "1px solid rgb(255, 255, 255, 0.6)"
-                      : today.getFullYear() === parseInt(y) &&
-                        j === today.getMonth()
-                      ? "1px solid #a8c7fa80"
-                      : "none",
+                      ? "2px solid rgb(255, 255, 255, 0.6)"
+                      : "",
+                  borderBottom:
+                    j !== 11
+                      ? "1px solid rgb(255, 255, 255, 0.3)"
+                      : "transparent",
                 }}
                 onClick={() => navigationHandler(m, y)}
               >

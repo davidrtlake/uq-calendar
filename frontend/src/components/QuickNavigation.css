@@ -7,14 +7,22 @@
 }
 
 .quick-navigation-month {
+  background-color: unset;
   display: block;
   margin: auto auto 1px;
   border-radius: 0px;
   padding: 0.6em 0em;
+  transition: border-color 0.15s;
 }
 
 .quick-navigation-month:focus {
   outline: none;
+}
+
+.quick-navigation-month:hover {
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: #646cff!important;
 }
 
 .quick-navigation-panel {
@@ -38,6 +46,6 @@
   justify-content: space-between;
 }
 
-.quick-navigation-panel .active, .year-collapsible:hover {
-  background-color: #ccc;
+.quick-navigation-panel .active, .nav-year-collapsible:hover {
+  background-color: #ffffff3a;;
 }

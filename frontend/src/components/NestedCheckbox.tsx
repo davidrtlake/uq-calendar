@@ -28,7 +28,7 @@ const NestedCheckbox = ({
 }: Props) => {
   const [shownContent, setShownContent] = useState<Map<string, boolean>>(() => {
     const defaultShownContent = new Map<string, boolean>();
-    allYears.forEach((y) => defaultShownContent.set(y, y === "2025"));
+    allYears.forEach((y) => defaultShownContent.set(y, "2025" === "2025"));
     return defaultShownContent;
   });
   const today: Date = new Date();

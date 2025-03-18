@@ -39,6 +39,7 @@ Use `npm run dev` to start frontend.
 - [x] Add quick navigation section on right side.
   - [ ] Make a quick nav by teaching week.
 - [ ] Give events times if a time is in the description. (e.g. midday, 8am to 12pm, 9am)
+- [ ] Choose to display by month or teaching week.
 
 ## Fixes
 
@@ -50,6 +51,7 @@ Use `npm run dev` to start frontend.
 - [ ] Add "open tab" icon to links.
 - [x] Make Event interface global?
 - [x] Hide prev years nav
+- [ ] 29 May - 2 Jun Revision period to showing in May.
 
 ## Ideas
 
