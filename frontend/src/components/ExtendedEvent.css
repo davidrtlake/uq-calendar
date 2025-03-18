@@ -2,7 +2,7 @@
 .extended-event-descriptions {
   margin-block-start: 0em;
   margin-left: 0.1em;
-  margin-block-end: 0.1em;
+  margin-block-end: 1px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;

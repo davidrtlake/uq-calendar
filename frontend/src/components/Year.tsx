@@ -7,7 +7,6 @@ interface Props {
   currDay: number;
   monthNames: string[];
   getMap: (y: string) => Map<string, HTMLDivElement>;
-  // monthRefs: Map<string, HTMLDivElement>;
   events: Event[];
 }
 

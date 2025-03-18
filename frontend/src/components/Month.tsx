@@ -137,16 +137,38 @@ const Month = ({
         {monthName}
       </h2>
       <div className="container">
-        {Array(Math.ceil((monthLength + fillerDays.length) / 7) * 2)
+        {Array(Math.ceil((monthLength + fillerDays.length) / 8) * 2)
           .fill(null)
           .map((_, row) => {
-            return Array(7)
+            return Array(8)
               .fill(null)
               .map((_, col) => {
                 if (row % 2 === 0) {
                   // If its a day row.
-                  if (
-                    (row === 0 && col < startDay) ||
+                  if (col === 0) {
+                    // Start of each row show the teaching week.
+                    return (
+                      <div
+                        key={col}
+                        style={{
+                          // paddingTop: "15px",
+                          maxWidth: "25px",
+                          // lineHeight: "160px",
+                        }}
+                      >
+                        <span
+                          style={{
+                            fontSize: "80px",
+                            color: "rgba(255, 255, 255, 0.4)",
+                            fontFamily: "fantasy",
+                          }}
+                        >
+                          {row}
+                        </span>
+                      </div>
+                    );
+                  } else if (
+                    (row === 0 && col - 1 < startDay) ||
                     dayCount >= monthLength
                   ) {
                     // If first row or after last day, fill with filler days.
@@ -160,17 +182,19 @@ const Month = ({
                       </div>
                     );
                   } else {
+                    // Regular day.
                     return (
                       <div
                         key={col}
                         className="day"
                         style={{
-                          minHeight: `${
+                          minHeight: `${Math.max(
+                            120,
                             150 -
-                            (invisExtendedEvents[eECount] +
-                              extendedEvents[eECount].length) *
-                              10
-                          }px`,
+                              (invisExtendedEvents[eECount] +
+                                extendedEvents[eECount].length) *
+                                10
+                          )}px`,
                         }}
                       >
                         <Day
@@ -183,9 +207,13 @@ const Month = ({
                   }
                 } else {
                   // If its an extended event row.
-                  if ((row === 1 && col < startDay) || eECount >= monthLength) {
+                  if (
+                    (row === 1 && col - 1 < startDay) ||
+                    eECount >= monthLength ||
+                    col === 0
+                  ) {
                     return (
-                      // If first row or after last day, fill with filler days.
+                      // If first row, after last day, or teaching week column (0), add filler day.
                       <div key={col} style={{ marginBlockEnd: "3%" }}></div>
                     );
                   } else {
@@ -225,8 +253,8 @@ const Month = ({
                         style={{
                           marginBlockEnd: "5%",
                           marginBlockStart: `${
-                            invisExtendedEvents[eECount] * 1.5 * 1.0425 // Just enough to put a gap between events.
-                          }rem`,
+                            Math.round(invisExtendedEvents[eECount] * 25) // Just enough to put a gap between events.
+                          }px`,
                         }}
                       >
                         {extendedEvents[eECount++].map((e, j) => {

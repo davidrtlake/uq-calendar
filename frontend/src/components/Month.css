@@ -8,7 +8,7 @@
   background: repeating-linear-gradient(-45deg, transparent 0 3px, var(--timetable-stripes-dark) 3px 6px);
 }
 
-.day:nth-of-type(7n + 0), .day:nth-of-type(7n + 1) {
+.day:nth-of-type(8n + 0), .day:nth-of-type(8n + 2) {
   background: repeating-linear-gradient(-45deg, transparent 0 3px, var(--timetable-stripes-light) 3px 6px);
 }
 
@@ -24,7 +24,7 @@
   background: repeating-linear-gradient(-45deg, transparent 0 3px, rgba(255, 255, 255, 0.05) 3px 6px);
 }
 
-.filler-day:nth-of-type(7n + 0), .filler-day:nth-of-type(7n + 1) {
+.filler-day:nth-of-type(8n + 0), .filler-day:nth-of-type(8n + 2) {
   background: repeating-linear-gradient(-45deg, transparent 0 3px, rgba(255, 255, 255, 0.1) 3px 6px);
 }
 

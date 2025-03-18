@@ -23,12 +23,14 @@ const QuickNavigation = ({
   monthRefs,
   navigationHandler,
 }: Props) => {
+  const today: Date = new Date();
   const [shownContent, setShownContent] = useState<Map<string, boolean>>(() => {
     const defaultShownContent = new Map<string, boolean>();
-    allYears.forEach((y) => defaultShownContent.set(y, y === "2025"));
+    allYears.forEach((y) =>
+      defaultShownContent.set(y, y === `${today.getFullYear()}`)
+    ); // Default set all to false except 2025.
     return defaultShownContent;
   });
-  const today: Date = new Date();
   const [currYear, setCurrYear] = useState<string>(`${today.getFullYear()}`);
   const [currMonth, setCurrMonth] = useState<string>(
     `${monthNames[today.getMonth()]}`
@@ -44,6 +46,10 @@ const QuickNavigation = ({
         // Item entering screen.
         setCurrYear(entryId[0]);
         setCurrMonth(entryId[1]);
+        const newShownContent = new Map<string, boolean>(shownContent);
+        allYears.forEach((ye) => newShownContent.set(ye, false));
+        newShownContent.set(entryId[0], true);
+        setShownContent(newShownContent);
       }
     });
   };
@@ -65,6 +71,7 @@ const QuickNavigation = ({
   function buttonClickHandler(y: string) {
     // Make the whole box a button.
     if (!shownContent.get(y)) {
+      console.log("Setting", y, "to true.");
       const newShownContent = new Map<string, boolean>(shownContent);
       allYears.forEach((ye) => newShownContent.set(ye, false));
       newShownContent.set(y, true);

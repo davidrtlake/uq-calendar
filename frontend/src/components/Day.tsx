@@ -46,7 +46,7 @@ const Day = ({ date, today, events }: Props) => {
           borderRadius: today ? "0.2em" : "0",
         }}
       >
-        {date}
+        {date} {today ? " Today" : ""}
       </h4>
       {events.map((e, i) => (
         <div

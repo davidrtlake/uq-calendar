@@ -137,7 +137,7 @@ function App() {
 
   // Handling clicking in navigation bar.
   function navigationHandler(m: string, y: string) {
-    console.log("Scrolling to", m, y);
+    // console.log("Scrolling to", m, y);
     const map = getMap(y);
     const node = map.get(m)!;
     node.scrollIntoView({
@@ -205,9 +205,6 @@ function App() {
           />
         </div>
         <div style={{ maxWidth: "1300px" }}>
-          {/* <div ref={headingRef} className="fixed-heading">
-            <MonthYearHeading monthRefs={monthRefs} />
-          </div> */}
           <div
             className="container"
             style={{
@@ -218,6 +215,15 @@ function App() {
               paddingTop: "0.3rem",
             }}
           >
+            <div
+              style={{
+                width: "30px",
+                borderBottom: "1px solid rgba(255, 255, 255, 0.56)",
+                paddingInlineStart: "0.1rem",
+              }}
+            >
+              WK
+            </div>
             {daysOfTheWeek.map((day, i) => (
               <div
                 key={i}

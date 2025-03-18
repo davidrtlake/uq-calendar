@@ -35,6 +35,7 @@ Use `npm run dev` to start frontend.
     - [x] Graduation Period (Orange bar)
     - [x] Finalisation of Grades (Red border)
 - [ ] Add teaching week.
+  - [ ] Different colour for summer semester.
 - [x] Add quick navigation section on right side.
   - [ ] Make a quick nav by teaching week.
 - [ ] Give events times if a time is in the description. (e.g. midday, 8am to 12pm, 9am)

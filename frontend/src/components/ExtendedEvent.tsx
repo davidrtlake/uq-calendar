@@ -26,13 +26,19 @@ const ExtendedEvent = ({ event, introText, eventLength }: Props) => {
         return ["rgb(56, 92, 146)", "rgb(255, 255, 255)"];
     }
   };
+  const paddingPercent: number = 2; //
+  const rowGapPercentOfDayWdith: number = 3.85; // Trial and error, close enough.
 
   return (
     <>
       <div
         className="extended-event"
         style={{
-          width: `${100 * eventLength + 3.61 * (eventLength - 1) - 4}%`,
+          width: `${
+            100 * eventLength +
+            rowGapPercentOfDayWdith * (eventLength - 1) -
+            paddingPercent * 2
+          }%`,
           backgroundColor: getEventColour(event.event_type)[0],
           color: getEventColour(event.event_type)[1],
         }}
