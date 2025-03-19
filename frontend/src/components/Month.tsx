@@ -38,6 +38,7 @@ const Month = ({
     .fill(null)
     .map(() => Array());
   const invisExtendedEvents: number[] = Array(monthLength).fill(0);
+  const publicHolidayDays: boolean[] = Array(monthLength).fill(false);
   const fillerDays = Array();
   const today: Date = new Date();
   let startDate: Date;
@@ -50,6 +51,7 @@ const Month = ({
   let eELength: number;
   let labelIndex: number = 0;
   let toggle: boolean = true;
+  let publicHoliday: boolean = false;
 
   // Sort events into single or multi-day.
   events.forEach((e, i) => {
@@ -69,9 +71,17 @@ const Month = ({
       endDate = e.end_date;
     }
 
+    publicHoliday = false;
+    if (e.title.toLocaleLowerCase().includes("public holiday")) {
+      publicHoliday = true;
+    }
+
     if (startDate.getDate() === endDate.getDate()) {
       // If a regular single day event.
       days[startDate.getDate() - 1].push(e);
+      if (publicHoliday) {
+        publicHolidayDays[startDate.getDate() - 1] = true;
+      }
     } else {
       // An extended event.
       const eventLength = endDate.getDate() - startDate.getDate();
@@ -91,16 +101,22 @@ const Month = ({
           introText: introText,
           length: eELength,
         });
+        if (publicHoliday) {
+          publicHolidayDays[currDate - 1] = true;
+        }
         toggle = true;
         for (let j = 0; j < i; j++) {
           if (events[j].title === events[i].title) {
-            // Duplicate event then only count one to invisExtendedEvents.
+            // Duplicate event then only count one of the events to invisExtendedEvents.
             toggle = false;
           }
         }
         if (toggle) {
           for (let i = currDate; i < currDate + eELength - 1; i++) {
             invisExtendedEvents[i]++;
+            if (publicHoliday) {
+              publicHolidayDays[i] = true;
+            }
           }
         }
         currDate += distanceToNextSunday;
@@ -115,6 +131,7 @@ const Month = ({
   let eECount: number = 0;
   let startFillCount: number = prevMonthLength - startDay + 1;
   let endFillCount: number = 1;
+  let maxRowExtendedEventDepth: number;
 
   // let marginStart: string = "0";
   // let paddingStart: string = "0";
@@ -148,6 +165,19 @@ const Month = ({
         {Array(Math.ceil((monthLength + fillerDays.length) / 7) * 2)
           .fill(null)
           .map((_, row) => {
+            if (row % 2 === 0) {
+              maxRowExtendedEventDepth = 0;
+              for (
+                let i = dayCount;
+                i < Math.min(dayCount + 7, monthLength);
+                i++
+              ) {
+                maxRowExtendedEventDepth = Math.max(
+                  maxRowExtendedEventDepth,
+                  invisExtendedEvents[i] + extendedEvents[i].length
+                );
+              }
+            }
             return Array(8)
               .fill(null)
               .map((_, col) => {
@@ -162,6 +192,9 @@ const Month = ({
                           width: "25px",
                           lineHeight: "100%",
                           margin: "auto",
+                          paddingTop: `${
+                            Math.min(2, extendedEvents[dayCount].length) * 25
+                          }px`,
                         }}
                       >
                         <span
@@ -202,12 +235,12 @@ const Month = ({
                         className="day"
                         style={{
                           minHeight: `${Math.max(
-                            120,
-                            150 -
-                              (invisExtendedEvents[eECount] +
-                                extendedEvents[eECount].length) *
-                                10
+                            130,
+                            150 - maxRowExtendedEventDepth * 10
                           )}px`,
+                          background: publicHolidayDays[dayCount]
+                            ? "repeating-linear-gradient(-45deg, transparent 0 3px, var(--timetable-stripes-public-holiday) 3px 6px)"
+                            : "",
                         }}
                       >
                         <Day
@@ -230,44 +263,25 @@ const Month = ({
                       <div key={col} style={{ marginBlockEnd: "3%" }}></div>
                     );
                   } else {
-                    // if (
-                    //   invisExtendedEvents[eECount] !== 0 &&
-                    //   extendedEvents[eECount].length === 0
-                    // ) {
-                    //   // Prev extended events still going but not putting any new ones.
-                    //   marginStart = "0";
-                    //   paddingStart = `${
-                    //     invisExtendedEvents[eECount] * 1.5 * 1.04
-                    //   }rem`;
-                    //   eEHeight = "0";
-                    //   gapBackground =
-                    //     "repeating-linear-gradient(-45deg, transparent 0 3px, var(--timetable-stripes-dark) 3px 6px)";
-                    // } else if (
-                    //   invisExtendedEvents[eECount] === 0 &&
-                    //   extendedEvents[eECount].length === 0
-                    // ) {
-                    //   // Empty space.
-                    //   marginStart = "0";
-                    //   paddingStart = "0";
-                    //   eEHeight = "80%";
-                    //   gapBackground = "green";
-                    // } else {
-                    //   // No prev events or putting new event in.
-                    //   marginStart = `${
-                    //     invisExtendedEvents[eECount] * 1.5 * 1.04
-                    //   }rem`;
-                    //   paddingStart = "0";
-                    //   eEHeight = "auto";
-                    //   gapBackground = "none";
-                    // }
                     return (
                       <div
                         key={col}
                         style={{
-                          marginBlockEnd: "5%",
+                          marginBlockEnd:
+                            extendedEvents[eECount].length === 0 &&
+                            invisExtendedEvents[eECount] === 0
+                              ? "5%"
+                              : "5%",
+                          paddingBlockEnd:
+                            extendedEvents[eECount].length === 0 &&
+                            invisExtendedEvents[eECount] === 0
+                              ? "0%"
+                              : "2%",
                           marginBlockStart: `${
                             Math.round(invisExtendedEvents[eECount] * 25) // Just enough to put a gap between events. 25 comes from height of extended event.
                           }px`,
+                          background:
+                            "repeating-linear-gradient(-45deg, transparent 0 3px, var(--timetable-stripes-dark) 3px 6px)",
                         }}
                       >
                         {extendedEvents[eECount++].map((e, j) => {

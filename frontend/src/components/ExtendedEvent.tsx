@@ -1,5 +1,6 @@
 import "./ExtendedEvent.css";
 import { Event } from "../App";
+import { getEventColour } from "./Day";
 
 interface Props {
   event: Event;
@@ -8,24 +9,6 @@ interface Props {
 }
 
 const ExtendedEvent = ({ event, introText, eventLength }: Props) => {
-  const getEventColour = (eventType: string): string[] => {
-    switch (eventType) {
-      case "Public holiday":
-        return ["rgb(110, 100, 84)", "rgb(255, 255, 255)"];
-      case "Examination period":
-        return ["rgb(216, 212, 165)", "rgb(71, 70, 55)"];
-      case "Starting date":
-        return ["rgb(74, 109, 68)", "rgb(255, 255, 255)"];
-      case "Closing date":
-        return ["rgb(151, 34, 54)", "rgb(255, 255, 255)"];
-      case "Graduation period":
-        return ["rgb(244, 122, 62)", "rgb(255, 255, 255)"];
-      case "Finalisation of grades":
-        return ["rgb(253, 170, 170)", "rgb(49, 20, 20)"];
-      default:
-        return ["rgb(56, 92, 146)", "rgb(255, 255, 255)"];
-    }
-  };
   const paddingPercent: number = 2; // Padding within the event.
   const rowGapPercentOfDayWdith: number = 3.85; // Trial and error, close enough.
 
@@ -54,6 +37,7 @@ const ExtendedEvent = ({ event, introText, eventLength }: Props) => {
           ) : (
             event.title
           )}
+          .
         </p>
       </div>
     </>

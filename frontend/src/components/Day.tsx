@@ -7,6 +7,25 @@ interface Props {
   events: Event[];
 }
 
+export const getEventColour = (eventType: string): string[] => {
+  switch (eventType) {
+    case "Public holiday":
+      return ["rgb(110, 100, 84)", "rgb(255, 255, 255)"];
+    case "Examination period":
+      return ["rgb(231, 222, 126)", "rgb(71, 70, 55)"];
+    case "Starting date":
+      return ["rgb(74, 109, 68)", "rgb(255, 255, 255)"];
+    case "Closing date":
+      return ["rgb(151, 34, 54)", "rgb(255, 255, 255)"];
+    case "Graduation period":
+      return ["rgb(244, 122, 62)", "rgb(255, 255, 255)"];
+    case "Finalisation of grades":
+      return ["rgb(253, 170, 170)", "rgb(49, 20, 20)"];
+    default:
+      return ["rgb(56, 92, 146)", "rgb(255, 255, 255)"];
+  }
+};
+
 const Day = ({ date, today, events }: Props) => {
   const showPeriod: boolean[] = Array();
   let prevPeriod: string = "";
@@ -15,25 +34,6 @@ const Day = ({ date, today, events }: Props) => {
     showPeriod.push(e.period !== prevPeriod);
     prevPeriod = e.period;
   });
-
-  const getEventColour = (eventType: string): string[] => {
-    switch (eventType) {
-      case "Public holiday":
-        return ["rgb(110, 100, 84)", "rgb(255, 255, 255)"];
-      case "Examination period":
-        return ["rgb(216, 212, 165)", "rgb(71, 70, 55)"];
-      case "Starting date":
-        return ["rgb(74, 109, 68)", "rgb(255, 255, 255)"];
-      case "Closing date":
-        return ["rgb(151, 34, 54)", "rgb(255, 255, 255)"];
-      case "Graduation period":
-        return ["rgb(244, 122, 62)", "rgb(255, 255, 255)"];
-      case "Finalisation of grades":
-        return ["rgb(253, 170, 170)", "rgb(49, 20, 20)"];
-      default:
-        return ["rgb(56, 92, 146)", "rgb(255, 255, 255)"];
-    }
-  };
 
   showPeriod.push(false);
 
@@ -83,6 +83,7 @@ const Day = ({ date, today, events }: Props) => {
               ) : (
                 e.title
               )}
+              .
             </p>
           </div>
         );

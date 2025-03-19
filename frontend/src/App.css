@@ -2,8 +2,9 @@
   margin: auto;
   padding: 2rem 1rem 0 1rem;
   text-align: left;
-  --timetable-stripes-light: rgba(255, 255, 255, 0.2);
+  --timetable-stripes-light: rgba(255, 255, 255, 0.22);
   --timetable-stripes-dark: rgba(255, 255, 255, 0.1);
+  --timetable-stripes-public-holiday: rgba(168, 151, 124, 0.4);
 }
 
 .container {
@@ -30,7 +31,7 @@ fieldset {
   border-color: rgb(255, 255, 255, 0.5);
   border-style: dashed;
   margin-right: 10px;
-  min-width: 7em;
+  min-width: 8em;
 }
 
 .fixed-heading {

@@ -26,7 +26,7 @@ const NestedCheckbox = ({
   checkHandler,
   checkedState,
 }: Props) => {
-  const [shownContent, setShownContent] = useState<Map<string, boolean>>(() => {
+  const [shownContent, _] = useState<Map<string, boolean>>(() => {
     const defaultShownContent = new Map<string, boolean>();
     allYears.forEach((y) => defaultShownContent.set(y, "2025" === "2025"));
     return defaultShownContent;
@@ -63,11 +63,11 @@ const NestedCheckbox = ({
     });
   }, []);
 
-  function buttonClickHandler(y: string) {
-    const newShownContent = new Map<string, boolean>(shownContent);
-    newShownContent.set(y, !newShownContent.get(y));
-    setShownContent(newShownContent);
-  }
+  // function buttonClickHandler(y: string) {
+  //   const newShownContent = new Map<string, boolean>(shownContent);
+  //   newShownContent.set(y, !newShownContent.get(y));
+  //   setShownContent(newShownContent);
+  // }
 
   return (
     <fieldset>
@@ -88,14 +88,14 @@ const NestedCheckbox = ({
                   {y}
                 </label>
               </div>
-              <button
+              {/* <button
                 type="button"
                 style={{ display: "inline" }}
                 onClick={() => buttonClickHandler(y)}
               >
                 {" "}
                 {shownContent.get(y) ? "^" : "v"}
-              </button>
+              </button> */}
             </div>
 
             <div

@@ -175,15 +175,6 @@ function App() {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
-  // useEffect(() => {
-  //   navigationHandler(monthNames[today.getMonth()], `${today.getFullYear()}`); //Wait until components have loaded.
-  //   console.log(
-  //     "Scrolling to today",
-  //     monthNames[today.getMonth()],
-  //     `${today.getFullYear()}`
-  //   );
-  // }, []);
-
   useEffect(() => {
     setTimeout(
       navigationHandler,
@@ -222,6 +213,7 @@ function App() {
                 width: "30px",
                 borderBottom: "1px solid rgba(255, 255, 255, 0.56)",
                 paddingInlineStart: "0.1rem",
+                textAlign: "center",
               }}
             >
               WK
