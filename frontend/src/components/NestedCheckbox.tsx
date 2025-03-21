@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import "./NestedCheckbox.css";
 
 interface CheckedYear {
@@ -71,23 +73,35 @@ const NestedCheckbox = ({
 
   return (
     <fieldset>
-      <legend>Select Categories:</legend>
+      <legend>Shown Categories:</legend>
       {allYears.map((y, i) => (
         <div key={i}>
           <ul style={{ display: y.includes(currYear) ? "block" : "none" }}>
-            <div className="year-collapsible">
-              <div>
-                <input
-                  type="checkbox"
-                  id={y}
-                  name={y}
-                  checked={checkedState.get(y)?.checked ?? true}
-                  onChange={() => checkHandler("", y)}
-                />
-                <label className="year" htmlFor={y}>
+            <div>
+              <input
+                type="checkbox"
+                id={y}
+                name={y}
+                checked={checkedState.get(y)?.checked ?? true}
+                onChange={() => checkHandler("", y)}
+                style={{ display: "none" }}
+              />
+              <label
+                className="year"
+                htmlFor={y}
+                style={{
+                  color: checkedState.get(y)!.checked ? "white" : "gray",
+                }}
+              >
+                <div className="year-collapsible">
+                  {checkedState.get(y)!.checked ? (
+                    <FontAwesomeIcon icon={faEye} />
+                  ) : (
+                    <FontAwesomeIcon icon={faEyeSlash} />
+                  )}
                   {y}
-                </label>
-              </div>
+                </div>
+              </label>
               {/* <button
                 type="button"
                 style={{ display: "inline" }}
@@ -110,8 +124,28 @@ const NestedCheckbox = ({
                     name={`${y}${p}`}
                     checked={checkedState.get(y)?.childPeriods?.get(p) ?? true}
                     onChange={() => checkHandler(p, y)}
+                    style={{ display: "none" }}
                   />
-                  <label htmlFor={`${y}${p}`}>{p}</label>
+                  <div
+                    style={{
+                      color: checkedState.get(y)!.childPeriods!.get(p)
+                        ? "white"
+                        : "gray",
+                    }}
+                  >
+                    {checkedState.get(y)!.childPeriods!.get(p) ? (
+                      <FontAwesomeIcon
+                        icon={faEye}
+                        style={{ fontSize: "13px " }}
+                      />
+                    ) : (
+                      <FontAwesomeIcon
+                        icon={faEyeSlash}
+                        style={{ fontSize: "13px " }}
+                      />
+                    )}
+                    <label htmlFor={`${y}${p}`}>{p}</label>
+                  </div>
                 </li>
               ))}
             </div>
@@ -123,21 +157,31 @@ const NestedCheckbox = ({
                 : "none",
             }}
           >
-            <div className="year-collapsible">
-              <input
-                type="checkbox"
-                id={allSummerSemesters[i]}
-                name={allSummerSemesters[i]}
-                checked={
-                  checkedState.get(allSummerSemesters[i])?.checked ?? true
-                }
-                onChange={() => checkHandler("", allSummerSemesters[i])}
-              />
-              <label
-                className="summer"
-                htmlFor={`${allSummerSemesters[i]}`}
-              >{`${allSummerSemesters[i]}`}</label>
-            </div>
+            <input
+              type="checkbox"
+              id={allSummerSemesters[i]}
+              name={allSummerSemesters[i]}
+              checked={checkedState.get(allSummerSemesters[i])?.checked ?? true}
+              onChange={() => checkHandler("", allSummerSemesters[i])}
+              style={{ display: "none" }}
+            />
+            <label className="summer" htmlFor={`${allSummerSemesters[i]}`}>
+              <div
+                className="year-collapsible"
+                style={{
+                  color: checkedState.get(allSummerSemesters[i])!.checked
+                    ? "white"
+                    : "gray",
+                }}
+              >
+                {checkedState.get(allSummerSemesters[i])!.checked ? (
+                  <FontAwesomeIcon icon={faEye} />
+                ) : (
+                  <FontAwesomeIcon icon={faEyeSlash} />
+                )}
+                {`${allSummerSemesters[i]}`}
+              </div>
+            </label>
           </ul>
         </div>
       ))}

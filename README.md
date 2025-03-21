@@ -16,7 +16,10 @@ Use `npm run dev` to start frontend.
   - [ ] Uses fieldset as filter.
   - [ ] Informs if there are results that are hidden.
   - [ ] Search all years checkbox.
+  - [ ] Make weeks scroll refs, make Map of events to week (Maybe not needed, just use date).
 - [ ] Choose to display by month or teaching week.
+- [ ] Adapt design for mobile screens.
+- [ ] Add export events option.
 
 ### Small
 
@@ -26,7 +29,7 @@ Use `npm run dev` to start frontend.
 - [x] Make fieldset sticky on scroll.
 - [x] Add all years to page.
   - [x] Automatic scroll to current day.
-  - [ ] Button to jump to today.
+  - [ ] Button to jump to today that appears as user scrolls away from today.
 - [x] On hover expand event description.
 - [x] Show holidays.
 - [x] Record type of day in JSON:
@@ -41,8 +44,8 @@ Use `npm run dev` to start frontend.
     - [x] Finalisation of Grades (Red border)
 - [x] Add teaching week.
   - [ ] Different colour for summer semester.
-  - [ ] Different shades for all non teaching weeks.
-  - [ ] Small text above the number "WEEK".
+  - [x] Different shades for all non teaching weeks.
+  - [x] Small text above the number "WEEK".
 - [x] Add quick navigation section on right side.
   - [ ] Make a quick nav by teaching week.
 - [ ] Give events times if a time is in the description. (e.g. midday, 8am to 12pm, 9am)
@@ -61,6 +64,7 @@ Use `npm run dev` to start frontend.
 - [x] Fix min height not shrinking for rows with extended events in them.
 - [ ] Fill space above floating extended events with same colour.
   - Not sure about this, just need to remove margin top 25px and add padding top 25px to extended event div, then adjust z-indexes.
+- [ ] On mobile first tap on truncate event text to view it will follow any link.
 
 ## Ideas
 

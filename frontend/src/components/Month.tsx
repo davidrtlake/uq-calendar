@@ -15,10 +15,12 @@ interface Props {
   monthLength: number;
   prevMonthLength: number;
   monthName: string;
+  yearName: string;
   todayMonth: boolean;
   monthNum: number;
   events: Event[];
   monthLabels: string[];
+  getWeekMap: (y: string) => Map<string, HTMLDivElement>;
 }
 
 const Month = ({
@@ -27,9 +29,11 @@ const Month = ({
   prevMonthLength,
   monthNum,
   monthName,
+  yearName,
   todayMonth,
   events,
   monthLabels,
+  getWeekMap,
 }: Props) => {
   const days: Event[][] = Array(monthLength)
     .fill(null)
@@ -41,6 +45,21 @@ const Month = ({
   const publicHolidayDays: boolean[] = Array(monthLength).fill(false);
   const fillerDays = Array();
   const today: Date = new Date();
+  const labelColours = (label: string): string => {
+    switch (label) {
+      case "SWOTVAC":
+        return "rgba(255, 204, 156, 0.31)";
+      case "EXAM":
+        return "rgba(231, 222, 126, 0.31)";
+      case "ORIENTATION":
+        return "rgba(56, 92, 146, 0.31)";
+      case "MIDSEM":
+      case "BREAK":
+        return "rgba(255, 118, 221, 0.31)";
+      default:
+        return "rgba(255, 255, 255, 0.31)";
+    }
+  };
   let startDate: Date;
   let endDate: Date;
   let distanceToNextSunday: number;
@@ -133,11 +152,6 @@ const Month = ({
   let endFillCount: number = 1;
   let maxRowExtendedEventDepth: number;
 
-  // let marginStart: string = "0";
-  // let paddingStart: string = "0";
-  // let eEHeight: string = "0";
-  // let gapBackground: string = "none";
-
   for (let i = 0; i < startDay; i++) {
     fillerDays.push(<div key={i}></div>);
   }
@@ -165,6 +179,7 @@ const Month = ({
         {Array(Math.ceil((monthLength + fillerDays.length) / 7) * 2)
           .fill(null)
           .map((_, row) => {
+            // Get the max number of extended events that run concurrently in that row.
             if (row % 2 === 0) {
               maxRowExtendedEventDepth = 0;
               for (
@@ -188,29 +203,69 @@ const Month = ({
                     return (
                       <div
                         key={col}
+                        ref={(node) => {
+                          const map = getWeekMap(yearName);
+                          if (node) {
+                            map.set(`${monthName}-${row}`, node!);
+                          } else {
+                            map.delete(`${monthName}-${row}`);
+                          }
+                        }}
                         style={{
                           width: "25px",
                           lineHeight: "100%",
                           margin: "auto",
-                          paddingTop: `${
-                            Math.min(2, extendedEvents[dayCount].length) * 25
-                          }px`,
+                          paddingTop:
+                            row === 0 && fillerDays.length > 0
+                              ? "0px"
+                              : `${
+                                  Math.min(2, extendedEvents[dayCount].length) *
+                                  25
+                                }px`,
+                          fontFamily: "fantasy",
+                          color: labelColours(monthLabels[labelIndex]),
                         }}
                       >
-                        <span
+                        {!Number.isNaN(parseInt(monthLabels[labelIndex])) ? (
+                          <div
+                            style={{
+                              fontSize:
+                                row === 0 && fillerDays.length > 0
+                                  ? "12px"
+                                  : "16px",
+                              marginBottom:
+                                row === 0 && fillerDays.length > 0
+                                  ? "12px"
+                                  : "20px",
+                            }}
+                          >
+                            WEEK
+                          </div>
+                        ) : (
+                          ""
+                        )}
+                        <div
                           style={{
                             fontSize:
                               row === 0 && fillerDays.length > 0
                                 ? "50px"
                                 : "70px",
-                            color: "rgba(255, 255, 255, 0.31)",
-                            fontFamily: "fantasy",
                             display: "inline-block",
                             verticalAlign: "middle",
+                            marginBottom: !Number.isNaN(
+                              parseInt(monthLabels[labelIndex])
+                            )
+                              ? "20px"
+                              : "auto",
+                            marginLeft:
+                              parseInt(monthLabels[labelIndex]) === 1 ||
+                              parseInt(monthLabels[labelIndex]) === 7
+                                ? "4px"
+                                : "auto",
                           }}
                         >
                           {monthLabels[labelIndex++]}
-                        </span>
+                        </div>
                       </div>
                     );
                   } else if (

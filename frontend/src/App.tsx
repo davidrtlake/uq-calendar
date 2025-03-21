@@ -88,8 +88,13 @@ function App() {
     string,
     React.MutableRefObject<Map<string, HTMLDivElement> | null>
   > = new Map();
+  const weekRefs: Map<
+    string,
+    React.MutableRefObject<Map<string, HTMLDivElement> | null>
+  > = new Map();
   allYears.map((y) => {
     monthRefs.set(y, useRef<Map<string, HTMLDivElement> | null>(null));
+    weekRefs.set(y, useRef<Map<string, HTMLDivElement> | null>(null));
   });
   const today: Date = new Date();
 
@@ -149,12 +154,34 @@ function App() {
     });
   }
 
+  // Handling clicking in navigation bar.
+  function navigationHandlerWeek() {
+    // console.log("Scrolling to", m, y);
+    const map = getWeekMap("2025");
+    console.log(map);
+
+    const node = map.get("September-0")!;
+    node.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "center",
+    });
+  }
+
   // Gets the map of refs for the year y.
   function getMap(y: string): Map<string, HTMLDivElement> {
     if (!monthRefs.get(y)!.current) {
       monthRefs.get(y)!.current = new Map();
     }
     return monthRefs.get(y)!.current!;
+  }
+  // Gets the map of refs for the week.
+  // Week string should be in the format MM-(Week no.)
+  function getWeekMap(y: string): Map<string, HTMLDivElement> {
+    if (!weekRefs.get(y)!.current) {
+      weekRefs.get(y)!.current = new Map();
+    }
+    return weekRefs.get(y)!.current!;
   }
 
   // Gets event data from API.
@@ -198,6 +225,7 @@ function App() {
           />
         </div>
         <div style={{ maxWidth: "1300px" }}>
+          <button onClick={() => navigationHandlerWeek()}>CLICK ME</button>
           <div
             className="container"
             style={{
@@ -241,6 +269,7 @@ function App() {
                 currDay={currDay}
                 monthNames={monthNames}
                 getMap={getMap}
+                getWeekMap={getWeekMap}
                 events={events
                   .filter(
                     // Only get fields for selected year.

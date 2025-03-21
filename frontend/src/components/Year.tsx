@@ -7,6 +7,7 @@ interface Props {
   currDay: number;
   monthNames: string[];
   getMap: (y: string) => Map<string, HTMLDivElement>;
+  getWeekMap: (y: string) => Map<string, HTMLDivElement>;
   events: Event[];
   yearLabels: object;
 }
@@ -16,6 +17,7 @@ const Year = ({
   currDay,
   monthNames,
   getMap,
+  getWeekMap,
   events,
   yearLabels,
 }: Props) => {
@@ -80,6 +82,7 @@ const Year = ({
                 monthLength={length}
                 prevMonthLength={monthLens[(i - 1 + 12) % 12]}
                 monthName={monthNames[i]}
+                yearName={`${year}`}
                 todayMonth={
                   today.getMonth() === i && year === today.getFullYear()
                 }
@@ -91,6 +94,7 @@ const Year = ({
                   );
                 })}
                 monthLabels={yearLabels[monthNames[i] as keyof object]}
+                getWeekMap={getWeekMap}
               />
             </div>
           ))}
