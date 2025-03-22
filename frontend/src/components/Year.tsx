@@ -9,6 +9,7 @@ interface Props {
   getMap: (y: string) => Map<string, HTMLDivElement>;
   getWeekMap: (y: string) => Map<string, HTMLDivElement>;
   events: Event[];
+  highlightedEvents: Map<number, boolean>;
   yearLabels: object;
 }
 
@@ -19,6 +20,7 @@ const Year = ({
   getMap,
   getWeekMap,
   events,
+  highlightedEvents,
   yearLabels,
 }: Props) => {
   const monthLens: number[] = [
@@ -93,6 +95,7 @@ const Year = ({
                     row.end_date.getMonth() === i
                   );
                 })}
+                highlightedEvents={highlightedEvents}
                 monthLabels={yearLabels[monthNames[i] as keyof object]}
                 getWeekMap={getWeekMap}
               />

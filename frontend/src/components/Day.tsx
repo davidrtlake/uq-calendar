@@ -5,6 +5,7 @@ interface Props {
   date: string;
   today: boolean;
   events: Event[];
+  highlightedEvents: Map<number, boolean>;
 }
 
 export const getEventColour = (eventType: string): string[] => {
@@ -26,7 +27,7 @@ export const getEventColour = (eventType: string): string[] => {
   }
 };
 
-const Day = ({ date, today, events }: Props) => {
+const Day = ({ date, today, events, highlightedEvents }: Props) => {
   const showPeriod: boolean[] = Array();
   let prevPeriod: string = "";
 
@@ -63,6 +64,9 @@ const Day = ({ date, today, events }: Props) => {
               marginBlockEnd: showPeriod[i + 1] ? "0.5em" : "0.2em",
               backgroundColor: getEventColour(e.event_type)[0],
               color: getEventColour(e.event_type)[1],
+              border: highlightedEvents.get(e.event_id)
+                ? "3px solid rgb(255, 255, 255)"
+                : "",
             }}
           >
             <p

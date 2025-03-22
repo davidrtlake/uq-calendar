@@ -3,7 +3,9 @@ import "./App.css";
 import Year from "./components/Year";
 import NestedCheckbox from "./components/NestedCheckbox";
 import QuickNavigation from "./components/QuickNavigation";
+import SearchBar from "./components/searchBar";
 import data from "./assets/week_labels.json";
+import eventData from "./assets/events.json";
 
 // Define a type for your events
 export interface Event {
@@ -24,7 +26,16 @@ interface CheckedYear {
 
 function App() {
   console.log("---RELOADING-APP---");
-  const [events, setEvents] = useState<Event[]>([]); // State is set of periods to use.
+  // const [events, setEvents] = useState<Event[]>([]); // State is set of periods to use.
+  // Get event data from JSON.
+  const events: Event[] = eventData.map((row) => {
+    return {
+      ...row,
+      event_type: row.event_type ? row.event_type : "",
+      start_date: new Date(row.start_date),
+      end_date: new Date(row.end_date),
+    };
+  });
   const allYears: string[] = ["2023", "2024", "2025", "2026"];
   const allSummerSemesters: string[] = [
     "Summer Semester (2023-24)",
@@ -82,6 +93,11 @@ function App() {
       return checkboxLayout;
     }
   );
+  const [highlightedEvents, setHighlightedEvents] = useState<
+    Map<number, boolean>
+  >(() => {
+    return new Map(events.map((e) => [e.event_id, false]));
+  });
   const labels: object = data;
   // This idea is taken from https://react.dev/learn/manipulating-the-dom-with-refs#example-scrolling-to-an-element
   const monthRefs: Map<
@@ -92,7 +108,7 @@ function App() {
     string,
     React.MutableRefObject<Map<string, HTMLDivElement> | null>
   > = new Map();
-  allYears.map((y) => {
+  allYears.forEach((y) => {
     monthRefs.set(y, useRef<Map<string, HTMLDivElement> | null>(null));
     weekRefs.set(y, useRef<Map<string, HTMLDivElement> | null>(null));
   });
@@ -155,17 +171,23 @@ function App() {
   }
 
   // Handling clicking in navigation bar.
-  function navigationHandlerWeek() {
+  function navigationHandlerWeek(year: number, monthNum: number) {
     // console.log("Scrolling to", m, y);
-    const map = getWeekMap("2025");
+    const map = getWeekMap(`${year}`);
     console.log(map);
 
-    const node = map.get("September-0")!;
+    const node = map.get(`${monthNum}-0`)!;
     node.scrollIntoView({
       behavior: "smooth",
       block: "start",
       inline: "center",
     });
+  }
+
+  function handleHighlightEvents(eIDsToHighlight: Set<number>) {
+    setHighlightedEvents(
+      new Map(events.map((e) => [e.event_id, eIDsToHighlight.has(e.event_id)]))
+    );
   }
 
   // Gets the map of refs for the year y.
@@ -185,22 +207,22 @@ function App() {
   }
 
   // Gets event data from API.
-  useEffect(() => {
-    fetch("/api/events") // Backend URL
-      .then((response) => response.json())
-      .then((data: Event[]) => {
-        const formattedData = data.map((row) => {
-          return {
-            ...row,
-            start_date: new Date(row.start_date),
-            end_date: new Date(row.end_date),
-          };
-        });
-        console.log("Setting Events");
-        setEvents(formattedData);
-      })
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []);
+  // useEffect(() => {
+  // fetch("/api/events") // Backend URL
+  //   .then((response) => response.json())
+  //   .then((data: Event[]) => {
+  //     const formattedData = data.map((row) => {
+  //       return {
+  //         ...row,
+  //         start_date: new Date(row.start_date),
+  //         end_date: new Date(row.end_date),
+  //       };
+  //     });
+  //     console.log("Setting Events");
+  //     setEvents(formattedData);
+  //   })
+  //   .catch((error) => console.error("Error fetching data:", error));
+  // }, []);
 
   useEffect(() => {
     setTimeout(
@@ -225,7 +247,23 @@ function App() {
           />
         </div>
         <div style={{ maxWidth: "1300px" }}>
-          <button onClick={() => navigationHandlerWeek()}>CLICK ME</button>
+          <div className="search-bar">
+            <SearchBar
+              navigationHandlerWeek={navigationHandlerWeek}
+              events={events.filter((e) => {
+                // Filter invisible events.
+                if (e.period.startsWith("Summer")) {
+                  return checkedState.get(e.period)?.checked ?? false;
+                } else {
+                  return checkedState
+                    .get(`${e.start_date.getFullYear()}`)!
+                    .childPeriods!.get(e.period);
+                }
+              })}
+              handleHighlightEvents={handleHighlightEvents}
+              monthRefs={monthRefs}
+            />
+          </div>
           <div
             className="container"
             style={{
@@ -301,6 +339,7 @@ function App() {
                         .childPeriods!.get(e.period);
                     }
                   })}
+                highlightedEvents={highlightedEvents}
                 yearLabels={labels[y as keyof Object]}
               />
             );

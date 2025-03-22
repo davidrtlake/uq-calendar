@@ -12,11 +12,14 @@ Use `npm run dev` to start frontend.
 ### Big
 
 - [ ] Add search for events:
-  - [ ] Scrolls to results (like ctrl+f)
-  - [ ] Uses fieldset as filter.
+  - [x] Scrolls to results (like ctrl+f)
+  - [x] Uses fieldset as filter.
+  - [ ] Need to update when fieldset updates.
   - [ ] Informs if there are results that are hidden.
-  - [ ] Search all years checkbox.
+  - [x] Search all years checkbox.
   - [ ] Make weeks scroll refs, make Map of events to week (Maybe not needed, just use date).
+    - Nvm, do like ctrl+f.
+  - [ ] Sort events by start date.
 - [ ] Choose to display by month or teaching week.
 - [ ] Adapt design for mobile screens.
 - [ ] Add export events option.
@@ -65,15 +68,17 @@ Use `npm run dev` to start frontend.
 - [ ] Fill space above floating extended events with same colour.
   - Not sure about this, just need to remove margin top 25px and add padding top 25px to extended event div, then adjust z-indexes.
 - [ ] On mobile first tap on truncate event text to view it will follow any link.
+- [ ] Fix week scroll refs not in right place.
 
 ## Ideas
 
-- Background gradient colour shift as user scrolls.
-- Check collision of heading and month heading. Fade out month heading.
-- Reduce min height of days with extended events below them.
-- Border line vertically middle of month shooting out either side.
-- Add "information current as" warning.
-- Scroll to currMonth/currWeek every time select periods is shown.
-- Make public holidays background lighter (like weekend)
-- Full stops or no full stops, that is the question.
-- Show slight day background pattern under and above extended events so they seem part of the day.
+- [ ] Background gradient colour shift as user scrolls.
+- [x] Check collision of heading and month heading. Fade out month heading.
+- [x] Reduce min height of days with extended events below them.
+- [ ] Border line vertically middle of month shooting out either side.
+- [ ] Add "information current as" warning.
+- [ ] Scroll to currMonth/currWeek every time select periods is shown.
+- [x] Make public holidays background lighter (like weekend)
+- [x] Full stops or no full stops, that is the question.
+- [ ] Show slight day background pattern under and above extended events so they seem part of the day.
+- [ ] Maybe change shown categories from checkbox to buttons?

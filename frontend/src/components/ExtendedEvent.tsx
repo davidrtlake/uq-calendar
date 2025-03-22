@@ -6,10 +6,16 @@ interface Props {
   event: Event;
   introText: string;
   eventLength: number;
+  highlighted: boolean;
 }
 
-const ExtendedEvent = ({ event, introText, eventLength }: Props) => {
-  const paddingPercent: number = 2; // Padding within the event.
+const ExtendedEvent = ({
+  event,
+  introText,
+  eventLength,
+  highlighted,
+}: Props) => {
+  const paddingPercent: number = 0; // Padding within the event.
   const rowGapPercentOfDayWdith: number = 3.85; // Trial and error, close enough.
 
   return (
@@ -24,6 +30,7 @@ const ExtendedEvent = ({ event, introText, eventLength }: Props) => {
           }%`,
           backgroundColor: getEventColour(event.event_type)[0],
           color: getEventColour(event.event_type)[1],
+          border: highlighted ? "2px solid rgb(255, 255, 255)" : "",
         }}
       >
         <p className="extended-event-descriptions">

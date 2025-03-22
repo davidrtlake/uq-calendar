@@ -19,6 +19,7 @@ interface Props {
   todayMonth: boolean;
   monthNum: number;
   events: Event[];
+  highlightedEvents: Map<number, boolean>;
   monthLabels: string[];
   getWeekMap: (y: string) => Map<string, HTMLDivElement>;
 }
@@ -32,6 +33,7 @@ const Month = ({
   yearName,
   todayMonth,
   events,
+  highlightedEvents,
   monthLabels,
   getWeekMap,
 }: Props) => {
@@ -206,9 +208,9 @@ const Month = ({
                         ref={(node) => {
                           const map = getWeekMap(yearName);
                           if (node) {
-                            map.set(`${monthName}-${row}`, node!);
+                            map.set(`${monthNum}-${row}`, node!);
                           } else {
-                            map.delete(`${monthName}-${row}`);
+                            map.delete(`${monthNum}-${row}`);
                           }
                         }}
                         style={{
@@ -302,6 +304,7 @@ const Month = ({
                           date={`${dayCount + 1}`}
                           today={todayMonth && dayCount + 1 === today.getDate()}
                           events={days[dayCount++]}
+                          highlightedEvents={highlightedEvents}
                         />
                       </div>
                     );
@@ -337,6 +340,7 @@ const Month = ({
                           }px`,
                           background:
                             "repeating-linear-gradient(-45deg, transparent 0 3px, var(--timetable-stripes-dark) 3px 6px)",
+                          zIndex: -invisExtendedEvents[eECount],
                         }}
                       >
                         {extendedEvents[eECount++].map((e, j) => {
@@ -355,6 +359,9 @@ const Month = ({
                               event={e.event}
                               introText={e.introText}
                               eventLength={e.length}
+                              highlighted={
+                                highlightedEvents.get(e.event.event_id)!
+                              }
                             />
                           );
                         })}
