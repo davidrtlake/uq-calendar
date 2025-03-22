@@ -1,6 +1,6 @@
 .search-bar {
   position: sticky;
-  top: 10px;
+  top: 20px;
   z-index: 3006;
   text-align: right;
   display: flex;

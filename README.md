@@ -21,7 +21,9 @@ Use `npm run dev` to start frontend.
   - [x] Make weeks scroll refs, make Map of events to week (Maybe not needed, just use date).
     - Nvm, do like ctrl+f.
   - [x] Sort events by start date.
-  - [ ] Maybe only search current year and display that in placeholder.
+  - [x] Maybe only search current year and display that in placeholder.
+  - [x] Grey out search navigation buttons if nothing searched.
+  - [ ] Focus the input when search is pressed with no text.
 - [ ] Choose to display by month or teaching week.
 - [ ] Adapt design for mobile screens.
 - [ ] Add export events option.

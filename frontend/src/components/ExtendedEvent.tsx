@@ -16,7 +16,7 @@ const ExtendedEvent = ({
   highlighted,
 }: Props) => {
   const paddingPercent: number = 0; // Padding within the event.
-  const rowGapPercentOfDayWdith: number = 3.85; // Trial and error, close enough.
+  const rowGapPercentOfDayWdith: number = 3.75; // Trial and error, close enough.
 
   return (
     <>
