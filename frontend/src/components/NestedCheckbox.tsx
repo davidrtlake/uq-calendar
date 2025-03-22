@@ -77,40 +77,30 @@ const NestedCheckbox = ({
       {allYears.map((y, i) => (
         <div key={i}>
           <ul style={{ display: y.includes(currYear) ? "block" : "none" }}>
-            <div>
-              <input
-                type="checkbox"
-                id={y}
-                name={y}
-                checked={checkedState.get(y)?.checked ?? true}
-                onChange={() => checkHandler("", y)}
-                style={{ display: "none" }}
-              />
-              <label
-                className="year"
-                htmlFor={y}
-                style={{
-                  color: checkedState.get(y)!.checked ? "white" : "gray",
-                }}
-              >
-                <div className="year-collapsible">
-                  {checkedState.get(y)!.checked ? (
-                    <FontAwesomeIcon icon={faEye} />
-                  ) : (
-                    <FontAwesomeIcon icon={faEyeSlash} />
-                  )}
-                  {y}
-                </div>
-              </label>
-              {/* <button
-                type="button"
-                style={{ display: "inline" }}
-                onClick={() => buttonClickHandler(y)}
-              >
-                {" "}
-                {shownContent.get(y) ? "^" : "v"}
-              </button> */}
-            </div>
+            <input
+              type="checkbox"
+              id={y}
+              name={y}
+              checked={checkedState.get(y)?.checked ?? true}
+              onChange={() => checkHandler("", y)}
+              style={{ display: "none" }}
+            />
+            <label
+              className="year"
+              htmlFor={y}
+              style={{
+                color: checkedState.get(y)!.checked ? "white" : "gray",
+              }}
+            >
+              <div className="year-collapsible">
+                {checkedState.get(y)!.checked ? (
+                  <FontAwesomeIcon icon={faEye} />
+                ) : (
+                  <FontAwesomeIcon icon={faEyeSlash} />
+                )}
+                {y}
+              </div>
+            </label>
 
             <div
               className="period-content"
@@ -126,26 +116,39 @@ const NestedCheckbox = ({
                     onChange={() => checkHandler(p, y)}
                     style={{ display: "none" }}
                   />
-                  <div
+                  <label
                     style={{
-                      color: checkedState.get(y)!.childPeriods!.get(p)
-                        ? "white"
-                        : "gray",
+                      display: "block",
+                      cursor: "pointer",
+                      padding: "5px 0px",
+                      borderBottom:
+                        j < allPeriods.length - 1
+                          ? "1px solid rgb(255, 255, 255, 0.2)"
+                          : "none",
                     }}
+                    htmlFor={`${y}${p}`}
                   >
-                    {checkedState.get(y)!.childPeriods!.get(p) ? (
-                      <FontAwesomeIcon
-                        icon={faEye}
-                        style={{ fontSize: "13px " }}
-                      />
-                    ) : (
-                      <FontAwesomeIcon
-                        icon={faEyeSlash}
-                        style={{ fontSize: "13px " }}
-                      />
-                    )}
-                    <label htmlFor={`${y}${p}`}>{p}</label>
-                  </div>
+                    <div
+                      style={{
+                        color: checkedState.get(y)!.childPeriods!.get(p)
+                          ? "white"
+                          : "gray",
+                      }}
+                    >
+                      {checkedState.get(y)!.childPeriods!.get(p) ? (
+                        <FontAwesomeIcon
+                          icon={faEye}
+                          style={{ fontSize: "13px " }}
+                        />
+                      ) : (
+                        <FontAwesomeIcon
+                          icon={faEyeSlash}
+                          style={{ fontSize: "13px " }}
+                        />
+                      )}
+                      {p}
+                    </div>
+                  </label>
                 </li>
               ))}
             </div>

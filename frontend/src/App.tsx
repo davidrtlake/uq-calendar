@@ -128,7 +128,7 @@ function App() {
     monthRefs.set(y, useRef<Map<string, HTMLDivElement> | null>(null));
     weekRefs.set(y, useRef<Map<string, HTMLDivElement> | null>(null));
   });
-  const today: Date = new Date();
+  const todayRef = useRef<HTMLDivElement>(null);
 
   // Handles any checkbox clicks => updates checkedState and therefore shown events.
   function checkBoxHandler(p: string, y: string) {
@@ -175,7 +175,7 @@ function App() {
   }
 
   // Handling clicking in navigation bar.
-  function navigationHandler(m: string, y: string) {
+  function navigationHandlerMonth(m: string, y: string) {
     // console.log("Scrolling to", m, y);
     const map = getMap(y);
     const node = map.get(m)!;
@@ -229,6 +229,14 @@ function App() {
     return eventIDToRowMap;
   }
 
+  function scrollToToday() {
+    todayRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "center",
+    });
+  }
+
   // Gets event data from API.
   // useEffect(() => {
   // fetch("/api/events") // Backend URL
@@ -248,18 +256,13 @@ function App() {
   // }, []);
 
   useEffect(() => {
-    setTimeout(
-      navigationHandler,
-      500,
-      monthNames[today.getMonth()],
-      `${today.getFullYear()}`
-    ); // Hacky but it works.
+    setTimeout(scrollToToday, 500); // Hacky but it works.
   }, []);
 
   return (
     <>
       <div className="body-flex-container">
-        <div className="sidebar" style={{ paddingRight: "1%" }}>
+        <div className="sidebar" style={{ paddingRight: "1%", width: "17vw" }}>
           <NestedCheckbox
             allYears={allYears}
             allPeriods={allPeriods}
@@ -270,23 +273,21 @@ function App() {
           />
         </div>
         <div style={{ maxWidth: "1300px" }}>
-          <div className="search-bar">
-            <SearchBar
-              navigationHandlerWeek={navigationHandlerWeek}
-              events={events.filter((e) => {
-                // Filter invisible events.
-                if (e.period.startsWith("Summer")) {
-                  return checkedState.get(e.period)?.checked ?? false;
-                } else {
-                  return checkedState
-                    .get(`${e.start_date.getFullYear()}`)!
-                    .childPeriods!.get(e.period);
-                }
-              })}
-              handleHighlightEvents={handleHighlightEvents}
-              monthRefs={monthRefs}
-            />
-          </div>
+          <SearchBar
+            navigationHandlerWeek={navigationHandlerWeek}
+            events={events.filter((e) => {
+              // Filter invisible events.
+              if (e.period.startsWith("Summer")) {
+                return checkedState.get(e.period)?.checked ?? false;
+              } else {
+                return checkedState
+                  .get(`${e.start_date.getFullYear()}`)!
+                  .childPeriods!.get(e.period);
+              }
+            })}
+            handleHighlightEvents={handleHighlightEvents}
+            monthRefs={monthRefs}
+          />
           <div
             className="container"
             style={{
@@ -303,6 +304,7 @@ function App() {
                 borderBottom: "1px solid rgba(255, 255, 255, 0.56)",
                 paddingInlineStart: "0.1rem",
                 textAlign: "center",
+                backgroundColor: "unset",
               }}
             >
               WK
@@ -328,6 +330,7 @@ function App() {
                 key={i}
                 year={year}
                 currDay={currDay}
+                todayRef={todayRef}
                 monthNames={monthNames}
                 getMap={getMap}
                 getWeekMap={getWeekMap}
@@ -374,7 +377,7 @@ function App() {
             allYears={allYears}
             monthNames={monthNames}
             monthRefs={monthRefs}
-            navigationHandler={navigationHandler}
+            navigationHandler={navigationHandlerMonth}
             checkedState={checkedState}
           />
         </div>

@@ -12,6 +12,7 @@ interface ExtendedEventAndLength {
 
 interface Props {
   startDay: number;
+  todayRef: React.RefObject<HTMLDivElement>;
   monthLength: number;
   prevMonthLength: number;
   monthName: string;
@@ -27,6 +28,7 @@ interface Props {
 
 const Month = ({
   startDay,
+  todayRef,
   monthLength,
   prevMonthLength,
   monthNum,
@@ -292,6 +294,11 @@ const Month = ({
                       <div
                         key={col}
                         className="day"
+                        ref={
+                          todayMonth && dayCount + 1 === today.getDate()
+                            ? todayRef
+                            : null
+                        }
                         style={{
                           minHeight: `${Math.max(
                             130,

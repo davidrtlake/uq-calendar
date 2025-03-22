@@ -1,0 +1,49 @@
+.search-bar {
+  position: sticky;
+  top: 10px;
+  z-index: 3006;
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-buttons {
+  background-color: unset;
+}
+
+.nav-buttons:hover {
+  background-color: #1a1a1a91;
+  border-color: transparent;
+}
+
+button[name="search"] {
+  background-color: unset;
+  margin-right: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+input[name="search-bar"] {
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 5px 5px;
+  font-size: 18px;
+  margin-right: 10px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* Search only current year */
+label[for="only-curr-year"] {
+  font-size: 14px;
+}
+
+/* Checkbox */
+input[id="only-curr-year"] {
+  accent-color: rgb(168, 199, 250);
+  margin: 5px 3px 0px 4px;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+}

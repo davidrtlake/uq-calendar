@@ -15,11 +15,13 @@ Use `npm run dev` to start frontend.
   - [x] Scrolls to results (like ctrl+f)
   - [x] Uses fieldset as filter.
   - [ ] Need to update when fieldset updates.
+    - Maybe not
   - [ ] Informs if there are results that are hidden.
   - [x] Search all years checkbox.
   - [x] Make weeks scroll refs, make Map of events to week (Maybe not needed, just use date).
     - Nvm, do like ctrl+f.
   - [x] Sort events by start date.
+  - [ ] Maybe only search current year and display that in placeholder.
 - [ ] Choose to display by month or teaching week.
 - [ ] Adapt design for mobile screens.
 - [ ] Add export events option.
@@ -67,7 +69,8 @@ Use `npm run dev` to start frontend.
 - [x] Fix min height not shrinking for rows with extended events in them.
 - [ ] On mobile first tap on truncate event text to view it will follow any link.
 - [x] Fix week scroll refs not in right place.
-- [ ] Fix auto scroll to today not right.
+- [x] Fix auto scroll to today not right.
+- [ ] Add visual clarification to sub period part in category selector.
 
 ## Ideas
 
@@ -79,5 +82,5 @@ Use `npm run dev` to start frontend.
 - [ ] Scroll to currMonth/currWeek every time select periods is shown.
 - [x] Make public holidays background lighter (like weekend)
 - [x] Full stops or no full stops, that is the question.
-- [ ] Show slight day background pattern under and above extended events so they seem part of the day.
+- [x] Show slight day background pattern under and above extended events so they seem part of the day.
 - [ ] Maybe change shown categories from checkbox to buttons?

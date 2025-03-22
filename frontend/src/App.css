@@ -43,10 +43,3 @@ fieldset {
   top: 0px;
   max-width: 1300px;
 }
-
-.search-bar {
-  position: sticky;
-  top: 20px;
-  z-index: 3006;
-  text-align: right;
-}

@@ -8,7 +8,9 @@ ul {
 }
 
 li {
-  margin-inline-start: 0.5em;
+  display: block;
+  padding-inline-start: 1em;
+  cursor: pointer;
 }
 
 @media (min-width: 1674px) {
@@ -42,7 +44,7 @@ li {
 }
 
 fieldset svg {
-  padding: 0 5%;
+  padding: 0 3%;
 }
 
 .period-content svg {

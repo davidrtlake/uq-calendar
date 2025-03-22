@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 import { Event } from "../App";
+import "./SearchBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronUp,
+  faChevronDown,
+  faXmark,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
   navigationHandlerWeek: (year: number, monthNum: number, eID: number) => void;
@@ -65,29 +71,23 @@ const SearchBar = ({
         // Then filter so search term.
         (e) => {
           const res =
-            e.period.toLowerCase().includes(searchString) ||
-            (e.title.toLowerCase().includes(searchString) &&
-              (updatedOnlyCurrYear === undefined
-                ? !onlyCurrYear || e.start_date.getFullYear() === currYear
-                : !updatedOnlyCurrYear ||
-                  e.start_date.getFullYear() === currYear));
+            (e.period.toLowerCase().includes(searchString) ||
+              e.title.toLowerCase().includes(searchString)) &&
+            (updatedOnlyCurrYear === undefined
+              ? !onlyCurrYear || e.start_date.getFullYear() === currYear
+              : !updatedOnlyCurrYear ||
+                e.start_date.getFullYear() === currYear);
           if (res) highlightedIDsSet.add(e.event_id);
           return res;
         }
       );
       setSearchResults(filteredSearchEvents);
+      handleHighlightEvents(highlightedIDsSet);
       if (filteredSearchEvents.length > 0) {
         navigationHandlerWeek(
           filteredSearchEvents[0].start_date.getFullYear(),
           filteredSearchEvents[0].start_date.getMonth(),
           filteredSearchEvents[0].event_id
-        );
-        handleHighlightEvents(highlightedIDsSet);
-        console.log(
-          "Searched for",
-          searchString,
-          "Returned",
-          filteredSearchEvents
         );
       }
     } else {
@@ -99,22 +99,24 @@ const SearchBar = ({
   function handleForwardAndBack(
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) {
-    let newIndex: number;
-    const target = event.target as HTMLButtonElement;
-    // console.log(typeof event.target, event.target, event.target.name);
-    if (target.name === "forward") {
-      newIndex = resultIndex + 1 >= searchResults.length ? 0 : resultIndex + 1;
-      setResultIndex(newIndex);
-    } else {
-      newIndex =
-        resultIndex - 1 < 0 ? searchResults.length - 1 : resultIndex - 1;
-      setResultIndex(newIndex);
+    if (searchResults.length > 0) {
+      let newIndex: number;
+      const target = event.target as HTMLButtonElement;
+      if (target.name === "forward") {
+        newIndex =
+          resultIndex + 1 >= searchResults.length ? 0 : resultIndex + 1;
+        setResultIndex(newIndex);
+      } else {
+        newIndex =
+          resultIndex - 1 < 0 ? searchResults.length - 1 : resultIndex - 1;
+        setResultIndex(newIndex);
+      }
+      navigationHandlerWeek(
+        searchResults[newIndex].start_date.getFullYear(),
+        searchResults[newIndex].start_date.getMonth(),
+        searchResults[newIndex].event_id
+      );
     }
-    navigationHandlerWeek(
-      searchResults[newIndex].start_date.getFullYear(),
-      searchResults[newIndex].start_date.getMonth(),
-      searchResults[newIndex].event_id
-    );
   }
 
   function handleOnlyCurrYearChange(
@@ -131,32 +133,87 @@ const SearchBar = ({
     }
   }
 
+  function clearSearch(
+    _event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) {
+    setSearchContents("");
+    setSearchResults([]);
+    handleHighlightEvents(new Set<number>());
+    setResultIndex(0);
+  }
+
   return (
-    <>
-      <input
-        type="checkbox"
-        id="only-curr-year"
-        checked={onlyCurrYear}
-        onChange={handleOnlyCurrYearChange}
-      />
-      <label htmlFor="only-curr-year">Only current year</label>
-      <input
-        // style={{ position: "sticky", top: "100px", zIndex: "3006" }}
-        name="search-bar"
-        value={searchContents}
-        onChange={(e) => setSearchContents(e.target.value)}
-        onKeyUp={handleKeyDown}
-      />
-      <button onClick={handleSearch}>Search</button>
-      {resultIndex + (searchResults.length === 0 ? 0 : 1)} /{" "}
-      {searchResults.length}
-      <button name="back" onClick={handleForwardAndBack}>
-        <FontAwesomeIcon icon={faChevronUp} />
-      </button>
-      <button name="forward" onClick={handleForwardAndBack}>
-        <FontAwesomeIcon icon={faChevronDown} />
-      </button>
-    </>
+    <div className="search-bar">
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "flex-start",
+        }}
+      >
+        <div>
+          <input
+            name="search-bar"
+            placeholder="Search Events"
+            value={searchContents}
+            onChange={(e) => setSearchContents(e.target.value)}
+            onKeyUp={handleKeyDown}
+          />
+          <button name="search" onClick={handleSearch}>
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </button>
+          <div
+            style={{
+              minWidth: "28px",
+              textAlign: "right",
+              display: "inline-block",
+            }}
+          >
+            {resultIndex + (searchResults.length === 0 ? 0 : 1)}
+          </div>{" "}
+          /{" "}
+          <div
+            style={{
+              minWidth: "28px",
+              textAlign: "left",
+              display: "inline-block",
+            }}
+          >
+            {searchResults.length}
+          </div>
+          <button
+            className="nav-buttons"
+            name="back"
+            onClick={handleForwardAndBack}
+            style={{ marginLeft: "10px" }}
+          >
+            <FontAwesomeIcon icon={faChevronUp} />
+          </button>
+          <button
+            className="nav-buttons"
+            name="forward"
+            onClick={handleForwardAndBack}
+          >
+            <FontAwesomeIcon icon={faChevronDown} />
+          </button>
+          <button className="nav-buttons" onClick={clearSearch}>
+            <FontAwesomeIcon icon={faXmark} />
+          </button>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            id="only-curr-year"
+            checked={onlyCurrYear}
+            onChange={handleOnlyCurrYearChange}
+          />
+          <label style={{ cursor: "pointer" }} htmlFor="only-curr-year">
+            Search only current year ({currYear})
+          </label>
+        </div>
+      </div>
+    </div>
   );
 };
 

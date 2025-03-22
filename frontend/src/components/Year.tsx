@@ -5,6 +5,7 @@ import "./Year.css";
 interface Props {
   year: number;
   currDay: number;
+  todayRef: React.RefObject<HTMLDivElement>;
   monthNames: string[];
   getMap: (y: string) => Map<string, HTMLDivElement>;
   getWeekMap: (y: string) => Map<string, HTMLDivElement>;
@@ -17,6 +18,7 @@ interface Props {
 const Year = ({
   year,
   currDay,
+  todayRef,
   monthNames,
   getMap,
   getWeekMap,
@@ -83,6 +85,7 @@ const Year = ({
             >
               <Month
                 startDay={monthStartDays[i]}
+                todayRef={todayRef}
                 monthLength={length}
                 prevMonthLength={monthLens[(i - 1 + 12) % 12]}
                 monthName={monthNames[i]}
