@@ -17,9 +17,9 @@ Use `npm run dev` to start frontend.
   - [ ] Need to update when fieldset updates.
   - [ ] Informs if there are results that are hidden.
   - [x] Search all years checkbox.
-  - [ ] Make weeks scroll refs, make Map of events to week (Maybe not needed, just use date).
+  - [x] Make weeks scroll refs, make Map of events to week (Maybe not needed, just use date).
     - Nvm, do like ctrl+f.
-  - [ ] Sort events by start date.
+  - [x] Sort events by start date.
 - [ ] Choose to display by month or teaching week.
 - [ ] Adapt design for mobile screens.
 - [ ] Add export events option.
@@ -65,10 +65,9 @@ Use `npm run dev` to start frontend.
 - [x] Hide prev years nav
 - [x] 29 May - 2 Jun Revision period to showing in May.
 - [x] Fix min height not shrinking for rows with extended events in them.
-- [ ] Fill space above floating extended events with same colour.
-  - Not sure about this, just need to remove margin top 25px and add padding top 25px to extended event div, then adjust z-indexes.
 - [ ] On mobile first tap on truncate event text to view it will follow any link.
-- [ ] Fix week scroll refs not in right place.
+- [x] Fix week scroll refs not in right place.
+- [ ] Fix auto scroll to today not right.
 
 ## Ideas
 

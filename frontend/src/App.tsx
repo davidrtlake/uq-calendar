@@ -27,15 +27,26 @@ interface CheckedYear {
 function App() {
   console.log("---RELOADING-APP---");
   // const [events, setEvents] = useState<Event[]>([]); // State is set of periods to use.
+  function compareEventDates(a: Event, b: Event): number {
+    if (a.start_date < b.start_date) {
+      return -1;
+    } else if (a.start_date > b.start_date) {
+      return 1;
+    }
+    // a must be equal to b
+    return 0;
+  }
   // Get event data from JSON.
-  const events: Event[] = eventData.map((row) => {
-    return {
-      ...row,
-      event_type: row.event_type ? row.event_type : "",
-      start_date: new Date(row.start_date),
-      end_date: new Date(row.end_date),
-    };
-  });
+  const events: Event[] = eventData
+    .map((row) => {
+      return {
+        ...row,
+        event_type: row.event_type ? row.event_type : "",
+        start_date: new Date(row.start_date),
+        end_date: new Date(row.end_date),
+      };
+    })
+    .sort(compareEventDates);
   const allYears: string[] = ["2023", "2024", "2025", "2026"];
   const allSummerSemesters: string[] = [
     "Summer Semester (2023-24)",
@@ -99,16 +110,21 @@ function App() {
     return new Map(events.map((e) => [e.event_id, false]));
   });
   const labels: object = data;
+  const eventIDToRowMap = new Map<number, number>(
+    events.map((e) => {
+      return [e.event_id, 0];
+    })
+  );
   // This idea is taken from https://react.dev/learn/manipulating-the-dom-with-refs#example-scrolling-to-an-element
-  const monthRefs: Map<
+  const monthRefs = new Map<
     string,
     React.MutableRefObject<Map<string, HTMLDivElement> | null>
-  > = new Map();
-  const weekRefs: Map<
+  >();
+  const weekRefs = new Map<
     string,
     React.MutableRefObject<Map<string, HTMLDivElement> | null>
-  > = new Map();
-  allYears.forEach((y) => {
+  >();
+  allYears.concat(["2027"]).forEach((y) => {
     monthRefs.set(y, useRef<Map<string, HTMLDivElement> | null>(null));
     weekRefs.set(y, useRef<Map<string, HTMLDivElement> | null>(null));
   });
@@ -171,15 +187,18 @@ function App() {
   }
 
   // Handling clicking in navigation bar.
-  function navigationHandlerWeek(year: number, monthNum: number) {
+  function navigationHandlerWeek(year: number, monthNum: number, eID: number) {
     // console.log("Scrolling to", m, y);
+    if (year > 2026) {
+      return;
+    }
     const map = getWeekMap(`${year}`);
-    console.log(map);
+    // console.log(map);
 
-    const node = map.get(`${monthNum}-0`)!;
+    const node = map.get(`${monthNum}-${eventIDToRowMap.get(eID)}`)!;
     node.scrollIntoView({
       behavior: "smooth",
-      block: "start",
+      block: "center",
       inline: "center",
     });
   }
@@ -200,10 +219,14 @@ function App() {
   // Gets the map of refs for the week.
   // Week string should be in the format MM-(Week no.)
   function getWeekMap(y: string): Map<string, HTMLDivElement> {
-    if (!weekRefs.get(y)!.current) {
+    if (!weekRefs.get(y)?.current) {
       weekRefs.get(y)!.current = new Map();
     }
     return weekRefs.get(y)!.current!;
+  }
+
+  function getEventIDMap(): Map<number, number> {
+    return eventIDToRowMap;
   }
 
   // Gets event data from API.
@@ -308,6 +331,7 @@ function App() {
                 monthNames={monthNames}
                 getMap={getMap}
                 getWeekMap={getWeekMap}
+                getEventIDMap={getEventIDMap}
                 events={events
                   .filter(
                     // Only get fields for selected year.

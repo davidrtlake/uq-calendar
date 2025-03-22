@@ -22,6 +22,7 @@ interface Props {
   highlightedEvents: Map<number, boolean>;
   monthLabels: string[];
   getWeekMap: (y: string) => Map<string, HTMLDivElement>;
+  getEventIDMap: () => Map<number, number>;
 }
 
 const Month = ({
@@ -36,6 +37,7 @@ const Month = ({
   highlightedEvents,
   monthLabels,
   getWeekMap,
+  getEventIDMap,
 }: Props) => {
   const days: Event[][] = Array(monthLength)
     .fill(null)
@@ -302,9 +304,11 @@ const Month = ({
                       >
                         <Day
                           date={`${dayCount + 1}`}
+                          row={row}
                           today={todayMonth && dayCount + 1 === today.getDate()}
                           events={days[dayCount++]}
                           highlightedEvents={highlightedEvents}
+                          getEventIDMap={getEventIDMap}
                         />
                       </div>
                     );
@@ -344,6 +348,8 @@ const Month = ({
                         }}
                       >
                         {extendedEvents[eECount++].map((e, j) => {
+                          const iDMap = getEventIDMap();
+                          iDMap.set(e.event.event_id, row - 1);
                           for (let k = 0; k < j; k++) {
                             if (
                               extendedEvents[eECount - 1][k].event.title ===

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
-  navigationHandlerWeek: (year: number, monthNum: number) => void;
+  navigationHandlerWeek: (year: number, monthNum: number, eID: number) => void;
   events: Event[];
   handleHighlightEvents: (eIDsToHighlight: Set<number>) => void;
   monthRefs: Map<
@@ -79,7 +79,8 @@ const SearchBar = ({
       if (filteredSearchEvents.length > 0) {
         navigationHandlerWeek(
           filteredSearchEvents[0].start_date.getFullYear(),
-          filteredSearchEvents[0].start_date.getMonth()
+          filteredSearchEvents[0].start_date.getMonth(),
+          filteredSearchEvents[0].event_id
         );
         handleHighlightEvents(highlightedIDsSet);
         console.log(
@@ -111,7 +112,8 @@ const SearchBar = ({
     }
     navigationHandlerWeek(
       searchResults[newIndex].start_date.getFullYear(),
-      searchResults[newIndex].start_date.getMonth()
+      searchResults[newIndex].start_date.getMonth(),
+      searchResults[newIndex].event_id
     );
   }
 
@@ -149,10 +151,10 @@ const SearchBar = ({
       {resultIndex + (searchResults.length === 0 ? 0 : 1)} /{" "}
       {searchResults.length}
       <button name="back" onClick={handleForwardAndBack}>
-        <FontAwesomeIcon icon={faChevronDown} />
+        <FontAwesomeIcon icon={faChevronUp} />
       </button>
       <button name="forward" onClick={handleForwardAndBack}>
-        <FontAwesomeIcon icon={faChevronUp} />
+        <FontAwesomeIcon icon={faChevronDown} />
       </button>
     </>
   );

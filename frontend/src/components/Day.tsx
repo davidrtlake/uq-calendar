@@ -3,9 +3,11 @@ import { Event } from "../App";
 
 interface Props {
   date: string;
+  row: number;
   today: boolean;
   events: Event[];
   highlightedEvents: Map<number, boolean>;
+  getEventIDMap: () => Map<number, number>;
 }
 
 export const getEventColour = (eventType: string): string[] => {
@@ -27,7 +29,14 @@ export const getEventColour = (eventType: string): string[] => {
   }
 };
 
-const Day = ({ date, today, events, highlightedEvents }: Props) => {
+const Day = ({
+  date,
+  row,
+  today,
+  events,
+  highlightedEvents,
+  getEventIDMap,
+}: Props) => {
   const showPeriod: boolean[] = Array();
   let prevPeriod: string = "";
 
@@ -50,6 +59,8 @@ const Day = ({ date, today, events, highlightedEvents }: Props) => {
         {date} {today ? " Today" : ""}
       </h4>
       {events.map((e, i) => {
+        const iDMap = getEventIDMap();
+        iDMap.set(e.event_id, row);
         for (let j = 0; j < i; j++) {
           if (events[j].title === events[i].title) {
             // Duplicate event then only show one.
