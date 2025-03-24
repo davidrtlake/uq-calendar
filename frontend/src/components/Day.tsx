@@ -1,11 +1,14 @@
 import "./Day.css";
 import { Event } from "../App";
+import { ExtendedEventAndLength } from "./Month";
 
 interface Props {
   date: string;
   row: number;
   today: boolean;
   events: Event[];
+  extendedEvents: ExtendedEventAndLength[];
+  invisExtendedEvents: number;
   highlightedEvents: Map<number, boolean>;
   getEventIDMap: () => Map<number, number>;
 }
@@ -34,6 +37,8 @@ const Day = ({
   row,
   today,
   events,
+  extendedEvents,
+  invisExtendedEvents,
   highlightedEvents,
   getEventIDMap,
 }: Props) => {
@@ -47,6 +52,9 @@ const Day = ({
 
   showPeriod.push(false);
 
+  const paddingPercent: number = 0; // Padding within the event.
+  const rowGapPercentOfDayWdith: number = 3.75; // Trial and error, close enough.
+
   return (
     <>
       <h4
@@ -58,51 +66,109 @@ const Day = ({
       >
         {date} {today ? " Today" : ""}
       </h4>
-      {events.map((e, i) => {
-        const iDMap = getEventIDMap();
-        iDMap.set(e.event_id, row);
-        for (let j = 0; j < i; j++) {
-          if (events[j].title === events[i].title) {
-            // Duplicate event then only show one.
-            return;
+      <div
+        style={{
+          marginBlockStart: `${
+            Math.round(invisExtendedEvents * 25 + (invisExtendedEvents ? 1 : 0)) // Just enough to put a gap between events. 25 comes from height of extended event.
+          }px`,
+        }}
+      >
+        {extendedEvents.map((e, j) => {
+          const iDMap = getEventIDMap();
+          iDMap.set(e.event.event_id, row);
+          for (let k = 0; k < j; k++) {
+            if (
+              extendedEvents[k].event.title === extendedEvents[j].event.title
+            ) {
+              // Duplicate event then only show one.
+              return;
+            }
           }
-        }
-        return (
-          <div
-            key={i}
-            className="event"
-            style={{
-              marginBlockEnd: showPeriod[i + 1] ? "0.5em" : "0.2em",
-              backgroundColor: getEventColour(e.event_type)[0],
-              color: getEventColour(e.event_type)[1],
-              border: highlightedEvents.get(e.event_id)
-                ? "3px solid rgb(255, 255, 255)"
-                : "",
-            }}
-          >
-            <p
-              className={`event-descriptions ${
-                events.length > 2 ? "truncate-2" : "truncate-3"
-              }`}
+          return (
+            <div
+              key={j}
+              className="extended-event"
+              style={{
+                width: `${
+                  100 * e.length +
+                  rowGapPercentOfDayWdith * (e.length - 1) -
+                  paddingPercent * 2 // Maybe use view width unit.
+                }%`,
+                backgroundColor: getEventColour(e.event.event_type)[0],
+                color: getEventColour(e.event.event_type)[1],
+                border: highlightedEvents.get(e.event.event_id)
+                  ? "3px solid rgb(255, 255, 255)"
+                  : "",
+                marginBlockEnd: "2px",
+                zIndex: 100 - invisExtendedEvents,
+              }}
             >
-              {showPeriod[i] && <b className="period-title">{e.period}: </b>}
-              {e.url ? (
-                <a
-                  href={e.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: getEventColour(e.event_type)[1] }}
-                >
-                  {e.title}
-                </a>
-              ) : (
-                e.title
-              )}
-              .
-            </p>
-          </div>
-        );
-      })}
+              <p className="extended-event-descriptions">
+                <b>
+                  {e.introText} {e.event.period}:{" "}
+                </b>
+                {e.event.url ? (
+                  <a
+                    href={e.event.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {e.event.title}
+                  </a>
+                ) : (
+                  e.event.title
+                )}
+                .
+              </p>
+            </div>
+          );
+        })}
+        {events.map((e, i) => {
+          const iDMap = getEventIDMap();
+          iDMap.set(e.event_id, row);
+          for (let j = 0; j < i; j++) {
+            if (events[j].title === events[i].title) {
+              // Duplicate event then only show one.
+              return;
+            }
+          }
+          return (
+            <div
+              key={i}
+              className="event"
+              style={{
+                marginBlockEnd: showPeriod[i + 1] ? "0.5em" : "0.2em",
+                backgroundColor: getEventColour(e.event_type)[0],
+                color: getEventColour(e.event_type)[1],
+                border: highlightedEvents.get(e.event_id)
+                  ? "3px solid rgb(255, 255, 255)"
+                  : "",
+              }}
+            >
+              <p
+                className={`event-descriptions ${
+                  events.length > 2 ? "truncate-2" : "truncate-3"
+                }`}
+              >
+                {showPeriod[i] && <b className="period-title">{e.period}: </b>}
+                {e.url ? (
+                  <a
+                    href={e.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: getEventColour(e.event_type)[1] }}
+                  >
+                    {e.title}
+                  </a>
+                ) : (
+                  e.title
+                )}
+                .
+              </p>
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 };

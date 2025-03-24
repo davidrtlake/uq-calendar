@@ -31,6 +31,7 @@ const SearchBar = ({
   const today: Date = new Date();
   const [currYear, setCurrYear] = useState<number>(today.getFullYear());
 
+  // Handling year detection.
   const callback = (
     entries: IntersectionObserverEntry[],
     _: IntersectionObserver
@@ -44,6 +45,7 @@ const SearchBar = ({
     });
   };
 
+  // Handling year detection.
   useEffect(() => {
     const options = {
       root: null,
@@ -58,6 +60,7 @@ const SearchBar = ({
     });
   }, []);
 
+  // Handling year detection.
   function handleSearch(
     _event: React.MouseEvent<HTMLButtonElement, MouseEvent> | null
   ) {
@@ -96,10 +99,8 @@ const SearchBar = ({
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) {
     if (searchResults.length > 0) {
-      console.log("event.target", event.target);
       let newIndex: number;
       const target = event.target as HTMLButtonElement;
-      console.log("target.name", target.name);
       if (target.name === "forward") {
         newIndex =
           resultIndex + 1 >= searchResults.length ? 0 : resultIndex + 1;

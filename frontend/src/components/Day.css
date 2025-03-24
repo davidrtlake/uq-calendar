@@ -44,3 +44,47 @@
   -webkit-line-clamp: none; /* number of lines to show */
           line-clamp: none;
 }
+
+/* Event descriptions */
+.extended-event-descriptions {
+  margin-block-start: 0em;
+  margin-left: 0.1em;
+  margin-block-end: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+          line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+/* .extended-event-descriptions a {
+  font-weight: 500;
+  color: #3f50e4;
+  text-decoration: inherit;
+}
+.extended-event-descriptions a:hover {
+  color: #9498eb;
+} */
+
+.extended-event {
+  padding: 0 2% 0 2%;
+  line-height: 1.5rem;
+  position: relative;
+  border-radius: 0 0 0.4em 0.4em;
+  /* background-color: rgb(146, 107, 56); */
+  font-size: 13px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.extended-event:hover {
+  /* background-color: rgb(114, 81, 37); */
+  z-index: 3000;
+}
+
+.extended-event:hover .extended-event-descriptions {
+  -webkit-line-clamp: none; /* number of lines to show */
+          line-clamp: none;
+}

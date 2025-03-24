@@ -1,10 +1,8 @@
 import Day from "./Day";
-import ExtendedEvent from "./ExtendedEvent";
 import { Event } from "../App";
 import "./Month.css";
-import "./ExtendedEvent.css";
 
-interface ExtendedEventAndLength {
+export interface ExtendedEventAndLength {
   event: Event;
   introText: string;
   length: number;
@@ -138,7 +136,7 @@ const Month = ({
         }
         if (toggle) {
           for (let i = currDate; i < currDate + eELength - 1; i++) {
-            invisExtendedEvents[i]++;
+            invisExtendedEvents[i] = 1 + invisExtendedEvents[currDate - 1];
             if (publicHoliday) {
               publicHolidayDays[i] = true;
             }
@@ -153,7 +151,6 @@ const Month = ({
   });
 
   let dayCount: number = 0;
-  let eECount: number = 0;
   let startFillCount: number = prevMonthLength - startDay + 1;
   let endFillCount: number = 1;
   let maxRowExtendedEventDepth: number;
@@ -290,6 +287,7 @@ const Month = ({
                     );
                   } else {
                     // Regular day.
+                    dayCount++;
                     return (
                       <div
                         key={col}
@@ -300,20 +298,21 @@ const Month = ({
                             : null
                         }
                         style={{
-                          minHeight: `${Math.max(
-                            130,
-                            150 - maxRowExtendedEventDepth * 10
-                          )}px`,
-                          background: publicHolidayDays[dayCount]
+                          background: publicHolidayDays[dayCount - 1]
                             ? "repeating-linear-gradient(-45deg, transparent 0 3px, var(--timetable-stripes-public-holiday) 3px 6px)"
                             : "",
+                          marginBlockEnd: "3%",
                         }}
                       >
                         <Day
-                          date={`${dayCount + 1}`}
+                          date={`${dayCount}`}
                           row={row}
-                          today={todayMonth && dayCount + 1 === today.getDate()}
-                          events={days[dayCount++]}
+                          today={todayMonth && dayCount === today.getDate()}
+                          events={days[dayCount - 1]}
+                          extendedEvents={extendedEvents[dayCount - 1]}
+                          invisExtendedEvents={
+                            invisExtendedEvents[dayCount - 1]
+                          }
                           highlightedEvents={highlightedEvents}
                           getEventIDMap={getEventIDMap}
                         />
@@ -321,66 +320,11 @@ const Month = ({
                     );
                   }
                 } else {
-                  // If its an extended event row.
-                  if (
-                    (row === 1 && col - 1 < startDay) ||
-                    eECount >= monthLength ||
-                    col === 0
-                  ) {
-                    return (
-                      // If first row, after last day, or teaching week column (0), add filler day.
-                      <div key={col} style={{ marginBlockEnd: "3%" }}></div>
-                    );
-                  } else {
-                    return (
-                      <div
-                        key={col}
-                        style={{
-                          marginBlockEnd:
-                            extendedEvents[eECount].length === 0 &&
-                            invisExtendedEvents[eECount] === 0
-                              ? "5%"
-                              : "5%",
-                          paddingBlockEnd:
-                            extendedEvents[eECount].length === 0 &&
-                            invisExtendedEvents[eECount] === 0
-                              ? "0%"
-                              : "2%",
-                          marginBlockStart: `${
-                            Math.round(invisExtendedEvents[eECount] * 25) // Just enough to put a gap between events. 25 comes from height of extended event.
-                          }px`,
-                          background:
-                            "repeating-linear-gradient(-45deg, transparent 0 3px, var(--timetable-stripes-dark) 3px 6px)",
-                          zIndex: -invisExtendedEvents[eECount],
-                        }}
-                      >
-                        {extendedEvents[eECount++].map((e, j) => {
-                          const iDMap = getEventIDMap();
-                          iDMap.set(e.event.event_id, row - 1);
-                          for (let k = 0; k < j; k++) {
-                            if (
-                              extendedEvents[eECount - 1][k].event.title ===
-                              extendedEvents[eECount - 1][j].event.title
-                            ) {
-                              // Duplicate event then only show one.
-                              return;
-                            }
-                          }
-                          return (
-                            <ExtendedEvent
-                              key={j}
-                              event={e.event}
-                              introText={e.introText}
-                              eventLength={e.length}
-                              highlighted={
-                                highlightedEvents.get(e.event.event_id)!
-                              }
-                            />
-                          );
-                        })}
-                      </div>
-                    );
-                  }
+                  // If its a gap row.
+                  return (
+                    // If first row, after last day, or teaching week column (0), add filler day.
+                    <div key={col} style={{ marginBlockEnd: "3%" }}></div>
+                  );
                 }
               });
           })}
