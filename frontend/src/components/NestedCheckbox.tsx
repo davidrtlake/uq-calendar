@@ -16,7 +16,11 @@ interface Props {
     string,
     React.MutableRefObject<Map<string, HTMLDivElement> | null>
   >;
-  checkHandler: (p: string, y: string) => void;
+  weekRefs: Map<
+    string,
+    React.MutableRefObject<Map<string, HTMLDivElement> | null>
+  >;
+  checkHandler: (p: string, y: string, currWeek: string) => void;
   checkedState: Map<string, CheckedYear>;
 }
 
@@ -25,6 +29,7 @@ const NestedCheckbox = ({
   allPeriods,
   allSummerSemesters,
   monthRefs,
+  weekRefs,
   checkHandler,
   checkedState,
 }: Props) => {
@@ -37,16 +42,30 @@ const NestedCheckbox = ({
   const [currYear, setCurrYear] = useState<string>(
     `${today.getFullYear()}`.slice(2)
   );
+  const [currWeek, setCurrWeek] = useState<string>("");
 
   const callback = (
     entries: IntersectionObserverEntry[],
-    _: IntersectionObserver
+    _observer: IntersectionObserver
   ) => {
     entries.forEach((entry: IntersectionObserverEntry) => {
       let entryId: string[] = entry.target.id.split("-");
       if (entry.isIntersecting) {
         // Item entering screen.
         setCurrYear(entryId[0].slice(2));
+      }
+    });
+  };
+
+  const weekCallback = (
+    entries: IntersectionObserverEntry[],
+    _observer: IntersectionObserver
+  ) => {
+    entries.forEach((entry: IntersectionObserverEntry) => {
+      if (entry.isIntersecting) {
+        // Item entering screen.
+        // console.log(entry.target.id);
+        setCurrWeek(entry.target.id);
       }
     });
   };
@@ -58,9 +77,15 @@ const NestedCheckbox = ({
       threshold: 0,
     };
     const observer = new IntersectionObserver(callback, options);
+    const weekObserver = new IntersectionObserver(weekCallback, options);
     monthRefs.forEach((year) => {
       year.current?.forEach((ref) => {
         observer.observe(ref);
+      });
+    });
+    weekRefs.forEach((year) => {
+      year.current?.forEach((ref) => {
+        weekObserver.observe(ref);
       });
     });
   }, []);
@@ -82,7 +107,7 @@ const NestedCheckbox = ({
               id={y}
               name={y}
               checked={checkedState.get(y)?.checked ?? true}
-              onChange={() => checkHandler("", y)}
+              onChange={() => checkHandler("", y, currWeek)}
               style={{ display: "none" }}
             />
             <label
@@ -113,7 +138,7 @@ const NestedCheckbox = ({
                     id={`${y}${p}`}
                     name={`${y}${p}`}
                     checked={checkedState.get(y)?.childPeriods?.get(p) ?? true}
-                    onChange={() => checkHandler(p, y)}
+                    onChange={() => checkHandler(p, y, currWeek)}
                     style={{ display: "none" }}
                   />
                   <label
@@ -165,7 +190,7 @@ const NestedCheckbox = ({
               id={allSummerSemesters[i]}
               name={allSummerSemesters[i]}
               checked={checkedState.get(allSummerSemesters[i])?.checked ?? true}
-              onChange={() => checkHandler("", allSummerSemesters[i])}
+              onChange={() => checkHandler("", allSummerSemesters[i], currWeek)}
               style={{ display: "none" }}
             />
             <label className="summer" htmlFor={`${allSummerSemesters[i]}`}>

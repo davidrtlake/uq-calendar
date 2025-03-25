@@ -75,7 +75,9 @@ const Day = ({
       >
         {extendedEvents.map((e, j) => {
           const iDMap = getEventIDMap();
-          iDMap.set(e.event.event_id, row);
+          if (iDMap.get(e.event.event_id) === -1) {
+            iDMap.set(e.event.event_id, row);
+          }
           for (let k = 0; k < j; k++) {
             if (
               extendedEvents[k].event.title === extendedEvents[j].event.title

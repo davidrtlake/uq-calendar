@@ -69,7 +69,7 @@ const SearchBar = ({
       const searchString = searchContents.toLocaleLowerCase();
       const highlightedIDsSet = new Set<number>();
       const filteredSearchEvents = events.filter(
-        // Then filter so search term.
+        // Then filter search term.
         (e) => {
           const res =
             (e.period.toLowerCase().includes(searchString) ||
@@ -81,20 +81,21 @@ const SearchBar = ({
         }
       );
       setSearchResults(filteredSearchEvents);
-      handleHighlightEvents(highlightedIDsSet);
       if (filteredSearchEvents.length > 0) {
+        handleHighlightEvents(highlightedIDsSet);
         navigationHandlerWeek(
           filteredSearchEvents[0].start_date.getFullYear(),
           filteredSearchEvents[0].start_date.getMonth(),
           filteredSearchEvents[0].event_id
         );
       }
-    } else {
+    } else if (searchResults.length > 0) {
       setSearchResults([]);
       handleHighlightEvents(new Set<number>());
     }
   }
 
+  // Handle presses of the forward and back buttons.
   function handleForwardAndBack(
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) {

@@ -199,13 +199,14 @@ const Month = ({
             return Array(8)
               .fill(null)
               .map((_, col) => {
+                // If its a day row.
                 if (row % 2 === 0) {
-                  // If its a day row.
+                  // Start of each row show the teaching week label.
                   if (col === 0) {
-                    // Start of each row show the teaching week label.
                     return (
                       <div
                         key={col}
+                        id={`${monthNum}-${row}`}
                         ref={(node) => {
                           const map = getWeekMap(yearName);
                           if (node) {
@@ -225,7 +226,7 @@ const Month = ({
                                   Math.min(2, extendedEvents[dayCount].length) *
                                   25
                                 }px`,
-                          fontFamily: "fantasy",
+                          fontFamily: "Impact, fantasy",
                           color: labelColours(monthLabels[labelIndex]),
                         }}
                       >

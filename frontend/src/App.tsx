@@ -3,7 +3,7 @@ import "./App.css";
 import Year from "./components/Year";
 import NestedCheckbox from "./components/NestedCheckbox";
 import QuickNavigation from "./components/QuickNavigation";
-import SearchBar from "./components/searchBar";
+import SearchBar from "./components/SearchBar";
 import data from "./assets/week_labels.json";
 import eventData from "./assets/events.json";
 
@@ -112,7 +112,7 @@ function App() {
   const labels: object = data;
   const eventIDToRowMap = new Map<number, number>(
     events.map((e) => {
-      return [e.event_id, 0];
+      return [e.event_id, -1];
     })
   );
   // This idea is taken from https://react.dev/learn/manipulating-the-dom-with-refs#example-scrolling-to-an-element
@@ -131,7 +131,9 @@ function App() {
   const todayRef = useRef<HTMLDivElement>(null);
 
   // Handles any checkbox clicks => updates checkedState and therefore shown events.
-  function checkBoxHandler(p: string, y: string) {
+  function checkBoxHandler(p: string, y: string, currWeek: string) {
+    console.log(y, currWeek);
+
     // Need to bundle it all into a Map of sets in App.tsx
     const newCS = new Map<string, CheckedYear>(checkedState);
     if (p.length === 0) {
@@ -171,7 +173,19 @@ function App() {
         });
       }
     }
+    // const map = getWeekMap(y);
+
+    // const node = map.get(currWeek)!;
+    // console.log("Scrolling to");
+    // console.log("scrollHeight", node.scrollHeight);
+    // console.log("scrollTop", node.scrollTop);
+
     setCheckedState(newCS);
+    // setTimeout(node.scrollIntoView, 5000, {
+    //   behavior: "smooth",
+    //   block: "center",
+    //   inline: "center",
+    // });
   }
 
   // Handling clicking in navigation bar.
@@ -259,6 +273,26 @@ function App() {
     setTimeout(scrollToToday, 500); // Hacky but it works.
   }, []);
 
+  console.log(
+    "getBoundingClientRect",
+    todayRef.current?.getBoundingClientRect(),
+    "window.innerHeight",
+    window.innerHeight
+  );
+
+  if (
+    todayRef.current?.getBoundingClientRect().top ??
+    window.innerHeight - window.innerHeight > 0
+  ) {
+    console.log("GOT HERE");
+    console.log(
+      "getBoundingClientRect",
+      todayRef.current?.getBoundingClientRect(),
+      "window.innerHeight",
+      window.innerHeight
+    );
+  }
+
   return (
     <>
       <div className="body-flex-container">
@@ -268,6 +302,7 @@ function App() {
             allPeriods={allPeriods}
             allSummerSemesters={allSummerSemesters}
             monthRefs={monthRefs}
+            weekRefs={weekRefs}
             checkHandler={checkBoxHandler}
             checkedState={checkedState}
           />
@@ -372,7 +407,7 @@ function App() {
             );
           })}
         </div>
-        <div className="sidebar" style={{ paddingLeft: "2%" }}>
+        <div className="sidebar" style={{ paddingLeft: "1%" }}>
           <QuickNavigation
             allYears={allYears}
             monthNames={monthNames}

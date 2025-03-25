@@ -80,61 +80,71 @@ const QuickNavigation = ({
 
   return (
     <div className="quick-navigation-panel">
-      {allYears.map((y, i) => (
-        <div key={i} className="quick-navigation-year">
-          <div
-            className="nav-year-collapsible"
-            onClick={() => buttonClickHandler(y)}
-            style={
-              {
-                // display:
-                //   y === currYear ||
-                //   y === `${parseInt(currYear) + 1}` ||
-                //   y === `${parseInt(currYear) - 1}`
-                //     ? "flex"
-                //     : "none",
+      <div
+        style={{
+          borderLeft: "1px solid rgba(168, 168, 168, 0.5)",
+          height: "80vh",
+          marginRight: "1vw",
+          // marginTop: "5vh",
+        }}
+      ></div>
+      <div>
+        {allYears.map((y, i) => (
+          <div key={i} className="quick-navigation-year">
+            <div
+              className="nav-year-collapsible"
+              onClick={() => buttonClickHandler(y)}
+              style={
+                {
+                  // display:
+                  //   y === currYear ||
+                  //   y === `${parseInt(currYear) + 1}` ||
+                  //   y === `${parseInt(currYear) - 1}`
+                  //     ? "flex"
+                  //     : "none",
+                }
               }
-            }
-          >
-            <span style={{ margin: "auto" }}>
-              {y === currYear ? <b>{`${y}`}</b> : `${y}`}
-            </span>
-          </div>
+            >
+              <span style={{ margin: "auto" }}>
+                {y === currYear ? <b>{`${y}`}</b> : `${y}`}
+              </span>
+            </div>
 
-          <div
-            style={{
-              display: shownContent.get(y) ? "block" : "none", //y === currYear ? "block" : "none",
-            }}
-          >
-            {monthNames.map((m, j) => (
-              <button
-                key={j}
-                className="quick-navigation-month"
-                id={`${y}${m}`}
-                style={{
-                  width: "90%",
-                  color:
-                    today.getFullYear() === parseInt(y) &&
-                    j === today.getMonth()
-                      ? "rgb(168, 199, 250)"
-                      : "",
-                  borderLeft:
-                    y === currYear && m === currMonth
-                      ? "2px solid rgb(255, 255, 255, 0.6)"
-                      : "",
-                  borderBottom:
-                    j !== 11
-                      ? "1px solid rgb(255, 255, 255, 0.3)"
-                      : "transparent",
-                }}
-                onClick={() => navigationHandler(m, y)}
-              >
-                {m}
-              </button>
-            ))}
+            <div
+              style={{
+                display: shownContent.get(y) ? "block" : "none", //y === currYear ? "block" : "none",
+              }}
+            >
+              {monthNames.map((m, j) => (
+                <button
+                  key={j}
+                  className="quick-navigation-month"
+                  id={`${y}${m}`}
+                  style={{
+                    width: "90%",
+                    color:
+                      today.getFullYear() === parseInt(y) &&
+                      j === today.getMonth()
+                        ? "rgb(168, 199, 250)"
+                        : "",
+                    borderLeft:
+                      y === currYear && m === currMonth
+                        ? "2px solid rgb(255, 255, 255, 0.6)"
+                        : "",
+                    borderBottom:
+                      j !== 11
+                        ? "1px solid rgb(255, 255, 255, 0.3)"
+                        : "transparent",
+                  }}
+                  onClick={() => navigationHandler(m, y)}
+                >
+                  {m}
+                </button>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
