@@ -138,7 +138,9 @@ const Month = ({
         }
         if (toggle) {
           for (let i = currDate; i < currDate + eELength - 1; i++) {
-            invisExtendedEvents[i] = 1 + invisExtendedEvents[currDate - 1];
+            invisExtendedEvents[i] =
+              invisExtendedEvents[currDate - 1] +
+              extendedEvents[currDate - 1].length;
             if (publicHoliday) {
               publicHolidayDays[i] = true;
             }

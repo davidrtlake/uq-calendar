@@ -40,25 +40,13 @@ function App() {
   //choose the screen size
   const handleResize = () => {
     if (window.innerWidth < 1022) {
-      console.log(
-        "Setting isMobile to 2",
-        window.innerWidth,
-        window.outerWidth
-      );
+      // Hide Category selector and quick nav.
       setWidthLevel(2);
     } else if (window.innerWidth < 1213) {
-      console.log(
-        "Setting isMobile to 1",
-        window.innerWidth,
-        window.outerWidth
-      );
+      // Hide search bar.
       setWidthLevel(1);
     } else {
-      console.log(
-        "Setting isMobile to 0",
-        window.innerWidth,
-        window.outerWidth
-      );
+      // Normal desktop view.
       setWidthLevel(0);
     }
   };
