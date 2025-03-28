@@ -11,7 +11,7 @@ Use `npm run dev` to start frontend.
 
 ### Big
 
-- [ ] Add search for events:
+- [x] Add search for events:
   - [x] Scrolls to results (like ctrl+f)
   - [x] Uses fieldset as filter.
   - [ ] Need to update when fieldset updates.
@@ -73,6 +73,7 @@ Use `npm run dev` to start frontend.
 - [x] Fix week scroll refs not in right place.
 - [x] Fix auto scroll to today not right.
 - [ ] Add visual clarification to sub period part in category selector.
+- [ ] Move mobile size updates into individual components.
 
 ## Ideas
 

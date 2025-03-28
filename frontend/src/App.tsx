@@ -323,7 +323,13 @@ function App() {
   return (
     <>
       <div className="body-flex-container">
-        <div className="sidebar" style={{ paddingRight: "1%", width: "17vw" }}>
+        <div
+          className="sidebar"
+          style={{
+            paddingRight: widthLevel <= 1 ? "1%" : "0px",
+            width: widthLevel <= 1 ? "17vw" : "0vw",
+          }}
+        >
           {widthLevel <= 1 ? (
             <NestedCheckbox
               allYears={allYears}
@@ -454,7 +460,7 @@ function App() {
                         : "rgba(47, 3, 61, 1)",
                       border: "1px solid rgba(255, 255, 255, 0.4)",
                       fontSize: "1.2em",
-                      marginLeft: "6px",
+                      margin: "0px 6px 0px 6px",
                     }}
                   >
                     <FontAwesomeIcon icon={faBarsStaggered} />
@@ -581,7 +587,10 @@ function App() {
             );
           })}
         </div>
-        <div className="sidebar" style={{ paddingLeft: "1%" }}>
+        <div
+          className="sidebar"
+          style={{ paddingLeft: widthLevel <= 1 ? "1%" : "0px" }}
+        >
           {widthLevel <= 1 ? (
             <QuickNavigation
               allYears={allYears}

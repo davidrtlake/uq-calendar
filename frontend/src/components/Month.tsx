@@ -175,7 +175,7 @@ const Month = ({
           marginBlockEnd: "1.2em", // 0.63
           paddingBlockStart: "1.725em",
           paddingBlockEnd: "0.105em",
-          paddingInlineStart: widthLevel < 2 ? "5.8em" : "228px",
+          paddingInlineStart: widthLevel < 2 ? "5.8em" : "258px",
           borderBottomWidth: "50%",
           borderBottom: "1px solid rgba(255, 255, 255, 0.56)",
         }}
@@ -230,7 +230,8 @@ const Month = ({
                                   Math.min(2, extendedEvents[dayCount].length) *
                                   25
                                 }px`,
-                          fontFamily: "Impact, fantasy",
+                          fontFamily:
+                            "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif",
                           color: labelColours(monthLabels[labelIndex]),
                         }}
                       >

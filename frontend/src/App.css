@@ -7,6 +7,12 @@
   --timetable-stripes-public-holiday: rgba(168, 151, 124, 0.4);
 }
 
+@media (max-width: 1213px) {
+  #root {
+    padding: 2rem 0rem 0 0rem;
+  }
+}
+
 .container {
   display: grid;
   grid-template-columns: auto repeat(7, 1fr);
