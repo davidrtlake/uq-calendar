@@ -7,7 +7,11 @@ import SearchBar from "./components/SearchBar";
 import data from "./assets/week_labels.json";
 import eventData from "./assets/events.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBarsStaggered,
+  faEye,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
 
 // Define a type for your events
 export interface Event {
@@ -31,6 +35,7 @@ function App() {
   const [widthLevel, setWidthLevel] = useState(0);
   const [showSearch, setShowSearch] = useState(false);
   const [showCats, setShowCats] = useState(false); // Meow.
+  const [showQuickNav, setShowQuickNav] = useState(false);
 
   //choose the screen size
   const handleResize = () => {
@@ -353,8 +358,8 @@ function App() {
               >
                 <button
                   onClick={() => {
-                    console.log("Clicked here.", !showCats);
                     setShowCats(!showCats);
+                    setShowQuickNav(false);
                   }}
                   style={{
                     backgroundColor: showCats
@@ -437,7 +442,6 @@ function App() {
               >
                 <button
                   onClick={() => {
-                    console.log("Clicked here.", !showSearch);
                     setShowSearch(!showSearch);
                   }}
                   style={{
@@ -450,6 +454,26 @@ function App() {
                 >
                   <FontAwesomeIcon icon={faMagnifyingGlass} />
                 </button>
+                {widthLevel > 1 ? (
+                  <button
+                    onClick={() => {
+                      setShowQuickNav(!showQuickNav);
+                      setShowCats(false);
+                    }}
+                    style={{
+                      backgroundColor: showQuickNav
+                        ? "rgba(68, 29, 81, 1)"
+                        : "rgba(47, 3, 61, 1)",
+                      border: "1px solid rgba(255, 255, 255, 0.4)",
+                      fontSize: "1.2em",
+                      marginLeft: "6px",
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faBarsStaggered} />
+                  </button>
+                ) : (
+                  ""
+                )}
               </div>
               <div
                 style={{
@@ -579,7 +603,25 @@ function App() {
               checkedState={checkedState}
             />
           ) : (
-            ""
+            <div
+              style={{
+                position: "fixed",
+                display: showQuickNav ? "block" : "none",
+                zIndex: "5000",
+                backgroundColor: "rgba(47, 3, 61, 1)",
+                minWidth: "15%",
+                top: "111px",
+                right: "0px",
+              }}
+            >
+              <QuickNavigation
+                allYears={allYears}
+                monthNames={monthNames}
+                monthRefs={monthRefs}
+                navigationHandler={navigationHandlerMonth}
+                checkedState={checkedState}
+              />
+            </div>
           )}
         </div>
       </div>
