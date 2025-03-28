@@ -22,6 +22,7 @@ interface Props {
   monthLabels: string[];
   getWeekMap: (y: string) => Map<string, HTMLDivElement>;
   getEventIDMap: () => Map<number, number>;
+  widthLevel: number;
 }
 
 const Month = ({
@@ -38,6 +39,7 @@ const Month = ({
   monthLabels,
   getWeekMap,
   getEventIDMap,
+  widthLevel,
 }: Props) => {
   const days: Event[][] = Array(monthLength)
     .fill(null)
@@ -171,7 +173,7 @@ const Month = ({
           marginBlockEnd: "1.2em", // 0.63
           paddingBlockStart: "1.725em",
           paddingBlockEnd: "0.105em",
-          paddingInlineStart: "5.8em",
+          paddingInlineStart: widthLevel < 2 ? "5.8em" : "228px",
           borderBottomWidth: "50%",
           borderBottom: "1px solid rgba(255, 255, 255, 0.56)",
         }}

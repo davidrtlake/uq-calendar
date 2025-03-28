@@ -13,6 +13,7 @@ interface Props {
   events: Event[];
   highlightedEvents: Map<number, boolean>;
   yearLabels: object;
+  widthLevel: number;
 }
 
 const Year = ({
@@ -26,6 +27,7 @@ const Year = ({
   events,
   highlightedEvents,
   yearLabels,
+  widthLevel,
 }: Props) => {
   const monthLens: number[] = [
     31,
@@ -64,6 +66,7 @@ const Year = ({
             paddingBlockEnd: "0.07em",
             borderBottom: "1px solid rgba(255, 255, 255, 0.56)",
             color: "rgb(197, 197, 197)",
+            paddingLeft: widthLevel < 2 ? "0em" : "87px",
           }}
         >
           {year}
@@ -104,6 +107,7 @@ const Year = ({
                 monthLabels={yearLabels[monthNames[i] as keyof object]}
                 getWeekMap={getWeekMap}
                 getEventIDMap={getEventIDMap}
+                widthLevel={widthLevel}
               />
             </div>
           ))}

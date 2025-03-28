@@ -7,7 +7,7 @@ import SearchBar from "./components/SearchBar";
 import data from "./assets/week_labels.json";
 import eventData from "./assets/events.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faEye, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 // Define a type for your events
 export interface Event {
@@ -30,6 +30,7 @@ function App() {
   console.log("---RELOADING-APP---");
   const [widthLevel, setWidthLevel] = useState(0);
   const [showSearch, setShowSearch] = useState(false);
+  const [showCats, setShowCats] = useState(false); // Meow.
 
   //choose the screen size
   const handleResize = () => {
@@ -341,7 +342,53 @@ function App() {
               checkedState={checkedState}
             />
           ) : (
-            ""
+            <>
+              <div
+                style={{
+                  position: "fixed",
+                  top: "20px",
+                  zIndex: "3007",
+                  left: "5%",
+                }}
+              >
+                <button
+                  onClick={() => {
+                    console.log("Clicked here.", !showCats);
+                    setShowCats(!showCats);
+                  }}
+                  style={{
+                    backgroundColor: showCats
+                      ? "rgba(68, 29, 81, 1)"
+                      : "rgba(47, 3, 61, 1)",
+                    border: "1px solid rgba(255, 255, 255, 0.4)",
+                    fontSize: "1.2em",
+                  }}
+                >
+                  <FontAwesomeIcon icon={faEye} />
+                </button>
+              </div>
+              <div
+                style={{
+                  position: "fixed",
+                  display: showCats ? "block" : "none",
+                  zIndex: "5000",
+                  backgroundColor: "rgba(47, 3, 61, 1)",
+                  minWidth: "50%",
+                  top: "111px",
+                  fontSize: "1.5em",
+                }}
+              >
+                <NestedCheckbox
+                  allYears={allYears}
+                  allPeriods={allPeriods}
+                  allSummerSemesters={allSummerSemesters}
+                  monthRefs={monthRefs}
+                  weekRefs={weekRefs}
+                  checkHandler={checkBoxHandler}
+                  checkedState={checkedState}
+                />
+              </div>
+            </>
           )}
         </div>
         <div style={{ maxWidth: "1300px" }}>
@@ -389,15 +436,16 @@ function App() {
                 }}
               >
                 <button
-                  name="search"
                   onClick={() => {
                     console.log("Clicked here.", !showSearch);
                     setShowSearch(!showSearch);
                   }}
                   style={{
                     backgroundColor: showSearch
-                      ? "rgba(255, 255, 255, 0.1)"
-                      : "rgba(0, 0, 0, 0)",
+                      ? "rgba(68, 29, 81, 1)"
+                      : "rgba(47, 3, 61, 1)",
+                    border: "1px solid rgba(255, 255, 255, 0.4)",
+                    fontSize: "1.2em",
                   }}
                 >
                   <FontAwesomeIcon icon={faMagnifyingGlass} />
@@ -412,7 +460,7 @@ function App() {
                   zIndex: "3006",
                   textAlign: "right",
                   flexDirection: "row",
-                  justifyContent: "flex-end",
+                  justifyContent: "center",
                   alignItems: "center",
                   backgroundColor: "rgb(47, 3, 61)",
                   borderBottom: "1px solid gray",
@@ -516,18 +564,23 @@ function App() {
                   })}
                 highlightedEvents={highlightedEvents}
                 yearLabels={labels[y as keyof Object]}
+                widthLevel={widthLevel}
               />
             );
           })}
         </div>
         <div className="sidebar" style={{ paddingLeft: "1%" }}>
-          <QuickNavigation
-            allYears={allYears}
-            monthNames={monthNames}
-            monthRefs={monthRefs}
-            navigationHandler={navigationHandlerMonth}
-            checkedState={checkedState}
-          />
+          {widthLevel <= 1 ? (
+            <QuickNavigation
+              allYears={allYears}
+              monthNames={monthNames}
+              monthRefs={monthRefs}
+              navigationHandler={navigationHandlerMonth}
+              checkedState={checkedState}
+            />
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </>
