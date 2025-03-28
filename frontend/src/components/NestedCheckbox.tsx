@@ -163,12 +163,12 @@ const NestedCheckbox = ({
                       {checkedState.get(y)!.childPeriods!.get(p) ? (
                         <FontAwesomeIcon
                           icon={faEye}
-                          style={{ fontSize: "13px " }}
+                          style={{ fontSize: "0.81em" }}
                         />
                       ) : (
                         <FontAwesomeIcon
                           icon={faEyeSlash}
-                          style={{ fontSize: "13px " }}
+                          style={{ fontSize: "0.81em" }}
                         />
                       )}
                       {p}

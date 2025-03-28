@@ -1,6 +1,8 @@
 import "./Day.css";
 import { Event } from "../App";
 import { ExtendedEventAndLength } from "./Month";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
   date: string;
@@ -11,6 +13,7 @@ interface Props {
   invisExtendedEvents: number;
   highlightedEvents: Map<number, boolean>;
   getEventIDMap: () => Map<number, number>;
+  widthLevel: number;
 }
 
 export const getEventColour = (eventType: string): string[] => {
@@ -41,6 +44,7 @@ const Day = ({
   invisExtendedEvents,
   highlightedEvents,
   getEventIDMap,
+  widthLevel,
 }: Props) => {
   const showPeriod: boolean[] = Array();
   let prevPeriod: string = "";
@@ -116,11 +120,15 @@ const Day = ({
                     rel="noopener noreferrer"
                   >
                     {e.event.title}
+                    {". "}
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                   </a>
                 ) : (
-                  e.event.title
+                  <>
+                    {e.event.title}
+                    {"."}
+                  </>
                 )}
-                .
               </p>
             </div>
           );
@@ -148,9 +156,14 @@ const Day = ({
               }}
             >
               <p
-                className={`event-descriptions ${
-                  events.length > 2 ? "truncate-2" : "truncate-3"
-                }`}
+                className={"event-descriptions truncate"}
+                style={{
+                  WebkitLineClamp:
+                    widthLevel > 1 ? "none" : events.length > 2 ? "2" : "3",
+                  lineClamp:
+                    widthLevel > 1 ? "none" : events.length > 2 ? "2" : "3",
+                  fontSize: widthLevel > 1 ? "1em" : "1em",
+                }}
               >
                 {showPeriod[i] && <b className="period-title">{e.period}: </b>}
                 {e.url ? (
@@ -161,11 +174,15 @@ const Day = ({
                     style={{ color: getEventColour(e.event_type)[1] }}
                   >
                     {e.title}
+                    {". "}
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                   </a>
                 ) : (
-                  e.title
+                  <>
+                    {e.title}
+                    {"."}
+                  </>
                 )}
-                .
               </p>
             </div>
           );

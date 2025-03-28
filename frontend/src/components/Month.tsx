@@ -320,6 +320,7 @@ const Month = ({
                           }
                           highlightedEvents={highlightedEvents}
                           getEventIDMap={getEventIDMap}
+                          widthLevel={widthLevel}
                         />
                       </div>
                     );
