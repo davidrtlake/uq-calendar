@@ -6,6 +6,8 @@ import QuickNavigation from "./components/QuickNavigation";
 import SearchBar from "./components/SearchBar";
 import data from "./assets/week_labels.json";
 import eventData from "./assets/events.json";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 // Define a type for your events
 export interface Event {
@@ -26,6 +28,35 @@ interface CheckedYear {
 
 function App() {
   console.log("---RELOADING-APP---");
+  const [widthLevel, setWidthLevel] = useState(0);
+  const [showSearch, setShowSearch] = useState(false);
+
+  //choose the screen size
+  const handleResize = () => {
+    if (window.innerWidth < 1022) {
+      console.log(
+        "Setting isMobile to 2",
+        window.innerWidth,
+        window.outerWidth
+      );
+      setWidthLevel(2);
+    } else if (window.innerWidth < 1213) {
+      console.log(
+        "Setting isMobile to 1",
+        window.innerWidth,
+        window.outerWidth
+      );
+      setWidthLevel(1);
+    } else {
+      console.log(
+        "Setting isMobile to 0",
+        window.innerWidth,
+        window.outerWidth
+      );
+      setWidthLevel(0);
+    }
+  };
+
   // const [events, setEvents] = useState<Event[]>([]); // State is set of periods to use.
   function compareEventDates(a: Event, b: Event): number {
     if (a.start_date < b.start_date) {
@@ -270,59 +301,141 @@ function App() {
   // }, []);
 
   useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    handleResize();
     setTimeout(scrollToToday, 500); // Hacky but it works.
   }, []);
 
-  console.log(
-    "getBoundingClientRect",
-    todayRef.current?.getBoundingClientRect(),
-    "window.innerHeight",
-    window.innerHeight
-  );
+  // console.log(
+  //   "getBoundingClientRect",
+  //   todayRef.current?.getBoundingClientRect(),
+  //   "window.innerHeight",
+  //   window.innerHeight
+  // );
 
-  if (
-    todayRef.current?.getBoundingClientRect().top ??
-    window.innerHeight - window.innerHeight > 0
-  ) {
-    console.log("GOT HERE");
-    console.log(
-      "getBoundingClientRect",
-      todayRef.current?.getBoundingClientRect(),
-      "window.innerHeight",
-      window.innerHeight
-    );
-  }
+  // if (
+  //   todayRef.current?.getBoundingClientRect().top ??
+  //   window.innerHeight - window.innerHeight > 0
+  // ) {
+  //   console.log("GOT HERE");
+  //   console.log(
+  //     "getBoundingClientRect",
+  //     todayRef.current?.getBoundingClientRect(),
+  //     "window.innerHeight",
+  //     window.innerHeight
+  //   );
+  // }
 
   return (
     <>
       <div className="body-flex-container">
         <div className="sidebar" style={{ paddingRight: "1%", width: "17vw" }}>
-          <NestedCheckbox
-            allYears={allYears}
-            allPeriods={allPeriods}
-            allSummerSemesters={allSummerSemesters}
-            monthRefs={monthRefs}
-            weekRefs={weekRefs}
-            checkHandler={checkBoxHandler}
-            checkedState={checkedState}
-          />
+          {widthLevel <= 1 ? (
+            <NestedCheckbox
+              allYears={allYears}
+              allPeriods={allPeriods}
+              allSummerSemesters={allSummerSemesters}
+              monthRefs={monthRefs}
+              weekRefs={weekRefs}
+              checkHandler={checkBoxHandler}
+              checkedState={checkedState}
+            />
+          ) : (
+            ""
+          )}
         </div>
         <div style={{ maxWidth: "1300px" }}>
-          <SearchBar
-            navigationHandlerWeek={navigationHandlerWeek}
-            events={events.filter((e) => {
-              // Filter invisible events.
-              if (e.period.startsWith("Summer")) {
-                return checkedState.get(e.period)?.checked ?? false;
-              } else {
-                return checkedState
-                  .get(`${e.start_date.getFullYear()}`)!
-                  .childPeriods!.get(e.period);
-              }
-            })}
-            handleHighlightEvents={handleHighlightEvents}
-            monthRefs={monthRefs}
-          />
+          {widthLevel === 0 ? (
+            <div
+              style={{
+                position: "sticky",
+                top: "20px",
+                zIndex: "3006",
+                textAlign: "right",
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "flex-end",
+                alignItems: "center",
+              }}
+            >
+              <SearchBar
+                navigationHandlerWeek={navigationHandlerWeek}
+                events={events.filter((e) => {
+                  // Filter invisible events.
+                  if (e.period.startsWith("Summer")) {
+                    return checkedState.get(e.period)?.checked ?? false;
+                  } else {
+                    return checkedState
+                      .get(`${e.start_date.getFullYear()}`)!
+                      .childPeriods!.get(e.period);
+                  }
+                })}
+                handleHighlightEvents={handleHighlightEvents}
+                monthRefs={monthRefs}
+              />
+            </div>
+          ) : (
+            <>
+              <div
+                style={{
+                  position: "sticky",
+                  top: "20px",
+                  zIndex: "3006",
+                  textAlign: "right",
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "flex-end",
+                  alignItems: "center",
+                }}
+              >
+                <button
+                  name="search"
+                  onClick={() => {
+                    console.log("Clicked here.", !showSearch);
+                    setShowSearch(!showSearch);
+                  }}
+                  style={{
+                    backgroundColor: showSearch
+                      ? "rgba(255, 255, 255, 0.1)"
+                      : "rgba(0, 0, 0, 0)",
+                  }}
+                >
+                  <FontAwesomeIcon icon={faMagnifyingGlass} />
+                </button>
+              </div>
+              <div
+                style={{
+                  display: showSearch ? "flex" : "none",
+                  transition: "display 4s 1s",
+                  position: "sticky",
+                  top: "111px",
+                  zIndex: "3006",
+                  textAlign: "right",
+                  flexDirection: "row",
+                  justifyContent: "flex-end",
+                  alignItems: "center",
+                  backgroundColor: "rgb(47, 3, 61)",
+                  borderBottom: "1px solid gray",
+                }}
+              >
+                <SearchBar
+                  navigationHandlerWeek={navigationHandlerWeek}
+                  events={events.filter((e) => {
+                    // Filter invisible events.
+                    if (e.period.startsWith("Summer")) {
+                      return checkedState.get(e.period)?.checked ?? false;
+                    } else {
+                      return checkedState
+                        .get(`${e.start_date.getFullYear()}`)!
+                        .childPeriods!.get(e.period);
+                    }
+                  })}
+                  handleHighlightEvents={handleHighlightEvents}
+                  monthRefs={monthRefs}
+                />
+              </div>
+            </>
+          )}
           <div
             className="container"
             style={{

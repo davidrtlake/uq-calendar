@@ -88,7 +88,7 @@ const QuickNavigation = ({
           // marginTop: "5vh",
         }}
       ></div>
-      <div>
+      <div style={{ minWidth: "7em" }}>
         {allYears.map((y, i) => (
           <div key={i} className="quick-navigation-year">
             <div
