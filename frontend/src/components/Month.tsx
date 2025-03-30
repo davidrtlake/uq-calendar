@@ -165,23 +165,7 @@ const Month = ({
 
   return (
     <>
-      <h2
-        style={{
-          position: "sticky",
-          top: "0em",
-          zIndex: "3002",
-          backgroundColor: "#2f033d",
-          marginBlockStart: "0em",
-          marginBlockEnd: "1.2em", // 0.63
-          paddingBlockStart: "1.725em",
-          paddingBlockEnd: "0.105em",
-          paddingInlineStart: widthLevel < 2 ? "5.8em" : "258px",
-          borderBottomWidth: "50%",
-          borderBottom: "1px solid rgba(255, 255, 255, 0.56)",
-        }}
-      >
-        {monthName}
-      </h2>
+      <h2 className="month-title">{monthName}</h2>
       <div className="container">
         {Array(Math.ceil((monthLength + fillerDays.length) / 7) * 2)
           .fill(null)
@@ -219,8 +203,8 @@ const Month = ({
                             map.delete(`${monthNum}-${row}`);
                           }
                         }}
+                        className="teaching-week-label"
                         style={{
-                          width: "25px",
                           lineHeight: "100%",
                           margin: "auto",
                           paddingTop:
@@ -231,7 +215,8 @@ const Month = ({
                                   25
                                 }px`,
                           fontFamily:
-                            "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif",
+                            "Impact, Haettenschweiler, 'Arial Bold', sans-serif",
+                          fontWeight: "bold",
                           color: labelColours(monthLabels[labelIndex]),
                         }}
                       >
@@ -256,7 +241,11 @@ const Month = ({
                         <div
                           style={{
                             fontSize:
-                              row === 0 && fillerDays.length > 0
+                              (row === 0 && fillerDays.length > 0) ||
+                              (Number.isNaN(
+                                parseInt(monthLabels[labelIndex])
+                              ) &&
+                                widthLevel >= 3)
                                 ? "50px"
                                 : "70px",
                             display: "inline-block",

@@ -41,7 +41,7 @@
   border-bottom: 1px solid rgb(255, 255, 255, 0.3);
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 1em;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -50,4 +50,10 @@
 
 .quick-navigation-panel .active, .nav-year-collapsible:hover {
   background-color: #ffffff3a;;
+}
+
+@media (max-width: 1021px) {
+  #quick-nav-vert-line {
+    display: none;
+  }
 }

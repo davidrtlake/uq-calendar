@@ -81,6 +81,7 @@ const QuickNavigation = ({
   return (
     <div className="quick-navigation-panel">
       <div
+        id="quick-nav-vert-line"
         style={{
           borderLeft: "1px solid rgba(168, 168, 168, 0.5)",
           height: "80vh",

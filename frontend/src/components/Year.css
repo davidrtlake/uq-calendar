@@ -9,3 +9,11 @@
   /* padding-block-end: 2rem; */
   /* margin-bottom: 2rem; */
 }
+
+@media (max-width: 502px) {
+  .year > h1 {
+    display: flex;
+    align-items: flex-end;
+    font-size: 2em;
+  }
+}

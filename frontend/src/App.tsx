@@ -39,10 +39,17 @@ function App() {
 
   //choose the screen size
   const handleResize = () => {
-    if (window.innerWidth < 1022) {
+    // console.log(window.innerWidth, window);
+    if (window.innerWidth <= 502) {
+      // Hide Category selector and quick nav.
+      setWidthLevel(4);
+    } else if (window.innerWidth <= 700) {
+      // Hide Category selector and quick nav.
+      setWidthLevel(3);
+    } else if (window.innerWidth <= 1022) {
       // Hide Category selector and quick nav.
       setWidthLevel(2);
-    } else if (window.innerWidth < 1213) {
+    } else if (window.innerWidth <= 1213) {
       // Hide search bar.
       setWidthLevel(1);
     } else {
@@ -345,36 +352,13 @@ function App() {
               <div
                 style={{
                   position: "fixed",
-                  top: "20px",
-                  zIndex: "3007",
-                  left: "5%",
-                }}
-              >
-                <button
-                  onClick={() => {
-                    setShowCats(!showCats);
-                    setShowQuickNav(false);
-                  }}
-                  style={{
-                    backgroundColor: showCats
-                      ? "rgba(68, 29, 81, 1)"
-                      : "rgba(47, 3, 61, 1)",
-                    border: "1px solid rgba(255, 255, 255, 0.4)",
-                    fontSize: "1.2em",
-                  }}
-                >
-                  <FontAwesomeIcon icon={faEye} />
-                </button>
-              </div>
-              <div
-                style={{
-                  position: "fixed",
                   display: showCats ? "block" : "none",
                   zIndex: "5000",
                   backgroundColor: "rgba(47, 3, 61, 1)",
-                  minWidth: "50%",
+                  // minWidth: "40%",
                   top: "111px",
                   fontSize: "1.5em",
+                  padding: "2vw",
                 }}
               >
                 <NestedCheckbox
@@ -387,6 +371,18 @@ function App() {
                   checkedState={checkedState}
                 />
               </div>
+              <div
+                style={{
+                  position: "fixed",
+                  display: showCats ? "block" : "none",
+                  zIndex: "4999",
+                  backgroundColor: "rgba(0, 0, 0, 0.4)",
+                  top: "111px",
+                  width: "100%",
+                  height: "100%",
+                }}
+                onClick={() => setShowCats(false)}
+              />
             </>
           )}
         </div>
@@ -434,6 +430,27 @@ function App() {
                   alignItems: "center",
                 }}
               >
+                {widthLevel > 1 ? (
+                  <button
+                    onClick={() => {
+                      setShowCats(!showCats);
+                      setShowQuickNav(false);
+                    }}
+                    style={{
+                      backgroundColor: showCats
+                        ? "rgba(68, 29, 81, 1)"
+                        : "rgba(47, 3, 61, 1)",
+                      border: "1px solid rgba(255, 255, 255, 0.4)",
+                      fontSize: "1.2em",
+                      marginRight: "auto",
+                      marginLeft: "6px",
+                    }}
+                  >
+                    <FontAwesomeIcon icon={faEye} />
+                  </button>
+                ) : (
+                  ""
+                )}
                 <button
                   onClick={() => {
                     setShowSearch(!showSearch);
@@ -512,17 +529,7 @@ function App() {
               paddingTop: "0.3rem",
             }}
           >
-            <div
-              style={{
-                width: "30px",
-                borderBottom: "1px solid rgba(255, 255, 255, 0.56)",
-                paddingInlineStart: "0.1rem",
-                textAlign: "center",
-                backgroundColor: "unset",
-              }}
-            >
-              WK
-            </div>
+            <div id="wk-label">WK</div>
             {daysOfTheWeek.map((day, i) => (
               <div
                 key={i}
@@ -600,25 +607,42 @@ function App() {
               checkedState={checkedState}
             />
           ) : (
-            <div
-              style={{
-                position: "fixed",
-                display: showQuickNav ? "block" : "none",
-                zIndex: "5000",
-                backgroundColor: "rgba(47, 3, 61, 1)",
-                minWidth: "15%",
-                top: "111px",
-                right: "0px",
-              }}
-            >
-              <QuickNavigation
-                allYears={allYears}
-                monthNames={monthNames}
-                monthRefs={monthRefs}
-                navigationHandler={navigationHandlerMonth}
-                checkedState={checkedState}
+            <>
+              <div
+                style={{
+                  position: "fixed",
+                  display: showQuickNav ? "block" : "none",
+                  zIndex: "5000",
+                  backgroundColor: "rgba(47, 3, 61, 1)",
+                  minWidth: "15%",
+                  top: "111px",
+                  right: "0px",
+                  fontSize: "2vh",
+                  padding: "2vh",
+                }}
+              >
+                <QuickNavigation
+                  allYears={allYears}
+                  monthNames={monthNames}
+                  monthRefs={monthRefs}
+                  navigationHandler={navigationHandlerMonth}
+                  checkedState={checkedState}
+                />
+              </div>
+              <div
+                style={{
+                  position: "fixed",
+                  display: showQuickNav ? "block" : "none",
+                  zIndex: "4999",
+                  backgroundColor: "rgba(0, 0, 0, 0.4)",
+                  top: "111px",
+                  right: "0px",
+                  width: "100%",
+                  height: "100%",
+                }}
+                onClick={() => setShowQuickNav(false)}
               />
-            </div>
+            </>
           )}
         </div>
       </div>

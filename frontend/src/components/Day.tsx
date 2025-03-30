@@ -68,7 +68,7 @@ const Day = ({
           borderRadius: today ? "0.2em" : "0",
         }}
       >
-        {date} {today ? " Today" : ""}
+        {date} {today && widthLevel < 2 ? " Today" : ""}
       </h4>
       <div
         style={{
@@ -95,11 +95,16 @@ const Day = ({
               key={j}
               className="extended-event"
               style={{
-                width: `${
-                  100 * e.length +
-                  rowGapPercentOfDayWdith * (e.length - 1) -
-                  paddingPercent * 2 // Maybe use view width unit.
-                }%`,
+                width:
+                  widthLevel <= 2
+                    ? `${
+                        100 * e.length +
+                        rowGapPercentOfDayWdith * (e.length - 1) -
+                        paddingPercent * 2 // Maybe use view width unit.
+                      }%`
+                    : `calc(calc(100vw / 7 - 1px) * ${e.length} + ${
+                        e.length - 1
+                      }px)`,
                 backgroundColor: getEventColour(e.event.event_type)[0],
                 color: getEventColour(e.event.event_type)[1],
                 border: highlightedEvents.get(e.event.event_id)
@@ -159,10 +164,22 @@ const Day = ({
                 className={"event-descriptions truncate"}
                 style={{
                   WebkitLineClamp:
-                    widthLevel > 1 ? "none" : events.length > 2 ? "2" : "3",
+                    widthLevel > 2
+                      ? events.length > 2
+                        ? "5"
+                        : "7"
+                      : events.length > 2
+                      ? "2"
+                      : "3",
                   lineClamp:
-                    widthLevel > 1 ? "none" : events.length > 2 ? "2" : "3",
-                  fontSize: widthLevel > 1 ? "1em" : "1em",
+                    widthLevel > 2
+                      ? events.length > 2
+                        ? "5"
+                        : "7"
+                      : events.length > 2
+                      ? "2"
+                      : "3",
+                  // fontSize: widthLevel > 1 ? "1em" : "1em",
                 }}
               >
                 {showPeriod[i] && <b className="period-title">{e.period}: </b>}

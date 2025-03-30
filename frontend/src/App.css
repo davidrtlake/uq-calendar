@@ -21,6 +21,13 @@
   align-items: start;
 }
 
+@media (max-width: 700px) {
+  .container {
+    grid-template-columns: 0 repeat(7, 1fr);
+    column-gap: 1px;
+  }
+}
+
 .body-flex-container {
   display: flex;
   flex-direction: row;
@@ -48,4 +55,20 @@ fieldset {
   z-index: 3001;
   top: 0px;
   max-width: 1300px;
+}
+
+#wk-label {
+  width: 25px;
+  visibility: visible;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.56);
+  padding-inline-start: "0.1rem";
+  text-align: "center";
+  background-color: "unset";
+}
+
+@media (max-width: 700px) {
+  #wk-label {
+    width: 0px;
+    visibility: hidden;
+  }
 }
