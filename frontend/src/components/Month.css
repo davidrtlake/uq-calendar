@@ -34,6 +34,16 @@
   background: repeating-linear-gradient(-45deg, transparent 0 3px, rgba(255, 255, 255, 0.1) 3px 6px);
 }
 
+.gap-element {
+  margin-bottom: 3%;
+}
+
+@media (max-width: 502px) {
+  .gap-element {
+    margin-bottom: 5%;
+  }
+}
+
 .day h4, h4 {
   /* margin-block-start: 0.1em;
   margin-inline-start: 0.3em;*/
@@ -52,7 +62,7 @@
   margin-block-end: 28.8px;
   padding-block-start: 41.4px;
   padding-block-end: 2.52px;
-  padding-inline-start: 190px;
+  padding-inline-start: 145px;
   /* border-bottom-width: 50%; */
   border-bottom: 1px solid rgba(255, 255, 255, 0.56);
   height: 36px;
@@ -62,7 +72,7 @@
   .month-title {
     display: flex;
     align-items: flex-end;
-    padding-inline-start: 170px;
+    padding-inline-start: 84px; /* 170 */
     font-size: 1em;
     padding-block-start: 39.4px;
     padding-block-end: 4.52px;

@@ -318,8 +318,8 @@ const Month = ({
                 } else {
                   // If its a gap row.
                   return (
-                    // If first row, after last day, or teaching week column (0), add filler day.
-                    <div key={col} style={{ marginBlockEnd: "3%" }}></div>
+                    // Gap element.
+                    <div className="gap-element" key={col}></div>
                   );
                 }
               });

@@ -66,7 +66,7 @@ const SearchBar = ({
   ) {
     setResultIndex(0);
     if (searchContents.length > 0) {
-      const searchString = searchContents.toLocaleLowerCase();
+      const searchString = searchContents.toLocaleLowerCase().trim();
       const highlightedIDsSet = new Set<number>();
       const filteredSearchEvents = events.filter(
         // Then filter search term.
@@ -140,12 +140,7 @@ const SearchBar = ({
 
   return (
     <div className="search-bar">
-      <div
-        style={{
-          backgroundColor: "#2f033d",
-          paddingLeft: "10px",
-        }}
-      >
+      <div style={{ display: "inline-block" }}>
         <input
           name="search-bar"
           placeholder={`Search ${currYear} Events`}
@@ -156,6 +151,9 @@ const SearchBar = ({
         <button name="search" onClick={handleSearch}>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </button>
+      </div>
+
+      <div style={{ display: "inline-block" }}>
         <div
           style={{
             minWidth: "28px",

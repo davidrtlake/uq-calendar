@@ -89,3 +89,4 @@ Use `npm run dev` to start frontend.
 - [x] Show slight day background pattern under and above extended events so they seem part of the day.
 - [ ] Maybe change shown categories from checkbox to buttons?
 - [ ] Investigate using flatlists.
+- [ ] Separate text to follow link.

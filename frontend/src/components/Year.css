@@ -13,7 +13,7 @@
 @media (max-width: 502px) {
   .year > h1 {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     font-size: 2em;
   }
 }

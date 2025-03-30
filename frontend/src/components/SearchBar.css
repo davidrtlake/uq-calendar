@@ -1,13 +1,15 @@
-/* .search-bar {
-  position: sticky;
-  top: 20px;
-  z-index: 3006;
-   text-align: right;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-} */
+.search-bar {
+  background-color: #2f033d;
+}
+
+@media (max-width: 700px) {
+  .search-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
+  }
+}
 
 .nav-buttons {
   background-color: unset;

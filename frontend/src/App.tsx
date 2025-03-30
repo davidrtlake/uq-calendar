@@ -163,9 +163,7 @@ function App() {
   const todayRef = useRef<HTMLDivElement>(null);
 
   // Handles any checkbox clicks => updates checkedState and therefore shown events.
-  function checkBoxHandler(p: string, y: string, currWeek: string) {
-    console.log(y, currWeek);
-
+  function checkBoxHandler(p: string, y: string, _currWeek: string) {
     // Need to bundle it all into a Map of sets in App.tsx
     const newCS = new Map<string, CheckedYear>(checkedState);
     if (p.length === 0) {
@@ -356,9 +354,13 @@ function App() {
                   zIndex: "5000",
                   backgroundColor: "rgba(47, 3, 61, 1)",
                   // minWidth: "40%",
+                  borderRight: "1px solid gray",
+                  borderBottom: "1px solid gray",
+                  borderRadius: "0px 0px 10px 0px",
                   top: "111px",
-                  fontSize: "1.5em",
-                  padding: "2vw",
+                  fontSize: "2vh",
+                  padding: "10px",
+                  paddingRight: "0px",
                 }}
               >
                 <NestedCheckbox
@@ -614,6 +616,9 @@ function App() {
                   display: showQuickNav ? "block" : "none",
                   zIndex: "5000",
                   backgroundColor: "rgba(47, 3, 61, 1)",
+                  borderLeft: "1px solid gray",
+                  borderBottom: "1px solid gray",
+                  borderRadius: "0px 0px 0px 10px",
                   minWidth: "15%",
                   top: "111px",
                   right: "0px",

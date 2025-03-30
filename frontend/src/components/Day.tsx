@@ -54,6 +54,16 @@ const Day = ({
     prevPeriod = e.period;
   });
 
+  function shortenPeriodName(periodName: string): string {
+    let splitName: string[] = periodName.split(" ");
+    if (periodName.toLowerCase().startsWith("semester")) {
+      splitName[0] = "Sem.";
+    } else if (periodName.toLowerCase().startsWith("summer semester")) {
+      splitName[1] = "Sem.";
+    }
+    return splitName.join(" ");
+  }
+
   showPeriod.push(false);
 
   const paddingPercent: number = 0; // Padding within the event.
@@ -73,7 +83,10 @@ const Day = ({
       <div
         style={{
           marginBlockStart: `${
-            Math.round(invisExtendedEvents * 25 + (invisExtendedEvents ? 1 : 0)) // Just enough to put a gap between events. 25 comes from height of extended event.
+            Math.round(
+              invisExtendedEvents * (widthLevel < 3 ? 25 : 17) +
+                (invisExtendedEvents ? 1 : 0)
+            ) // Just enough to put a gap between events. 25 comes from height of extended event.
           }px`,
         }}
       >
@@ -116,22 +129,43 @@ const Day = ({
             >
               <p className="extended-event-descriptions">
                 <b>
-                  {e.introText} {e.event.period}:{" "}
+                  {e.introText}{" "}
+                  {widthLevel < 3
+                    ? e.event.period
+                    : shortenPeriodName(e.event.period)}
+                  :{" "}
                 </b>
-                {e.event.url ? (
-                  <a
-                    href={e.event.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {e.event.title}
-                    {". "}
-                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                  </a>
+                {widthLevel < 3 ? (
+                  e.event.url ? (
+                    <a
+                      href={e.event.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {e.event.title}
+                      {". "}
+                      <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                    </a>
+                  ) : (
+                    <>
+                      {e.event.title}
+                      {"."}
+                    </>
+                  )
                 ) : (
                   <>
                     {e.event.title}
                     {"."}
+                    {e.event.url && (
+                      <a
+                        href={e.event.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {" "}
+                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                      </a>
+                    )}
                   </>
                 )}
               </p>
@@ -182,22 +216,44 @@ const Day = ({
                   // fontSize: widthLevel > 1 ? "1em" : "1em",
                 }}
               >
-                {showPeriod[i] && <b className="period-title">{e.period}: </b>}
-                {e.url ? (
-                  <a
-                    href={e.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ color: getEventColour(e.event_type)[1] }}
-                  >
-                    {e.title}
-                    {". "}
-                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                  </a>
+                {showPeriod[i] && (
+                  <b className="period-title">
+                    {widthLevel < 3 ? e.period : shortenPeriodName(e.period)}:{" "}
+                  </b>
+                )}
+                {widthLevel < 3 ? (
+                  e.url ? (
+                    <a
+                      href={e.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: getEventColour(e.event_type)[1] }}
+                    >
+                      {e.title}
+                      {". "}
+                      <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                    </a>
+                  ) : (
+                    <>
+                      {e.title}
+                      {"."}
+                    </>
+                  )
                 ) : (
                   <>
                     {e.title}
                     {"."}
+                    {e.url && (
+                      <a
+                        href={e.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: getEventColour(e.event_type)[1] }}
+                      >
+                        {" "}
+                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                      </a>
+                    )}
                   </>
                 )}
               </p>
