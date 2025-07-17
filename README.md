@@ -26,7 +26,7 @@ Use `npm run dev` to start frontend.
   - [ ] Focus the input when search is pressed with no text.
 - [ ] Choose to display by month or teaching week.
 - [x] Adapt design for mobile screens.
-  - [ ] If to small make search two levels
+  - [ ] If too small make search two levels
 - [ ] Add export events option.
 
 ### Small

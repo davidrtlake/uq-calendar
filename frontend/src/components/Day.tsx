@@ -16,7 +16,7 @@ interface Props {
   widthLevel: number;
 }
 
-export const getEventColour = (eventType: string): string[] => {
+const getEventColour = (eventType: string): string[] => {
   switch (eventType) {
     case "Public holiday":
       return ["rgb(110, 100, 84)", "rgb(255, 255, 255)"];
@@ -46,7 +46,7 @@ const Day = ({
   getEventIDMap,
   widthLevel,
 }: Props) => {
-  const showPeriod: boolean[] = Array();
+  const showPeriod: boolean[] = [];
   let prevPeriod: string = "";
 
   events.forEach((e) => {
@@ -55,9 +55,10 @@ const Day = ({
   });
 
   function shortenPeriodName(periodName: string): string {
-    let splitName: string[] = periodName.split(" ");
+    const splitName: string[] = periodName.split(" ");
     if (periodName.toLowerCase().startsWith("semester")) {
-      splitName[0] = "Sem.";
+      splitName[1] = "Sem.".concat(splitName[1]);
+      return splitName.slice(1).join(" ");
     } else if (periodName.toLowerCase().startsWith("summer semester")) {
       splitName[1] = "Sem.";
     }

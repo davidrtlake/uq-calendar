@@ -34,6 +34,7 @@ input[name="search-bar"] {
   font-size: 18px;
   margin-right: 10px;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #ffffff;
 }
 
 /* Search only current year */

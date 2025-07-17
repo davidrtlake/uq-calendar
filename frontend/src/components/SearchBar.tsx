@@ -37,7 +37,7 @@ const SearchBar = ({
     _: IntersectionObserver
   ) => {
     entries.forEach((entry: IntersectionObserverEntry) => {
-      let entryId: string[] = entry.target.id.split("-");
+      const entryId: string[] = entry.target.id.split("-");
       if (entry.isIntersecting) {
         // Item entering screen.
         setCurrYear(parseInt(entryId[0]));

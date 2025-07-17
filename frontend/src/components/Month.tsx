@@ -43,13 +43,13 @@ const Month = ({
 }: Props) => {
   const days: Event[][] = Array(monthLength)
     .fill(null)
-    .map(() => Array());
+    .map(() => []);
   const extendedEvents: ExtendedEventAndLength[][] = Array(monthLength)
     .fill(null)
-    .map(() => Array());
+    .map(() => []);
   const invisExtendedEvents: number[] = Array(monthLength).fill(0);
   const publicHolidayDays: boolean[] = Array(monthLength).fill(false);
-  const fillerDays = Array();
+  const fillerDays = [];
   const today: Date = new Date();
   const labelColours = (label: string): string => {
     switch (label) {

@@ -121,7 +121,7 @@ function App() {
       let newChildPeriods: Map<string, boolean>;
       for (let i = 0; i < allYears.length; i++) {
         newChildPeriods = new Map<string, boolean>();
-        for (let p of allPeriods) {
+        for (const p of allPeriods) {
           newChildPeriods.set(p, true);
         }
         checkboxLayout.set(allYears[i], {
@@ -141,7 +141,7 @@ function App() {
   >(() => {
     return new Map(events.map((e) => [e.event_id, false]));
   });
-  const labels: object = data;
+  const labels: Record<string, Record<string, string[]>> = data;
   const eventIDToRowMap = new Map<number, number>(
     events.map((e) => {
       return [e.event_id, -1];
@@ -544,10 +544,29 @@ function App() {
               </div>
             ))}
           </div>
+          <div
+            style={{
+              display: "grid",
+              position: "sticky",
+              top: "90vh",
+              zIndex: "3006",
+              justifyContent: "end",
+            }}
+          >
+            <button
+              onClick={() => scrollToToday()}
+              style={{
+                backgroundColor: "#2f033d",
+                marginRight: "15px",
+              }}
+            >
+              Jump to today
+            </button>
+          </div>
           {allYears.map((y, i) => {
             const year: number = parseInt(y);
             const newYearsDay = new Date(`${year}-01-01`);
-            let currDay: number = newYearsDay.getDay();
+            const currDay: number = newYearsDay.getDay();
             return (
               <Year
                 key={i}
@@ -590,7 +609,7 @@ function App() {
                     }
                   })}
                 highlightedEvents={highlightedEvents}
-                yearLabels={labels[y as keyof Object]}
+                yearLabels={labels[y]}
                 widthLevel={widthLevel}
               />
             );

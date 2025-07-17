@@ -43,7 +43,7 @@ const Year = ({
     30,
     31,
   ];
-  const monthStartDays: number[] = Array();
+  const monthStartDays: number[] = [];
   const today: Date = new Date();
 
   monthLens.forEach((length) => {
