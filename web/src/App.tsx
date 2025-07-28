@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import "./App.css";
+import styles from  "./styles/App.module.css";
 import Year from "./components/Year";
 import NestedCheckbox from "./components/NestedCheckbox";
 import QuickNavigation from "./components/QuickNavigation";
@@ -327,9 +327,9 @@ function App() {
 
   return (
     <>
-      <div className="body-flex-container">
+      <div className={styles.bodyFlexContainer}>
         <div
-          className="sidebar"
+          className={styles.sidebar}
           style={{
             paddingRight: widthLevel <= 1 ? "1%" : "0px",
             width: widthLevel <= 1 ? "17vw" : "0vw",
@@ -616,7 +616,7 @@ function App() {
           })}
         </div>
         <div
-          className="sidebar"
+          className={styles.sidebar}
           style={{ paddingLeft: widthLevel <= 1 ? "1%" : "0px" }}
         >
           {widthLevel <= 1 ? (

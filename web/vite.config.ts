@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "/uq-calendar",
+  base: "/",
   server: {
     proxy: {
       "/api": {
@@ -14,4 +14,9 @@ export default defineConfig({
       },
     },
   },
+  css: {
+    modules: {
+      localsConvention: 'camelCase'
+    }
+  }
 })

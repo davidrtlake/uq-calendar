@@ -1,6 +1,6 @@
 import Month from "./Month";
 import { Event } from "../App";
-import "./Year.css";
+import styles from  "../styles/Year.module.css";
 
 interface Props {
   year: number;
@@ -52,7 +52,7 @@ const Year = ({
   });
 
   return (
-    <div className="year">
+    <div className={styles.year}>
       <h1
         style={{
           position: "sticky",
@@ -71,12 +71,12 @@ const Year = ({
       >
         {year}
       </h1>
-      <div className="flex-container-column">
+      <div className={styles.flexContainerColumn}>
         {monthLens.map((length, i) => (
           <div
             key={i}
             id={`${year}-${monthNames[i]}`}
-            className="month"
+            className={styles.month}
             ref={(node) => {
               const map = getMap(`${year}`);
               if (node) {

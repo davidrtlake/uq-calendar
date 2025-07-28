@@ -1,6 +1,6 @@
 import Day from "./Day";
 import { Event } from "../App";
-import "./Month.css";
+import styles from  "../styles/Month.module.css";
 
 export interface ExtendedEventAndLength {
   event: Event;
@@ -165,7 +165,7 @@ const Month = ({
 
   return (
     <>
-      <h2 className="month-title">{monthName}</h2>
+      <h2 className={styles.monthTitle}>{monthName}</h2>
       <div className="container">
         {Array(Math.ceil((monthLength + fillerDays.length) / 7) * 2)
           .fill(null)
@@ -203,7 +203,7 @@ const Month = ({
                             map.delete(`${monthNum}-${row}`);
                           }
                         }}
-                        className="teaching-week-label"
+                        className={styles.teachingWeekLabel}
                         style={{
                           lineHeight: "100%",
                           margin: "auto",
@@ -274,7 +274,7 @@ const Month = ({
                     return (
                       <div
                         key={col}
-                        className="filler-day"
+                        className={styles.fillerDay}
                         style={{ color: "rgb(146, 146, 146)" }}
                       >
                         <h4>{row === 0 ? startFillCount++ : endFillCount++}</h4>
@@ -286,7 +286,7 @@ const Month = ({
                     return (
                       <div
                         key={col}
-                        className="day"
+                        className={styles.day}
                         ref={
                           todayMonth && dayCount + 1 === today.getDate()
                             ? todayRef
@@ -319,7 +319,7 @@ const Month = ({
                   // If its a gap row.
                   return (
                     // Gap element.
-                    <div className="gap-element" key={col}></div>
+                    <div className={styles.gapElement} key={col}></div>
                   );
                 }
               });

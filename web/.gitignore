@@ -25,3 +25,4 @@ dist-ssr
 
 # Selected files
 src/testing.tsx
+public/CNAME

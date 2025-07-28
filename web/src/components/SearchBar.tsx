@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Event } from "../App";
-import "./SearchBar.css";
+import styles from  "../styles/SearchBar.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronUp,
@@ -139,7 +139,7 @@ const SearchBar = ({
   }
 
   return (
-    <div className="search-bar">
+    <div className={styles.searchBar}>
       <div style={{ display: "inline-block" }}>
         <input
           name="search-bar"
@@ -176,7 +176,7 @@ const SearchBar = ({
           {searchResults.length}
         </div>
         <button
-          className="nav-buttons"
+          className={styles.navButtons}
           name="back"
           onClick={handleForwardAndBack}
           style={{
@@ -190,7 +190,7 @@ const SearchBar = ({
           />
         </button>
         <button
-          className="nav-buttons"
+          className={styles.navButtons}
           name="forward"
           onClick={handleForwardAndBack}
           style={{
@@ -203,7 +203,7 @@ const SearchBar = ({
           />
         </button>
         <button
-          className="nav-buttons"
+          className={styles.navButtons}
           onClick={clearSearch}
           style={{
             color: searchContents.length > 0 ? "white" : "gray",

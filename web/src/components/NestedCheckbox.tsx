@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
-import "./NestedCheckbox.css";
+import styles from  "../styles/NestedCheckbox.module.css";
 
 interface CheckedYear {
   checked: boolean;
@@ -111,13 +111,13 @@ const NestedCheckbox = ({
               style={{ display: "none" }}
             />
             <label
-              className="year"
+              className={styles.year}
               htmlFor={y}
               style={{
                 color: checkedState.get(y)!.checked ? "white" : "gray",
               }}
             >
-              <div className="year-collapsible">
+              <div className={styles.yearCollapsible}>
                 {checkedState.get(y)!.checked ? (
                   <FontAwesomeIcon icon={faEye} />
                 ) : (
@@ -128,7 +128,7 @@ const NestedCheckbox = ({
             </label>
 
             <div
-              className="period-content"
+              className={styles.periodContent}
               style={{ display: shownContent.get(y) ? "block" : "none" }}
             >
               {allPeriods.map((p, j) => (
@@ -193,9 +193,9 @@ const NestedCheckbox = ({
               onChange={() => checkHandler("", allSummerSemesters[i], currWeek)}
               style={{ display: "none" }}
             />
-            <label className="summer" htmlFor={`${allSummerSemesters[i]}`}>
+            <label className={styles.summer} htmlFor={`${allSummerSemesters[i]}`}>
               <div
-                className="year-collapsible"
+                className={styles.yearCollapsible}
                 style={{
                   color: checkedState.get(allSummerSemesters[i])!.checked
                     ? "white"

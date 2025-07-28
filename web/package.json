@@ -1,6 +1,6 @@
 {
   "name": "uq-calendar",
-  "homepage": "https://www.uqcalendar.app/",
+  "homepage": "https://www.uqcalendar.app",
   "private": true,
   "version": "0.0.0",
   "type": "module",

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./QuickNavigation.css";
+import styles from  "../styles/QuickNavigation.module.css";
 
 interface CheckedYear {
   checked: boolean;
@@ -79,7 +79,7 @@ const QuickNavigation = ({
   }
 
   return (
-    <div className="quick-navigation-panel">
+    <div className={styles.quickNavigationPanel}>
       <div
         id="quick-nav-vert-line"
         style={{
@@ -91,9 +91,9 @@ const QuickNavigation = ({
       ></div>
       <div style={{ minWidth: "7em" }}>
         {allYears.map((y, i) => (
-          <div key={i} className="quick-navigation-year">
+          <div key={i} className={styles.quickNavigationYear}>
             <div
-              className="nav-year-collapsible"
+              className={styles.navYearCollapsible}
               onClick={() => buttonClickHandler(y)}
               style={
                 {
@@ -119,7 +119,7 @@ const QuickNavigation = ({
               {monthNames.map((m, j) => (
                 <button
                   key={j}
-                  className="quick-navigation-month"
+                  className={styles.quickNavigationMonth}
                   id={`${y}${m}`}
                   style={{
                     width: "90%",

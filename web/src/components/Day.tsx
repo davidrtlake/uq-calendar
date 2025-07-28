@@ -1,4 +1,4 @@
-import "./Day.css";
+import styles from  "../styles/Day.module.css";
 import { Event } from "../App";
 import { ExtendedEventAndLength } from "./Month";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -67,8 +67,8 @@ const Day = ({
 
   showPeriod.push(false);
 
-  const paddingPercent: number = 0; // Padding within the event.
-  const rowGapPercentOfDayWdith: number = 3.75; // Trial and error, close enough.
+  const PADDING_PERCENTAGE = 0; // Padding within the event.
+  const ROW_GAP_PERCENTAGE_OF_DAY_WIDTH = 3.75; // Trial and error, close enough.
 
   return (
     <>
@@ -107,14 +107,14 @@ const Day = ({
           return (
             <div
               key={j}
-              className="extended-event"
+              className={styles.extendedEvent}
               style={{
                 width:
                   widthLevel <= 2
                     ? `${
                         100 * e.length +
-                        rowGapPercentOfDayWdith * (e.length - 1) -
-                        paddingPercent * 2 // Maybe use view width unit.
+                        ROW_GAP_PERCENTAGE_OF_DAY_WIDTH * (e.length - 1) -
+                        PADDING_PERCENTAGE * 2 // Maybe use view width unit.
                       }%`
                     : `calc(calc(100vw / 7 - 1px) * ${e.length} + ${
                         e.length - 1
@@ -128,7 +128,7 @@ const Day = ({
                 zIndex: 100 - invisExtendedEvents,
               }}
             >
-              <p className="extended-event-descriptions">
+              <p className={styles.extendedEventDescriptions}>
                 <b>
                   {e.introText}{" "}
                   {widthLevel < 3
@@ -185,7 +185,7 @@ const Day = ({
           return (
             <div
               key={i}
-              className="event"
+              className={styles.event}
               style={{
                 marginBlockEnd: showPeriod[i + 1] ? "0.5em" : "0.2em",
                 backgroundColor: getEventColour(e.event_type)[0],
@@ -196,7 +196,7 @@ const Day = ({
               }}
             >
               <p
-                className={"event-descriptions truncate"}
+                className={`${styles.eventDescriptions} ${styles.truncate}`}
                 style={{
                   WebkitLineClamp:
                     widthLevel > 2
@@ -218,7 +218,7 @@ const Day = ({
                 }}
               >
                 {showPeriod[i] && (
-                  <b className="period-title">
+                  <b className={styles.periodTitle}>
                     {widthLevel < 3 ? e.period : shortenPeriodName(e.period)}:{" "}
                   </b>
                 )}
