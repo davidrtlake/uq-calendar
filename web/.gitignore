@@ -24,5 +24,4 @@ dist-ssr
 *.sw?
 
 # Selected files
-src/testing.tsx
 public/CNAME

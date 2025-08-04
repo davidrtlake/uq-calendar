@@ -187,7 +187,7 @@ function convertDate(date, month, year) {
     }
   }
 
-  if (endMonth.length === 0) {
+  if (endMonth.length == 0) {
     endMonth = startMonth;
   }
 
@@ -196,10 +196,10 @@ function convertDate(date, month, year) {
 
   let startDate = date.split("-")[0];
   let endDate = date.split("-")[1] || startDate;
-  if (startDate.length === 1) {
+  if (startDate.length == 1) {
     startDate = "0".concat(startDate);
   }
-  if (endDate.length === 1) {
+  if (endDate.length == 1) {
     endDate = "0".concat(endDate);
   }
 
@@ -219,12 +219,12 @@ function convertDate(date, month, year) {
   //   monthNums
   // );
 
-  if (dateLen > 6 && startDate === endDate) {
+  if (dateLen > 6 && startDate == endDate) {
     throw new Error("Start and end date should be different.");
   } else if (dateLen <= 6 && startDate !== endDate) {
     throw new Error("Start and end date should be the same.");
   }
-  if (dateLen > 10 && startMonth === endMonth) {
+  if (dateLen > 10 && startMonth == endMonth) {
     throw new Error("Start and end month should be different.");
   }
 

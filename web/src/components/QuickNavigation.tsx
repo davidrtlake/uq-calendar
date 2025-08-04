@@ -1,80 +1,55 @@
-import { useEffect, useState } from "react";
-import styles from  "../styles/QuickNavigation.module.css";
+import { useContext, useEffect, useState } from "react"
+import styles from "../styles/QuickNavigation.module.css"
+import { ALL_YEAR_NAMES, MONTH_NAMES } from "../constants/date"
+import { CalendarContext } from "../App"
 
-interface CheckedYear {
-  checked: boolean;
-  childPeriods: Map<string, boolean> | undefined;
-}
-
-interface Props {
-  allYears: string[];
-  monthNames: string[];
-  monthRefs: Map<
-    string,
-    React.MutableRefObject<Map<string, HTMLDivElement> | null>
-  >;
-  navigationHandler: (m: string, y: string) => void;
-  checkedState: Map<string, CheckedYear>;
-}
-
-const QuickNavigation = ({
-  allYears,
-  monthNames,
-  monthRefs,
-  navigationHandler,
-}: Props) => {
-  const today: Date = new Date();
+const QuickNavigation = () => {
+  const today: Date = new Date()
   const [shownContent, setShownContent] = useState<Map<string, boolean>>(() => {
-    const defaultShownContent = new Map<string, boolean>();
-    allYears.forEach((y) =>
-      defaultShownContent.set(y, y === `${today.getFullYear()}`)
-    ); // Default set all to false except 2025.
-    return defaultShownContent;
-  });
-  const [currYear, setCurrYear] = useState<string>(`${today.getFullYear()}`);
-  const [currMonth, setCurrMonth] = useState<string>(
-    `${monthNames[today.getMonth()]}`
-  );
+    const defaultShownContent = new Map<string, boolean>()
+    ALL_YEAR_NAMES.forEach((y) => defaultShownContent.set(y, y == `${today.getFullYear()}`)) // Default set all to false except 2025.
+    return defaultShownContent
+  })
+  const [currYear, setCurrYear] = useState<string>(`${today.getFullYear()}`)
+  const [currMonth, setCurrMonth] = useState<string>(`${MONTH_NAMES[today.getMonth()]}`)
+  const { monthRefs, scrollToMonth } = useContext(CalendarContext)!
 
-  const callback = (
-    entries: IntersectionObserverEntry[],
-    _: IntersectionObserver
-  ) => {
+  const callback = (entries: IntersectionObserverEntry[], _: IntersectionObserver) => {
     entries.forEach((entry: IntersectionObserverEntry) => {
-      const entryId: string[] = entry.target.id.split("-");
+      const entryId: string[] = entry.target.id.split("-")
       if (entry.isIntersecting) {
         // Item entering screen.
-        setCurrYear(entryId[0]);
-        setCurrMonth(entryId[1]);
-        const newShownContent = new Map<string, boolean>(shownContent);
-        allYears.forEach((ye) => newShownContent.set(ye, false));
-        newShownContent.set(entryId[0], true);
-        setShownContent(newShownContent);
+        setCurrYear(entryId[0])
+        setCurrMonth(entryId[1])
+        const newShownContent = new Map<string, boolean>(shownContent)
+        ALL_YEAR_NAMES.forEach((ye) => newShownContent.set(ye, false))
+        newShownContent.set(entryId[0], true)
+        setShownContent(newShownContent)
       }
-    });
-  };
+    })
+  }
 
   useEffect(() => {
     const options = {
       root: null,
       rootMargin: "-49% 0px -49% 0px",
-      threshold: 0,
-    };
-    const observer = new IntersectionObserver(callback, options);
-    monthRefs.forEach((year) => {
-      year.current?.forEach((ref) => {
-        observer.observe(ref);
-      });
-    });
-  }, []);
+      threshold: 0
+    }
+    const observer = new IntersectionObserver(callback, options)
+    monthRefs.forEach((ref) => {
+      if (ref.current != null) {
+        observer.observe(ref.current)
+      }
+    })
+  }, [])
 
   function buttonClickHandler(y: string) {
     // Make the whole box a button.
     if (!shownContent.get(y)) {
-      const newShownContent = new Map<string, boolean>(shownContent);
-      allYears.forEach((ye) => newShownContent.set(ye, false));
-      newShownContent.set(y, true);
-      setShownContent(newShownContent);
+      const newShownContent = new Map<string, boolean>(shownContent)
+      ALL_YEAR_NAMES.forEach((ye) => newShownContent.set(ye, false))
+      newShownContent.set(y, true)
+      setShownContent(newShownContent)
     }
   }
 
@@ -85,12 +60,12 @@ const QuickNavigation = ({
         style={{
           borderLeft: "1px solid rgba(168, 168, 168, 0.5)",
           height: "80vh",
-          marginRight: "1vw",
+          marginRight: "1vw"
           // marginTop: "5vh",
         }}
       ></div>
       <div style={{ minWidth: "7em" }}>
-        {allYears.map((y, i) => (
+        {ALL_YEAR_NAMES.map((y, i) => (
           <div key={i} className={styles.quickNavigationYear}>
             <div
               className={styles.navYearCollapsible}
@@ -98,46 +73,34 @@ const QuickNavigation = ({
               style={
                 {
                   // display:
-                  //   y === currYear ||
-                  //   y === `${parseInt(currYear) + 1}` ||
-                  //   y === `${parseInt(currYear) - 1}`
+                  //   y == currYear ||
+                  //   y == `${parseInt(currYear) + 1}` ||
+                  //   y == `${parseInt(currYear) - 1}`
                   //     ? "flex"
                   //     : "none",
                 }
               }
             >
-              <span style={{ margin: "auto" }}>
-                {y === currYear ? <b>{`${y}`}</b> : `${y}`}
-              </span>
+              <span style={{ margin: "auto" }}>{y == currYear ? <b>{`${y}`}</b> : `${y}`}</span>
             </div>
 
             <div
               style={{
-                display: shownContent.get(y) ? "block" : "none", //y === currYear ? "block" : "none",
+                display: shownContent.get(y) ? "block" : "none" //y == currYear ? "block" : "none",
               }}
             >
-              {monthNames.map((m, j) => (
+              {MONTH_NAMES.map((m, j) => (
                 <button
                   key={j}
                   className={styles.quickNavigationMonth}
                   id={`${y}${m}`}
                   style={{
                     width: "90%",
-                    color:
-                      today.getFullYear() === parseInt(y) &&
-                      j === today.getMonth()
-                        ? "rgb(168, 199, 250)"
-                        : "",
-                    borderLeft:
-                      y === currYear && m === currMonth
-                        ? "2px solid rgb(255, 255, 255, 0.6)"
-                        : "",
-                    borderBottom:
-                      j !== 11
-                        ? "1px solid rgb(255, 255, 255, 0.3)"
-                        : "transparent",
+                    color: today.getFullYear() == parseInt(y) && j == today.getMonth() ? "rgb(168, 199, 250)" : "",
+                    borderLeft: y == currYear && m == currMonth ? "2px solid rgb(255, 255, 255, 0.6)" : "",
+                    borderBottom: j !== 11 ? "1px solid rgb(255, 255, 255, 0.3)" : "transparent"
                   }}
-                  onClick={() => navigationHandler(m, y)}
+                  onClick={() => scrollToMonth(y, m)}
                 >
                   {m}
                 </button>
@@ -147,7 +110,7 @@ const QuickNavigation = ({
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default QuickNavigation;
+export default QuickNavigation

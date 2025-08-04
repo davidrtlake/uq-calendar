@@ -1,73 +1,55 @@
-import { useEffect, useState } from "react";
-import { Event } from "../App";
-import styles from  "../styles/SearchBar.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronUp,
-  faChevronDown,
-  faXmark,
-  faMagnifyingGlass,
-} from "@fortawesome/free-solid-svg-icons";
+import { useContext, useEffect, useState } from "react"
+import { CalendarContext, Event } from "../App"
+import styles from "../styles/SearchBar.module.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faChevronUp, faChevronDown, faXmark, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
+import { MONTH_NAMES } from "../constants/date"
 
 interface Props {
-  navigationHandlerWeek: (year: number, monthNum: number, eID: number) => void;
-  events: Event[];
-  handleHighlightEvents: (eIDsToHighlight: Set<number>) => void;
-  monthRefs: Map<
-    string,
-    React.MutableRefObject<Map<string, HTMLDivElement> | null>
-  >;
+  events: Event[]
+  handleHighlightEvents: (eIDsToHighlight: Set<number>) => void
 }
 
-const SearchBar = ({
-  navigationHandlerWeek,
-  events,
-  handleHighlightEvents,
-  monthRefs,
-}: Props) => {
-  const [searchContents, setSearchContents] = useState("");
-  const [searchResults, setSearchResults] = useState<Event[]>([]);
-  const [resultIndex, setResultIndex] = useState(0);
-  const today: Date = new Date();
-  const [currYear, setCurrYear] = useState<number>(today.getFullYear());
+const SearchBar = ({ events, handleHighlightEvents }: Props) => {
+  const [searchContents, setSearchContents] = useState("")
+  const [searchResults, setSearchResults] = useState<Event[]>([])
+  const [resultIndex, setResultIndex] = useState(0)
+  const today: Date = new Date()
+  const [currYear, setCurrYear] = useState<number>(today.getFullYear())
+  const { monthRefs, scrollToEvent } = useContext(CalendarContext)!
 
   // Handling year detection.
-  const callback = (
-    entries: IntersectionObserverEntry[],
-    _: IntersectionObserver
-  ) => {
+  const callback = (entries: IntersectionObserverEntry[], _: IntersectionObserver) => {
     entries.forEach((entry: IntersectionObserverEntry) => {
-      const entryId: string[] = entry.target.id.split("-");
+      const entryId: string[] = entry.target.id.split("-")
       if (entry.isIntersecting) {
         // Item entering screen.
-        setCurrYear(parseInt(entryId[0]));
+        setCurrYear(parseInt(entryId[0]))
       }
-    });
-  };
+    })
+  }
 
   // Handling year detection.
   useEffect(() => {
     const options = {
       root: null,
       rootMargin: "-49% 0px -49% 0px",
-      threshold: 0,
-    };
-    const observer = new IntersectionObserver(callback, options);
-    monthRefs.forEach((year) => {
-      year.current?.forEach((ref) => {
-        observer.observe(ref);
-      });
-    });
-  }, []);
+      threshold: 0
+    }
+    const observer = new IntersectionObserver(callback, options)
+    monthRefs.forEach((ref) => {
+      if (ref.current != null) {
+        observer.observe(ref.current)
+      }
+    })
+  }, [])
 
   // Handling year detection.
-  function handleSearch(
-    _event: React.MouseEvent<HTMLButtonElement, MouseEvent> | null
-  ) {
-    setResultIndex(0);
+  function handleSearch(_event: React.MouseEvent<HTMLButtonElement, MouseEvent> | null) {
+    setResultIndex(0)
     if (searchContents.length > 0) {
-      const searchString = searchContents.toLocaleLowerCase().trim();
-      const highlightedIDsSet = new Set<number>();
+      const searchString = searchContents.toLocaleLowerCase().trim()
+      const highlightedIDsSet = new Set<number>()
       const filteredSearchEvents = events.filter(
         // Then filter search term.
         (e) => {
@@ -75,67 +57,61 @@ const SearchBar = ({
             (e.period.toLowerCase().includes(searchString) ||
               e.title.toLowerCase().includes(searchString) ||
               e.sub_period.toLowerCase().includes(searchString)) &&
-            e.start_date.getFullYear() === currYear;
-          if (res) highlightedIDsSet.add(e.event_id);
-          return res;
+            e.start_date.getFullYear() == currYear
+          if (res) highlightedIDsSet.add(e.event_id)
+          return res
         }
-      );
-      setSearchResults(filteredSearchEvents);
+      )
+      setSearchResults(filteredSearchEvents)
       if (filteredSearchEvents.length > 0) {
-        handleHighlightEvents(highlightedIDsSet);
-        navigationHandlerWeek(
-          filteredSearchEvents[0].start_date.getFullYear(),
-          filteredSearchEvents[0].start_date.getMonth(),
+        handleHighlightEvents(highlightedIDsSet)
+        scrollToEvent(
+          filteredSearchEvents[0].start_date.getFullYear().toString(),
+          MONTH_NAMES[filteredSearchEvents[0].start_date.getMonth()],
           filteredSearchEvents[0].event_id
-        );
+        )
       }
     } else if (searchResults.length > 0) {
-      setSearchResults([]);
-      handleHighlightEvents(new Set<number>());
+      setSearchResults([])
+      handleHighlightEvents(new Set<number>())
     }
   }
 
   // Handle presses of the forward and back buttons.
-  function handleForwardAndBack(
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) {
+  function handleForwardAndBack(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     if (searchResults.length > 0) {
-      let newIndex: number;
-      const target = event.target as HTMLButtonElement;
-      if (target.name === "forward") {
-        newIndex =
-          resultIndex + 1 >= searchResults.length ? 0 : resultIndex + 1;
-        setResultIndex(newIndex);
-      } else if (target.name === "back") {
-        newIndex =
-          resultIndex - 1 < 0 ? searchResults.length - 1 : resultIndex - 1;
-        setResultIndex(newIndex);
+      let newIndex: number
+      const target = event.target as HTMLButtonElement
+      if (target.name == "forward") {
+        newIndex = resultIndex + 1 >= searchResults.length ? 0 : resultIndex + 1
+        setResultIndex(newIndex)
+      } else if (target.name == "back") {
+        newIndex = resultIndex - 1 < 0 ? searchResults.length - 1 : resultIndex - 1
+        setResultIndex(newIndex)
       } else {
-        newIndex = resultIndex;
-        console.error("Target is not a button. target:", target);
+        newIndex = resultIndex
+        console.error("Target is not a button. target:", target)
       }
-      navigationHandlerWeek(
-        searchResults[newIndex].start_date.getFullYear(),
-        searchResults[newIndex].start_date.getMonth(),
+      scrollToEvent(
+        searchResults[newIndex].start_date.getFullYear().toString(),
+        MONTH_NAMES[searchResults[newIndex].start_date.getMonth()],
         searchResults[newIndex].event_id
-      );
+      )
     }
   }
 
   function handleKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
-    if (event.key === "Enter") {
-      console.log("Searching with enter");
-      handleSearch(null);
+    if (event.key == "Enter") {
+      console.log("Searching with enter")
+      handleSearch(null)
     }
   }
 
-  function clearSearch(
-    _event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) {
-    setSearchContents("");
-    setSearchResults([]);
-    handleHighlightEvents(new Set<number>());
-    setResultIndex(0);
+  function clearSearch(_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+    setSearchContents("")
+    setSearchResults([])
+    handleHighlightEvents(new Set<number>())
+    setResultIndex(0)
   }
 
   return (
@@ -159,10 +135,10 @@ const SearchBar = ({
             minWidth: "28px",
             textAlign: "right",
             display: "inline-block",
-            color: searchResults.length > 0 ? "white" : "gray",
+            color: searchResults.length > 0 ? "white" : "gray"
           }}
         >
-          {resultIndex + (searchResults.length === 0 ? 0 : 1)}
+          {resultIndex + (searchResults.length == 0 ? 0 : 1)}
         </div>{" "}
         /{" "}
         <div
@@ -170,7 +146,7 @@ const SearchBar = ({
             minWidth: "28px",
             textAlign: "left",
             display: "inline-block",
-            color: searchResults.length > 0 ? "white" : "gray",
+            color: searchResults.length > 0 ? "white" : "gray"
           }}
         >
           {searchResults.length}
@@ -181,39 +157,33 @@ const SearchBar = ({
           onClick={handleForwardAndBack}
           style={{
             marginLeft: "10px",
-            color: searchResults.length > 0 ? "white" : "gray",
+            color: searchResults.length > 0 ? "white" : "gray"
           }}
         >
-          <FontAwesomeIcon
-            style={{ pointerEvents: "none" }}
-            icon={faChevronUp}
-          />
+          <FontAwesomeIcon style={{ pointerEvents: "none" }} icon={faChevronUp} />
         </button>
         <button
           className={styles.navButtons}
           name="forward"
           onClick={handleForwardAndBack}
           style={{
-            color: searchResults.length > 0 ? "white" : "gray",
+            color: searchResults.length > 0 ? "white" : "gray"
           }}
         >
-          <FontAwesomeIcon
-            style={{ pointerEvents: "none" }}
-            icon={faChevronDown}
-          />
+          <FontAwesomeIcon style={{ pointerEvents: "none" }} icon={faChevronDown} />
         </button>
         <button
           className={styles.navButtons}
           onClick={clearSearch}
           style={{
-            color: searchContents.length > 0 ? "white" : "gray",
+            color: searchContents.length > 0 ? "white" : "gray"
           }}
         >
           <FontAwesomeIcon style={{ pointerEvents: "none" }} icon={faXmark} />
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default SearchBar;
+export default SearchBar

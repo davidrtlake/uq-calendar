@@ -72,7 +72,7 @@ const scraperObject = {
 
         // Find the h2 that matches the target text
         const targetH2 = h2Elements.find(
-          (h2) => h2.textContent.trim() === targetYear
+          (h2) => h2.textContent.trim() == targetYear
         );
         if (!targetH2) return [];
 
@@ -96,11 +96,11 @@ const scraperObject = {
             ...p.parentNode.nextElementSibling.childNodes[0].children,
           ]) {
             // Iterating over months.
-            if (m.nodeName === "H4") {
+            if (m.nodeName == "H4") {
               // Check if month name or list of days.
               let month = { name: cleanText(m.textContent), days: [] };
               period["months"].push(month);
-            } else if (m.nodeName === "UL") {
+            } else if (m.nodeName == "UL") {
               for (let li of m.children) {
                 let [date, desc, link] = ["", "", ""];
                 for (let word of li.childNodes) {
@@ -127,7 +127,7 @@ const scraperObject = {
                 }
                 desc = cleanText(desc);
                 if (
-                  link === "" &&
+                  link == "" &&
                   desc.toLowerCase().includes("my timetable")
                 ) {
                   link = myTimetableURL;

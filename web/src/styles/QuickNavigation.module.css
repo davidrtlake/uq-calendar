@@ -22,7 +22,7 @@
 .quick-navigation-month:hover {
   border-top-color: transparent;
   border-right-color: transparent;
-  border-left-color: #646cff!important;
+  border-left-color: #646cff !important;
 }
 
 .quick-navigation-panel {
@@ -48,8 +48,9 @@
   justify-content: space-between;
 }
 
-.quick-navigation-panel .active, .nav-year-collapsible:hover {
-  background-color: #ffffff3a;;
+.quick-navigation-panel .active,
+.nav-year-collapsible:hover {
+  background-color: #ffffff3a;
 }
 
 @media (max-width: 1021px) {

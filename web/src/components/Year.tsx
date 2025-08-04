@@ -1,55 +1,29 @@
-import Month from "./Month";
-import { Event } from "../App";
-import styles from  "../styles/Year.module.css";
+import Month from "./Month"
+import { CalendarContext, Event } from "../App"
+import styles from "../styles/Year.module.css"
+import { MONTH_NAMES } from "../constants/date"
+import { useContext } from "react"
 
 interface Props {
-  year: number;
-  currDay: number;
-  todayRef: React.RefObject<HTMLDivElement>;
-  monthNames: string[];
-  getMap: (y: string) => Map<string, HTMLDivElement>;
-  getWeekMap: (y: string) => Map<string, HTMLDivElement>;
-  getEventIDMap: () => Map<number, number>;
-  events: Event[];
-  highlightedEvents: Map<number, boolean>;
-  yearLabels: object;
-  widthLevel: number;
+  year: number
+  currDay: number
+  todayRef: React.RefObject<HTMLDivElement>
+  events: Event[]
+  highlightedEvents: Map<number, boolean>
+  yearLabels: object
+  widthLevel: number
 }
 
-const Year = ({
-  year,
-  currDay,
-  todayRef,
-  monthNames,
-  getMap,
-  getWeekMap,
-  getEventIDMap,
-  events,
-  highlightedEvents,
-  yearLabels,
-  widthLevel,
-}: Props) => {
-  const monthLens: number[] = [
-    31,
-    28 + (year % 4 === 0 ? 1 : 0),
-    31,
-    30,
-    31,
-    30,
-    31,
-    31,
-    30,
-    31,
-    30,
-    31,
-  ];
-  const monthStartDays: number[] = [];
-  const today: Date = new Date();
+const Year = ({ year, currDay, todayRef, events, highlightedEvents, yearLabels, widthLevel }: Props) => {
+  const monthLens: number[] = [31, 28 + (year % 4 == 0 ? 1 : 0), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+  const monthStartDays: number[] = []
+  const today: Date = new Date()
+  const { monthRefs } = useContext(CalendarContext)!
 
   monthLens.forEach((length) => {
-    monthStartDays.push(currDay % 7);
-    currDay += length;
-  });
+    monthStartDays.push(currDay % 7)
+    currDay += length
+  })
 
   return (
     <div className={styles.year}>
@@ -66,7 +40,7 @@ const Year = ({
           borderBottom: "1px solid rgba(255, 255, 255, 0.56)",
           color: "rgb(197, 197, 197)",
           paddingLeft: widthLevel < 2 ? "0em" : "84px",
-          height: "56.3px",
+          height: "56.3px"
         }}
       >
         {year}
@@ -75,45 +49,31 @@ const Year = ({
         {monthLens.map((length, i) => (
           <div
             key={i}
-            id={`${year}-${monthNames[i]}`}
+            id={`${year}-${MONTH_NAMES[i]}`}
             className={styles.month}
-            ref={(node) => {
-              const map = getMap(`${year}`);
-              if (node) {
-                map.set(monthNames[i], node!);
-              } else {
-                map.delete(monthNames[i]);
-              }
-            }}
+            ref={monthRefs.get(`${year}-${MONTH_NAMES[i]}`)}
           >
             <Month
               startDay={monthStartDays[i]}
               todayRef={todayRef}
               monthLength={length}
               prevMonthLength={monthLens[(i - 1 + 12) % 12]}
-              monthName={monthNames[i]}
+              monthName={MONTH_NAMES[i]}
               yearName={`${year}`}
-              todayMonth={
-                today.getMonth() === i && year === today.getFullYear()
-              }
+              todayMonth={today.getMonth() == i && year == today.getFullYear()}
               monthNum={i}
               events={events.filter((row) => {
-                return (
-                  row.start_date.getMonth() === i ||
-                  row.end_date.getMonth() === i
-                );
+                return row.start_date.getMonth() == i || row.end_date.getMonth() == i
               })}
               highlightedEvents={highlightedEvents}
-              monthLabels={yearLabels[monthNames[i] as keyof object]}
-              getWeekMap={getWeekMap}
-              getEventIDMap={getEventIDMap}
+              monthLabels={yearLabels[MONTH_NAMES[i] as keyof object]}
               widthLevel={widthLevel}
             />
           </div>
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Year;
+export default Year

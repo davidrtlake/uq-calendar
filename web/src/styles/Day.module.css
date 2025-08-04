@@ -26,8 +26,8 @@
 }
 
 .event:hover .event-descriptions {
-  -webkit-line-clamp: none!important; /* number of lines to show */
-          line-clamp: none!important;
+  -webkit-line-clamp: none !important; /* number of lines to show */
+  line-clamp: none !important;
 }
 
 /* Event descriptions */
@@ -39,7 +39,7 @@
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 1; /* number of lines to show */
-          line-clamp: 1;
+  line-clamp: 1;
   -webkit-box-orient: vertical;
 }
 
@@ -71,11 +71,12 @@
 
 .extended-event:hover .extended-event-descriptions {
   -webkit-line-clamp: none; /* number of lines to show */
-          line-clamp: none;
+  line-clamp: none;
 }
 
 @media (max-width: 700px) {
-  .extended-event-descriptions, .event-descriptions {
+  .extended-event-descriptions,
+  .event-descriptions {
     font-size: 0.8em;
     overflow-wrap: break-word;
     /* white-space: normal;

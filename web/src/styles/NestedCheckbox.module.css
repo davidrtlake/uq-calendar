@@ -39,7 +39,8 @@ li {
   /* justify-content: space-between; */
 }
 
-.active, .year-collapsible:hover {
+.active,
+.year-collapsible:hover {
   background-color: #ffffff3a;
 }
 
