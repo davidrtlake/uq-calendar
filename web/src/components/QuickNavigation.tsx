@@ -1,35 +1,34 @@
-import { useContext, useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import styles from "../styles/QuickNavigation.module.css"
 import { ALL_YEAR_NAMES, MONTH_NAMES } from "../constants/date"
 import { CalendarContext } from "../App"
 
-const QuickNavigation = () => {
-  const today: Date = new Date()
-  const [shownContent, setShownContent] = useState<Map<string, boolean>>(() => {
-    const defaultShownContent = new Map<string, boolean>()
-    ALL_YEAR_NAMES.forEach((y) => defaultShownContent.set(y, y == `${today.getFullYear()}`)) // Default set all to false except 2025.
-    return defaultShownContent
-  })
-  const [currYear, setCurrYear] = useState<string>(`${today.getFullYear()}`)
-  const [currMonth, setCurrMonth] = useState<string>(`${MONTH_NAMES[today.getMonth()]}`)
+const QuickNavigation: React.FC = () => {
+  const today = new Date()
   const { monthRefs, scrollToMonth } = useContext(CalendarContext)!
 
+  // Which year/month panel is expanded.
+  const [shownContent, setShownContent] = useState(
+    () => new Map<string, boolean>(ALL_YEAR_NAMES.map((y) => [y, y == `${today.getFullYear()}`]))
+  )
+  // Current visible year/month from IntersectionObserver.
+  const [currYear, setCurrYear] = useState(`${today.getFullYear()}`)
+  const [currMonth, setCurrMonth] = useState(MONTH_NAMES[today.getMonth()])
+
+  // Observe which month is in view.
   useEffect(() => {
     const options = {
       root: null,
       rootMargin: "-49% 0px -49% 0px",
       threshold: 0
     }
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const [year, month] = entry.target.id.split("-")
         if (entry.isIntersecting) {
           setCurrYear(year)
           setCurrMonth(month)
-
           setShownContent((prev) => {
-            // Reset all years to false, then set the intersecting one to true.
             const next = new Map(prev)
             ALL_YEAR_NAMES.forEach((y) => next.set(y, false))
             next.set(year, true)
@@ -42,73 +41,55 @@ const QuickNavigation = () => {
     monthRefs.forEach((ref) => {
       if (ref.current) observer.observe(ref.current)
     })
-
-    return () => observer.disconnect()
+    return () => {
+      observer.disconnect()
+    }
   }, [monthRefs])
 
-  function buttonClickHandler(y: string) {
-    // Make the whole box a button.
-    if (!shownContent.get(y)) {
-      const newShownContent = new Map<string, boolean>(shownContent)
-      ALL_YEAR_NAMES.forEach((ye) => newShownContent.set(ye, false))
-      newShownContent.set(y, true)
-      setShownContent(newShownContent)
-    }
+  // Toggle expand/collapse for a year.
+  const handleYearClick = (year: string) => {
+    setShownContent((prev) => {
+      const next = new Map(prev)
+      ALL_YEAR_NAMES.forEach((y) => next.set(y, false))
+      next.set(year, !prev.get(year))
+      return next
+    })
   }
 
   return (
-    <div className={styles.quickNavigationPanel}>
-      <div
-        id="quick-nav-vert-line"
-        style={{
-          borderLeft: "1px solid rgba(168, 168, 168, 0.5)",
-          height: "80vh",
-          marginRight: "1vw"
-          // marginTop: "5vh",
-        }}
-      ></div>
-      <div style={{ minWidth: "7em" }}>
-        {ALL_YEAR_NAMES.map((y, i) => (
-          <div key={i} className={styles.quickNavigationYear}>
+    <div className={styles.panel}>
+      <div className={styles.vertLine} />
+
+      <div className={styles.content}>
+        {ALL_YEAR_NAMES.map((year) => (
+          <div key={year} className={styles.yearSection}>
             <div
-              className={styles.navYearCollapsible}
-              onClick={() => buttonClickHandler(y)}
-              style={
-                {
-                  // display:
-                  //   y == currYear ||
-                  //   y == `${parseInt(currYear) + 1}` ||
-                  //   y == `${parseInt(currYear) - 1}`
-                  //     ? "flex"
-                  //     : "none",
-                }
-              }
+              className={`${styles.yearHeader} ${year == currYear ? styles.activeYear : ""}`}
+              onClick={() => handleYearClick(year)}
             >
-              <span style={{ margin: "auto" }}>{y == currYear ? <b>{`${y}`}</b> : `${y}`}</span>
+              {year}
             </div>
 
-            <div
-              style={{
-                display: shownContent.get(y) ? "block" : "none" //y == currYear ? "block" : "none",
-              }}
-            >
-              {MONTH_NAMES.map((m, j) => (
-                <button
-                  key={j}
-                  className={styles.quickNavigationMonth}
-                  id={`${y}${m}`}
-                  style={{
-                    width: "90%",
-                    color: today.getFullYear() == parseInt(y) && j == today.getMonth() ? "rgb(168, 199, 250)" : "",
-                    borderLeft: y == currYear && m == currMonth ? "2px solid rgb(255, 255, 255, 0.6)" : "",
-                    borderBottom: j !== 11 ? "1px solid rgb(255, 255, 255, 0.3)" : "transparent"
-                  }}
-                  onClick={() => scrollToMonth(y, m)}
-                >
-                  {m}
-                </button>
-              ))}
-            </div>
+            <ul className={`${styles.monthList} ${shownContent.get(year) ? styles.expanded : ""}`}>
+              {MONTH_NAMES.map((month, idx) => {
+                const isToday = idx == today.getMonth() && parseInt(year, 10) == today.getFullYear()
+                const isActive = year == currYear && month == currMonth
+
+                return (
+                  <li key={month}>
+                    <button
+                      id={`${year}-${month}`}
+                      className={`${styles.monthButton} ${
+                        isActive ? styles.activeMonth : ""
+                      } ${isToday ? styles.currentMonth : ""}`}
+                      onClick={() => scrollToMonth(year, month)}
+                    >
+                      {month}
+                    </button>
+                  </li>
+                )
+              })}
+            </ul>
           </div>
         ))}
       </div>

@@ -1,60 +1,103 @@
-.quick-navigation-year {
-  margin-block-start: 0em;
-  margin-block-end: 0.2em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 0px;
-}
-
-.quick-navigation-month {
-  background-color: unset;
-  display: block;
-  margin: auto auto 1px;
-  border-radius: 0px;
-  padding: 0.6em 0em;
-  transition: border-color 0.15s;
-}
-
-.quick-navigation-month:focus {
-  outline: none;
-}
-
-.quick-navigation-month:hover {
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-left-color: #646cff !important;
-}
-
-.quick-navigation-panel {
+.panel {
+  display: flex;
   position: sticky;
-  top: 10%; /* Adjust as needed */
+  top: 10%;
+  align-items: flex-start;
+}
+
+/* vertical divider */
+.vertLine {
+  border-left: 1px solid rgba(168, 168, 168, 0.5);
+  height: 80vh;
+  margin-right: 1vw;
+}
+
+/* wrapper for years + months */
+.content {
   min-width: 7em;
-  display: flex;
-  flex-direction: row;
 }
 
-.nav-year-collapsible {
-  background-color: rgb(255, 255, 255, 0.1);
-  width: 100%;
-  min-height: 41px;
+/* each year block */
+.yearSection {
+  margin-bottom: 1rem;
+}
+
+/* year header (clickable) */
+.yearHeader {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 0.75rem;
   cursor: pointer;
-  border-bottom: 1px solid rgb(255, 255, 255, 0.3);
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.yearHeader:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* when this year is the one in view */
+.activeYear {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* month list: collapsed by default */
+.monthList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.monthList li {
+  padding-inline-start: 0.1em;
+  cursor: pointer;
+}
+
+/* expand to show all 12 months */
+.expanded {
+  max-height: 30rem;
+  /* adjust if needed */
+}
+
+/* month button styling */
+.monthButton {
+  width: 100%;
   text-align: left;
+  background: none;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  color: #ccc;
+  border-left: 2px solid transparent;
+  transition:
+    background-color 0.15s,
+    border-color 0.15s,
+    color 0.15s;
+}
+
+.monthButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.monthButton:focus {
   outline: none;
-  font-size: 1em;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
 }
 
-.quick-navigation-panel .active,
-.nav-year-collapsible:hover {
-  background-color: #ffffff3a;
+/* highlight the month currently in view */
+.activeMonth {
+  border-left-color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
 }
 
+/* highlight today's month on initial load */
+.currentMonth {
+  color: rgb(168, 199, 250);
+}
+
+/* hide divider on small screens */
 @media (max-width: 1021px) {
-  #quick-nav-vert-line {
+  .vertLine {
     display: none;
   }
 }
