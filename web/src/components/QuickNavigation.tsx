@@ -14,34 +14,37 @@ const QuickNavigation = () => {
   const [currMonth, setCurrMonth] = useState<string>(`${MONTH_NAMES[today.getMonth()]}`)
   const { monthRefs, scrollToMonth } = useContext(CalendarContext)!
 
-  const callback = (entries: IntersectionObserverEntry[], _: IntersectionObserver) => {
-    entries.forEach((entry: IntersectionObserverEntry) => {
-      const entryId: string[] = entry.target.id.split("-")
-      if (entry.isIntersecting) {
-        // Item entering screen.
-        setCurrYear(entryId[0])
-        setCurrMonth(entryId[1])
-        const newShownContent = new Map<string, boolean>(shownContent)
-        ALL_YEAR_NAMES.forEach((ye) => newShownContent.set(ye, false))
-        newShownContent.set(entryId[0], true)
-        setShownContent(newShownContent)
-      }
-    })
-  }
-
   useEffect(() => {
     const options = {
       root: null,
       rootMargin: "-49% 0px -49% 0px",
       threshold: 0
     }
-    const observer = new IntersectionObserver(callback, options)
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const [year, month] = entry.target.id.split("-")
+        if (entry.isIntersecting) {
+          setCurrYear(year)
+          setCurrMonth(month)
+
+          setShownContent((prev) => {
+            // Reset all years to false, then set the intersecting one to true.
+            const next = new Map(prev)
+            ALL_YEAR_NAMES.forEach((y) => next.set(y, false))
+            next.set(year, true)
+            return next
+          })
+        }
+      })
+    }, options)
+
     monthRefs.forEach((ref) => {
-      if (ref.current != null) {
-        observer.observe(ref.current)
-      }
+      if (ref.current) observer.observe(ref.current)
     })
-  }, [])
+
+    return () => observer.disconnect()
+  }, [monthRefs])
 
   function buttonClickHandler(y: string) {
     // Make the whole box a button.

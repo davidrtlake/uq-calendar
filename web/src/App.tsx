@@ -91,16 +91,16 @@ function App() {
   const labels: Record<string, Record<string, string[]>> = WEEK_LABELS
 
   const monthRefs = useMemo(() => {
-    return ALL_YEAR_NAMES.concat(["2027"]).reduce((map, year) => {
+    return [...ALL_YEAR_NAMES, "2027"].reduce((map, year) => {
       MONTH_NAMES.forEach((month) => {
         map.set(`${year}-${month}`, createRef<HTMLDivElement>())
       })
       return map
     }, new Map<string, RefObject<HTMLDivElement>>())
-  }, [ALL_YEAR_NAMES.concat(["2027"])])
+  }, [])
 
   const weekRefs = useMemo(() => {
-    return ALL_YEAR_NAMES.concat(["2027"]).reduce((map, year) => {
+    return [...ALL_YEAR_NAMES, "2027"].reduce((map, year) => {
       MONTH_NAMES.forEach((month) => {
         Array.from(Array(6).keys()).forEach((row) => {
           map.set(`${year}-${month}-${row}`, createRef<HTMLDivElement>())
@@ -108,7 +108,7 @@ function App() {
       })
       return map
     }, new Map<string, RefObject<HTMLDivElement>>())
-  }, [ALL_YEAR_NAMES.concat(["2027"])])
+  }, [])
 
   const scrollToMonth = (year: string, month: string) => {
     if (!ALL_YEAR_NAMES.includes(year)) {
@@ -146,7 +146,7 @@ function App() {
   const todayRef = useRef<HTMLDivElement>(null)
 
   // Handles any checkbox clicks => updates checkedState and therefore shown events.
-  function checkBoxHandler(p: string, y: string, _currWeek: string) {
+  function checkBoxHandler(p: string, y: string) {
     // Need to bundle it all into a Map of sets in App.tsx
     const newCheckedState = new Map<string, CheckedYear>(checkedState)
     if (p.length == 0) {

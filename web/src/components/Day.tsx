@@ -89,7 +89,7 @@ const Day = ({
         }}
       >
         {extendedEvents.map((e, j) => {
-          if (eventIdToRow.get(e.event.event_id) == -1) {
+          if (eventIdToRow.get(e.event.event_id) == undefined) {
             eventIdToRow.set(e.event.event_id, row)
           }
           for (let k = 0; k < j; k++) {

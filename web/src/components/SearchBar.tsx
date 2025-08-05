@@ -19,33 +19,32 @@ const SearchBar = ({ events, handleHighlightEvents }: Props) => {
   const { monthRefs, scrollToEvent } = useContext(CalendarContext)!
 
   // Handling year detection.
-  const callback = (entries: IntersectionObserverEntry[], _: IntersectionObserver) => {
-    entries.forEach((entry: IntersectionObserverEntry) => {
-      const entryId: string[] = entry.target.id.split("-")
-      if (entry.isIntersecting) {
-        // Item entering screen.
-        setCurrYear(parseInt(entryId[0]))
-      }
-    })
-  }
-
-  // Handling year detection.
   useEffect(() => {
     const options = {
       root: null,
       rootMargin: "-49% 0px -49% 0px",
       threshold: 0
     }
-    const observer = new IntersectionObserver(callback, options)
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const [year] = entry.target.id.split("-")
+        if (entry.isIntersecting) {
+          setCurrYear(parseInt(year))
+        }
+      })
+    }, options)
+
     monthRefs.forEach((ref) => {
       if (ref.current != null) {
         observer.observe(ref.current)
       }
     })
-  }, [])
+
+    return () => observer.disconnect()
+  }, [monthRefs])
 
   // Handling year detection.
-  function handleSearch(_event: React.MouseEvent<HTMLButtonElement, MouseEvent> | null) {
+  function handleSearch() {
     setResultIndex(0)
     if (searchContents.length > 0) {
       const searchString = searchContents.toLocaleLowerCase().trim()
@@ -103,11 +102,11 @@ const SearchBar = ({ events, handleHighlightEvents }: Props) => {
   function handleKeyDown(event: React.KeyboardEvent<HTMLInputElement>) {
     if (event.key == "Enter") {
       console.log("Searching with enter")
-      handleSearch(null)
+      handleSearch()
     }
   }
 
-  function clearSearch(_event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+  function clearSearch() {
     setSearchContents("")
     setSearchResults([])
     handleHighlightEvents(new Set<number>())
