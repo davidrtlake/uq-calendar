@@ -1,53 +1,124 @@
-ul {
-  list-style: none;
-  margin-block-start: 0em;
-  margin-block-end: 0.2em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 0px;
+.panel {
+  padding: 1rem;
+  border-radius: 8px;
+  min-width: 8em;
+  color: #ddd;
+  position: sticky;
+  top: 10%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-li {
-  display: block;
-  padding-inline-start: 1em;
-  cursor: pointer;
+/* Legend / title */
+.legend {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
 }
 
-@media (min-width: 1674px) {
-  .year-collapsible .year {
-    padding: 0.6em 4em 0.6em 0em;
-  }
-  .year-collapsible .summer {
-    padding: 0.6em 2em 0.6em 0em;
-  }
-}
-
-.year-collapsible {
-  background-color: rgb(255, 255, 255, 0.1);
+/* Each top-level row (year or summer semester) */
+.item {
+  display: flex;
+  background-color: #ffffff1a;
+  justify-content: space-between;
+  align-items: center;
   padding: 0;
+  background-color: #ffffff1a;
   width: 100%;
   min-height: 41px;
   cursor: pointer;
-  /* border: 1px solid rgb(255, 255, 255, 0.0); */
   border-radius: 0.3em;
   text-align: left;
   outline: none;
-  font-size: 0.97em;
-  display: flex;
   flex-direction: row;
+  margin-block-end: 0.2em;
+}
+
+/* Label text for years & summer semesters */
+.itemLabel {
+  font-size: 1rem;
+  padding: 0.1em 0 0.2em 0.5em;
+  color: #fff;
+  overflow-wrap: break-word;
+}
+
+/* Container for the period checkboxes */
+.periodList {
+  margin: 0.5rem 0 1rem 1rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Each child-period row */
+.periodItem {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
   align-items: center;
-  /* justify-content: space-between; */
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.active,
-.year-collapsible:hover {
-  background-color: #ffffff3a;
+/* Text for each period */
+.periodLabel {
+  font-size: 1rem;
+  color: #fff;
+  overflow-wrap: break-word;
 }
 
-fieldset svg {
-  padding: 0 3%;
+/* --- Toggle Switch Styles --- */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
 }
 
-.period-content svg {
-  padding: 0 3% 0 1%;
+.item .switch {
+  flex: 0 0 auto;
+  margin: 0 0.4em 0 0.4em;
+}
+
+.periodItem .switch {
+  flex: 0 0 auto;
+  margin: 0 0.6em 0 0.4em;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 36px;
+  background-color: #444;
+  border-radius: 20px;
+  transition: background-color 0.2s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.switch input:checked + .slider {
+  background-color: #8c63ff;
+  /* match your accent */
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(16px);
 }

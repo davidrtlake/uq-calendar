@@ -1,25 +1,13 @@
 .body-flex-container {
   display: flex;
   flex-direction: row;
-  /* width: 100%; */
 }
 
 .sidebar {
   margin-block-start: 10%;
 }
 
-fieldset {
-  position: sticky;
-  top: 10%;
-  /* Adjust as needed */
-  border-color: rgb(255, 255, 255, 0.5);
-  border-style: dashed;
-  margin-right: 10px;
-  min-width: 8em;
-}
-
 .fixed-heading {
-  /* border: 1px solid red; */
   position: fixed;
   width: inherit;
   background-color: #2f033d;

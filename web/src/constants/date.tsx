@@ -1,8 +1,8 @@
 export const SUMMER_SEMESTER_NAMES: string[] = [
-  "Summer Semester (2023-24)",
-  "Summer Semester (2024-25)",
-  "Summer Semester (2025-26)",
-  "Summer Semester (2026-27)"
+  "Summer Sem. (2023-24)",
+  "Summer Sem. (2024-25)",
+  "Summer Sem. (2025-26)",
+  "Summer Sem. (2026-27)"
 ] as const
 
 export const ALL_YEAR_NAMES: string[] = ["2023", "2024", "2025", "2026"] as const

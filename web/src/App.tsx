@@ -68,9 +68,8 @@ function App() {
 
   const [checkedState, setCheckedState] = useState<Map<string, CheckedYear>>(() => {
     const checkboxLayout = new Map<string, CheckedYear>()
-    let newChildPeriods: Map<string, boolean>
     for (let i = 0; i < ALL_YEAR_NAMES.length; i++) {
-      newChildPeriods = new Map<string, boolean>()
+      const newChildPeriods = new Map<string, boolean>()
       for (const p of ALL_PERIOD_NAMES) {
         newChildPeriods.set(p, true)
       }
@@ -145,46 +144,24 @@ function App() {
 
   const todayRef = useRef<HTMLDivElement>(null)
 
-  // Handles any checkbox clicks => updates checkedState and therefore shown events.
-  function checkBoxHandler(p: string, y: string) {
-    // Need to bundle it all into a Map of sets in App.tsx
+  function checkBoxHandler(year: string, period?: string) {
     const newCheckedState = new Map<string, CheckedYear>(checkedState)
-    if (p.length == 0) {
-      // If year checked/unchecked, then also toggle children.
-      // Clone the children.
-      const childPeriodsCopy = new Map<string, boolean>(newCheckedState.get(y)?.childPeriods)
-      // Set all the children to parent.
-      childPeriodsCopy.forEach((_, key) => {
-        childPeriodsCopy.set(key, !newCheckedState.get(y)?.checked)
-      })
-      newCheckedState.set(y, {
-        checked: !newCheckedState.get(y)?.checked,
-        childPeriods: childPeriodsCopy
+    if (period) {
+      newCheckedState.get(year)!.childPeriods!.set(period, !newCheckedState.get(year)!.childPeriods!.get(period))
+      newCheckedState.set(year, {
+        checked: Array.from(newCheckedState.get(year)!.childPeriods!.entries()).every(([, val]) => val == true),
+        childPeriods: newCheckedState.get(year)!.childPeriods
       })
     } else {
-      // If a child is checked/unchecked.
-      // Toggle the child state.
-      newCheckedState.get(y)?.childPeriods?.set(p, !newCheckedState.get(y)?.childPeriods?.get(p))
-
-      // Check if all children are ticked or all unticked now.
-      const target: number = newCheckedState.get(y)?.childPeriods?.size ?? 0
-      let sum: number = 0
-      newCheckedState.get(y)?.childPeriods?.forEach((value) => {
-        value && sum++
+      const childPeriodsCopy = new Map<string, boolean>(newCheckedState.get(year)!.childPeriods)
+      childPeriodsCopy.forEach((_, key) => {
+        childPeriodsCopy.set(key, !newCheckedState.get(year)!.checked)
       })
-      if (sum == 0 || !newCheckedState.get(y)?.childPeriods?.get(p)) {
-        newCheckedState.set(y, {
-          checked: false,
-          childPeriods: newCheckedState.get(y)?.childPeriods
-        })
-      } else if (sum == target) {
-        newCheckedState.set(y, {
-          checked: true,
-          childPeriods: newCheckedState.get(y)?.childPeriods
-        })
-      }
+      newCheckedState.set(year, {
+        checked: !newCheckedState.get(year)!.checked,
+        childPeriods: childPeriodsCopy
+      })
     }
-
     setCheckedState(newCheckedState)
   }
 
@@ -250,8 +227,7 @@ function App() {
                   borderRadius: "0px 0px 10px 0px",
                   top: "111px",
                   fontSize: "2vh",
-                  padding: "10px",
-                  paddingRight: "0px"
+                  padding: "0px"
                 }}
               >
                 <NestedCheckbox checkHandler={checkBoxHandler} checkedState={checkedState} />
@@ -400,7 +376,7 @@ function App() {
               paddingTop: "0.3rem"
             }}
           >
-            <div id="wk-label">WK</div>
+            <div id={styles.wkLabel}>WK</div>
             {DAYS_OF_WEEK.map((day, i) => (
               <div
                 key={i}
