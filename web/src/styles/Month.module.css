@@ -4,13 +4,13 @@
   flex-direction: column;
   height: 100%;
   min-height: 150px;
-  /* min-width: 90px; */
+  min-width: 90px;
   background: repeating-linear-gradient(-45deg, transparent 0 3px, var(--timetable-stripes-dark) 3px 6px);
 }
 
 @media (max-width: 700px) {
   .day {
-    min-width: calc(100vw / 7 - 1px);
+    min-width: calc(100vw / 7 - 6px);
   }
 }
 
@@ -75,7 +75,8 @@ h4 {
   .month-title {
     display: flex;
     align-items: flex-end;
-    padding-inline-start: 84px; /* 170 */
+    padding-inline-start: 84px;
+    /* 170 */
     font-size: 1em;
     padding-block-start: 39.4px;
     padding-block-end: 4.52px;

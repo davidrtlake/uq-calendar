@@ -17,7 +17,7 @@
 
 #root {
   margin: auto;
-  padding: 2rem 1rem 0 1rem;
+  padding: 2rem 0.5rem 0 0.2rem;
   text-align: left;
   --timetable-stripes-light: rgba(255, 255, 255, 0.22);
   --timetable-stripes-dark: rgba(255, 255, 255, 0.1);
@@ -79,30 +79,21 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
-
 .container {
   display: grid;
   grid-template-columns: auto repeat(7, 1fr);
-  column-gap: 0.5%;
-  /* row-gap: 1%; */
+  column-gap: 0.3%;
   align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    column-gap: 0.3%;
+  }
 }
 
 @media (max-width: 700px) {
   .container {
     grid-template-columns: 0 repeat(7, 1fr);
-    column-gap: 1px;
   }
 }

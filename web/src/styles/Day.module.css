@@ -1,3 +1,43 @@
+.todayDateHeading {
+  background-color: #a8c7fa;
+  color: #062e6f;
+  border-radius: 0.2em;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.dateHeading {
+  background-color: none;
+  color: #fff;
+  border-radius: 0px;
+}
+
+.desktopOnly {
+  display: block;
+}
+
+.mobileOnly {
+  display: none;
+}
+
+.todayMessage {
+  display: inline;
+}
+
+@media (max-width: 0px) {
+  .todayMessage {
+    display: none;
+  }
+
+  .desktopOnly {
+    display: none;
+  }
+
+  .mobileOnly {
+    display: block;
+  }
+}
+
 /* Event descriptions */
 .event-descriptions {
   margin-block-start: 0em;
@@ -26,7 +66,8 @@
 }
 
 .event:hover .event-descriptions {
-  -webkit-line-clamp: none !important; /* number of lines to show */
+  -webkit-line-clamp: none !important;
+  /* number of lines to show */
   line-clamp: none !important;
 }
 
@@ -38,7 +79,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-line-clamp: 1;
+  /* number of lines to show */
   line-clamp: 1;
   -webkit-box-orient: vertical;
 }
@@ -70,7 +112,8 @@
 }
 
 .extended-event:hover .extended-event-descriptions {
-  -webkit-line-clamp: none; /* number of lines to show */
+  -webkit-line-clamp: none;
+  /* number of lines to show */
   line-clamp: none;
 }
 

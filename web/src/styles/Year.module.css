@@ -4,16 +4,37 @@
 }
 
 .month {
-  /* border: 1px solid rgba(255, 255, 255, 0.87); */
   height: auto;
-  /* padding-block-end: 2rem; */
-  /* margin-bottom: 2rem; */
 }
 
-@media (max-width: 502px) {
-  .year > h1 {
+.yearHeading {
+  position: sticky;
+  top: 0;
+  z-index: 3003;
+  margin-block-start: 0px;
+  margin-block-end: 34.3px;
+  padding-block-start: 20.48px;
+  padding-block-end: 3.58px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.56);
+  color: rgb(197, 197, 197);
+  padding-left: 0px;
+  height: 56.3px;
+}
+
+/* @media (max-width: 502px) {
+  .year>h1 {
     display: flex;
     align-items: flex-start;
     font-size: 2em;
+  }
+} */
+
+/* Mobile */
+@media (max-width: 1024px) {
+  .yearHeading {
+    display: flex;
+    align-items: flex-start;
+    font-size: 2em;
+    padding-left: 84px;
   }
 }

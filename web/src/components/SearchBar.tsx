@@ -7,16 +7,15 @@ import { MONTH_NAMES } from "../constants/date"
 
 interface Props {
   events: Event[]
-  handleHighlightEvents: (eIDsToHighlight: Set<number>) => void
 }
 
-const SearchBar = ({ events, handleHighlightEvents }: Props) => {
+const SearchBar = ({ events }: Props) => {
   const [searchContents, setSearchContents] = useState("")
   const [searchResults, setSearchResults] = useState<Event[]>([])
   const [resultIndex, setResultIndex] = useState(0)
   const today: Date = new Date()
   const [currYear, setCurrYear] = useState<number>(today.getFullYear())
-  const { monthRefs, scrollToEvent } = useContext(CalendarContext)!
+  const { monthRefs, setHighlightedEvents, scrollToEvent } = useContext(CalendarContext)!
 
   // Handling year detection.
   useEffect(() => {
@@ -63,7 +62,7 @@ const SearchBar = ({ events, handleHighlightEvents }: Props) => {
       )
       setSearchResults(filteredSearchEvents)
       if (filteredSearchEvents.length > 0) {
-        handleHighlightEvents(highlightedIDsSet)
+        setHighlightedEvents(highlightedIDsSet)
         scrollToEvent(
           filteredSearchEvents[0].start_date.getFullYear().toString(),
           MONTH_NAMES[filteredSearchEvents[0].start_date.getMonth()],
@@ -72,7 +71,7 @@ const SearchBar = ({ events, handleHighlightEvents }: Props) => {
       }
     } else if (searchResults.length > 0) {
       setSearchResults([])
-      handleHighlightEvents(new Set<number>())
+      setHighlightedEvents(new Set<number>())
     }
   }
 
@@ -109,7 +108,7 @@ const SearchBar = ({ events, handleHighlightEvents }: Props) => {
   function clearSearch() {
     setSearchContents("")
     setSearchResults([])
-    handleHighlightEvents(new Set<number>())
+    setHighlightedEvents(new Set<number>())
     setResultIndex(0)
   }
 

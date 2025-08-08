@@ -1,4 +1,4 @@
-export const WEEK_LABELS = {
+export const WEEK_LABELS: Record<string, Record<string, string[]>> = {
   "2023": {
     January: ["BREAK", "BREAK", "BREAK", "BREAK", "BREAK"],
     February: ["BREAK", "BREAK", "ORIENTATION", "1", "2"],

@@ -19,9 +19,7 @@ interface Props {
   todayMonth: boolean
   monthNum: number
   events: Event[]
-  highlightedEvents: Map<number, boolean>
   monthLabels: string[]
-  widthLevel: number
 }
 
 const Month = ({
@@ -34,9 +32,7 @@ const Month = ({
   yearName,
   todayMonth,
   events,
-  highlightedEvents,
-  monthLabels,
-  widthLevel
+  monthLabels
 }: Props) => {
   const days: Event[][] = Array(monthLength)
     .fill(null)
@@ -213,8 +209,7 @@ const Month = ({
                         <div
                           style={{
                             fontSize:
-                              (row == 0 && fillerDays.length > 0) ||
-                              (Number.isNaN(parseInt(monthLabels[labelIndex])) && widthLevel >= 3)
+                              (row == 0 && fillerDays.length > 0) || Number.isNaN(parseInt(monthLabels[labelIndex]))
                                 ? "50px"
                                 : "70px",
                             display: "inline-block",
@@ -259,8 +254,6 @@ const Month = ({
                           events={days[dayCount - 1]}
                           extendedEvents={extendedEvents[dayCount - 1]}
                           invisExtendedEvents={invisExtendedEvents[dayCount - 1]}
-                          highlightedEvents={highlightedEvents}
-                          widthLevel={widthLevel}
                         />
                       </div>
                     )

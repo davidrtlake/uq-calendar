@@ -48,17 +48,19 @@ const NestedCheckbox: React.FC<Props> = ({ checkHandler, checkedState }) => {
         const showYear = yearShort == currYear
         const summerName = SUMMER_SEMESTER_NAMES[idx]
         const showSummer = summerName.includes(currYear)
+        const yearIsChecked = checkedState.get(yearFull)?.checked ?? true
+        const summerIsChecked = checkedState.get(summerName)?.checked ?? true
 
         return (
           <React.Fragment key={yearFull}>
             {showYear && (
               <div className={styles.item} onClick={() => checkHandler(yearFull)}>
-                <span className={styles.itemLabel}>{yearFull}</span>
+                <span className={yearIsChecked ? styles.itemLabel : styles.itemLabelDark}>{yearFull}</span>
                 <label className={styles.switch} onClick={(e) => e.stopPropagation()}>
                   <input
                     id={yearFull}
                     type="checkbox"
-                    checked={checkedState.get(yearFull)?.checked ?? true}
+                    checked={yearIsChecked}
                     onChange={() => checkHandler(yearFull)}
                   />
                   <span className={styles.slider} />
@@ -68,31 +70,34 @@ const NestedCheckbox: React.FC<Props> = ({ checkHandler, checkedState }) => {
 
             {showYear && (
               <div className={styles.periodList}>
-                {ALL_PERIOD_NAMES.map((pName) => (
-                  <div className={styles.periodItem} key={pName} onClick={() => checkHandler(yearFull, pName)}>
-                    <span className={styles.periodLabel}>{pName}</span>
-                    <label className={styles.switch} onClick={(e) => e.stopPropagation()}>
-                      <input
-                        id={`${yearFull}-${pName}`}
-                        type="checkbox"
-                        checked={checkedState.get(yearFull)?.childPeriods?.get(pName) ?? true}
-                        onChange={() => checkHandler(yearFull, pName)}
-                      />
-                      <span className={styles.slider} />
-                    </label>
-                  </div>
-                ))}
+                {ALL_PERIOD_NAMES.map((pName) => {
+                  const isChecked = checkedState.get(yearFull)?.childPeriods?.get(pName) ?? true
+                  return (
+                    <div className={styles.periodItem} key={pName} onClick={() => checkHandler(yearFull, pName)}>
+                      <span className={isChecked ? styles.periodLabel : styles.periodLabelDark}>{pName}</span>
+                      <label className={styles.switch} onClick={(e) => e.stopPropagation()}>
+                        <input
+                          id={`${yearFull}-${pName}`}
+                          type="checkbox"
+                          checked={isChecked}
+                          onChange={() => checkHandler(yearFull, pName)}
+                        />
+                        <span className={styles.slider} />
+                      </label>
+                    </div>
+                  )
+                })}
               </div>
             )}
 
             {showSummer && (
               <div className={styles.item} onClick={() => checkHandler(summerName)}>
-                <span className={styles.itemLabel}>{summerName}</span>
+                <span className={summerIsChecked ? styles.itemLabel : styles.itemLabelDark}>{summerName}</span>
                 <label className={styles.switch} onClick={(e) => e.stopPropagation()}>
                   <input
                     id={summerName}
                     type="checkbox"
-                    checked={checkedState.get(summerName)?.checked ?? true}
+                    checked={summerIsChecked}
                     onChange={() => checkHandler(summerName)}
                   />
                   <span className={styles.slider} />

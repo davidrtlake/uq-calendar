@@ -1,4 +1,4 @@
-import { createContext, createRef, RefObject, useEffect, useMemo, useRef, useState } from "react"
+import { createContext, createRef, RefObject, useCallback, useEffect, useMemo, useRef, useState } from "react"
 import styles from "./styles/App.module.css"
 import Year from "./components/Year"
 import NestedCheckbox from "./components/NestedCheckbox"
@@ -24,13 +24,15 @@ export interface Event {
 
 interface CheckedYear {
   checked: boolean
-  childPeriods: Map<string, boolean> | undefined
+  childPeriods: Map<string, boolean>
 }
 
 interface CalendarContextValue {
   monthRefs: Map<string, RefObject<HTMLDivElement>>
   weekRefs: Map<string, RefObject<HTMLDivElement>>
   eventIdToRow: Map<number, number>
+  highlightedEvents: Set<number>
+  setHighlightedEvents: React.Dispatch<React.SetStateAction<Set<number>>>
   scrollToMonth(year: string, month: string): void
   scrollToWeek(year: string, month: string, week: string): void
   scrollToEvent(y: string, m: string, eventId: number): void
@@ -40,31 +42,10 @@ export const CalendarContext = createContext<CalendarContextValue | null>(null)
 
 function App() {
   console.log("---RELOADING-APP---")
-  const [widthLevel, setWidthLevel] = useState(0)
   const [showSearch, setShowSearch] = useState(false)
   const [showCats, setShowCats] = useState(false) // Meow.
   const [showQuickNav, setShowQuickNav] = useState(false)
-
-  //choose the screen size
-  const handleResize = () => {
-    // console.log(window.innerWidth, window);
-    if (window.innerWidth <= 502) {
-      // Hide Category selector and quick nav.
-      setWidthLevel(4)
-    } else if (window.innerWidth <= 700) {
-      // Hide Category selector and quick nav.
-      setWidthLevel(3)
-    } else if (window.innerWidth <= 1022) {
-      // Hide Category selector and quick nav.
-      setWidthLevel(2)
-    } else if (window.innerWidth <= 1213) {
-      // Hide search bar.
-      setWidthLevel(1)
-    } else {
-      // Normal desktop view.
-      setWidthLevel(0)
-    }
-  }
+  const [highlightedEvents, setHighlightedEvents] = useState(new Set<number>())
 
   const [checkedState, setCheckedState] = useState<Map<string, CheckedYear>>(() => {
     const checkboxLayout = new Map<string, CheckedYear>()
@@ -84,10 +65,6 @@ function App() {
     }
     return checkboxLayout
   })
-  const [highlightedEvents, setHighlightedEvents] = useState<Map<number, boolean>>(() => {
-    return new Map(events.map((e) => [e.event_id, false]))
-  })
-  const labels: Record<string, Record<string, string[]>> = WEEK_LABELS
 
   const monthRefs = useMemo(() => {
     return [...ALL_YEAR_NAMES, "2027"].reduce((map, year) => {
@@ -101,7 +78,7 @@ function App() {
   const weekRefs = useMemo(() => {
     return [...ALL_YEAR_NAMES, "2027"].reduce((map, year) => {
       MONTH_NAMES.forEach((month) => {
-        Array.from(Array(6).keys()).forEach((row) => {
+        Array.from({ length: 6 }, (_, row) => {
           map.set(`${year}-${month}-${row}`, createRef<HTMLDivElement>())
         })
       })
@@ -144,32 +121,33 @@ function App() {
 
   const todayRef = useRef<HTMLDivElement>(null)
 
-  function checkBoxHandler(year: string, period?: string) {
-    const newCheckedState = new Map<string, CheckedYear>(checkedState)
-    if (period) {
-      newCheckedState.get(year)!.childPeriods!.set(period, !newCheckedState.get(year)!.childPeriods!.get(period))
-      newCheckedState.set(year, {
-        checked: Array.from(newCheckedState.get(year)!.childPeriods!.entries()).every(([, val]) => val == true),
-        childPeriods: newCheckedState.get(year)!.childPeriods
-      })
-    } else {
-      const childPeriodsCopy = new Map<string, boolean>(newCheckedState.get(year)!.childPeriods)
-      childPeriodsCopy.forEach((_, key) => {
-        childPeriodsCopy.set(key, !newCheckedState.get(year)!.checked)
-      })
-      newCheckedState.set(year, {
-        checked: !newCheckedState.get(year)!.checked,
-        childPeriods: childPeriodsCopy
-      })
-    }
-    setCheckedState(newCheckedState)
-  }
+  const checkBoxHandler = useCallback((year: string, period?: string) => {
+    setCheckedState((prev) => {
+      const next = new Map(prev)
+      const entry = prev.get(year)!
+      if (!entry) return prev
+      const newChildPeriods = new Map(entry.childPeriods)
+      let newChecked: boolean
 
-  function handleHighlightEvents(eIDsToHighlight: Set<number>) {
-    setHighlightedEvents(new Map(events.map((e) => [e.event_id, eIDsToHighlight.has(e.event_id)])))
-  }
+      if (period) {
+        newChildPeriods.set(period, !newChildPeriods.get(period)!)
+        newChecked = Array.from(newChildPeriods.values()).every((v) => v)
+      } else {
+        newChecked = !entry.checked
+        newChildPeriods.forEach((_, key) => newChildPeriods.set(key, newChecked))
+      }
+
+      next.set(year, {
+        checked: newChecked,
+        childPeriods: newChildPeriods
+      })
+      return next
+    })
+  }, [])
 
   function scrollToToday() {
+    console.log("Scrolling to today")
+
     todayRef.current?.scrollIntoView({
       behavior: "smooth",
       block: "center",
@@ -177,90 +155,70 @@ function App() {
     })
   }
 
-  // Gets event data from API.
-  // useEffect(() => {
-  // fetch("/api/events") // Backend URL
-  //   .then((response) => response.json())
-  //   .then((data: Event[]) => {
-  //     const formattedData = data.map((row) => {
-  //       return {
-  //         ...row,
-  //         start_date: new Date(row.start_date),
-  //         end_date: new Date(row.end_date),
-  //       };
-  //     });
-  //     console.log("Setting Events");
-  //     setEvents(formattedData);
-  //   })
-  //   .catch((error) => console.error("Error fetching data:", error));
-  // }, []);
-
   useEffect(() => {
-    window.addEventListener("resize", handleResize)
-    handleResize()
-    setTimeout(scrollToToday, 500) // Hacky but it works.
+    setTimeout(scrollToToday, 500)
   }, [])
 
   return (
-    <CalendarContext.Provider value={{ monthRefs, weekRefs, eventIdToRow, scrollToMonth, scrollToWeek, scrollToEvent }}>
+    <CalendarContext.Provider
+      value={{
+        monthRefs,
+        weekRefs,
+        eventIdToRow,
+        highlightedEvents,
+        setHighlightedEvents,
+        scrollToMonth,
+        scrollToWeek,
+        scrollToEvent
+      }}
+    >
       <div className={styles.bodyFlexContainer}>
-        <div
-          className={styles.sidebar}
-          style={{
-            paddingRight: widthLevel <= 1 ? "1%" : "0px",
-            width: widthLevel <= 1 ? "17vw" : "0vw"
-          }}
-        >
-          {widthLevel <= 1 ? (
-            <NestedCheckbox checkHandler={checkBoxHandler} checkedState={checkedState} />
-          ) : (
+        <aside className={styles.sidebarLeft}>
+          <NestedCheckbox checkHandler={checkBoxHandler} checkedState={checkedState} />
+        </aside>
+        {showCats && (
+          <>
+            <div className={styles.toggleMenuLeft}>
+              <NestedCheckbox checkHandler={checkBoxHandler} checkedState={checkedState} />
+            </div>
+            <div className={styles.overlay} onClick={() => setShowCats(false)} />
+          </>
+        )}
+        <main className={styles.mainContent}>
+          <header className={styles.toolbar}>
+            <SearchBar
+              events={events.filter((e) => {
+                // Filter invisible events.
+                if (e.period.startsWith("Summer")) {
+                  return checkedState.get(e.period)?.checked ?? false
+                } else {
+                  return checkedState.get(`${e.start_date.getFullYear()}`)!.childPeriods!.get(e.period)
+                }
+              })}
+            />
+          </header>
+          <header className={styles.mobileToolbar}>
+            <button className={styles.toggleBtnLeft} onClick={() => setShowCats((v) => !v)}>
+              <FontAwesomeIcon icon={faEye} />
+            </button>
+            <button className={styles.toggleBtn} onClick={() => setShowSearch((v) => !v)}>
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+            </button>
+
+            <button className={styles.toggleBtnRight} onClick={() => setShowQuickNav((v) => !v)}>
+              <FontAwesomeIcon icon={faBarsStaggered} />
+            </button>
+          </header>
+          {showQuickNav && (
             <>
-              <div
-                style={{
-                  position: "fixed",
-                  display: showCats ? "block" : "none",
-                  zIndex: "5000",
-                  backgroundColor: "rgba(47, 3, 61, 1)",
-                  // minWidth: "40%",
-                  borderRight: "1px solid gray",
-                  borderBottom: "1px solid gray",
-                  borderRadius: "0px 0px 10px 0px",
-                  top: "111px",
-                  fontSize: "2vh",
-                  padding: "0px"
-                }}
-              >
-                <NestedCheckbox checkHandler={checkBoxHandler} checkedState={checkedState} />
+              <div className={styles.toggleMenuRight}>
+                <QuickNavigation />
               </div>
-              <div
-                style={{
-                  position: "fixed",
-                  display: showCats ? "block" : "none",
-                  zIndex: "4999",
-                  backgroundColor: "rgba(0, 0, 0, 0.4)",
-                  top: "111px",
-                  width: "100%",
-                  height: "100%"
-                }}
-                onClick={() => setShowCats(false)}
-              />
+              <div className={styles.overlay} onClick={() => setShowQuickNav(false)} />
             </>
           )}
-        </div>
-        <div style={{ maxWidth: "1300px" }}>
-          {widthLevel == 0 ? (
-            <div
-              style={{
-                position: "sticky",
-                top: "20px",
-                zIndex: "3006",
-                textAlign: "right",
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "flex-end",
-                alignItems: "center"
-              }}
-            >
+          {showSearch && (
+            <div className={styles.searchWrapper}>
               <SearchBar
                 events={events.filter((e) => {
                   // Filter invisible events.
@@ -270,225 +228,65 @@ function App() {
                     return checkedState.get(`${e.start_date.getFullYear()}`)!.childPeriods!.get(e.period)
                   }
                 })}
-                handleHighlightEvents={handleHighlightEvents}
               />
             </div>
-          ) : (
-            <>
-              <div
-                style={{
-                  position: "sticky",
-                  top: "20px",
-                  zIndex: "3006",
-                  textAlign: "right",
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "flex-end",
-                  alignItems: "center"
-                }}
-              >
-                {widthLevel > 1 ? (
-                  <button
-                    onClick={() => {
-                      setShowCats(!showCats)
-                      setShowQuickNav(false)
-                    }}
-                    style={{
-                      backgroundColor: showCats ? "rgba(68, 29, 81, 1)" : "rgba(47, 3, 61, 1)",
-                      border: "1px solid rgba(255, 255, 255, 0.4)",
-                      fontSize: "1.2em",
-                      marginRight: "auto",
-                      marginLeft: "6px"
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faEye} />
-                  </button>
-                ) : (
-                  ""
-                )}
-                <button
-                  onClick={() => {
-                    setShowSearch(!showSearch)
-                  }}
-                  style={{
-                    backgroundColor: showSearch ? "rgba(68, 29, 81, 1)" : "rgba(47, 3, 61, 1)",
-                    border: "1px solid rgba(255, 255, 255, 0.4)",
-                    fontSize: "1.2em"
-                  }}
-                >
-                  <FontAwesomeIcon icon={faMagnifyingGlass} />
-                </button>
-                {widthLevel > 1 ? (
-                  <button
-                    onClick={() => {
-                      setShowQuickNav(!showQuickNav)
-                      setShowCats(false)
-                    }}
-                    style={{
-                      backgroundColor: showQuickNav ? "rgba(68, 29, 81, 1)" : "rgba(47, 3, 61, 1)",
-                      border: "1px solid rgba(255, 255, 255, 0.4)",
-                      fontSize: "1.2em",
-                      margin: "0px 6px 0px 6px"
-                    }}
-                  >
-                    <FontAwesomeIcon icon={faBarsStaggered} />
-                  </button>
-                ) : (
-                  ""
-                )}
-              </div>
-              <div
-                style={{
-                  display: showSearch ? "flex" : "none",
-                  transition: "display 4s 1s",
-                  position: "sticky",
-                  top: "111px",
-                  zIndex: "3006",
-                  textAlign: "right",
-                  flexDirection: "row",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  backgroundColor: "rgb(47, 3, 61)",
-                  borderBottom: "1px solid gray"
-                }}
-              >
-                <SearchBar
-                  events={events.filter((e) => {
-                    // Filter invisible events.
-                    if (e.period.startsWith("Summer")) {
-                      return checkedState.get(e.period)?.checked ?? false
-                    } else {
-                      return checkedState.get(`${e.start_date.getFullYear()}`)!.childPeriods!.get(e.period)
-                    }
-                  })}
-                  handleHighlightEvents={handleHighlightEvents}
-                />
-              </div>
-            </>
           )}
-          <div
-            className="container"
-            style={{
-              top: "5.05rem",
-              position: "sticky",
-              zIndex: "3005",
-              backgroundColor: "#2f033d",
-              paddingTop: "0.3rem"
-            }}
-          >
-            <div id={styles.wkLabel}>WK</div>
+
+          <div className={styles.weekLabelContainer}>
+            <div className={styles.wkLabel}>WK</div>
             {DAYS_OF_WEEK.map((day, i) => (
-              <div
-                key={i}
-                style={{
-                  borderBottom: "1px solid rgba(255, 255, 255, 0.56)",
-                  paddingInlineStart: "0.1rem"
-                }}
-              >
+              <div key={i} className={styles.dayLabel}>
                 {day}
               </div>
             ))}
           </div>
-          <div
-            style={{
-              display: "grid",
-              position: "sticky",
-              top: "90vh",
-              zIndex: "3006",
-              justifyContent: "end"
-            }}
-          >
-            <button
-              onClick={() => scrollToToday()}
-              style={{
-                backgroundColor: "#2f033d",
-                marginRight: "15px"
-              }}
-            >
+
+          <div className={styles.jumpWrapper}>
+            <button className={styles.jumpButton} onClick={scrollToToday}>
               Jump to today
             </button>
           </div>
-          {ALL_YEAR_NAMES.map((y, i) => {
-            const year: number = parseInt(y)
-            const newYearsDay = new Date(`${year}-01-01`)
-            const currDay: number = newYearsDay.getDay()
-            return (
-              <Year
-                key={i}
-                year={year}
-                currDay={currDay}
-                todayRef={todayRef}
-                events={events
-                  .filter(
-                    // Only get fields for selected year.
-                    (row) => row.start_date.getFullYear() == year || row.end_date.getFullYear() == year
-                  )
-                  .map((row) => {
-                    // Crop any overflowing start or end dates.
-                    return {
-                      ...row,
-                      start_date:
-                        row.start_date.getFullYear() == year
-                          ? row.start_date
-                          : new Date(`Janurary 01, ${year} 00:00:00`),
-                      end_date:
-                        row.end_date.getFullYear() == year ? row.end_date : new Date(`December 31, ${year} 00:00:00`)
-                    }
-                  })
-                  .filter((e) => {
-                    // filter here
-                    if (e.period.startsWith("Summer")) {
-                      return checkedState.get(e.period)?.checked ?? false
-                    } else {
-                      return checkedState.get(`${e.start_date.getFullYear()}`)!.childPeriods!.get(e.period)
-                    }
-                  })}
-                highlightedEvents={highlightedEvents}
-                yearLabels={labels[y]}
-                widthLevel={widthLevel}
-              />
-            )
-          })}
-        </div>
-        <div className={styles.sidebar} style={{ paddingLeft: widthLevel <= 1 ? "1%" : "0px" }}>
-          {widthLevel <= 1 ? (
-            <QuickNavigation />
-          ) : (
-            <>
-              <div
-                style={{
-                  position: "fixed",
-                  display: showQuickNav ? "block" : "none",
-                  zIndex: "5000",
-                  backgroundColor: "rgba(47, 3, 61, 1)",
-                  borderLeft: "1px solid gray",
-                  borderBottom: "1px solid gray",
-                  borderRadius: "0px 0px 0px 10px",
-                  minWidth: "15%",
-                  top: "111px",
-                  right: "0px",
-                  fontSize: "2vh",
-                  padding: "2vh"
-                }}
-              >
-                <QuickNavigation />
-              </div>
-              <div
-                style={{
-                  position: "fixed",
-                  display: showQuickNav ? "block" : "none",
-                  zIndex: "4999",
-                  backgroundColor: "rgba(0, 0, 0, 0.4)",
-                  top: "111px",
-                  right: "0px",
-                  width: "100%",
-                  height: "100%"
-                }}
-                onClick={() => setShowQuickNav(false)}
-              />
-            </>
-          )}
-        </div>
+
+          {ALL_YEAR_NAMES.map((y, i) => (
+            <Year
+              key={i}
+              year={parseInt(y)}
+              currDay={new Date(`${y}-01-01`).getDay()}
+              todayRef={todayRef}
+              events={events
+                .filter(
+                  // Only get fields for selected year.
+                  (row) => row.start_date.getFullYear() == parseInt(y) || row.end_date.getFullYear() == parseInt(y)
+                )
+                .map((row) => {
+                  // Crop any overflowing start or end dates.
+                  return {
+                    ...row,
+                    start_date:
+                      row.start_date.getFullYear() == parseInt(y)
+                        ? row.start_date
+                        : new Date(`Janurary 01, ${y} 00:00:00`),
+                    end_date:
+                      row.end_date.getFullYear() == parseInt(y) ? row.end_date : new Date(`December 31, ${y} 00:00:00`)
+                  }
+                })
+                .filter((e) => {
+                  // filter here
+                  if (e.period.startsWith("Summer")) {
+                    return checkedState.get(e.period)!.checked ?? true
+                  } else {
+                    return checkedState.get(`${e.start_date.getFullYear()}`)!.childPeriods!.get(e.period)
+                  }
+                })}
+              yearLabels={WEEK_LABELS[y]}
+            />
+          ))}
+        </main>
+
+        {/* Right Sidebar (Quick Nav) */}
+        <aside className={styles.sidebarRight}>
+          <QuickNavigation />
+        </aside>
       </div>
     </CalendarContext.Provider>
   )

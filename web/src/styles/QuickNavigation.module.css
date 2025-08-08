@@ -1,8 +1,8 @@
 .panel {
   display: flex;
+  align-items: flex-start;
   position: sticky;
   top: 10%;
-  align-items: flex-start;
 }
 
 /* vertical divider */

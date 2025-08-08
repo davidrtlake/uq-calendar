@@ -1,10 +1,10 @@
 .panel {
+  position: sticky;
+  top: 10%;
   padding: 1rem;
   border-radius: 8px;
   min-width: 8em;
   color: #ddd;
-  position: sticky;
-  top: 10%;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -34,7 +34,8 @@
 }
 
 /* Label text for years & summer semesters */
-.itemLabel {
+.itemLabel,
+.itemLabelDark {
   font-size: 1rem;
   padding: 0.1em 0 0.2em 0.5em;
   color: #fff;
@@ -43,7 +44,7 @@
 
 /* Container for the period checkboxes */
 .periodList {
-  margin: 0.5rem 0 1rem 1rem;
+  margin: 0.3rem 0 0.7rem 0.5em;
   padding-left: 0.5rem;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -59,10 +60,16 @@
 }
 
 /* Text for each period */
-.periodLabel {
+.periodLabel,
+.periodLabelDark {
   font-size: 1rem;
   color: #fff;
   overflow-wrap: break-word;
+}
+
+.periodLabelDark,
+.itemLabelDark {
+  color: #acacac;
 }
 
 /* --- Toggle Switch Styles --- */

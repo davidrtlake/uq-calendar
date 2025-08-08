@@ -41,9 +41,7 @@ const QuickNavigation: React.FC = () => {
     monthRefs.forEach((ref) => {
       if (ref.current) observer.observe(ref.current)
     })
-    return () => {
-      observer.disconnect()
-    }
+    return () => observer.disconnect()
   }, [monthRefs])
 
   // Toggle expand/collapse for a year.
