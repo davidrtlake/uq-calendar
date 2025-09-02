@@ -233,7 +233,7 @@ function App() {
           )}
 
           <div className={styles.weekLabelContainer}>
-            <div className={styles.wkLabel}>WK</div>
+            <div className={styles.wkLabel}></div>
             {DAYS_OF_WEEK.map((day, i) => (
               <div key={i} className={styles.dayLabel}>
                 {day}

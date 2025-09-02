@@ -12,29 +12,31 @@
   border-radius: 0px;
 }
 
-.desktopOnly {
-  display: block;
+.periodTitle {
+  display: inline;
 }
 
-.mobileOnly {
+.shortPeriodTitle {
   display: none;
+}
+
+@media (max-width: 700px) {
+  .periodTitle {
+    display: none;
+  }
+
+  .shortPeriodTitle {
+    display: inline;
+  }
 }
 
 .todayMessage {
   display: inline;
 }
 
-@media (max-width: 0px) {
+@media (max-width: 700px) {
   .todayMessage {
     display: none;
-  }
-
-  .desktopOnly {
-    display: none;
-  }
-
-  .mobileOnly {
-    display: block;
   }
 }
 
@@ -52,6 +54,28 @@
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+}
+
+.lineClampShort {
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.lineClampLong {
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+}
+
+@media (max-width: 700px) {
+  .lineClampShort {
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+  }
+
+  .lineClampLong {
+    -webkit-line-clamp: 7;
+    line-clamp: 7;
+  }
 }
 
 .event {
@@ -85,50 +109,46 @@
   -webkit-box-orient: vertical;
 }
 
-/* .extended-event-descriptions a {
-  font-weight: 500;
-  color: #3f50e4;
-  text-decoration: inherit;
-}
-.extended-event-descriptions a:hover {
-  color: #9498eb;
-} */
-
 .extended-event {
   padding: 0 2% 0 2%;
-  line-height: 1.5rem;
   position: relative;
   border-radius: 0 0 0.4em 0.4em;
-  /* background-color: rgb(146, 107, 56); */
-  font-size: 13px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.eventBufferClass {
+  font-size: 13px;
 }
 
 .extended-event:hover {
-  /* background-color: rgb(114, 81, 37); */
   z-index: 3000;
 }
 
 .extended-event:hover .extended-event-descriptions {
   -webkit-line-clamp: none;
-  /* number of lines to show */
   line-clamp: none;
 }
 
 @media (max-width: 700px) {
   .extended-event-descriptions,
   .event-descriptions {
-    font-size: 0.8em;
     overflow-wrap: break-word;
     /* white-space: normal;
     word-break: break-all; */
     hyphens: auto;
   }
 
+  .extended-event,
+  .event-descriptions,
+  .eventBufferClass {
+    font-size: 11px;
+  }
+
   .extended-event-descriptions {
-    line-height: 16px;
     margin-left: 2px;
   }
 }

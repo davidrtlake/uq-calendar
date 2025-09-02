@@ -129,17 +129,21 @@
   padding-top: 0.3rem;
   display: grid;
   grid-template-columns: auto repeat(7, 1fr);
-  column-gap: 0.5%;
   align-items: start;
 }
 
 .wkLabel {
   width: 25px;
   visibility: visible;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.56);
   padding-inline-start: 0.1rem;
   text-align: center;
+  padding-right: 2.3%;
   background-color: unset;
+}
+
+.dayLabel {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.56);
+  margin-left: 2.3%;
 }
 
 @media (max-width: 700px) {
@@ -149,15 +153,18 @@
     visibility: hidden;
   }
 
+  .dayLabel {
+    margin-left: 0px;
+  }
+
+  .dayLabel + .dayLabel {
+    margin-left: 2.3%;
+  }
+
   .weekLabelContainer {
     grid-template-columns: 0 repeat(7, 1fr);
     column-gap: 1px;
   }
-}
-
-.dayLabel {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.56);
-  padding-inline-start: 0.1rem;
 }
 
 .jumpWrapper {
@@ -170,5 +177,6 @@
 
 .jumpButton {
   background-color: #2f033d;
+  border: 1px rgb(177, 177, 177) solid;
   margin-right: 15px;
 }

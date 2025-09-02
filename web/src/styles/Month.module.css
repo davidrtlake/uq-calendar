@@ -6,6 +6,7 @@
   min-height: 150px;
   min-width: 90px;
   background: repeating-linear-gradient(-45deg, transparent 0 3px, var(--timetable-stripes-dark) 3px 6px);
+  margin-left: 2.3%;
 }
 
 @media (max-width: 700px) {
