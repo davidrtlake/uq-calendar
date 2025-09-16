@@ -41,7 +41,7 @@
   margin-bottom: 3%;
 }
 
-@media (max-width: 502px) {
+@media (max-width: 517px) {
   .gap-element {
     margin-bottom: 5%;
   }
@@ -51,7 +51,7 @@
 h4 {
   /* margin-block-start: 0.1em;
   margin-inline-start: 0.3em;*/
-  margin: 0 0 0.4em;
+  margin: 0 0 0.1em;
   padding-block-start: 0.1em;
   padding-inline-start: 0.3em;
   /* padding-block-end: 0.4em; */
@@ -72,7 +72,7 @@ h4 {
   height: 36px;
 }
 
-@media (max-width: 502px) {
+@media (max-width: 517px) {
   .month-title {
     display: flex;
     align-items: flex-end;
@@ -85,7 +85,7 @@ h4 {
   }
 }
 
-@media (min-width: 503px) and (max-width: 1021px) {
+@media (min-width: 518px) and (max-width: 1021px) {
   .month-title {
     padding-inline-start: 225px;
   }
@@ -96,7 +96,7 @@ h4 {
   overflow: visible;
 }
 
-@media (max-width: 502px) {
+@media (max-width: 517px) {
   .teaching-week-label {
     width: 0px;
   }

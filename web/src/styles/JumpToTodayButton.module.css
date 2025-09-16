@@ -1,0 +1,38 @@
+.jumpWrapper {
+  position: fixed;
+  right: 2dvw;
+  bottom: max(5dvh, env(safe-area-inset-bottom));
+  z-index: 3006;
+  display: grid;
+  justify-content: end;
+  transition:
+    opacity 160ms ease,
+    transform 200ms ease;
+}
+
+.jumpButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 9999px;
+  background-color: #2f033d;
+  color: #fff;
+  border: 1px solid rgb(177, 177, 177);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.jumpButton:active {
+  transform: translateY(1px);
+}
+
+.arrow {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.label {
+  white-space: nowrap;
+}

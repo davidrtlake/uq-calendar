@@ -22,7 +22,7 @@
 }
 
 /* Mobile */
-@media (max-width: 502px) {
+@media (max-width: 517px) {
   .yearHeading {
     display: flex;
     align-items: flex-start;

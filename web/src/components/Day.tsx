@@ -45,14 +45,20 @@ const Day = ({ date, row, today, events, extendedEvents, invisExtendedEvents }: 
   })
 
   function shortenPeriodName(periodName: string) {
-    const splitName: string[] = periodName.split(" ")
-    if (periodName.toLowerCase().startsWith("semester")) {
-      splitName[1] = "Sem.".concat(splitName[1])
-      return splitName.slice(1).join(" ")
-    } else if (periodName.toLowerCase().startsWith("summer semester")) {
-      splitName[1] = "Sem."
-    }
-    return splitName.join(" ")
+    const splitName: string[] = periodName.split(" ").map((it, i) => {
+      const wordLower = it.toLocaleLowerCase()
+      if (wordLower == "semester") {
+        return i == 0 ? "Sem." : "Sem. "
+      }
+      if (wordLower == "quarters") {
+        return "qtrs. "
+      }
+      if (it.match(/^\(\d+-\d+\)$/)) {
+        return it.replace(/^\((\d{2})(\d{2})-(\d+)\)$/, "($2-$3)")
+      }
+      return `${it} `
+    })
+    return splitName.join("").trim()
   }
 
   const periodNameToShortened: Record<string, string> = {}
@@ -101,11 +107,19 @@ const Day = ({ date, row, today, events, extendedEvents, invisExtendedEvents }: 
                     <b className={styles.shortPeriodTitle}>{getShortenPeriodName(e.event.period)}</b>:{" "}
                   </b>
                   {e.event.url ? (
-                    <a href={e.event.url} target="_blank" rel="noopener noreferrer">
-                      {e.event.title}
-                      {". "}
-                      <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                    </a>
+                    <>
+                      <a href={e.event.url} target="_blank" rel="noopener noreferrer" className={styles.desktopLink}>
+                        {e.event.title}
+                        {". "}
+                      </a>
+                      <p className={styles.mobileLink}>
+                        {e.event.title}
+                        {". "}
+                      </p>
+                      <a href={e.event.url} target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                      </a>
+                    </>
                   ) : (
                     <>
                       {e.event.title}
@@ -123,7 +137,7 @@ const Day = ({ date, row, today, events, extendedEvents, invisExtendedEvents }: 
               key={i}
               className={styles.event}
               style={{
-                marginBlockEnd: showPeriod[i + 1] ? "0.3em" : "0.2em",
+                marginBlockEnd: showPeriod[i + 1] ? "0.3em" : "0.1em",
                 backgroundColor: getEventColour(e.event_type)[0],
                 color: getEventColour(e.event_type)[1],
                 border: highlightedEvents.has(e.event_id) ? "3px solid rgb(255, 255, 255)" : ""
@@ -140,16 +154,30 @@ const Day = ({ date, row, today, events, extendedEvents, invisExtendedEvents }: 
                   </>
                 )}
                 {e.url ? (
-                  <a
-                    href={e.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ color: getEventColour(e.event_type)[1] }}
-                  >
-                    {e.title}
-                    {". "}
-                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                  </a>
+                  <>
+                    <a
+                      href={e.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.desktopLink}
+                      style={{ color: getEventColour(e.event_type)[1] }}
+                    >
+                      {e.title}
+                      {". "}
+                    </a>
+                    <p className={styles.mobileLink} style={{ color: getEventColour(e.event_type)[1] }}>
+                      {e.title}
+                      {". "}
+                    </p>
+                    <a
+                      href={e.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: getEventColour(e.event_type)[1] }}
+                    >
+                      <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                    </a>
+                  </>
                 ) : (
                   <>
                     {e.title}

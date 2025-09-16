@@ -9,8 +9,8 @@ import { faBarsStaggered, faEye, faMagnifyingGlass } from "@fortawesome/free-sol
 import { ALL_PERIOD_NAMES, ALL_YEAR_NAMES, DAYS_OF_WEEK, MONTH_NAMES, SUMMER_SEMESTER_NAMES } from "./constants/date"
 import { events } from "./constants/events"
 import { WEEK_LABELS } from "./constants/weeks"
+import JumpToTodayButton from "./components/JumpToTodayButton"
 
-// Define a type for your events
 export interface Event {
   event_id: number
   title: string
@@ -146,8 +146,6 @@ function App() {
   }, [])
 
   function scrollToToday() {
-    console.log("Scrolling to today")
-
     todayRef.current?.scrollIntoView({
       behavior: "smooth",
       block: "center",
@@ -156,7 +154,7 @@ function App() {
   }
 
   useEffect(() => {
-    setTimeout(scrollToToday, 500)
+    scrollToToday()
   }, [])
 
   return (
@@ -177,12 +175,12 @@ function App() {
           <NestedCheckbox checkHandler={checkBoxHandler} checkedState={checkedState} />
         </aside>
         {showCats && (
-          <>
+          <div className={styles.mobileMenuPopUp}>
             <div className={styles.toggleMenuLeft}>
               <NestedCheckbox checkHandler={checkBoxHandler} checkedState={checkedState} />
             </div>
             <div className={styles.overlay} onClick={() => setShowCats(false)} />
-          </>
+          </div>
         )}
         <main className={styles.mainContent}>
           <header className={styles.toolbar}>
@@ -198,24 +196,36 @@ function App() {
             />
           </header>
           <header className={styles.mobileToolbar}>
-            <button className={styles.toggleBtnLeft} onClick={() => setShowCats((v) => !v)}>
+            <button
+              className={styles.toggleBtnLeft}
+              onClick={() => {
+                setShowCats((v) => !v)
+                setShowQuickNav(false)
+              }}
+            >
               <FontAwesomeIcon icon={faEye} />
             </button>
             <button className={styles.toggleBtn} onClick={() => setShowSearch((v) => !v)}>
               <FontAwesomeIcon icon={faMagnifyingGlass} />
             </button>
 
-            <button className={styles.toggleBtnRight} onClick={() => setShowQuickNav((v) => !v)}>
+            <button
+              className={styles.toggleBtnRight}
+              onClick={() => {
+                setShowCats(false)
+                setShowQuickNav((v) => !v)
+              }}
+            >
               <FontAwesomeIcon icon={faBarsStaggered} />
             </button>
           </header>
           {showQuickNav && (
-            <>
+            <div className={styles.mobileMenuPopUp}>
               <div className={styles.toggleMenuRight}>
                 <QuickNavigation />
               </div>
               <div className={styles.overlay} onClick={() => setShowQuickNav(false)} />
-            </>
+            </div>
           )}
           {showSearch && (
             <div className={styles.searchWrapper}>
@@ -239,12 +249,6 @@ function App() {
                 {day}
               </div>
             ))}
-          </div>
-
-          <div className={styles.jumpWrapper}>
-            <button className={styles.jumpButton} onClick={scrollToToday}>
-              Jump to today
-            </button>
           </div>
 
           {ALL_YEAR_NAMES.map((y, i) => (
@@ -281,6 +285,7 @@ function App() {
               yearLabels={WEEK_LABELS[y]}
             />
           ))}
+          <JumpToTodayButton todayRef={todayRef} onJump={scrollToToday} />
         </main>
 
         {/* Right Sidebar (Quick Nav) */}

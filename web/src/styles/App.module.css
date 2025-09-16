@@ -84,6 +84,14 @@
   display: none;
 }
 
+.mobileMenuPopUp {
+  display: none;
+}
+
+.searchWrapper {
+  display: none;
+}
+
 /* Mobile */
 @media (max-width: 1024px) {
   .sidebarLeft {
@@ -104,21 +112,25 @@
   .toolbar {
     display: none;
   }
+
+  .mobileMenuPopUp {
+    display: block;
+  }
+
+  .searchWrapper {
+    position: sticky;
+    top: 111px;
+    z-index: 3006;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(47, 3, 61);
+    border-bottom: 1px solid gray;
+  }
 }
 
 .mainContent {
   max-width: 1300px;
-}
-
-.searchWrapper {
-  position: sticky;
-  top: 111px;
-  z-index: 3006;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(47, 3, 61);
-  border-bottom: 1px solid gray;
 }
 
 .weekLabelContainer {
@@ -165,18 +177,4 @@
     grid-template-columns: 0 repeat(7, 1fr);
     column-gap: 1px;
   }
-}
-
-.jumpWrapper {
-  position: sticky;
-  top: 90vh;
-  z-index: 3006;
-  display: grid;
-  justify-content: end;
-}
-
-.jumpButton {
-  background-color: #2f033d;
-  border: 1px rgb(177, 177, 177) solid;
-  margin-right: 15px;
 }
